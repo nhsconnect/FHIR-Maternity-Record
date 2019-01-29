@@ -109,7 +109,7 @@ entries:
         - title: Legal Information
           url: /explore_legal_information.html
           output: web
-        - title: Legal Information - Looked after child
+        - title: Legal Information <br/> Looked after child
           url: /explore_looked_after_child.html
           output: web
         - title: Legal Information - Child protection plan
