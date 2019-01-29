@@ -122,7 +122,7 @@ entries:
         output: web
       - title: Medication
         url: /explore_medication.html
-         output: web
+        output: web
       - title: Newborn Hearing
         url: /explore_newborn_hearing.html
         output: web
