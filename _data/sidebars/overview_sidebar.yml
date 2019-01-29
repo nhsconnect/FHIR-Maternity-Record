@@ -56,39 +56,30 @@ entries:
       - title: A - B
         output: web
         subfolderitems:
-        - title: Admission Details
+        - title: Admission details
           url: /explore_admission_details.html
           output: web
-        - title: Allergies and Adverse Reactions
+        - title: Allergies and adverse reactions
           url: /explore_allergies_and_adverse_reactions.html
           output: web
-        - title: Assessment Scales
+        - title: Assessment scales
           url: /explore_assessment_scales.html
           output: web
-        - title: Birth Details
+        - title: Birth details (woman)
           url: /explore_birth_details.html
-          output: web
-        - title: Blood Spot Sample Taken
-          url: /explore_blood_spot_sample_taken.html
-          output: web
-        - title: Blood Spot Card Received
-          url: /explore_blood_spot_card_received.html
-          output: web
-        - title: Blood Spot Test Outcome
-          url: /explore_blood_spot_test_outcome.html
           output: web
         
       - title: C - E
         output: web
         subfolderitems:
-        - title: Conditions / Diagnoses
-          url: /explore_conditions_diagnoses.html
+        - title: Clinical risk factors
+          url: /explore_clinical_risk_factors.html
           output: web
-        - title: Discharge Details
+        - title: Demographic history
+          url: /explore_demographic_history.html
+          output: web  
+        - title: Discharge details
           url: /explore_discharge_details.html
-          output: web
-        - title: Emergency Care Attendance
-          url: /explore_emergency_care_attendance.html
           output: web
         - title: Examination Findings
           url: /explore_examination_findings.html
@@ -97,14 +88,23 @@ entries:
       - title: F - L
         output: web
         subfolderitems:
+        - title: Family history
+          url: /explore_family_history.html
+          output: web       
         - title: GP practice
           url: /explore_gp_practice.html
           output: web
-        - title: Immunisation Administration
-          url: /explore_immunisation_administration.html
+        - title: Immunisations
+          url: /explore_immunisations.html
           output: web
-        - title: Individual Requirement
+        - title: Individual requirement
           url: /explore_individual_requirement.html
+          output: web
+        - title: Information and advice given
+          url: /explore_information_and_advice_given.html
+          output: web
+        - title: Investigation results
+          url: /explore_investigation_results.html
           output: web
         - title: Legal Information
           url: /explore_legal_information.html
