@@ -180,7 +180,7 @@ entries:
           url: /explore_professional_contacts.html
           output: web
           
-      - title: R - Z
+      - title: R - T
         output: web
         subfolderitems:
         - title: Referral details
@@ -213,6 +213,9 @@ entries:
         - title: Social context<br/>&nbsp;&nbsp;Personal
           url: /explore_personal.html
           output: web
+      - title: U - Z
+        output: web
+        subfolderitems:
         - title: Woman's concerns, expectations and wishes
           url: /explore_womens_concerns.html
           output: web
