@@ -2,10 +2,10 @@
 output: web
 # this property is useful for conditional filtering of content that is separate from the PDF.
 
-topnav_title: Maternity-Record (DCH) | FHIR&reg;
+topnav_title: Maternity-Record  | FHIR&reg;
 # this appears on the top navigation bar next to the home button
 
-site_title: Maternity-Record (DCH) 
+site_title: Maternity-Record  
 # this appears in the html browser tab for the site title (seen mostly by search engines, not users)
 
 company_name: NHS Digital
@@ -96,7 +96,7 @@ sidebars:
 - appointments_sidebar
 - tasks_sidebar
 
-description: "This implementation guide supports the publishing of Maternity-Record (DCH) event messages held across settings through the use of nationally defined messaging components."
+description: "This implementation guide supports the publishing of Maternity-Record  event messages held across settings through the use of nationally defined messaging components."
 # the description is used in the feed.xml file
 
 sitemap: true
