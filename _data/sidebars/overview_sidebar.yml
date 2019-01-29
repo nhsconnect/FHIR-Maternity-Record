@@ -65,8 +65,8 @@ entries:
         - title: Assessment scales
           url: /explore_assessment_scales.html
           output: web
-        - title: Birth details (woman)
-          url: /explore_birth_details.html
+        - title: Baby details (woman)
+          url: /explore_baby_details.html
           output: web
         
       - title: C - E
@@ -81,16 +81,25 @@ entries:
         - title: Discharge details
           url: /explore_discharge_details.html
           output: web
-        - title: Examination Findings
+        - title: Examination findings
           url: /explore_examination_findings.html
           output: web
-        
+        - title: Examination findings<br/>&nbsp;&nbsp;Fetal examinations
+          url: /explore_fetal_examination.html
+          output: web
+          
       - title: F - L
         output: web
         subfolderitems:
         - title: Family history
           url: /explore_family_history.html
-          output: web       
+          output: web
+        - title: Family history<br/>&nbsp;&nbsp;Family history of woman
+          url: /explore_family_history_woman.html
+          output: web    
+        - title: Family history<br/>&nbsp;&nbsp;Family history of fetus
+          url: /explore_family_history_fetus.html
+          output: web              
         - title: GP practice
           url: /explore_gp_practice.html
           output: web
@@ -122,36 +131,94 @@ entries:
       - title: M - O
         output: web
         subfolderitems:
-        - title: Measurements
-          url: /explore_measurements.html
-          output: web
-        - title: Medication
+        - title: Medication and medical devices
           url: /explore_medication.html
+          output: web 
+        - title: Medication and medical devices<br/>&nbsp;&nbsp;Medication item cluster
+          url: /explore_medication_item_cluster.html
           output: web
-        - title: Newborn Hearing
-          url: /explore_newborn_hearing.html
-          output: web
+        - title: Medication and medical devices<br/>&nbsp;&nbsp;Medical devices entry
+          url: /explore_medication_devices_entry.html
+          output: web 
+        - title: Medication and medical devices<br/>&nbsp;&nbsp;Medical discontinued entry
+          url: /explore_medication_discontinued_entry.html
+          output: web               
           
       - title: P - Q
         output: web
         subfolderitems:
-        - title: Personal Contacts
+        - title: Patient demographics
+          url: /explore_patient_demographics.html
+          output: web
+         - title: Participation in research
+          url: /explore_participation_in_research.html
+          output: web
+        - title: Personal comments/plan
+          url: /explore_personal_comments.html
+          output: web
+        - title: Personal contacts
           url: /explore_personal_contacts.html
           output: web
-        - title: Physical Examination
-          url: /explore_physical_examination.html
+        - title: Plan and requested actions
+          url: /explore_plan_and_requested_actions.html
           output: web
-        - title: Professional Contacts
+        - title: Pregnancy episode details
+          url: /explore_pregnancy_episode.html
+          output: web
+        - title: Pregnancy outcome delivery and birth
+          url: /explore_pregnancy_outcome_delivery_and_birth.html
+          output: web
+        - title: Pregnancy outcome delivery and birth<br/>&nbsp;&nbsp;Birth details
+          url: /explore_pregnancy_birth_details.html
+          output: web
+        - title: Problems list
+          url: /explore_problems_list.html
+          output: web
+        - title: Procedures
+          url: /explore_procedures.html
+          output: web
+        - title: Professional comments
+          url: /explore_professional_comments.html
+          output: web
+        - title: Professional contacts
           url: /explore_professional_contacts.html
           output: web
+          
       - title: R - Z
         output: web
         subfolderitems:
-        - title: Referral
-          url: /explore_referral.html
+        - title: Referral details
+          url: /explore_referral_details.html
+          output: web
+        - title: Relevant past medical, surgical and mental health history
+          url: /explore_relevant_past_history.html
+          output: web
+        - title: Safeguarding
+          url: /explore_safeguarding.html
           output: web
         - title: Safety Alerts
           url: /explore_safety_alerts.html
+          output: web
+        - title: Scan details
+          url: /explore_scan_details.html
+          output: web
+        - title: Screening review
+          url: /explore_screening_review.html
+          output: web
+        - title: Screening review<br/>&nbsp;&nbsp;National antenatal screening programme
+          url: /explore_national_screening_review.html
+          output: web
+        - title: Social context
+          url: /explore_social_context.html
+          output: web
+        - title: Social context<br/>&nbsp;&nbsp;Family and household
+          url: /explore_family_and_household.html
+          output: web
+        - title: Social context<br/>&nbsp;&nbsp;Personal
+          url: /explore_personal.html
+          output: web
+        - title: Woman's concerns, expectations and wishes
+          url: /explore_womens_concerns.html
           output: web
 
 
