@@ -95,8 +95,8 @@ entries:
         - title: GP practice
           url: /explore_gp_practice.html
           output: web
-        - title: H - L
         
+        - title: H - L
         output: web
         subfolderitems:
         - title: Immunisations
