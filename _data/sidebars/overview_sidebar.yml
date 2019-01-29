@@ -48,21 +48,26 @@ entries:
   - title: Bundles
     output: web,pdf
     folderitems:
-    - title: A - B
+    - title: Overview
+      url: /explore_headings.html
       output: web
+      type: homepage
       subfolders:
-      - title: Admission details
-        url: /explore_admission_details.html
+      - title: A - B
         output: web
-      - title: Allergies and adverse reactions
-        url: /explore_allergies_and_adverse_reactions.html
-        output: web
-      - title: Assessment scales
-        url: /explore_assessment_scales.html
-        output: web
-      - title: Birth details (woman)
-        url: /explore_birth_details.html
-        output: web
+        subfolderitems:
+        - title: Admission details
+          url: /explore_admission_details.html
+          output: web
+        - title: Allergies and adverse reactions
+          url: /explore_allergies_and_adverse_reactions.html
+          output: web
+        - title: Assessment scales
+          url: /explore_assessment_scales.html
+          output: web
+        - title: Birth details (woman)
+          url: /explore_birth_details.html
+          output: web
         
       - title: C - E
         output: web
