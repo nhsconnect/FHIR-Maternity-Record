@@ -144,13 +144,13 @@ entries:
           url: /explore_medication_discontinued_entry.html
           output: web
           
-      # - title: P - Q
-        # output: web
-        # subfolderitems:
+      - title: P - Q
+        output: web
+        subfolderitems:
         - title: Patient demographics
           url: /explore_patient_demographics.html
           output: web
-         - title: Participation in research
+        - title: Participation in research
           url: /explore_participation_in_research.html
           output: web
         - title: Personal comments/plan
