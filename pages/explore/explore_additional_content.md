@@ -15,63 +15,63 @@ In addition to the event message bundles detailed in this specification, the Dig
 
 ## Assessment Scales ##
 
-- [CareConnect-DCH-ASQ3AssessmentScale-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-ASQ3AssessmentScale-Observation-1)
-- [CareConnect-DCH-ASQSE-AssessmentScale-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-ASQSE-AssessmentScale-Observation-1)
-- [CareConnect-DCH-AssessmentScale-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-AssessmentScale-Observation-1)
+- [CareConnect-Maternity-Record-ASQ3AssessmentScale-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-ASQ3AssessmentScale-Observation-1)
+- [CareConnect-Maternity-Record-ASQSE-AssessmentScale-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-ASQSE-AssessmentScale-Observation-1)
+- [CareConnect-Maternity-Record-AssessmentScale-Observation-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-AssessmentScale-Observation-1)
 
 ## Clinical Risk Factors ##
 
-- [DCH-ClinicalRiskFactor-RiskAssessment-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-ClinicalRiskFactor-RiskAssessment-1)
+- [Maternity-Record-ClinicalRiskFactor-RiskAssessment-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-ClinicalRiskFactor-RiskAssessment-1)
 
 ## Developmental Skills ##
 
-- [CareConnect-DCH-DevelopmentalSkill-Condition-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-DevelopmentalSkill-Condition-1)
+- [CareConnect-Maternity-Record-DevelopmentalSkill-Condition-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-DevelopmentalSkill-Condition-1)
 
 ## Early Years Progress ##
 
-- [DCH-EarlyYearsProgress-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-EarlyYearsProgress-QuestionnaireResponse-1)
+- [Maternity-Record-EarlyYearsProgress-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-EarlyYearsProgress-QuestionnaireResponse-1)
 
 ## Educational History  ##
 
-- [DCH-EducationalHistory-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-EducationalHistory-QuestionnaireResponse-1)
+- [Maternity-Record-EducationalHistory-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-EducationalHistory-QuestionnaireResponse-1)
 
 ## Examination Findings ##
 
-- [DCH-ExaminationFindings-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-ExaminationFindings-QuestionnaireResponse-1)
+- [Maternity-Record-ExaminationFindings-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-ExaminationFindings-QuestionnaireResponse-1)
 
 ## Family History ##
 
-- [CareConnect-DCH-FamilyMemberHistory-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-FamilyMemberHistory-1)
-- [CareConnect-DCH-MaternalProblemsInPregnancy-FamilyMemberHistory-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-MaternalProblemsInPregnancy-FamilyMemberHistory-1)
+- [CareConnect-Maternity-Record-FamilyMemberHistory-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-FamilyMemberHistory-1)
+- [CareConnect-Maternity-Record-MaternalProblemsInPregnancy-FamilyMemberHistory-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-MaternalProblemsInPregnancy-FamilyMemberHistory-1)
 
 ## Feeding Status ##
 
-- [DCH-FeedingStatus-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-FeedingStatus-QuestionnaireResponse-1)
+- [Maternity-Record-FeedingStatus-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-FeedingStatus-QuestionnaireResponse-1)
 
 ## Information and Advice Given ##
 
-- [DCH-InformationAndAdviceGiven-Communication-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-InformationAndAdviceGiven-Communication-1)
+- [Maternity-Record-InformationAndAdviceGiven-Communication-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-InformationAndAdviceGiven-Communication-1)
 
 ## Parent Guardian or Personal Comment ##
 
-- [DCH-ParentGuardianOrPersonalComment-Communication-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-ParentGuardianOrPersonalComment-Communication-1)
+- [Maternity-Record-ParentGuardianOrPersonalComment-Communication-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-ParentGuardianOrPersonalComment-Communication-1)
 
 ## Plan and Requested Actions ##
 
-- [DCH-PlanAndRequestedActions-CarePlan-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-PlanAndRequestedActions-CarePlan-1)
+- [Maternity-Record-PlanAndRequestedActions-CarePlan-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-PlanAndRequestedActions-CarePlan-1)
 
 ## Professional Comment ##
 
-- [DCH-ProfessionalComment-Communication-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-ProfessionalComment-Communication-1)
+- [Maternity-Record-ProfessionalComment-Communication-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-ProfessionalComment-Communication-1)
 
 ## Referral ##
 
-- [DCH-ReferralRequest-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-ReferralRequest-1)
+- [Maternity-Record-ReferralRequest-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-ReferralRequest-1)
 
 ## Social Context (Household) ##
 
-- [DCH-SocialContextHousehold-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-SocialContextHousehold-QuestionnaireResponse-1)
+- [Maternity-Record-SocialContextHousehold-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-SocialContextHousehold-QuestionnaireResponse-1)
 
 ## Social Context (Person) ##
 
-- [DCH-SocialContextPerson-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-SocialContextPerson-QuestionnaireResponse-1)
+- [Maternity-Record-SocialContextPerson-QuestionnaireResponse-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-SocialContextPerson-QuestionnaireResponse-1)

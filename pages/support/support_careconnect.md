@@ -5,7 +5,7 @@ tags: [fhir,messaging]
 toc: false
 sidebar: overview_sidebar
 permalink: support_careconnect.html
-summary: "Clarification on the application of CareConnect STU3 FHIR profiles for Digital Child Health (TEST) (DCH) event messages"
+summary: "Clarification on the application of CareConnect STU3 FHIR profiles for Digital Child Health (TEST) (Maternity-Record) event messages"
 ---
 
 ## Background ##

@@ -9,7 +9,7 @@ summary: "Example Messages for Digital Child Health (TEST) event message bundles
 
 **XML**
 
-XML example messages can be found under the 'Examples' tab on the [DCH-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-Bundle-1) FHIR profile page.
+XML example messages can be found under the 'Examples' tab on the [Maternity-Record-Bundle-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-Bundle-1) FHIR profile page.
 
 **JSON**
 

@@ -35,9 +35,9 @@ The Messaging Overview has been updated to align with the publish and subscribe 
 
 An [additional content section](explore_additional_content.html) has been added for reference to FHIR profiles that have been developed to support these areas in child health, should this content prove useful locally. This is with the exception of **Additional Demographics** and **Related Persons**, which fall into a demographics scope and not Digital Child Health (TEST). 
 
-**[Digital Child Health (TEST) Events Model](explore_dch_events_model.html)** - a new page sharing Digital Child Health (TEST) Events Model mapping to Healthy Child Programme interventions
+**[Digital Child Health (TEST) Events Model](explore_Maternity-Record_events_model.html)** - a new page sharing Digital Child Health (TEST) Events Model mapping to Healthy Child Programme interventions
 
-**Admission Details** - Patient Location clarified to use CareConnect-DCH-Location-1.type.text
+**Admission Details** - Patient Location clarified to use CareConnect-Maternity-Record-Location-1.type.text
 
 **Birth Details** - Location of Birth changed to Required
 
@@ -56,7 +56,7 @@ An [additional content section](explore_additional_content.html) has been added 
 **Medication** - Course status, Dose directions description, Dose Direction Duration and Additional instruction changed to Optional
 
 **Newborn Hearing** 
-	- Procedure profiles for AABR and AOAE hearing tests and outcomes added - [CareConnect-DCH-AABRHearingTest-Procedure-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-AABRHearingTest-Procedure-1) and [CareConnect-DCH-AOAEHearingTest-Procedure-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-AOAEHearingTest-Procedure-1)
+	- Procedure profiles for AABR and AOAE hearing tests and outcomes added - [CareConnect-Maternity-Record-AABRHearingTest-Procedure-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-AABRHearingTest-Procedure-1) and [CareConnect-Maternity-Record-AOAEHearingTest-Procedure-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-AOAEHearingTest-Procedure-1)
 	- Optional Comment field added
 
 **Physical Examination** - Optional Comment field added
@@ -64,21 +64,21 @@ An [additional content section](explore_additional_content.html) has been added 
 
 **Changes following INTEROPen curation**
 
-- **Birth Details** - Event remodelled to use [CareConnect-DCH-Patient-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Patient-1) and [CareConnect-DCH-Encounter-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-DCH-Encounter-1)
-- **Event header** - [DCH-HealthcareService-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-HealthcareService-1) - the terminology binding for 'type' will now use the [Care Connect Care Setting Type Value Set](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-CareSettingType-1).
+- **Birth Details** - Event remodelled to use [CareConnect-Maternity-Record-Patient-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-Patient-1) and [CareConnect-Maternity-Record-Encounter-1](https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Maternity-Record-Encounter-1)
+- **Event header** - [Maternity-Record-HealthcareService-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-HealthcareService-1) - the terminology binding for 'type' will now use the [Care Connect Care Setting Type Value Set](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-CareSettingType-1).
 - **Immunisation Administration** - Added FHIR profiles to support sharing of Information and Advice Given, and Allergies and Adverse Reactions 
 - **Professional Contacts** - Event data item mapping clarified to detail team or care professional association requirements. The event has been redesigned as follows:
 	- 'Specialty' data item removed
-	- [CodeSystem DCH-ProfessionalType-1](https://fhir.nhs.uk/STU3/CodeSystem/DCH-ProfessionalType-1) updated to use new codes
-	- **CareConnect-DCH-Team-Organization-1** profile removed and replaced with [DCH-CareTeam-1](https://fhir.nhs.uk/STU3/StructureDefinition/DCH-CareTeam-1)
+	- [CodeSystem Maternity-Record-ProfessionalType-1](https://fhir.nhs.uk/STU3/CodeSystem/Maternity-Record-ProfessionalType-1) updated to use new codes
+	- **CareConnect-Maternity-Record-Team-Organization-1** profile removed and replaced with [Maternity-Record-CareTeam-1](https://fhir.nhs.uk/STU3/StructureDefinition/Maternity-Record-CareTeam-1)
 	- 'Role' changed to Required
 	- 'Telephone number' changed to 'Contact details'
 
 - The following Level 3 profiles have been removed and replaced with Level 2 CareConnect profiles:
-	- **CareConnect-DCH-Organisation-1** replaced with CareConnect-Organization-1
-	- **CareConnect-DCH-Location-1** replaced with CareConnect-Location-1
+	- **CareConnect-Maternity-Record-Organisation-1** replaced with CareConnect-Organization-1
+	- **CareConnect-Maternity-Record-Location-1** replaced with CareConnect-Location-1
 
-All example instances, and the **DCH-DSTU2-STU3-Map** provided in the [About](support_about.html) section have been updated to reflect these changes.
+All example instances, and the **Maternity-Record-DSTU2-STU3-Map** provided in the [About](support_about.html) section have been updated to reflect these changes.
 
 ## Beta 1.0.1 ##
 This implementation guidance has been updated to:
