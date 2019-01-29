@@ -109,13 +109,13 @@ entries:
         - title: Legal Information
           url: /explore_legal_information.html
           output: web
-        - title: Looked after child
+        - title: Legal Information\Looked after child
           url: /explore_looked_after_child.html
           output: web
-        - title: Child protection plan
+        - title: Legal Information\Child protection plan
           url: /explore_child_protection_plan.html
           output: web
-        - title: Unborn child protection plan
+        - title: Legal Information\Unborn child protection plan
           url: /explore_unborn_child_protection_plan.html
           output: web
         
