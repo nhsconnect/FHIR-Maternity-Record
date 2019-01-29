@@ -44,248 +44,110 @@ entries:
     - title: Event Publishing/Receiving Requirements
       url: /explore_event_publish_receive.html
       output: web
-#    - title: FHIR Profiles
-#      url: /explore_fhir_profiles.html
-#      output: web
-#      subfolders:
-#      - title: Work Flow
-#        url: /workflow.html
-#        output: web
-#        subfolderitems:
-#        - title: Overview
-#          url: /explore_workflow_overview.html
-#          output: web
-#        - title: Encounter
-#          url: /workflow_encounter.html
-#          output: web
+
   - title: Bundles
     output: web,pdf
     folderitems:
-    - title: Example Bundles
-      url: /explore_example_bundles.html
+    - title: A - B
       output: web
-      type: homepage
-      subfolders:
-      - title: A - B
-#        url: /explore.html
+      subfolderitems:
+      - title: Admission Details
+        url: /explore_admission_details.html
         output: web
-        subfolderitems:
-#        - title: Additional Demographics
-#          url: /explore_additional_demographics.html
-#          output: web
-        - title: Admission Details
-          url: /explore_admission_details.html
-          output: web
-        - title: Allergies and Adverse Reactions
-          url: /explore_allergies_and_adverse_reactions.html
-          output: web
-        - title: Assessment Scales
-          url: /explore_assessment_scales.html
-          output: web
-        - title: Birth Details
-          url: /explore_birth_details.html
-          output: web
-        - title: Blood Spot Sample Taken
-          url: /explore_blood_spot_sample_taken.html
-          output: web
-        - title: Blood Spot Card Received
-          url: /explore_blood_spot_card_received.html
-          output: web
-        - title: Blood Spot Test Outcome
-          url: /explore_blood_spot_test_outcome.html
-          output: web
-      - title: C - E
-#        url: /explore.html
+      - title: Allergies and Adverse Reactions
+        url: /explore_allergies_and_adverse_reactions.html
         output: web
-        subfolderitems:
-#        - title: Clinical Risk Factors
-#          url: /explore_clinical_risk_factors.html
-#          output: web
-        - title: Conditions / Diagnoses
-          url: /explore_conditions_diagnoses.html
-          output: web
-#        - title: Developmental Skills
-#          url: /explore_developmental_skills.html
-#          output: web
-        - title: Discharge Details
-          url: /explore_discharge_details.html
-          output: web
-#        - title: Early Years Progress
-#          url: /explore_early_years_progress.html
-#          output: web
-#        - title: Educational History
-#          url: /explore_educational_history.html
-#          output: web
-        - title: Emergency Care Attendance
-          url: /explore_emergency_care_attendance.html
-          output: web
-         - title: Examination Findings
-           url: /explore_examination_findings.html
-           output: web
-      - title: F - L
-#        url: /explore.html
+      - title: Assessment Scales
+        url: /explore_assessment_scales.html
         output: web
-        subfolderitems:
-#        - title: Family History
-#          url: /explore_family_history.html
-#          output: web
-         - title: GP practice
-           url: /explore_gp_practice.html
-           output: web
-#        - title: Feeding Status
-#          url: /explore_feeding_status.html
-#          output: web
-        - title: Immunisation Administration
-          url: /explore_immunisation_administration.html
-          output: web
-        - title: Individual Requirement
-          url: /explore_individual_requirement.html
-          output: web
-#        - title: Information and Advice Given
-#          url: /explore_information_and_advice_given.html
-#          output: web
-        - title: Legal Information
-          url: /explore_legal_information.html
-          output: web
-          subfolderitems:
-          - title: Looked after child
-            url: /explore_looked_after_child.html
-            output: web
-         - title: Child protection plan
-           url: /explore_child_protection_plan.html
-           output: web
-         - title: Unborn child protection plan
-           url: /explore_unborn_child_protection_plan.html
-           output: web
-      - title: M - O
-#        url: /explore.html
+      - title: Birth Details
+        url: /explore_birth_details.html
         output: web
-        subfolderitems:
-        - title: Measurements
-          url: /explore_measurements.html
-          output: web
-        - title: Medication
-          url: /explore_medication.html
-          output: web
-        - title: Newborn Hearing
-          url: /explore_newborn_hearing.html
-          output: web
-      - title: P - Q
-#        url: /explore.html
+      - title: Blood Spot Sample Taken
+        url: /explore_blood_spot_sample_taken.html
         output: web
-        subfolderitems:
-#        - title: Parent Guardian or Personal Comment
-#          url: /explore_parent_guardian_or_personal_comment.html
-#          output: web
-         - title: Personal Contacts
-           url: /explore_personal_contacts.html
-           output: web
-        - title: Physical Examination
-          url: /explore_physical_examination.html
-          output: web
-#        - title: Plan and Requested Actions
-#          url: /explore_plan_and_requested_actions.html
-#          output: web
-#        - title: Professional Comment
-#          url: /explore_professional_comment.html
-#          output: web
-        - title: Professional Contacts
-          url: /explore_professional_contacts.html
-          output: web
-      - title: R - Z
-#        url: /explore.html
+      - title: Blood Spot Card Received
+        url: /explore_blood_spot_card_received.html
         output: web
-        subfolderitems:
-         - title: Referral
-           url: /explore_referral.html
-           output: web
-#        - title: Referral
-#          url: /explore_referral.html
-#          output: web
-        - title: Safety Alerts
-          url: /explore_safety_alerts.html
-          output: web
-#        - title: Social Context Household
-#          url: /explore_social_context_household.html
-#          output: web
-#        - title: Social Context Person
-#          url: /explore_social_context_person.html
-#          output: web
-  - title: Additional Content
-    output: web
-    folderitems:
-    - title: Additional DCH Content
-      url: /explore_additional_content.html
+      - title: Blood Spot Test Outcome
+        url: /explore_blood_spot_test_outcome.html
+        output: web
+        
+    - title: C - E
       output: web
-#    folderitems:
-#    - title: Overview
-#      url: /explore_event_store_overview.html
-#      output: web
-#      type: homepage
-#    - title: Event Store Query Operation
-#      url: /explore_event_store_query.html
-#      output: web
-#    - title: Event Header Design
-#      url: /explore_event_header_design.html
-#      output: web
+      subfolderitems:
+      - title: Conditions / Diagnoses
+        url: /explore_conditions_diagnoses.html
+        output: web
+      - title: Discharge Details
+        url: /explore_discharge_details.html
+        output: web
+      - title: Emergency Care Attendance
+        url: /explore_emergency_care_attendance.html
+        output: web
+      - title: Examination Findings
+        url: /explore_examination_findings.html
+        output: web
+        
+    - title: F - L
+      output: web
+      subfolderitems:
+      - title: GP practice
+        url: /explore_gp_practice.html
+        output: web
+      - title: Immunisation Administration
+        url: /explore_immunisation_administration.html
+        output: web
+      - title: Individual Requirement
+        url: /explore_individual_requirement.html
+        output: web
+      - title: Legal Information
+        url: /explore_legal_information.html
+        output: web
+      - title: Looked after child
+        url: /explore_looked_after_child.html
+        output: web
+      - title: Child protection plan
+        url: /explore_child_protection_plan.html
+        output: web
+      - title: Unborn child protection plan
+        url: /explore_unborn_child_protection_plan.html
+        output: web
+        
+    - title: M - O
+      output: web
+      subfolderitems:
+      - title: Measurements
+        url: /explore_measurements.html
+        output: web
+      - title: Medication
+        url: /explore_medication.html
+         output: web
+      - title: Newborn Hearing
+        url: /explore_newborn_hearing.html
+        output: web
+    - title: P - Q
+      output: web
+      subfolderitems:
+      - title: Personal Contacts
+        url: /explore_personal_contacts.html
+        output: web
+      - title: Physical Examination
+        url: /explore_physical_examination.html
+        output: web
+      - title: Professional Contacts
+        url: /explore_professional_contacts.html
+        output: web
+    - title: R - Z
+      output: web
+      subfolderitems:
+      - title: Referral
+        url: /explore_referral.html
+        output: web
+      - title: Safety Alerts
+        url: /explore_safety_alerts.html
+        output: web
 
-
-#  - title: Example Scenarios
-#    url: /engage_scenario.html
-#    output: web
-#    folderitems:
-#    - title: Richard Smith
-#      url: /engage_richard_smith.html
-#      output: web, pdf
-#      type: homepage
-
-#  - title: Design & Build
-#    output: web
-#    folderitems:
-#    - title: Overview
-#      url: /test.html
-#      output: web
-#    - title: Patterns / Topology
-#      url: /test_patterns.html
-#      output: web
-#    - title: Access
-#      url: /test_access.html
-#      output: web
-#    - title: Security
-#      url: /test_security.html
-#      output: web
-#    - title: Test Data
-#      url: /test_data.html
-#      output: web
-
-#  - title: Assure
-#    output: web
-#    folderitems:
-#    - title: Overview
-#      url: /assure.html
-#      output: web
-#    - title: Access
-#      url: /assure_access.html
-#      output: web
-#    - title: Security
-#      url: /assure_security.html
-#      output: web
-#    - title: End To End
-#      url: /assure_end_to_end.html
-#      output: web
-
-#  - title: Deploy
-#    output: web
-#    folderitems:
-#    - title: Overview
-#      url: /deploy.html
-#      output: web
-#    - title: Access
-#      url: /deploy_access.html
-#      output: web
-#    - title: Security
-#      url: /deploy_security.html
-#      output: web
 
   - title: Help & Support
     output: web
@@ -300,13 +162,8 @@ entries:
       - title: Where Else Can I Look?
         output: web
         subfolderitems:
-#        - title: Community
-#          url: /support_community.html
-#          output: web
         - title: FHIR Tools
           url: /support_fhirtools.html
           output: web
-#        - title: Referenced Documentation
-#          url: /support_referenceddocumentation.html
-#          output: web
+
 
