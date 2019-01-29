@@ -1,6 +1,6 @@
 entries:
-- title: Digital Child Health (TEST) (DCH)  
-  product: Digital Child Health (TEST) (DCH)
+- title: Maternity-Record (DCH)  
+  product: Maternity-Record (DCH)
   version: 1.1.0-Beta
   levels: one
   folders:
@@ -38,7 +38,7 @@ entries:
     - title: Bundle Structure
       url: /explore_bundle_structure.html
       output: web
-    - title: Digital Child Health (TEST) Events Model
+    - title: Maternity-Record Events Model
       url: /explore_dch_events_model.html
       output: web
     - title: Event Publishing/Receiving Requirements
