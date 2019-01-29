@@ -128,21 +128,21 @@ entries:
           url: /explore_unborn_child_protection_plan.html
           output: web
         
-      - title: M - O
-        output: web
-        subfolderitems:
-        - title: Medication and medical devices
-          url: /explore_medication.html
-          output: web 
-        - title: Medication and medical devices<br/>&nbsp;&nbsp;Medication item cluster
-          url: /explore_medication_item_cluster.html
-          output: web
-        - title: Medication and medical devices<br/>&nbsp;&nbsp;Medical devices entry
-          url: /explore_medication_devices_entry.html
-          output: web 
-        - title: Medication and medical devices<br/>&nbsp;&nbsp;Medical discontinued entry
-          url: /explore_medication_discontinued_entry.html
-          output: web
+      # - title: M - O
+        # output: web
+        # subfolderitems:
+        # - title: Medication and medical devices
+          # url: /explore_medication.html
+          # output: web 
+        # - title: Medication and medical devices<br/>&nbsp;&nbsp;Medication item cluster
+          # url: /explore_medication_item_cluster.html
+          # output: web
+        # - title: Medication and medical devices<br/>&nbsp;&nbsp;Medical devices entry
+          # url: /explore_medication_devices_entry.html
+          # output: web 
+        # - title: Medication and medical devices<br/>&nbsp;&nbsp;Medical discontinued entry
+          # url: /explore_medication_discontinued_entry.html
+          # output: web
           
       - title: P - Q
         output: web
