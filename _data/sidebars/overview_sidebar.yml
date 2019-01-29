@@ -25,7 +25,7 @@ entries:
       url: /overview_glossary.html
       output: web
 
-  - title: Messaging Architecture
+  - title: Architecture
     output: web,pdf
     folderitems:
     - title: Overview
@@ -58,11 +58,11 @@ entries:
 #        - title: Encounter
 #          url: /workflow_encounter.html
 #          output: web
-  - title: Messages
+  - title: Bundles
     output: web,pdf
     folderitems:
-    - title: Example Messages
-      url: /explore_example_messages.html
+    - title: Example Bundles
+      url: /explore_example_bundles.html
       output: web
       type: homepage
       subfolders:
@@ -79,9 +79,9 @@ entries:
         - title: Allergies and Adverse Reactions
           url: /explore_allergies_and_adverse_reactions.html
           output: web
-#        - title: Assessment Scales
-#          url: /explore_assessment_scales.html
-#          output: web
+        - title: Assessment Scales
+          url: /explore_assessment_scales.html
+          output: web
         - title: Birth Details
           url: /explore_birth_details.html
           output: web
@@ -144,6 +144,16 @@ entries:
         - title: Legal Information
           url: /explore_legal_information.html
           output: web
+          subfolderitems:
+          - title: Looked after child
+            url: /explore_looked_after_child.html
+            output: web
+         - title: Child protection plan
+           url: /explore_child_protection_plan.html
+           output: web
+         - title: Unborn child protection plan
+           url: /explore_unborn_child_protection_plan.html
+           output: web
       - title: M - O
 #        url: /explore.html
         output: web
