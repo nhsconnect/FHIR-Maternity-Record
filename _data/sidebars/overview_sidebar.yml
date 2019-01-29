@@ -48,10 +48,6 @@ entries:
   - title: Bundles
     output: web,pdf
     folderitems:
-    - title: Overview
-      url: /explore_headings.html
-      output: web
-      type: homepage
     - title: A - B
       output: web
       subfolders:
