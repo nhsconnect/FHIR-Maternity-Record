@@ -147,42 +147,42 @@ entries:
       # - title: P - Q
         # output: web
         # subfolderitems:
-        # - title: Patient demographics
-          # url: /explore_patient_demographics.html
-          # output: web
-         # - title: Participation in research
-          # url: /explore_participation_in_research.html
-          # output: web
-        # - title: Personal comments/plan
-          # url: /explore_personal_comments.html
-          # output: web
-        # - title: Personal contacts
-          # url: /explore_personal_contacts.html
-          # output: web
-        # - title: Plan and requested actions
-          # url: /explore_plan_and_requested_actions.html
-          # output: web
-        # - title: Pregnancy episode details
-          # url: /explore_pregnancy_episode.html
-          # output: web
-        # - title: Pregnancy outcome delivery and birth
-          # url: /explore_pregnancy_outcome_delivery_and_birth.html
-          # output: web
-        # - title: Pregnancy outcome delivery and birth<br/>&nbsp;&nbsp;Birth details
-          # url: /explore_pregnancy_birth_details.html
-          # output: web
-        # - title: Problems list
-          # url: /explore_problems_list.html
-          # output: web
-        # - title: Procedures
-          # url: /explore_procedures.html
-          # output: web
-        # - title: Professional comments
-          # url: /explore_professional_comments.html
-          # output: web
-        # - title: Professional contacts
-          # url: /explore_professional_contacts.html
-          # output: web
+        - title: Patient demographics
+          url: /explore_patient_demographics.html
+          output: web
+         - title: Participation in research
+          url: /explore_participation_in_research.html
+          output: web
+        - title: Personal comments/plan
+          url: /explore_personal_comments.html
+          output: web
+        - title: Personal contacts
+          url: /explore_personal_contacts.html
+          output: web
+        - title: Plan and requested actions
+          url: /explore_plan_and_requested_actions.html
+          output: web
+        - title: Pregnancy episode details
+          url: /explore_pregnancy_episode.html
+          output: web
+        - title: Pregnancy outcome delivery and birth
+          url: /explore_pregnancy_outcome_delivery_and_birth.html
+          output: web
+        - title: Pregnancy outcome delivery and birth<br/>&nbsp;&nbsp;Birth details
+          url: /explore_pregnancy_birth_details.html
+          output: web
+        - title: Problems list
+          url: /explore_problems_list.html
+          output: web
+        - title: Procedures
+          url: /explore_procedures.html
+          output: web
+        - title: Professional comments
+          url: /explore_professional_comments.html
+          output: web
+        - title: Professional contacts
+          url: /explore_professional_contacts.html
+          output: web
           
       - title: R - Z
         output: web
