@@ -119,9 +119,9 @@ entries:
         - title: Emergency Care Attendance
           url: /explore_emergency_care_attendance.html
           output: web
-#        - title: Examination Findings
-#          url: /explore_examination_findings.html
-#          output: web
+         - title: Examination Findings
+           url: /explore_examination_findings.html
+           output: web
       - title: F - L
 #        url: /explore.html
         output: web
@@ -129,14 +129,17 @@ entries:
 #        - title: Family History
 #          url: /explore_family_history.html
 #          output: web
+         - title: GP practice
+           url: /explore_gp_practice.html
+           output: web
 #        - title: Feeding Status
 #          url: /explore_feeding_status.html
 #          output: web
         - title: Immunisation Administration
           url: /explore_immunisation_administration.html
           output: web
-        - title: Individual Requirements
-          url: /explore_individual_requirements.html
+        - title: Individual Requirement
+          url: /explore_individual_requirement.html
           output: web
 #        - title: Information and Advice Given
 #          url: /explore_information_and_advice_given.html
@@ -174,9 +177,9 @@ entries:
 #        - title: Parent Guardian or Personal Comment
 #          url: /explore_parent_guardian_or_personal_comment.html
 #          output: web
-#        - title: Personal Contacts
-#          url: /explore_personal_contacts.html
-#          output: web
+         - title: Personal Contacts
+           url: /explore_personal_contacts.html
+           output: web
         - title: Physical Examination
           url: /explore_physical_examination.html
           output: web
@@ -193,6 +196,9 @@ entries:
 #        url: /explore.html
         output: web
         subfolderitems:
+         - title: Referral
+           url: /explore_referral.html
+           output: web
 #        - title: Referral
 #          url: /explore_referral.html
 #          output: web
