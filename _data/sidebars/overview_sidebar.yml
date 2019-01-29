@@ -52,22 +52,21 @@ entries:
       url: /explore_headings.html
       output: web
       type: homepage
+    - title: A - B
+      output: web
       subfolders:
-      - title: A - B
+      - title: Admission details
+        url: /explore_admission_details.html
         output: web
-        subfolderitems:
-        - title: Admission details
-          url: /explore_admission_details.html
-          output: web
-        - title: Allergies and adverse reactions
-          url: /explore_allergies_and_adverse_reactions.html
-          output: web
-        - title: Assessment scales
-          url: /explore_assessment_scales.html
-          output: web
-        - title: Birth details (woman)
-          url: /explore_birth_details.html
-          output: web
+      - title: Allergies and adverse reactions
+        url: /explore_allergies_and_adverse_reactions.html
+        output: web
+      - title: Assessment scales
+        url: /explore_assessment_scales.html
+        output: web
+      - title: Birth details (woman)
+        url: /explore_birth_details.html
+        output: web
         
       - title: C - E
         output: web
