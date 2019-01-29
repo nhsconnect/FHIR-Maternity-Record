@@ -53,7 +53,7 @@ entries:
       output: web
       type: homepage
       subfolders:
-      - title: A - E
+      - title: A - G
         output: web
         subfolderitems:
         - title: Admission details
@@ -83,10 +83,6 @@ entries:
         - title: Examination findings<br/>&nbsp;&nbsp;Fetal examinations
           url: /explore_fetal_examination.html
           output: web
-          
-      - title: F - L
-        output: web
-        subfolderitems:
         - title: Family history
           url: /explore_family_history.html
           output: web
@@ -99,6 +95,9 @@ entries:
         - title: GP practice
           url: /explore_gp_practice.html
           output: web
+        - title: H - L
+        output: web
+        subfolderitems:
         - title: Immunisations
           url: /explore_immunisations.html
           output: web
