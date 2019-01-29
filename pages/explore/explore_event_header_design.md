@@ -1,10 +1,10 @@
 ---
-title: Digital Child Health (TEST) Event Header Design
+title: Maternity-Record Event Header Design
 keywords:  messaging, bundles
 tags: [fhir,messaging]
 sidebar: foundations_sidebar
 permalink: explore_event_header_design.html
-summary: "The standard event header information applicable to Digital Child Health (TEST) (Maternity-Record) event messages"
+summary: "The standard event header information applicable to Maternity-Record (Maternity-Record) event messages"
 ---
 
 ## Event header information ##
@@ -28,7 +28,7 @@ This event header information must consist of the following **mandatory** items 
 | event published date                   | Maternity-Record-MessageHeader-1         | timestamp                                                                   |
 | a publication reference number         | Maternity-Record-MessageHeader-1         | The resource identifier for the MessageHeader, which will use a UUID format |
 
-The remaining resources in the bundle depend on the Digital Child Health (TEST) Event listed under the [Messages](explore.html) section.
+The remaining resources in the bundle depend on the Maternity-Record Event listed under the [Messages](explore.html) section.
 
 
 

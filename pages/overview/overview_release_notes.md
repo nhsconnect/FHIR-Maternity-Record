@@ -4,10 +4,10 @@ keywords: development, versioning
 tags: [development]
 sidebar: overview_sidebar
 permalink: overview_release_notes.html
-summary: Summary release notes of the versions released in Digital Child Health (TEST) Implementation Guide
+summary: Summary release notes of the versions released in Maternity-Record Implementation Guide
 ---
 
-This site is under active development by NHS Digital and is intended to provide the FHIR messaging components for the Digital Child Health (TEST) event messages. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis, and remains subject to clinical review. Changes to this specification following the initial beta release will be documented here.
+This site is under active development by NHS Digital and is intended to provide the FHIR messaging components for the Maternity-Record event messages. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis, and remains subject to clinical review. Changes to this specification following the initial beta release will be documented here.
 
 ## Beta 1.1.0 ##
 
@@ -33,9 +33,9 @@ The Messaging Overview has been updated to align with the publish and subscribe 
 - Social Context (Household)
 - Social Context (Person)
 
-An [additional content section](explore_additional_content.html) has been added for reference to FHIR profiles that have been developed to support these areas in child health, should this content prove useful locally. This is with the exception of **Additional Demographics** and **Related Persons**, which fall into a demographics scope and not Digital Child Health (TEST). 
+An [additional content section](explore_additional_content.html) has been added for reference to FHIR profiles that have been developed to support these areas in child health, should this content prove useful locally. This is with the exception of **Additional Demographics** and **Related Persons**, which fall into a demographics scope and not Maternity-Record. 
 
-**[Digital Child Health (TEST) Events Model](explore_Maternity-Record_events_model.html)** - a new page sharing Digital Child Health (TEST) Events Model mapping to Healthy Child Programme interventions
+**[Maternity-Record Events Model](explore_Maternity-Record_events_model.html)** - a new page sharing Maternity-Record Events Model mapping to Healthy Child Programme interventions
 
 **Admission Details** - Patient Location clarified to use CareConnect-Maternity-Record-Location-1.type.text
 
@@ -86,7 +86,7 @@ This implementation guidance has been updated to:
 - apply a correction to the title for Blood Spot Test Outcome event
 
 ## Beta 1.0.0 ##
-This Beta release includes implementation guidance to support the development of the Digital Child Health (TEST) Event Messages, supporting the following:
+This Beta release includes implementation guidance to support the development of the Maternity-Record Event Messages, supporting the following:
 
 - the [Healthy Child Record Standard](https://theprsb.org/standards/healthychildrecord/)
 - FHIR profiles developed using the [FHIR Release STU3](https://www.hl7.org/fhir/STU3/index.html) specification

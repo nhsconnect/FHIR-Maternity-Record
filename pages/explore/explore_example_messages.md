@@ -4,7 +4,7 @@ keywords:  messaging
 tags: [fhir,messaging]
 sidebar: foundations_sidebar
 permalink: explore_example_messages.html
-summary: "Example Messages for Digital Child Health (TEST) event message bundles"
+summary: "Example Messages for Maternity-Record event message bundles"
 ---
 
 **XML**

@@ -9,7 +9,7 @@ summary: An overview of this implementation guide is versioned.
 
 ## Beta ##
 
-This implementation guidance is the **Beta** release to support the development of the Digital Child Health (TEST) Event Messages. 
+This implementation guidance is the **Beta** release to support the development of the Maternity-Record Event Messages. 
 
 ## Semantic Versioning ##
 

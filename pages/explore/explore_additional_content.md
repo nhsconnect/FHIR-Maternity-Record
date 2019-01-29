@@ -4,12 +4,12 @@ keywords:  fhir
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_additional_content.html
-summary: "Additional content produced by Digital Child Health (TEST)"
+summary: "Additional content produced by Maternity-Record"
 ---
 
-## Additional Content produced by Digital Child Health (TEST) ##
+## Additional Content produced by Maternity-Record ##
  
-In addition to the event message bundles detailed in this specification, the Digital Child Health (TEST) project has produced some additional content for reference to areas not represented in an event message. The areas and the draft FHIR profiles to support them are listed below. 
+In addition to the event message bundles detailed in this specification, the Maternity-Record project has produced some additional content for reference to areas not represented in an event message. The areas and the draft FHIR profiles to support them are listed below. 
 
 {% include important.html content="The FHIR profiles listed below are **draft** and remain subject to change in response to future requirements. They are not within the scope of the Digital Child Event event message specifications or the Events Management Service." %}
 

@@ -8,7 +8,7 @@ summary: "Capabilities to be supported via publish and receiving requirements"
 ---
 
 ## Background ##
-The Digital Child Health (TEST) event messages are subject to supporting the following event publishing and receiving requirements:
+The Maternity-Record event messages are subject to supporting the following event publishing and receiving requirements:
 
 ## Publishing Events ##
 

@@ -1,14 +1,14 @@
 ---
-title: Digital Child Health (TEST) Events Model
+title: Maternity-Record Events Model
 keywords:  events, interventions
 tags: [fhir,messaging]
 sidebar: foundations_sidebar
 permalink: explore_Maternity-Record_events_model.html
-summary: "Digital Child Health (TEST) Events Model mapping to Healthy Child Programme interventions"
+summary: "Maternity-Record Events Model mapping to Healthy Child Programme interventions"
 ---
 
-## Digital Child Health (TEST) Events Model ##
+## Maternity-Record Events Model ##
 
-The Digital Child Health (TEST) Events Model below shares the event(s) produced at each intervention attended by the child during the Healthy Child programme.
+The Maternity-Record Events Model below shares the event(s) produced at each intervention attended by the child during the Healthy Child programme.
 
 <img src="images/explore/Maternity-Recordeventsmodel.png" style="width:100%;max-width:100%;">

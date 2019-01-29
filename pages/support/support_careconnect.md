@@ -5,7 +5,7 @@ tags: [fhir,messaging]
 toc: false
 sidebar: overview_sidebar
 permalink: support_careconnect.html
-summary: "Clarification on the application of CareConnect STU3 FHIR profiles for Digital Child Health (TEST) (Maternity-Record) event messages"
+summary: "Clarification on the application of CareConnect STU3 FHIR profiles for Maternity-Record (Maternity-Record) event messages"
 ---
 
 ## Background ##
@@ -13,7 +13,7 @@ FHIR Messaging components specified within this site have been developed by NHS 
 
 The INTEROPen vision is to create a library of nationally defined HL7® FHIR® resources and interaction patterns that implementers can adopt to simplify integration and interoperability within UK health and social care.
 
-## Application of CareConnect STU3 FHIR profiles for Digital Child Health (TEST) ##
+## Application of CareConnect STU3 FHIR profiles for Maternity-Record ##
 
 This Beta specification release includes FHIR profiles derived from the following CareConnect STU3 FHIR profiles and their supporting artefacts, which have been published following INTEROPen curation on the [HL7-UK github repository](https://github.com/HL7-UK/CareConnect-profiles-STU3/):
 
