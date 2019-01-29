@@ -53,7 +53,7 @@ entries:
       output: web
       type: homepage
       subfolders:
-      - title: A - B
+      - title: A - E
         output: web
         subfolderitems:
         - title: Admission details
@@ -68,10 +68,6 @@ entries:
         - title: Baby details (woman)
           url: /explore_baby_details.html
           output: web
-        
-      - title: C - E
-        output: web
-        subfolderitems:
         - title: Clinical risk factors
           url: /explore_clinical_risk_factors.html
           output: web
