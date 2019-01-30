@@ -80,18 +80,10 @@ entries:
         - title: Examination findings
           url: /explore_examination_findings.html
           output: web
-        - title: Examination findings<br/>&nbsp;&nbsp;Fetal examinations
-          url: /explore_fetal_examination.html
           output: web
         - title: Family history
           url: /explore_family_history.html
-          output: web
-        - title: Family history<br/>&nbsp;&nbsp;Family history of woman
-          url: /explore_family_history_woman.html
-          output: web    
-        - title: Family history<br/>&nbsp;&nbsp;Family history of fetus
-          url: /explore_family_history_fetus.html
-          output: web              
+          output: web          
         - title: GP practice
           url: /explore_gp_practice.html
           output: web
@@ -114,15 +106,6 @@ entries:
         - title: Legal Information
           url: /explore_legal_information.html
           output: web
-        - title: Legal Information<br/>&nbsp;&nbsp; Looked after child
-          url: /explore_looked_after_child.html
-          output: web
-        - title: Legal Information<br/>&nbsp;&nbsp;Child protection plan
-          url: /explore_child_protection_plan.html
-          output: web
-        - title: Legal Information<br/>&nbsp;&nbsp;Unborn child protection plan
-          url: /explore_unborn_child_protection_plan.html
-          output: web
         
       - title: M - O
         output: web
@@ -130,15 +113,6 @@ entries:
         - title: Medication and medical devices
           url: /explore_medication.html
           output: web 
-        - title: Medication and medical devices<br/>&nbsp;&nbsp;Medication item cluster
-          url: /explore_medication_item_cluster.html
-          output: web
-        - title: Medication and medical devices<br/>&nbsp;&nbsp;Medical devices entry
-          url: /explore_medication_devices_entry.html
-          output: web 
-        - title: Medication and medical devices<br/>&nbsp;&nbsp;Medical discontinued entry
-          url: /explore_medication_discontinued_entry.html
-          output: web
           
       - title: P - Q
         output: web
@@ -163,9 +137,6 @@ entries:
           output: web
         - title: Pregnancy outcome delivery and birth
           url: /explore_pregnancy_outcome_delivery_and_birth.html
-          output: web
-        - title: Pregnancy outcome delivery and birth<br/>&nbsp;&nbsp;Birth details
-          url: /explore_pregnancy_birth_details.html
           output: web
         - title: Problems list
           url: /explore_problems_list.html
@@ -201,17 +172,8 @@ entries:
         - title: Screening review
           url: /explore_screening_review.html
           output: web
-        - title: Screening review<br/>&nbsp;&nbsp;National antenatal screening programme
-          url: /explore_national_screening_review.html
-          output: web
         - title: Social context
           url: /explore_social_context.html
-          output: web
-        - title: Social context<br/>&nbsp;&nbsp;Family and household
-          url: /explore_family_and_household.html
-          output: web
-        - title: Social context<br/>&nbsp;&nbsp;Personal
-          url: /explore_personal.html
           output: web
       - title: U - Z
         output: web
