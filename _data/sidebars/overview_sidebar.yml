@@ -65,7 +65,10 @@ entries:
         - title: Assessment scales
           url: /explore_assessment_scales.html
           output: web
-        - title: Baby details (woman)
+        - title: Attendance details
+          url: /explore_attendance_details.html
+          output: web
+        - title: Baby details (person)
           url: /explore_baby_details.html
           output: web
         - title: Clinical risk factors
@@ -91,10 +94,7 @@ entries:
       - title: H - L
         output: web
         subfolderitems:
-        - title: Immunisations
-          url: /explore_immunisations.html
-          output: web
-        - title: Individual requirement
+        - title: Individual requirements
           url: /explore_individual_requirement.html
           output: web
         - title: Information and advice given
@@ -113,6 +113,12 @@ entries:
         - title: Medication and medical devices
           url: /explore_medication.html
           output: web 
+        - title: Medication History
+          url: /explore_medication_history.html
+          output: web
+        - title: Observations
+          url: /explore_observations.html
+          output: web 
           
       - title: P - Q
         output: web
@@ -123,8 +129,11 @@ entries:
         - title: Participation in research
           url: /explore_participation_in_research.html
           output: web
-        - title: Personal comments/plan
-          url: /explore_personal_comments.html
+        - title: Person concerns
+          url: /explore_person_concerns.html
+          output: web
+        - title: Personal comment
+          url: /explore_personal_comment.html
           output: web
         - title: Personal contacts
           url: /explore_personal_contacts.html
@@ -135,8 +144,8 @@ entries:
         - title: Pregnancy episode details
           url: /explore_pregnancy_episode.html
           output: web
-        - title: Pregnancy outcome delivery and birth
-          url: /explore_pregnancy_outcome_delivery_and_birth.html
+        - title: Pregnancy outcome
+          url: /explore_pregnancy_outcome.html
           output: web
         - title: Problems list
           url: /explore_problems_list.html
@@ -144,8 +153,8 @@ entries:
         - title: Procedures
           url: /explore_procedures.html
           output: web
-        - title: Professional comments
-          url: /explore_professional_comments.html
+        - title: Professional summary
+          url: /explore_professional_summary.html
           output: web
         - title: Professional contacts
           url: /explore_professional_contacts.html
@@ -157,13 +166,10 @@ entries:
         - title: Referral details
           url: /explore_referral_details.html
           output: web
-        - title: Relevant past medical, surgical and mental health history
-          url: /explore_relevant_past_history.html
-          output: web
         - title: Safeguarding
           url: /explore_safeguarding.html
           output: web
-        - title: Safety Alerts
+        - title: Safety alerts
           url: /explore_safety_alerts.html
           output: web
         - title: Scan details
@@ -178,8 +184,8 @@ entries:
       - title: U - Z
         output: web
         subfolderitems:
-        - title: Woman's concerns, expectations and wishes
-          url: /explore_womens_concerns.html
+        - title: Vaccinations
+          url: /explore_vaccinations.html
           output: web
 
 
