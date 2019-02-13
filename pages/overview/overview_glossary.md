@@ -4,8 +4,8 @@ keywords: abbreviations, definitions, glossaries, terms
 tags: [overview]
 sidebar: overview_sidebar
 permalink: overview_glossary.html
-summary: "Glossary of terms used in this Implementation Guide"
+summary: "Glossary of terms used by NHS Digital Specifications"
 toc: false
 ---
 
-A glossary of common terms and abbreviations used in this Implementation Guide can be found on the [Health Developer Network](https://developer.nhs.uk/library/glossary).
+A Glossary of common terms and abbreviations used throughout the documentation can be found on the <a href="https://developer.nhs.uk/library/glossary/" target="_blank">Health Developer Network</a>.
