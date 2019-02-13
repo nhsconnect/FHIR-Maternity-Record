@@ -32,18 +32,18 @@ entries:
       url: /explore.html
       output: web
       type: homepage
-    - title: Event Header Design
-      url: /explore_event_header_design.html
-      output: web
-    - title: Bundle Structure
-      url: /explore_bundle_structure.html
-      output: web
-    - title: Maternity-Record Events Model
-      url: /explore_dch_events_model.html
-      output: web
-    - title: Event Publishing/Receiving Requirements
-      url: /explore_event_publish_receive.html
-      output: web
+    # - title: Event Header Design
+      # url: /explore_event_header_design.html
+      # output: web
+    # - title: Bundle Structure
+      # url: /explore_bundle_structure.html
+      # output: web
+    # - title: Maternity-Record Events Model
+      # url: /explore_dch_events_model.html
+      # output: web
+    # - title: Event Publishing/Receiving Requirements
+      # url: /explore_event_publish_receive.html
+      # output: web
 
   - title: Bundles
     output: web,pdf
