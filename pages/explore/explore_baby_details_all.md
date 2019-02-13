@@ -3,7 +3,7 @@ title: Baby Details (person) Bundle
 keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar
-permalink: explore_assessment_scales_all.html
+permalink: explore_baby_details_all.html
 summary: "The FHIR profiles used for the Baby details (person) Bundle"
 ---
 
