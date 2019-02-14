@@ -3,7 +3,7 @@ title: Individual Requirements Bundle
 keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar
-permalink: explore_information_and_advice_given.html
+permalink: explore_information_and_advice_given_all.html
 summary: "The FHIR profiles used for the Information and advice given Bundle"
 ---
 
