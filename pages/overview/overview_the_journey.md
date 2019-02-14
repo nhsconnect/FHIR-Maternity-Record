@@ -11,4 +11,4 @@ summary: The journey outlines the approach of developing FHIR profiles for Mater
 
 ## Profile journey ##
 
-The initial focus of the profiling for Maternity Record is to use CareConnect level 2 profiles with explicit guidance on how to create the necessary FHIR structures.
+The initial focus of the profiling for Maternity Record is to use CareConnect level 2 profiles with explicit guidance on how to create the necessary FHIR structures which make up the Maternity Record.
