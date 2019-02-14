@@ -49,7 +49,7 @@ entries:
     output: web,pdf
     folderitems:
     - title: Overview
-      url: /explore_headings.html
+      url: /explore_headings_overview.html
       output: web
       type: homepage
       subfolders:
