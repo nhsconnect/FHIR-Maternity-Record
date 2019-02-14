@@ -7,6 +7,8 @@ permalink: explore_attendance_details_all.html
 summary: "The FHIR profiles used for the Attendance details Bundle"
 ---
 
+## Heading Description ##
+The details of the woman’s contact with services.
 
 ## Mapping for Bundle ##
 

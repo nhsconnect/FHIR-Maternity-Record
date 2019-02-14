@@ -7,6 +7,8 @@ permalink: explore_demographic_history_all.html
 summary: "The FHIR profiles used for the Demographic history Bundle"
 ---
 
+## Heading Description ##
+This heading holds all of the elements for each instance of a patient demographics history as provided by the PDS previous demographic history flag.
 
 ## Mapping for Bundle ##
 

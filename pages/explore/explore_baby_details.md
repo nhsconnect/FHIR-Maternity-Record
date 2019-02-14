@@ -6,6 +6,8 @@ sidebar: foundations_sidebar
 permalink: explore_baby_details.html
 summary: "The FHIR profiles used for the Baby details (person) Bundle"
 ---
+## Heading Description ##
+Birth details of the baby.
 
 ## Mapping for Bundle ##
 

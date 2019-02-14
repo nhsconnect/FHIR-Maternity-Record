@@ -7,6 +7,8 @@ permalink: explore_admission_details_all.html
 summary: "The FHIR profiles used for the Admission Details Bundle"
 ---
 
+## Heading Description ##
+The details of the woman’s admission.
 
 ## Mapping for Bundle ##
 

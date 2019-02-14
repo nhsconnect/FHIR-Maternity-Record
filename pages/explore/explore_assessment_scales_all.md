@@ -6,6 +6,8 @@ sidebar: foundations_sidebar
 permalink: explore_assessment_scales_all.html
 summary: "The FHIR profiles used for the Admission Details Bundle"
 ---
+## Heading Description ##
+Details of the woman’s assessment scales.
 
 
 ## Mapping for Bundle ##

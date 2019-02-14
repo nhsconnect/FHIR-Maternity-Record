@@ -7,6 +7,8 @@ permalink: explore_allergies_and_adverse_reactions.html
 summary: "The FHIR profiles used for the Allergies and Adverse Reactions Bundle"
 ---
 
+## Heading Description ##
+The details of any known allergies, intolerances or adverse reactions.
 
 ## Mapping for Bundle ##
 
