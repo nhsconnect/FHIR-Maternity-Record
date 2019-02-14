@@ -1,5 +1,5 @@
 ---
-title: Individual Requirements Bundle
+title: Information and Advice Given Bundle
 keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar

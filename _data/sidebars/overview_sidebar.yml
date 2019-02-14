@@ -113,8 +113,8 @@ entries:
         - title: Medication and medical devices
           url: /explore_medication.html
           output: web 
-        - title: Medication History
-          url: /explore_medication_history.html
+        - title: Medical History
+          url: /explore_medical_history.html
           output: web
         - title: Observations
           url: /explore_observations.html
