@@ -8,7 +8,7 @@ summary: "The FHIR profiles used for the Patient demographics Bundle"
 ---
 
 ## Heading Description ##
-The record of physiological observations, e.g., weight, height, heart rate, blood pressure, temperature, pulse, respiratory rate and oxygen saturation. Use of National Early Warning Score (NEWS) scores where appropriate. 
+This heading holds all of the elements for each instance of a patient demographics entry.
 
 ## Mapping for Bundle ##
 
