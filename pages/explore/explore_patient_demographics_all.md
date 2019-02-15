@@ -3,7 +3,7 @@ title: Patient Demographics Bundle
 keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar
-permalink: explore_patient_demographics.html
+permalink: explore_patient_demographics_all.html
 summary: "The FHIR profiles used for the Patient demographics Bundle"
 ---
 
