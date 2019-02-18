@@ -4,11 +4,11 @@ keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_pregnancy_episode_all.html
-summary: "The FHIR profiles used for the Pregnancy outcome and birth Bundle"
+summary: "The FHIR profiles used for the Pregnancy episode details Bundle"
 ---
 
 ## Heading Description ##
-Details of a pregnancy outcome and birth.
+The details of the pregnancy episode status.
 
 ## Mapping for Bundle ##
 
