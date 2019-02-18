@@ -195,9 +195,6 @@ entries:
     - title: About
       url: /support_about.html
       output: web
-    - title: CareConnect FHIR Profiles
-      url: /support_careconnect.html
-      output: web
       subfolders:
       - title: Where Else Can I Look?
         output: web
