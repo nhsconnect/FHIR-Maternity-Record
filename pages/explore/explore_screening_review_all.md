@@ -3,7 +3,7 @@ title: Screening Review Bundle
 keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar
-permalink: explore_screening_review.html
+permalink: explore_screening_review_all.html
 summary: "The FHIR profiles used for the Screening review Bundle"
 ---
 
