@@ -1,14 +1,14 @@
 ---
-title: Safety Alerts Bundle
+title: Scan Details Bundle
 keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar
-permalink: explore_safety_alerts.html
-summary: "The FHIR profiles used for the Safety alerts Bundle"
+permalink: explore_scan_details.html
+summary: "The FHIR profiles used for the Scan details Bundle"
 ---
 
 ## Heading Description ##
-Details of the concern, risk or issues in relation to safeguarding.
+The details of any scan performed.
 
 ## Mapping for Bundle ##
 
