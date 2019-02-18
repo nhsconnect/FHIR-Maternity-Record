@@ -3,7 +3,7 @@ title: Safeguarding Bundle
 keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar
-permalink: explore_safeguarding.html
+permalink: explore_safeguarding_all.html
 summary: "The FHIR profiles used for the Safeguarding Bundle"
 ---
 
