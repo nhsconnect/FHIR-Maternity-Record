@@ -3,7 +3,7 @@ title: Pregnancy Episode Details Bundle
 keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar
-permalink: explore_pregnancy_episode_details_all.html
+permalink: explore_pregnancy_episode_all.html
 summary: "The FHIR profiles used for the Pregnancy outcome and birth Bundle"
 ---
 
