@@ -14,4 +14,4 @@ Details of a pregnancy outcome and birth.
 
 |>|Level 1|[Bundle Resource](http://hl7.org/fhir/stu3/bundle.html)|>|Level 2| None|>|Level 3|[NHSD-Bundle-1 Profile](http://xxx)|
 
-|**View All FHIR Elements**|    |**[View Used Elements Only](explore_pregnancy_episode_details.html#mapping-for-bundle)**| 
+|**View All FHIR Elements**|    |**[View Used Elements Only](explore_pregnancy_episode.html#mapping-for-bundle)**| 
