@@ -195,12 +195,12 @@ entries:
     - title: About
       url: /support_about.html
       output: web
-      subfolders:
-      - title: Where Else Can I Look?
-        output: web
-        subfolderitems:
-        - title: FHIR Tools
-          url: /support_fhirtools.html
-          output: web
+      # subfolders:
+      # - title: Where Else Can I Look?
+        # output: web
+        # subfolderitems:
+        # - title: FHIR Tools
+          # url: /support_fhirtools.html
+          # output: web
 
 
