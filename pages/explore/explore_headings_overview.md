@@ -3,7 +3,7 @@ title: Bundle Structure Overview
 keywords:  bundle
 tags: [fhir,bundles]
 sidebar: foundations_sidebar
-permalink: explore_headings.html
+permalink: explore_headings_overview.html
 summary: "Overview of the Bundle Structure Used for the Maternity Record"
 ---
 
