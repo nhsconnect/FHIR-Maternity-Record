@@ -40,4 +40,23 @@ This column contains the resource name and nested below the FHIR resource elemen
 
 **-** level 1
 **- -** level 2
-***- - -** level 3 etc etc
+**- - -** level 3 etc etc
+
+The elements are shown as per the NHS Digital FHIR server rendering and may not include every child element.
+
+### Card ###
+This is the cardinally of the element from a business perspective and may be tighter than the CareConnect profile. To follow constraint rules it will never be less constrained than the CareConnect profile.
+
+### Conformance ###
+This is conformance of FHIR element from the business perspective. It is either mandatory, required or optional these are defined as below:
+
+-  Mandatory - The FHIR element MUST contain a value - Note the business may allow values such as "not known" or " no information" these allows value will be documented in the Constraints and mapping column.
+-  Required - The sender MUST include the information or alternative values as defined by the business use case.
+-  Optional - This element may be populated or not dependant on the sending system's capability.
+
+**Note**: These are the default behaviours which may vary from use case to use case. Any variation will be documented in the relevant specification.  
+
+### Type ###
+This is the type of element as defined by the FHIR standard. The type will link to the releveant page in hte correct version of the FHIR standard.
+
+ 
