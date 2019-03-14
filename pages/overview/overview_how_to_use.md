@@ -63,6 +63,6 @@ This is the type of element as defined by the FHIR standard. The type will link 
 This column provides various information as below:
 - The annotation for the FHIR element as contained in the FHIR profile - this appear in black
 - Additional constraints and guidance for population of the FHIR element - this appears in red
-- The mapping to the business data item - this appears in red bold 
+- The mapping to the business data item - this appears in red bold for example <b><font color=red>Maps to Patient national identifier</font></b> where there is no mapping for example where the FHIR element is structural it will say <b><font color=red>FHIR structural element</font></b> 
 
  
