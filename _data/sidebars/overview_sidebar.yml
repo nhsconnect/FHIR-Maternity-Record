@@ -12,6 +12,9 @@ entries:
       url: /index.html
       output: web, pdf
       type: homepage
+    - title: How to use this specification
+      url: /overview_how_to_use.html
+      output: web
     - title: The Journey
       url: /overview_the_journey.html
       output: web

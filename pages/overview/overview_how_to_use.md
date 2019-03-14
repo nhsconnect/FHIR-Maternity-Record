@@ -3,7 +3,7 @@ title: About this specification.
 keywords:  bundles
 tags: [fhir]
 sidebar: foundations_sidebar
-permalink: overview_about.html
+permalink: overview_how_to_use.html
 summary: "How to use this specification"
 ---
 
