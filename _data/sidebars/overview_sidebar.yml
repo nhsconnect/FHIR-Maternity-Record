@@ -48,7 +48,7 @@ entries:
       # url: /explore_event_publish_receive.html
       # output: web
 
-  - title: Bundles
+  - title: PRSB Headings
     output: web,pdf
     folderitems:
     - title: Overview
