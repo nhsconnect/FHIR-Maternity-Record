@@ -20,5 +20,5 @@ Developed and supported by midwives, clinicians and other professionals, the wor
 
 This initial implementation guidance covers the first phase of the project and its focus is to specify the structure of the Maternity Record using the various FHIR resources. Further phases will cover other elements such as how to locate and query the Maternity Record. 
 
-{% include important.html content="This site is under active development by NHS Digital and is intended to provide the FHIR Bundle specification for the Maternity-Record. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis. Changes to this specification following the initial beta release will be documented in the [Release Notes](overview_release_notes.html) section." %}
+{% include important.html content="This site is under active development by NHS Digital and is intended to provide the FHIR Bundle specification for the Maternity-Record. This project is being developed using an agile methodology so iterative updates to content will be added on a regular basis. Changes to this specification following the initial experimental releases will be documented in the [Release Notes](overview_release_notes.html) section." %}
  
