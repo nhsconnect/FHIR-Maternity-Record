@@ -23,12 +23,12 @@ The following profiles are referenced from the Admission details list structure:
 
 - [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
 
-## Admission details structure ##
+## Admission Details Structure ##
 
 {% include custom/admission_details.svg %}
 
 
-##  data item mapping to FHIR profiles ##
+## Maternity Data Set Mapping to FHIR profiles ##
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data set.
 
