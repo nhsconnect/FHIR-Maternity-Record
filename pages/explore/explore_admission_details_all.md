@@ -25,7 +25,7 @@ The following profiles are referenced from the Admission details list structure:
 
 ## Admission details structure ##
 
-{% include custom/admission_details.svg %}
+{% include images/admission_details.svg %}
 
 
 ##  data item mapping to FHIR profiles ##
