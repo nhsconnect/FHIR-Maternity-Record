@@ -37,32 +37,32 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
 
-|**[View Used FHIR Elements]**|**[View All FHIR Elements](explore_admission_details.html#mapping-for-list)**|
+|**[View Used FHIR Elements]**|**[View All FHIR Elements](explore_admission_details.html#mapping-for-admission-details-list)**|
 
 ## Mapping for Admission Details Encounter ##
 
 |>|Level 1|[Encounter Resource](http://hl7.org/fhir/stu3/encounter.html)|>|Level 2|[CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|>|Level 3|None|
 
 
-|**[View Used FHIR Elements]**|**[View All FHIR Elements](explore_admission_details.html#mapping-for-encounter)**|
+|**[View Used FHIR Elements]**|**[View All FHIR Elements](explore_admission_details.html#mapping-for-admission-details-encounter)**|
 
 ## Mapping for Admission Details RelatedPerson ##
 
 |>|Level 1|[RelatedPerson Resource](http://hl7.org/fhir/stu3/relatedPerson.html)|>|Level 2|None|>|Level 3|None|
 
 
-|**[View Used FHIR Elements]**|**[View All FHIR Elements](explore_admission_details.html#mapping-for-relatedperson)**|
+|**[View Used FHIR Elements]**|**[View All FHIR Elements](explore_admission_details.html#mapping-for--admission-details-relatedperson)**|
 
 ## Mapping for Admission Details Practitioner ##
 
 |>|Level 1|[Practitioner Resource](http://hl7.org/fhir/stu3/practitioner.html)|>|Level 2|[CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)|>|Level 3|None|
 
 
-|**[View Used FHIR Elements](explore_admission_details.html#mapping-for-practitioner)**|**[View All FHIR Elements]**|
+|**[View Used FHIR Elements](explore_admission_details.html#mapping-for--admission-details-practitioner)**|**[View All FHIR Elements]**|
 
 ## Mapping for Admission Details PractitionerRole ##
 
 |>|Level 1|[Practitioner Resource](http://hl7.org/fhir/stu3/practitionerRole.html)|>|Level 2|[CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)|>|Level 3|None|
 
 
-|**[View Used FHIR Elements](explore_admission_details.html#mapping-for-practitionerrole)**|**[View All FHIR Elements]**|
+|**[View Used FHIR Elements](explore_admission_details.html#mapping-for--admission-details-practitionerrole)**|**[View All FHIR Elements]**|
