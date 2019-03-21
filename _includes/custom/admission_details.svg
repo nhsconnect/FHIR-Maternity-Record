@@ -159,7 +159,7 @@
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="24.9449" cy="290.963" width="49.89" height="23.5276"/>
 			<rect x="0" y="279.199" width="49.8898" height="23.5276" class="st6"/>
-			<text x="15.6" y="288.56" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
+			<text x="15.63" y="288.56" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>0..* R<v:newlineChar/><tspan
 						x="7.38" dy="1.2em" class="st3">entry.item </tspan> </text>		</g>
 		<g id="shape11-46" v:mID="11" v:groupContext="shape" transform="translate(338.332,-187.182)">
 			<title>0..1 R location</title>
