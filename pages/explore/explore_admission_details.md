@@ -106,26 +106,9 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - text | 0..1 | Required | String | Plain text representation of the concept<br/><font color='red'>This MAY be used where a suitable coded concept is not available to the sending system</font> |
 |  - - extension (admissionMethod) | 0..1 | Required | [Extension-CareConnect-AdmissionMethod-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1 "Extension-CareConnect-AdmissionMethod-1") | An extension to the Encounter resource to record how a Patient was admitted to hospital.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color='red'>An extension to the Encounter  resource</font><br/>See [Admission method extension](explore_admission_details.html#mapping-for-admission-details-admission-method-extension) for information on how to populate this extension to the resource.<br/><font color='red'>Mapping to Maternity data item = 'Reason for Admission'.</font>  |
 |  - location | 0..1 | Required | BackboneElement | List of locations where the patient has been |
-|  - - modifierExtension | 0..* | Not Used | Extension | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
 |  - - location | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Location the encounter takes place<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>The site code of the unit to which the person was admitted</font> |
 |   |  | Mandatory | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") | "<font color='red'>The location</font><br/>This MUST use the CareConnect Location profile. </font>See [Location resource](explore_admission_details.html#mapping-for-admission-details-location) for information on how to populate the resource." |
 |  - - - reference | 0..1 | Mandatory | String | "Persons involved in the encounter other than the patient<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This MUST be a reference to either the location resource</font>" |
-|  - - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
-|  - - - display | 0..1 | Not Used | String | Text alternative for the resource |
-|  - - status | 0..1 | Not Used | Code | planned : active : reserved : completed<br/>Binding (required): The status of the location. [EncounterLocationStatus](http://hl7.org/fhir/stu3/valueset-encounter-location-status.html) |
-|  - - period | 0..1 | Not Used | Period | Time period during which the patient was present at the location<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
-|  - - - start | 0..1 | Not Used | dateTime | Starting time with inclusive boundary |
-|  - - - end | 0..1 | Not Used | dateTime | End time with inclusive boundary, if not ongoing |
-|  - serviceProvider | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | The custodian organization of this Encounter record<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Not Used | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") |  |
-|  - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
-|  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
-|  - - display | 0..1 | Not Used | String | Text alternative for the resource |
-|  - partOf | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Another Encounter this encounter is part of<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Not Used | [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1 "CareConnect-Encounter-1") |  |
-|  - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
-|  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
-|  - - display | 0..1 | Not Used | String | Text alternative for the resource |
 
 
 
