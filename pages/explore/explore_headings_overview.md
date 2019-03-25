@@ -11,6 +11,12 @@ summary: "Overview of the Headings Used for the Maternity Record"
 
 This section details each of the PRSB headings used in the Maternity record and the FHIR structure for each heading.
 
+## The Headings Specified ##
+
+This specification is currently under development and the following PRSB Heading have so far been documented.
+- [Admission details](explore_admission_details.html)
+- [Patient demographics](explore_patient_demographics.html)
+
 ## PRSB Version Used ##
 
 This specification is based of the PRSB heading as uploaded: 2018-9-12 09:56:06
