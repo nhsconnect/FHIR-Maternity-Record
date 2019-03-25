@@ -226,10 +226,10 @@
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M-7.09 302.73 L-7.09 325.98" class="st4"/>
+			<path d="M-7.09 261.81 L-7.09 285.06" class="st4"/>
 		</g>
 		<g id="shape20-74" v:mID="20" v:groupContext="shape" v:layerMember="0" transform="translate(425.921,-205.289)">
-			<title>Dynamic connector.20</title>
+			<title>1..1 M Subject</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
