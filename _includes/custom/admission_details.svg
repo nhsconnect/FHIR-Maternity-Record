@@ -228,5 +228,20 @@
 			</v:userDefs>
 			<path d="M-7.09 302.73 L-7.09 325.98" class="st4"/>
 		</g>
+		<g id="shape20-74" v:mID="20" v:groupContext="shape" v:layerMember="0" transform="translate(425.921,-205.289)">
+			<title>Dynamic connector.20</title>
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 261.81 L29.49 261.81 L29.49 438.99 L-347.68 438.99 L-347.68 402.67" class="st4"/>
+		</g>
+		<g id="shape21-79" v:mID="21" v:groupContext="shape" transform="translate(434.148,-212.359)">
+			<title>Sheet.21</title>
+			<desc>1..1 M subject</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="24.9449" cy="250.043" width="49.89" height="23.5276"/>
+			<rect x="0" y="238.279" width="49.8898" height="23.5276" class="st6"/>
+			<text x="14.35" y="247.64" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>1..1 M<v:newlineChar/><tspan
+						x="12.96" dy="1.2em" class="st3">subject</tspan></text>		</g>
 	</g>
 </svg>
