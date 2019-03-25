@@ -188,3 +188,20 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - - display | 0..1 | Required | String | Representation defined by the system<br/><font color='red'>This MUST contain the display associated with the code</font> |
 |  - physicalType | 0..1 | Required | CodeableConcept | Physical form of the location<br/>Binding (example): Physical form of the location [LocationType](http://hl7.org/fhir/stu3/valueset-location-physical-type.html) |
 |  - - text | 0..1 | Required | String | Plain text representation of the concept<br/><font color='red'>This is the physical location of the person. E.g hospital ward, bed, theatre. For ambulatory care, eg, health centre, clinic, resource centre, person’s home maximum 150 characters</font><br/><br/><font color='red'><b>Maternity Date set mapping = 'Patient Location'</b></font> |
+
+## Mapping for Admission Details Extension Admission Method Extension ##
+
+explore_admission_details.html#mapping-for-admission-details-admission-method-extension
+
+|>|Level 1|[Extension](http://hl7.org/fhir/STU3/extensibility.html#Extension)|>|Level 2|[Extension-CareConnect-AdmissionMethod-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1)|>|Level 3|None|
+
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_admission_details_all.html#mapping-for-admission-details-location)**|
+
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description/Constraints** |
+| :--- | :--- | --- | :--- | :--- |
+|  Extension | ​ |  |  | **An extension to the Encounter resource to record how a Patient was admitted to hospital.<br/>Constraint (ele-1): All FHIR elements must have a @value or children<br/>Constraint (ext-1): Must have either extensions or value[x], not both** |
+|  - id | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | **xml:id (or equivalent in JSON)** |
+|  - url | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | **Identifies The Meaning Of The Extension Fixed Value='https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1'** |
+|  - valueCodeableConcept | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | **The method of admission to a Hospital Provider Spell.<br/>Binding (required): The method of admission to a Hospital Provider Spell. [Admission Method](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdmissionMethod-1 )** |
