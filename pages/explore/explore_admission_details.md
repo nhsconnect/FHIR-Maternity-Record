@@ -122,12 +122,14 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 |>|Level 1|[RelatedPerson Resource](http://hl7.org/fhir/stu3/relatedPerson.html)|>|Level 2|None|>|Level 3|None|
 
-
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | --- | --- | --- | --- | --- |
 |  RelatedPerson | ​ |  |  | An person that is related to a patient, but who is not a direct target of care<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1'</font> |
+|  - patient | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | The patient this person is related to<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
 |  - relationship | 0..1 | Optional | CodeableConcept | The nature of the relationship<br/>Binding (preferred): The nature of the relationship between a patient and the related person [PatientRelationshipType](http://hl7.org/fhir/stu3/valueset-relatedperson-relationshiptype.html) |
 |  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system |
 |  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>This SHOULD contain the value 'http://hl7.org/fhir/stu3/valueset-relatedperson-relationshiptype' if the preferred codeSystem is used.</font>  |
