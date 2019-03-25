@@ -1,17 +1,13 @@
 ---
-title: Bundle Structure Overview
+title: Headings Overview
 keywords:  bundle
 tags: [fhir,bundles]
 sidebar: foundations_sidebar
 permalink: explore_headings_overview.html
-summary: "Overview of the Bundle Structure Used for the Maternity Record"
+summary: "Overview of the Headings Used for the Maternity Record"
 ---
 
-**Bundle Structure Overview Diagram**
+## Introduction ##
 
-This diagram illustrates the way the PRSB headings are structured using the FHIR List resource within the FHIR Bundle resource.
-
-<a href="images/explore/maternity_bundle_overview.pdf" target="_blank" style="width: 100%;max-width: 100%;"><b>Click to open in a new window</b></a>
-
-<img src="images/explore/maternity_bundle_overview.png" style="width: auto %;height: auto%;"/>
+This section details each of the PRSB headings used in the Maternity record and the FHIR structure for each heading.
 
