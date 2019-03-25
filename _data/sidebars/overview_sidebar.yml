@@ -32,7 +32,7 @@ entries:
     output: web,pdf
     folderitems:
     - title: Overview
-      url: /explore.html
+      url: /explore_overview.html
       output: web
       type: homepage
     # - title: Event Header Design
