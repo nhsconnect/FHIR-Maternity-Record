@@ -1,10 +1,10 @@
 ---
-title: Admission Details Bundle
-keywords:  bundles
+title: Admission Details List
+keywords:  lists
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_admission_details.html
-summary: "The FHIR profiles used for the Admission Details Bundle"
+summary: "The FHIR profiles used for the Admission Details List Structure"
 ---
 
 ## Heading Description ##
