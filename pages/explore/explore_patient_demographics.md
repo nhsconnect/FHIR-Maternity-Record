@@ -36,7 +36,6 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_patient_demographics_all.html#mapping-for-patient-demographics-list)**|
 
-
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
 |  List | ​ |  |  | Information summarized from a list of other resources<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource<br/>Constraint (lst-2): The deleted flag can only be used if the mode of the list is "changes"<br/>Constraint (lst-1): A list can only have an emptyReason if it is empty |
@@ -55,7 +54,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system<br/><font color='red'>This MUST contain the value '886731000000109'</font> |
 |  - - - display | 0..1 | Mandatory | String | Representation defined by the system<br/><font color='red'>This MUST contain the value 'Patient demographics'</font><br/><font color='red'>Mapping to Maternity data item = 'PSRB Heading Patient demographics'</font>  |
 |  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color='red'>This is the subject of the Patient demgraphics List.<br/>This MUST use the CareConnect patient profile. </font>See [patient resource](explore_patient_demographics.html#mapping-for-patient-demopgraphics-patient) for information on how to populate the resource. |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color='red'>This is the subject of the Patient demographics List.<br/>This MUST use the CareConnect patient profile. </font><br/>See [Patient resource](explore_patient_demographics.html#mapping-for-patient-demographics-patient) for information on how to populate the resource. |
 |  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - date | 0..1 | Mandatory | dateTime | When the list was prepared<br/><font color='red'> This MUST contain a system date to indicate when the list created or updated</font> |
 |  - note | 0..* | Optional | Annotation | Comments about the list |
@@ -64,8 +63,8 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - text | 1..1 | Required | String | The annotation - text content |
 |  - entry | 0..* | Mandatory | BackboneElement | Entries in the list<br/><font color='red'>The entries MUST be as per the diagram for this PRSB headings list with the Observation resource being the focal resource.</font> |
 |  - - date | 0..1 | Required | dateTime | When item added to list<br/><font color='red'>The SHOULD contain a system time of when the item was added to the list.</font> |
-|  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to an Observation resource included in the list<br/>This MUST use the CareConnect Observation profile. </font>See [Observation resource](explore_patient_demographics.html#mapping-for-observation) for information on how to populate the resource. |
-|  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included Observation resource.</font> 
+|  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to an Observation resource included in the list<br/>This MUST use the CareConnect Observation profile. </font><br/>See [Observation resource](explore_patient_demographics.html#mapping-for-patient-demograhics-observation) for information on how to populate the resource. |
+|  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included Observation resource.</font> |
 
 ## Mapping for Patient Demographics Patient ##
 
@@ -123,7 +122,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_patient_demographics_all.html#mapping-for-patient-demographics-list)**|
 
-|  **FHIR Element Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
 |  Observation | ​ |  |  | Measurements and simple assertions<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource<br/>Constraint (obs-7): If code is the same as a component code then the value element associated with the code SHALL NOT be present<br/>Constraint (obs-6): dataAbsentReason SHALL only be present if Observation.value[x] is not present |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
