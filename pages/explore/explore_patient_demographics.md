@@ -137,3 +137,14 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |   |  | Mandatory | CodeableConcept | The system element MUST contain the identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
 |   |  |  |  | The code element MUST contain the symbol in syntax defined by the system<br/><font color='red'>This MUST contain the value '248152002'</font> |
 |   |  |  |  | The display element MUST contain the representation defined by the system<br/><font color='red'>This MUST contain the value 'Female'</font> |
+
+## Mapping for Patient Demographics Extension Ethnic category ##
+
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
+| :--- | :--- | --- | :--- | :--- |
+|  Extension | ​ |  |  | Ethnic category<br/>Constraint (ele-1): All FHIR elements must have a @value or children<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
+|  - id | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | xml:id (or equivalent in JSON) |
+|  - url | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identifies The Meaning Of The Extension<br/>Fixed Value = 'https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-EthnicCategory-1' |
+|  - valueCodeableConcept | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | A code classifying the person's ethnicity<br/>Binding (required): A code classifying the person's ethnicity. (https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EthnicCategory-1 ) |
