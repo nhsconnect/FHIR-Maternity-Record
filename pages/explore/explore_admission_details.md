@@ -191,7 +191,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - physicalType | 0..1 | Required | CodeableConcept | Physical form of the location<br/>Binding (example): Physical form of the location [LocationType](http://hl7.org/fhir/stu3/valueset-location-physical-type.html) |
 |  - - text | 0..1 | Required | String | Plain text representation of the concept<br/><font color='red'>This is the physical location of the person. E.g hospital ward, bed, theatre. For ambulatory care, eg, health centre, clinic, resource centre, person’s home maximum 150 characters</font><br/><br/><font color='red'><b>Maternity Date set mapping = 'Patient Location'</b></font> |
 
-## Mapping for Admission Details Extension Admission Method Extension ##
+## Mapping for Admission Details Admission Method Extension ##
 
 explore_admission_details.html#mapping-for-admission-details-admission-method-extension
 
