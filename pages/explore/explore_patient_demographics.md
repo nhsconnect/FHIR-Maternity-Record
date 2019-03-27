@@ -148,3 +148,14 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - id | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | xml:id (or equivalent in JSON) |
 |  - url | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identifies The Meaning Of The Extension<br/>Fixed Value = 'https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-EthnicCategory-1' |
 |  - valueCodeableConcept | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | A code classifying the person's ethnicity<br/>Binding (required): A code classifying the person's ethnicity.[CareConnect-EthnicCategory-1] (https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-EthnicCategory-1) |
+
+## Mapping for Patient Demographics Extension Religious Affiliation ##
+
+|>|Level 1|[Extension](http://hl7.org/fhir/stu3/extension.html)|>|Level 2|[CareConnect-ReligiousAffiliation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReligiousAffiliation-1)|>|Level 3|None|
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
+| :--- | :--- | --- | :--- | :--- |
+|  Extension | ​ |  |  | Religious affiliation<br/>Constraint (ele-1): All FHIR elements must have a @value or children<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
+|  - id | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | xml:id (or equivalent in JSON) |
+|  - url | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identifies The Meaning Of The Extension<br/>Fixed Value = 'https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReligiousAffiliation-1' |
+|  - valueCodeableConcept | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | A code classifying the person's ethnicity<br/>Binding (required): A code classifying the person's ethnicity.[CareConnect-ReligiousAffiliation-1] (https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReligiousAffiliation-1) |
