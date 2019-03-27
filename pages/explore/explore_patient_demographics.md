@@ -100,7 +100,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - value | 1..1 | Required | String | The actual contact point details |
 |  - - use | 0..1 | Required | Code | home : work : temp : old : mobile - purpose of this contact point<br/>Binding (required): Use of contact point [ContactPointUse](http://hl7.org/fhir/stu3/valueset-contact-point-use.html) |
 |  - - rank | 0..1 | Required | positiveInt | Specify preferred order of use (1 = highest) |
-|  - gender | 0..1 | Required | Code | male : female : other : unknown<br/>Binding (required): The gender of a person used for administrative purposes. [CareConnect-AdministrativeGender-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdministrativeGender-1)<br/><font color='red'>As the patient wishes to portray themselves.</font><br/><font color='red'><b>Mapping to Maternity data item = 'Gender'</font>  |
+|  - gender | 0..1 | Required | Code | male : female : other : unknown<br/>Binding (required): The gender of a person used for administrative purposes. [CareConnect-AdministrativeGender-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdministrativeGender-1)<br/><font color='red'>As the patient wishes to portray themselves.</font><br/><font color='red'><b>Mapping to Maternity data item = 'Gender'</b></font>  |
 |  - birthDate | 0..1 | Required | Date | The date of birth for the individual<br/><font color='red'><b>Mapping to Maternity data item ='Date of Birth'</b></font>  |
 |  - deceased[x] | 0..1 | Required | Boolean | Indicates if the individual is deceased or not |
 |   |  | Required | dateTime | The date and time when the patient died<br/><font color='red'><b>Mapping to Maternity data item = 'Date of Death and Time of Date'</b></font>  |
