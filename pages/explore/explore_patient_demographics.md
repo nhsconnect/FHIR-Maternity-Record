@@ -140,7 +140,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 ## Mapping for Patient Demographics Extension Ethnic category ##
 
-|>|Level 1|[Extension](http://hl7.org/fhir/stu3/extension.html)|>|Level 2|[CareConnect-EthnicCategory-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-EthnicCategory-1)|>|Level 3|None|
+|>|Level 1|[Extension](http://hl7.org/fhir/stu3/extension.html)|>|Level 2|[CareConnect-EthnicCategory-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-EthnicCategory-1)|>|Level 3|None|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | --- | :--- | :--- |
@@ -151,7 +151,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 ## Mapping for Patient Demographics Extension Religious Affiliation ##
 
-|>|Level 1|[Extension](http://hl7.org/fhir/stu3/extension.html)|>|Level 2|[CareConnect-ReligiousAffiliation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReligiousAffiliation-1)|>|Level 3|None|
+|>|Level 1|[Extension](http://hl7.org/fhir/stu3/extension.html)|>|Level 2|[CareConnect-ReligiousAffiliation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReligiousAffiliation-1)|>|Level 3|None|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | --- | :--- | :--- |
