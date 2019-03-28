@@ -166,8 +166,6 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - suffix | 0..* | Optional | String | Parts that come after the name |
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_admission_details_all.html#mapping-for-admission-details-practitionerrole)**|
-
 ## Mapping for Admission Details Location ##
 
 |>|Level 1|[Location Resource](http://hl7.org/fhir/stu3/location.html)|>|Level 2|[CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)|>|Level 3|None|
