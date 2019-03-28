@@ -713,3 +713,22 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
 |  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
 |  - - display | 0..1 | Not Used | String | Text alternative for the resource |
+
+
+## Mapping for Admission Details Admission Method Extension ##
+
+|>|Level 1|[Extension](http://hl7.org/fhir/STU3/extensibility.html#Extension)|>|Level 2|[Extension-CareConnect-AdmissionMethod-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1)|>|Level 3|None|
+
+
+|**[View Used FHIR Elements](explore_admission_details.html#mapping-for-admission-details-location)**|**View All FHIR Elements**|
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
+| :--- | :--- | --- | :--- | :--- |
+|  Extension | ​ |  |  | An extension to the Encounter resource to record how a Patient was admitted to hospital.<br/>Constraint (ele-1): All FHIR elements must have a @value or children<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
+|  - id | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | xml:id (or equivalent in JSON) |
+|  - url | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identifies The Meaning Of The Extension Fixed Value = 'https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1' |
+|  - valueCodeableConcept | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | The method of admission to a Hospital Provider Spell.<br/>Binding (required): The method of admission to a Hospital Provider Spell. <br/>[Admission Method](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AdmissionMethod-1 ) |
+
+## Admission Details Heading Example ##
+
+<script src="https://gist.github.com/IOPS-DEV/9d51ee5528e59b70da255468c3da5413.js"></script>
