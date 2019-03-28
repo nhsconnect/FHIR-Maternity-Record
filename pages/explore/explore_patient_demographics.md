@@ -159,3 +159,8 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - id | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | xml:id (or equivalent in JSON) |
 |  - url | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identifies The Meaning Of The Extension<br/>Fixed Value = 'https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-ReligiousAffiliation-1' |
 |  - valueCodeableConcept | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | A code classifying the person's religious affiliation<br/>Binding (required): A code classifying the person's ethnicity.[CareConnect-ReligiousAffiliation-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReligiousAffiliation-1) |
+
+
+## Patient Demographics Heading Example ##
+
+<script src="https://gist.github.com/unicorn150161/49dada9bdc39ec0c1a32bc85385e7fb2.js"></script>
