@@ -36,7 +36,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
 
-|**[View Used FHIR Elements](explore_admission_details_all.html#mapping-for-admission-details-list)**|**[View All FHIR Elements]**|
+|**[View Used FHIR Elements](explore_admission_details.html#mapping-for-admission-details-list)**|**[View All FHIR Elements]**|
 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
@@ -420,7 +420,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |>|Level 1|[RelatedPerson Resource](http://hl7.org/fhir/stu3/relatedPerson.html)|>|Level 2|None|>|Level 3|None|
 
 
-|**[View Used FHIR Elements](explore_admission_details_all.html#mapping-for-admission-details-relatedperson)**|**[View All FHIR Elements]**|
+|**[View Used FHIR Elements](explore_admission_details.html#mapping-for-admission-details-relatedperson)**|**[View All FHIR Elements]**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | --- | --- | --- | --- | --- |
