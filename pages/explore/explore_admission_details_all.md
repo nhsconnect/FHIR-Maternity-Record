@@ -720,7 +720,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |>|Level 1|[Extension](http://hl7.org/fhir/STU3/extensibility.html#Extension)|>|Level 2|[Extension-CareConnect-AdmissionMethod-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1)|>|Level 3|None|
 
 
-|**[View Used FHIR Elements](explore_admission_details.html#mapping-for-admission-details-location)**|**View All FHIR Elements**|
+|**[View Used FHIR Elements](explore_admission_details.html#mapping-for-admission-details-admission-method-extension)**|**View All FHIR Elements**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | --- | :--- | :--- |
