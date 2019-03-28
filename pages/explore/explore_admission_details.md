@@ -209,4 +209,4 @@ explore_admission_details.html#mapping-for-admission-details-admission-method-ex
 
 ## Admission Details Heading Example ##
 
-<script src="https://gist.github.com/unicorn150161/3fd81ce52eca692a5dd52542565a4fbc.js"></script> 
+<script src="https://gist.github.com/IOPS-DEV/9d51ee5528e59b70da255468c3da5413.js"></script>
