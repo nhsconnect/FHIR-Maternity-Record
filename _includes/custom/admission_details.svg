@@ -207,7 +207,7 @@
 			</v:userDefs>
 			<path d="M7.06 244.1 L7.06 254.73 L7.12 254.73 L7.12 272.22" class="st4"/>
 		</g>
-		<a xlink:href="explore_patient_demographics.html#mapping-for-patient-demographics-patient">
+		<a xlink:href="explore_admission_details.html#patient-reference">
 			<g id="shape35-74" v:mID="35" v:groupContext="shape" transform="translate(18.12,-48.2955)">
 				<title>Reference to Patient resource</title>
 				<desc>Reference to Patient resource</desc>

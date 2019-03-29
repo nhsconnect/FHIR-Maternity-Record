@@ -1,19 +1,34 @@
 ---
-title: Allergies and Adverse Reactions Event Bundle
-keywords:  messaging, bundles
+title: Allergies and Adverse Reactions List
+keywords:  Lists
 tags: [fhir,messaging]
 sidebar: foundations_sidebar
 permalink: explore_allergies_and_adverse_reactions_all.html
-summary: "The FHIR profiles used for the Allergies and Adverse Reactions Bundle"
+summary: "The FHIR profiles used for the Allergies and Adverse Reactions list"
 ---
 
 ## Heading Description ##
 The details of any known allergies, intolerances or adverse reactions.
 
-## Mapping for Bundle ##
+The following FHIR profiles are used to form the Allergies and reactions list structure:
 
-|>|Level 1|[Bundle Resource](http://hl7.org/fhir/stu3/bundle.html)|>|Level 2| None|>|Level 3|[NHSD-Bundle-1 Profile](http://xxx)|
+- [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
+- [CareConnect-AllergyIntolerance-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1)
 
-|**View All FHIR Elements**|    |**[View Used Elements Only](explore_allergies_and_adverse_reactions.html#mapping-for-bundle)**| 
+The following profiles are referenced from the Allergies and reactions list structure:
+
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+
+## Allergies and Adverse Reactions List Structure ##
+
+{% include custom/allergy.svg %}
+
+## Maternity data standard Mapping to FHIR profiles ##
+
+The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
+
+## Mapping for Allergies and Adverse Reactions List ##
+
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
 

@@ -145,6 +145,9 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - - userSelected | 0..1 | Not Used | Boolean | If this coding was chosen directly by the user |
 |  - - text | 0..1 | Not Used | String | Plain text representation of the concept |
 
+## Patient Reference ##
+
+The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
 ## Mapping for Admission Details Encounter ##
 
