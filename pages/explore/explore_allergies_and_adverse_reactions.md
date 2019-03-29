@@ -33,6 +33,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_allergies_and_adverse_reactions_all.html#mapping-for-allergies-and-adverse-reactions-list)**|
 
+
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
 |  List | ​ |  |  | Information summarized from a list of other resources<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource<br/>Constraint (lst-2): The deleted flag can only be used if the mode of the list is "changes"<br/>Constraint (lst-1): A list can only have an emptyReason if it is empty |
