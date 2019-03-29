@@ -22,9 +22,11 @@ The following profiles are referenced from the Allergies and reactions list stru
 ## Allergies and Adverse Reactions List Structure ##
 
 
+## Patient Reference ##
 
+The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
-## Maternity data standard Mapping to FHIR profiles ##
+## Maternity Data Standard Mapping to FHIR profiles ##
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 

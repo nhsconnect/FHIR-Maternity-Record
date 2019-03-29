@@ -27,7 +27,7 @@ The following profiles are referenced from the Admission details list structure:
 {% include custom/admission_details.svg %}
 
 
-## Maternity data standard Mapping to FHIR profiles ##
+## Maternity Data Standard Mapping to FHIR profiles ##
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
