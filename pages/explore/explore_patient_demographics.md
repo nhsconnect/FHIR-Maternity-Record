@@ -120,7 +120,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_patient_demographics_all.html#mapping-for-patient-demographics-list)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_patient_demographics_all.html#mapping-for-patient-demographics-observation)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
