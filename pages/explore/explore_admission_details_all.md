@@ -27,9 +27,9 @@ The following profiles are referenced from the Admission details list structure:
 {% include custom/admission_details.svg %}
 
 
-## Maternity Data Set Mapping to FHIR profiles ##
+## Maternity data standard Mapping to FHIR profiles ##
 
-The following tables detail how to populate the FHIR resources and the mapping to the Maternity data set.
+The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
 ## Mapping for Admission Details List ##
 
@@ -338,7 +338,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
 |  - - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
 |  - - - display | 0..1 | Not Used | String | Text alternative for the resource |
-|  - - admitSource | 0..1 | Required | CodeableConcept | From where patient was admitted (physician referral, transfer)<br/>Binding (preferred): The source of admission to a Hospital Provider Spell or a Nursing Episode when the Patient is in a Hospital Site or a Care Home. [CareConnect-SourceOfAdmission-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-SourceOfAdmission-1)<br/><font color='red'><b>Maternity Data set mapping = 'Source of Admission'</b></font> |
+|  - - admitSource | 0..1 | Required | CodeableConcept | From where patient was admitted (physician referral, transfer)<br/>Binding (preferred): The source of admission to a Hospital Provider Spell or a Nursing Episode when the Patient is in a Hospital Site or a Care Home. [CareConnect-SourceOfAdmission-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-SourceOfAdmission-1)<br/><font color='red'><b>Maternity data standard mapping = 'Source of Admission'</b></font> |
 |  - - - coding | 0..1 | Required | Coding | Code defined by a terminology system |
 |  - - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system |
 |  - - - - version | 0..1 | Not Used | String | Version of the system - if relevant |
@@ -533,10 +533,10 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - extension (nhsCommunication) | 0..* | Not Used | [Extension-CareConnect-NHSCommunication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-NHSCommunication-1 "Extension-CareConnect-NHSCommunication-1") | **NHS communication preferences for a resource<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>** |
 |  - modifierExtension | 0..* | Not Used | Extension | **Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>Slicing: Description: Extensions are always sliced by (at least) url, Discriminator: url, Ordering: false, Rules: Open** |
 |  - identifier | 0..* | Mandatory | Identifier | A identifier for the person as this agent<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open at End |
-|  - identifier (sdsUserID) | 0..1 | Mandatory | Identifier | A identifier for the person as this agent<br/><font color='red'>This will be the clinicians SDS identifier (GMC code)</font><br/><font color='red'><b>Mapping to Maternity Data set = 'Responsible Clinician Identifier'.</b></font> |
+|  - identifier (sdsUserID) | 0..1 | Mandatory | Identifier | A identifier for the person as this agent<br/><font color='red'>This will be the clinicians SDS identifier (GMC code)</font><br/><font color='red'><b>Mapping to Maternity data standard = 'Responsible Clinician Identifier'.</b></font> |
 |  - - use | 0..1 | Not Used | Code | usual : official : temp : secondary (If known)<br/>Binding (required): Identifies the purpose for this identifier, if known. [IdentifierUse](http://hl7.org/fhir/stu3/valueset-identifier-use.html)<br/><font color='red'>This MUST contain the value 'offical'.</font> |
 |  - - type | 0..1 | Not Used | CodeableConcept | Description of identifier<br/>Binding (extensible): A coded type for an identifier that can be used to determine which identifier to use for a specific purpose. [Identifier Type Codes](http://hl7.org/fhir/stu3/valueset-identifier-type.html) |
-|  - - system | 1..1 | Mandatory | Uri | The namespace for the identifier value<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/Id/sds-user-id'</font><br/><font color='red'><b>Maternity data set mapping = ' |
+|  - - system | 1..1 | Mandatory | Uri | The namespace for the identifier value<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/Id/sds-user-id'</font><br/><font color='red'><b>Maternity data standard mapping = ' |
 |  - - value | 1..1 | Mandatory | String | The value that is unique<br/><font color='red'>This MUST contain the person's SDS user id</font> |
 |  - - period | 0..1 | Not Used | Period | **Time period when id is/was valid for use<br/>Constraint (per-1): If present, start SHALL have a lower value than end** |
 |  - - assigner | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | **Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided** |
@@ -552,7 +552,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - active | 0..1 | Not Used | Boolean | **Whether this practitioner's record is in active use<br/>Default Value: true** |
 |  - name | 0..* | Required | HumanName | The name(s) associated with the practitioner |
 |  - - use | 0..1 | Not Used | Code | **usual : official : temp : nickname : anonymous : old : maiden<br/>Binding (required): The use of a human name [NameUse](http://hl7.org/fhir/stu3/valueset-name-use.html)** |
-|  - - text | 0..1 | Required | String | Text representation of the full name<br/><font color='red'><b>Mapping to Maternity Data set = 'Responsible Clinician Name'.</b></font> |
+|  - - text | 0..1 | Required | String | Text representation of the full name<br/><font color='red'><b>Mapping to Maternity data standard = 'Responsible Clinician Name'.</b></font> |
 |  - - family | 0..1 | Optional | String | Family name (often called 'Surname') |
 |  - - given | 0..* | Optional | String | Given names (not always 'first'). Includes middle names |
 |  - - prefix | 0..* | Optional | String | Parts that come before the name |
@@ -637,7 +637,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - contained | 0..* | Not Used | Resource | **Contained, inline Resources** |
 |  - modifierExtension | 0..* | Not Used | Extension | **Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>Slicing: Description: Extensions are always sliced by (at least) url, Discriminator: url, Ordering: false, Rules: Open** |
 |  - identifier | 0..* | Not Used | Identifier | Unique code or number identifying the location to its users<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open at End |
-|  - identifier (odsSiteCode) | 0..1 | Required | Identifier | ODS Site code to identify the organisation at site level<br/><font color='red'>Site code of the unit to which the person was admitted</font> <br/><font color='red'><b>Maternity Data set mapping = 'ODS/ORD Site Code'</b></font> |
+|  - identifier (odsSiteCode) | 0..1 | Required | Identifier | ODS Site code to identify the organisation at site level<br/><font color='red'>Site code of the unit to which the person was admitted</font> <br/><font color='red'><b>Maternity data standard mapping = 'ODS/ORD Site Code'</b></font> |
 |  - - use | 0..1 | Not Used | Code | usual : official : temp : secondary (If known)<br/>Binding (required): Identifies the purpose for this identifier, if known. [IdentifierUse](http://hl7.org/fhir/stu3/valueset-identifier-use.html) |
 |  - - type | 0..1 | Not Used | CodeableConcept | Description of identifier<br/>Binding (extensible): A coded type for an identifier that can be used to determine which identifier to use for a specific purpose. [Identifier Type Codes](http://hl7.org/fhir/stu3/valueset-identifier-type.html) |
 |  - - system | 1..1 | Required | Uri | ODS Code<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/Id/ods-site-code'</font> |

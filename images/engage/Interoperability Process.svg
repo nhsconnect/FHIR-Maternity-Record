@@ -318,7 +318,7 @@
 		</g>
 		<g id="shape22-25" v:mID="22" v:groupContext="shape" v:layerMember="1" transform="translate(108.256,-19.25)">
 			<title>Process</title>
-			<desc>Identify Requirements and Data Sets</desc>
+			<desc>Identify Requirements and data standards</desc>
 			<v:custProps>
 				<v:cp v:nameU="Cost" v:lbl="Cost" v:prompt="" v:type="7" v:format="@" v:sortKey="" v:invis="false" v:ask="false"
 						v:langID="1033" v:cal="0"/>
@@ -348,7 +348,7 @@
 			<v:textRect cx="36" cy="119.5" width="72" height="54"/>
 			<rect x="0" y="92.5" width="72" height="54" class="st9"/>
 			<text x="23.59" y="112.3" class="st10" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Identify <tspan
-						x="4.81" dy="1.2em" class="st11">Requirements and </tspan><tspan x="19.51" dy="1.2em" class="st11">Data Sets</tspan></text>		</g>
+						x="4.81" dy="1.2em" class="st11">Requirements and </tspan><tspan x="19.51" dy="1.2em" class="st11">data standards</tspan></text>		</g>
 		<g id="shape24-32" v:mID="24" v:groupContext="shape" v:layerMember="1" transform="translate(217.25,-19.25)">
 			<title>Process.24</title>
 			<desc>Identify FHIR Resources and Care Connect Profiles</desc>

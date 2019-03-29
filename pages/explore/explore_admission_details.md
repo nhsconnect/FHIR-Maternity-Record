@@ -27,9 +27,9 @@ The following profiles are referenced from the Admission details list structure:
 {% include custom/admission_details.svg %}
 
 
-## Maternity Data Set Mapping to FHIR profiles ##
+## Maternity data standard Mapping to FHIR profiles ##
 
-The following tables detail how to populate the FHIR resources and the mapping to the Maternity data set.
+The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
 ## Mapping for Admission Details List ##
 
@@ -105,7 +105,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - text | 0..1 | Required | String | Plain text representation of the concept<br/><font color='red'>This MAY be used where a suitable coded concept is not available to the sending system</font> |
 |  - hospitalization | 0..1 | Required | BackboneElement | Details about the admission to a healthcare service |
 |  - - extension (admissionMethod) | 0..1 | Required | [Extension-CareConnect-AdmissionMethod-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-AdmissionMethod-1 "Extension-CareConnect-AdmissionMethod-1") | An extension to the Encounter resource to record how a Patient was admitted to hospital.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color='red'>An extension to the Encounter  resource</font><br/>See [Admission method extension](explore_admission_details.html#mapping-for-admission-details-admission-method-extension) for information on how to populate this extension to the resource.<br/><font color='red'><b>Mapping to Maternity data item = 'Reason for Admission'.</b></font>  |
-|  - - admitSource | 0..1 | Required | CodeableConcept | From where patient was admitted (physician referral, transfer)<br/>Binding (preferred): The source of admission to a Hospital Provider Spell or a Nursing Episode when the Patient is in a Hospital Site or a Care Home. [CareConnect-SourceOfAdmission-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-SourceOfAdmission-1)<br/><font color='red'><b>Maternity Data set mapping = 'Source of Admission'</b></font> |
+|  - - admitSource | 0..1 | Required | CodeableConcept | From where patient was admitted (physician referral, transfer)<br/>Binding (preferred): The source of admission to a Hospital Provider Spell or a Nursing Episode when the Patient is in a Hospital Site or a Care Home. [CareConnect-SourceOfAdmission-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-SourceOfAdmission-1)<br/><font color='red'><b>Maternity data standard mapping = 'Source of Admission'</b></font> |
 |  - - - coding | 0..1 | Required | Coding | Code defined by a terminology system |
 |  - - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system |
 |  - - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<br/><font color='red'>This MUST contain the value 'https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-SourceOfAdmission-1'</font> |
@@ -157,11 +157,11 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Practitioner-1'</font> |
 |  - identifier | 0..* | Mandatory | Identifier | A identifier for the person as this agent<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open at End |
-|  - identifier (sdsUserID) | 0..1 | Mandatory | Identifier | A identifier for the person as this agent<br/><font color='red'>This will be the clinicians SDS identifier (GMC code)</font><br/><font color='red'><b>Mapping to Maternity Data set = 'Responsible Clinician Identifier'.</b></font> |
+|  - identifier (sdsUserID) | 0..1 | Mandatory | Identifier | A identifier for the person as this agent<br/><font color='red'>This will be the clinicians SDS identifier (GMC code)</font><br/><font color='red'><b>Mapping to Maternity data standard = 'Responsible Clinician Identifier'.</b></font> |
 |  - - system | 1..1 | Mandatory | Uri | The namespace for the identifier value<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/Id/sds-user-id'</font> |
 |  - - value | 1..1 | Mandatory | String | The value that is unique<br/><font color='red'>This MUST contain the person's SDS user id</font> |
 |  - name | 0..* | Required | HumanName | The name(s) associated with the practitioner |
-|  - - text | 0..1 | Required | String | Text representation of the full name<br/><font color='red'><b>Mapping to Maternity Data set = 'Responsible Clinician Name'.</b></font> |
+|  - - text | 0..1 | Required | String | Text representation of the full name<br/><font color='red'><b>Mapping to Maternity data standard = 'Responsible Clinician Name'.</b></font> |
 |  - - family | 0..1 | Optional | String | Family name (often called 'Surname') |
 |  - - given | 0..* | Optional | String | Given names (not always 'first'). Includes middle names |
 |  - - prefix | 0..* | Optional | String | Parts that come before the name |
@@ -180,7 +180,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  Location | ​ |  |  | Details and position information for a physical place<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 1..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Location-1'</font> |
-|  - identifier (odsSiteCode) | 0..1 | Required | Identifier | ODS Site code to identify the organisation at site level<br/><font color='red'>Site code of the unit to which the person was admitted</font> <br/><font color='red'><b>Maternity Data set mapping = 'ODS/ORD Site Code'</b></font> |
+|  - identifier (odsSiteCode) | 0..1 | Required | Identifier | ODS Site code to identify the organisation at site level<br/><font color='red'>Site code of the unit to which the person was admitted</font> <br/><font color='red'><b>Maternity data standard mapping = 'ODS/ORD Site Code'</b></font> |
 |  - - system | 1..1 | Required | Uri | ODS Code<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/Id/ods-site-code'</font> |
 |  - - value | 1..1 | Required | String | The ODS Site code name, to reflect the code used |
 |  - type | 0..1 | Required | CodeableConcept | Type of function performed<br/>Binding (extensible): Indicates the type of function performed at the location. [ServiceDeliveryLocationRoleType](http://hl7.org/fhir/stu3/v3/ServiceDeliveryLocationRoleType/vs.html )<br/><font color='red'><b>Maternity Date set mapping = 'Specialty admitted to'</b></font><br/><font color='red'>Note this valueset is defined as extensible and therefore if the code exists in this valueSet then that code MUST be used.</font> <br/> <font color='red'>Alternatively if the code does not exist in this valueSet then a code from the</font> [Activity Treatment Function Code](https://www.datadictionary.nhs.uk/data_dictionary/data_field_notes/a/act/activity_treatment_function_code_de.asp?shownav=1?query=%22ACTIVITY+TREATMENT+FUNCTION+CODE%22&rank=100&shownav=1) <font color='red'>valueSet MUST be used</font><br/>  |

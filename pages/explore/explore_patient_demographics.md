@@ -25,9 +25,9 @@ The following profiles are referenced from the Patient demographics list structu
 {% include custom/patient_demographics.svg %}
 
 
-## Maternity Data Set Mapping to FHIR profiles ##
+## Maternity data standard Mapping to FHIR profiles ##
 
-The following tables detail how to populate the FHIR resources and the mapping to the Maternity data set.
+The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
 ## Mapping for Patient Demographics List ##
 
