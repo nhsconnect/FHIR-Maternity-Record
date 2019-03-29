@@ -48,7 +48,7 @@
 		<v:layer v:name="Connector" v:index="0"/>
 		<a xlink:href="explore_allergies_and_adverse_reactions.html#mapping-for-allergies-and-adverse-reactions-list">
 			<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(166.198,-121.133)">
-				<title>Rectangle.870</title>
+				<title>Allergies and Adverse Reactions List Resource</title>
 				<desc>Allergies and Adverse Reactions List Resource</desc>
 				<v:custProps>
 					<v:cp v:nameU="Row_1" v:lbl="title" v:type="0" v:langID="2057" v:val="VT4(Bundle)"/>

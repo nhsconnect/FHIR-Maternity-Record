@@ -19,6 +19,7 @@ The following profiles are referenced from the Allergies and reactions list stru
 
 - [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
 
+
 ## Allergies and Adverse Reactions List Structure ##
 
 {% include custom/allergy_adverse.svg %}
@@ -27,16 +28,18 @@ The following profiles are referenced from the Allergies and reactions list stru
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
+## Mapping for Allergies and Adverse Reactions List ##
+
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
+
+|**[View Used FHIR Elements](explore_allergies_and_adverse_reactions.html#mapping-for-allergies-and-adverse-reactions-list)**|**View All FHIR Elements**|
+
 ## Patient Reference ##
 
 The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
-## Maternity Data Standard Mapping to FHIR profiles ##
 
-The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
-## Mapping for Allergies and Adverse Reactions List ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
 
