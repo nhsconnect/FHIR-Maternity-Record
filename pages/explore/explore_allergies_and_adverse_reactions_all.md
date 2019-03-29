@@ -21,7 +21,11 @@ The following profiles are referenced from the Allergies and reactions list stru
 
 ## Allergies and Adverse Reactions List Structure ##
 
+{% include custom/allergy_adverse.svg %}
 
+## Maternity Data Standard Mapping to FHIR profiles ##
+
+The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
 ## Patient Reference ##
 
