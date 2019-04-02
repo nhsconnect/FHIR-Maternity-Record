@@ -75,6 +75,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_allergies_and_adverse_reactions_all.html#mapping-for-allergies-and-adverse-reactions-allergyintolerence)**|
 
 
+
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
 |  AllergyIntolerance | ​ |  |  | Allergy or Intolerance (generally: Risk of adverse reaction to a substance)<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource<br/>Constraint (ait-1): AllergyIntolerance.clinicalStatus SHALL be present if verificationStatus is not entered-in-error.<br/>Constraint (ait-2): AllergyIntolerance.clinicalStatus SHALL NOT be present if verification Status is entered-in-error |
@@ -113,16 +114,12 @@ The Admission details list has a mandated subject reference to the Patient resou
 |  - note | 0..* | Required | Annotation | Additional text not captured in other fields<br/><font color='red'>Any additional comment or clarification about the allergy or adverse reaction</font> |
 |  - - text | 1..1 | Mandatory | String | The annotation - text content |
 |  - reaction | 0..* | Mandatory | BackboneElement | Adverse Reaction Events linked to exposure to substance |
-|  - - modifierExtension | 0..* | Not Used | Extension | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
 |  - - substance | 0..1 | Required | CodeableConcept | Specific substance or pharmaceutical product considered to be responsible for event<br/>Binding (example): Codes defining the type of the substance (including pharmaceutical products). [Substance Code](http://hl7.org/fhir/stu3/valueset-substance-code.html) <font color='red'>This example valueSet is replaced with a SNOMED CT ref set</font> |
 |  - - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
 |  - - - coding (snomedCT) | 0..1 | Mandatory | Coding | Code defined by a terminology system SNOMED. |
-|  - - - - extension (snomedCTDescriptionID) | 0..1 | Not Used | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
-|  - - - - version | 0..1 | Not Used | String | Version of the system - if relevant |
-|  - - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<font color='red'>Coded text- [SNOMED CT](<105590001 \|SubstanceOR <373873005 \|Pharmaceutical / biologic product\|OR <716186003 \|No known allergy\|OR 196461000000101 \|Transfer-degraded drug allergy\|OR 196471000000108 \|Transfer-degraded non-drug allergy)Alternatively one of the following statements:"No known drug allergies" Or "Information not available"</font> |
+|  - - - - code | 1..1 | Mandatory | Code |  |
 |  - - - - display | 1..1 | Mandatory | String | Representation defined by the system |
-|  - - - - userSelected | 0..1 | Not Used | Boolean | If this coding was chosen directly by the user |
 |  - - - text | 0..1 | Select | String | Plain text representation of the concept |
 |  - - manifestation | 1..* | Select | CodeableConcept | Clinical symptoms/signs associated with the Event<br/>Binding (extensible): Clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event. [CareConnect-AllergyManifestation-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyManifestation-1) |
 |  - - - coding | 0..* | Select | Coding | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
