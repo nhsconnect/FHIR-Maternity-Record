@@ -134,7 +134,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1'</font> |
 |  - patient | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | The patient this person is related to<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
+|  - - reference | 1..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>This must use the CareConnect Patient profile.</font>See [patient resource reference](explore_allergies_and_adverse_reactions.html#patient-reference) for information on how to populate the resource. |
 |  - relationship | 0..1 | Optional | CodeableConcept | The nature of the relationship<br/>Binding (preferred): The nature of the relationship between a patient and the related person [PatientRelationshipType](http://hl7.org/fhir/stu3/valueset-relatedperson-relationshiptype.html) |
 |  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system |
 |  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>This SHOULD contain the value 'http://hl7.org/fhir/stu3/valueset-relatedperson-relationshiptype' if the preferred codeSystem is used.</font>  |
@@ -146,7 +146,6 @@ The Admission details list has a mandated subject reference to the Patient resou
 |  - - given | 0..* | Optional | String | Given names (not always 'first'). Includes middle names |
 |  - - prefix | 0..* | Optional | String | Parts that come before the name |
 |  - - suffix | 0..* | Optional | String | Parts that come after the name |
-
 
 ## Mapping for Admission Details Practitioner ##
 
