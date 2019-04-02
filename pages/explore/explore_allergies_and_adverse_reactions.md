@@ -68,11 +68,11 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
-## Mapping for Allergies and Adverse Reactions AllergyIntolerence ##
+## Mapping for Allergies and Adverse Reactions AllergyIntolerance ##
 
-|>|Level 1|[AllergyIntolerence Resource](http://hl7.org/fhir/stu3/allergyIntolerence.html)|>|Level 2|[CareConnect-AllergyIntolerence-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerence-1)|>|Level 3|None|
+|>|Level 1|[AllergyIntolerance Resource](http://hl7.org/fhir/stu3/allergyIntolerance.html)|>|Level 2|[CareConnect-AllergyIntolerance-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1)|>|Level 3|None|
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_allergies_and_adverse_reactions_all.html#mapping-for-allergies-and-adverse-reactions-allergyintolerence)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_allergies_and_adverse_reactions_all.html#mapping-for-allergies-and-adverse-reactions-allergyintolerance)**|
 
 
 
