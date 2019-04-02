@@ -14,7 +14,7 @@ The following FHIR profiles are used to form the Admission details list structur
 
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)
-- [RelatedPerson](http://hl7.org/fhir/STU3/relatedperson.html)
+- [CareConnect-RelatedPerson](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Relatedperson-1)
 - [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
 - [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)
 
@@ -123,7 +123,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 
 ## Mapping for Admission Details RelatedPerson ##
 
-|>|Level 1|[RelatedPerson Resource](http://hl7.org/fhir/stu3/relatedPerson.html)|>|Level 2|None|>|Level 3|None|
+|>|Level 1|[RelatedPerson Resource](http://hl7.org/fhir/stu3/relatedPerson.html)|>|Level 2|[CareConnect-RelatedPerson](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Relatedperson-1)|>|Level 3|None|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_admission_details_all.html#mapping-for-admission-details-relatedperson)**|
 
