@@ -65,7 +65,7 @@
 							class="st3">List Resource</tspan></text>			</g>
 		</a>
 		<a
-				xlink:href="explore_allergies_and_adverse_reactions.html#mapping-for-allergies-and-adverse-reactions-allergiyIntolerance">
+				xlink:href="explore_allergies_and_adverse_reactions.html#mapping-for-allergies-and-adverse-reactions-allergiyintolerance">
 			<g id="shape2-8" v:mID="2" v:groupContext="shape" transform="translate(166.036,-18.25)">
 				<title>AllergyIntolerance Resource</title>
 				<desc>AllergyIntolerance Resource</desc>
@@ -88,7 +88,7 @@
 			</v:userDefs>
 			<path d="M-7.06 209.21 L-7.1 235.02" class="st5"/>
 		</g>
-		<g id="shape4-18" v:mID="4" v:groupContext="shape" transform="translate(118.004,-159.982)">
+		<g id="shape4-18" v:mID="4" v:groupContext="shape" transform="translate(114.52,-159.982)">
 			<title>1..1 M subject</title>
 			<desc>1..1 M subject</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
@@ -139,5 +139,19 @@
 				<text x="21.35" y="170.27" class="st10" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Reference to <v:newlineChar/><tspan
 							x="13.72" dy="1.2em" class="st3">Patient resource </tspan> </text>			</g>
 		</a>
+		<g id="shape8-35" v:mID="8" v:groupContext="shape" v:layerMember="0" transform="translate(166.036,-52.2657)">
+			<v:userDefs>
+				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
+			</v:userDefs>
+			<path d="M0 209.21 L-100 209.21 L-100 151.3" class="st5"/>
+		</g>
+		<g id="shape9-40" v:mID="9" v:groupContext="shape" transform="translate(112.552,-57.1181)">
+			<title>1..1 M patient</title>
+			<desc>1..1 M patient</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="24.9449" cy="197.442" width="49.89" height="23.5276"/>
+			<rect x="0" y="185.678" width="49.8898" height="23.5276" class="st7"/>
+			<text x="14.35" y="195.04" class="st8" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>1..1 M<v:newlineChar/><tspan
+						x="12.91" dy="1.2em" class="st3">patient</tspan></text>		</g>
 	</g>
 </svg>
