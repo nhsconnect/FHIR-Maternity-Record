@@ -28,7 +28,7 @@ The following profiles are referenced from the Demographics history list structu
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
-## Mapping for Demographics History List ##
+## Mapping for Demographic History List ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
@@ -37,7 +37,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 
 
-## Mapping for Demographics History Patient ##
+## Mapping for Demographic History Patient ##
 
 |>|Level 1|[Patient Resource](http://hl7.org/fhir/stu3/patient.html)|>|Level 2|[CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)|>|Level 3|None|
 
