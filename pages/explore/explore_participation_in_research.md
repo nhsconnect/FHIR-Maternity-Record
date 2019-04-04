@@ -1,5 +1,5 @@
 ---
-title: Participation in Research Bundle
+title: Participation in Research List
 keywords:  lists
 tags: [fhir]
 sidebar: foundations_sidebar
@@ -58,6 +58,10 @@ The following profiles are referenced from the Participation in research list st
 |  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to an ResearchStudy resource included in the list<br/>This MUST use the CareConnect ResearchStudy profile. </font>See [ResearchStudy resource](explore_participation_in_research.html#mapping-for-participation_in_research_research_study) for information on how to populate the resource. |
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included ResearchStudy resource.</font> |
 
+## Patient Reference ##
+
+The Participation in research list has a mandated subject reference to the Patient resource. This means that any exchange of the Participation in research heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
+
 
 ## Mapping for Participation in research Research Study ##
 
@@ -67,6 +71,10 @@ The following profiles are referenced from the Participation in research list st
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Maternity Record Implementation** |
 | --- | --- | --- | --- | --- |
-|  ResearchStudy | ​ |  |  | **Investigation to increase healthcare-related patient-independent knowledge<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource** |
-|  - title | 1..1 | Mandatory | String | **Name for this study <br/><font color='red'><b>Mapping to Maternity data item = 'Research Study Name'.</b></font><br/>** |
-|  - status | 1..1 | Mandatory | Code | **draft : in-progress : suspended : stopped : completed : entered-in-error<br/>Binding (required): Codes that convey the current status of the research study [ResearchStudyStatus](http://hl7.org/fhir/stu3/valueset-research-study-status.html )** |
+|  ResearchStudy | ​ |  |  | Investigation to increase healthcare-related patient-independent knowledge<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
+|  - title | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Name for this study <br/><font color='red'><b>Mapping to Maternity data item = 'Research Study Name'.</b></font><br/> |
+|  - status | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | draft : in-progress : suspended : stopped : completed : entered-in-error<br/>Binding (required): Codes that convey the current status of the research study [ResearchStudyStatus](http://hl7.org/fhir/stu3/valueset-research-study-status.html ) |
+
+## Participation in Research Heading Example ##
+
+<script src="https://gist.github.com/IOPS-DEV/246df677aca81ec81275bee51f4e9c12.js"></script>
