@@ -130,11 +130,12 @@
 						 9.58317 -180 0 0 0 139.23 L0 191.94 L9.58 201.52 Z" class="st9"/>
 			<text x="21.35" y="162.59" class="st10" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Reference to <v:newlineChar/><tspan
 						x="13.72" dy="1.2em" class="st3">Patient resource </tspan> </text>		</g>
+						</a>
 		<g id="shape7-30" v:mID="7" v:groupContext="shape" v:layerMember="0" transform="translate(145.742,-155.15)">
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
 			<path d="M0 208.43 L-22.75 208.69" class="st5"/>
 		</g>
-	</g>
+		</g>
 </svg>
