@@ -143,17 +143,6 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - - userSelected | 0..1 | Not Used | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") | If this coding was chosen directly by the user |
 |  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
 
-## Mapping for Demographic History Patient ##
-
-|>|Level 1|[Patient Resource](http://hl7.org/fhir/stu3/patient.html)|>|Level 2|[CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)|>|Level 3|None|
-
-
-|**[View Used FHIR Elements](explore_demographic_history.html#mapping-for-demographic-history-patient)**|**[View All FHIR Elements]**|
-
-
-## Patient Reference ##
-
-The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
 ## Mapping for Demographic History Patient ##
 
@@ -327,6 +316,10 @@ The Admission details list has a mandated subject reference to the Patient resou
 |  - - - reference | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
 |  - - - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
 |  - - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
+
+## Patient Reference ##
+
+The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
 
 ## Demographics History Heading Example ##
