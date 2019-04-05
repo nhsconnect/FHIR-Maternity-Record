@@ -17,7 +17,7 @@ The following FHIR profiles are used to form the Demographics history list struc
 
 The following profiles are referenced from the Demographics history list structure:
 
-- None
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
 
 ## Demographics History Structure ##
 
@@ -46,7 +46,11 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |**[View Used FHIR Elements](explore_demographics_history.html#mapping-for-demographic-history-patient)**|**[View All FHIR Elements]**|
 
 
+## Patient Reference ##
 
+The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
 ## Demographics History Heading Example ##
+
+<script src="https://gist.github.com/IOPS-DEV/9d51ee5528e59b70da255468c3da5413.js"></script>
 
