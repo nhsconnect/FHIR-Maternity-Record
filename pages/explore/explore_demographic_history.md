@@ -33,9 +33,8 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_demographics_history_all.html#mapping-for-demographic-history-list)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_demographic_history_all.html#mapping-for-demographic-history-list)**|
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_demographics_history_all.html#mapping-for-demographic-history-patient)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -71,6 +70,8 @@ The following tables detail how to populate the FHIR resources and the mapping t
 ## Mapping for Demographic History Patient ##
 
 |>|Level 1|[Patient Resource](http://hl7.org/fhir/stu3/patient.html)|>|Level 2|[CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)|>|Level 3|None|
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_demographic_history_all.html#mapping-for-demographic-history-patient)**|
 
 
 
