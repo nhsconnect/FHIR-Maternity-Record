@@ -109,5 +109,5 @@ The Admission details list has a mandated subject reference to the Patient resou
 
 ## Demographics History Heading Example ##
 
-<script src="https://gist.github.com/IOPS-DEV/9d51ee5528e59b70da255468c3da5413.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/8bb05d77ffb84c78b7f30330069a59f1.js"></script>
 
