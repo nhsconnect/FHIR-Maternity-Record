@@ -655,18 +655,18 @@ The Admission details list has a mandated subject reference to the Patient resou
 |>|Level 1|[Location Resource](http://hl7.org/fhir/stu3/location.html)|>|Level 2|[CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)|>|Level 3|None|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_assessment_scales.html#mapping-for-assessment-scales-location)**|
+|**[View Used FHIR Elements](explore_assessment_scales.html#mapping-for-assessment-scales-location)**|**View All FHIR Elements**|
 
 ## Mapping for Assessment Scales Practitioner ##
 
 |>|Level 1|[Practitioner Resource](http://hl7.org/fhir/stu3/practitioner.html)|>|Level 2|[CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)|>|Level 3|None|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_assessment_scales.html#mapping-for-assessment-scales-practitioner)**|
+|**[View Used FHIR Elements](explore_assessment_scales.html#mapping-for-assessment-scales-practitioner)**|**View All FHIR Elements**|
 
 ## Mapping for Assessment Scales PracitionerRole ##
 
 |>|Level 1|[PractitionerRole Resource](http://hl7.org/fhir/stu3/practitionerRole.html)|>|Level 2|[CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)|>|Level 3|None|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_assessment_scales.html#mapping-for-assessment-scales-practitionerRole)**|
+|**[View Used FHIR Elements](explore_assessment_scales.html#mapping-for-assessment-scales-practitionerRole)**|**View All FHIR Elements**|
