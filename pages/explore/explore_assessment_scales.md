@@ -32,7 +32,7 @@ The following profiles are referenced from the Assessment scales list structure:
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_assessment_scales_all.html#mapping-for-assessment-scales-bundle)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_assessment_scales_all.html#mapping-for-assessment-scales-list)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -70,6 +70,8 @@ The following profiles are referenced from the Assessment scales list structure:
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_assessment_scales_all.html#mapping-for-assessment-scales-encounter)**|
+
+
 
 
 ## Patient Reference ##
