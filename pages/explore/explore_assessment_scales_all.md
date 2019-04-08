@@ -669,4 +669,4 @@ The Admission details list has a mandated subject reference to the Patient resou
 |>|Level 1|[PractitionerRole Resource](http://hl7.org/fhir/stu3/practitionerRole.html)|>|Level 2|[CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)|>|Level 3|None|
 
 
-|**[View Used FHIR Elements](explore_assessment_scales.html#mapping-for-assessment-scales-practitionerRole)**|**View All FHIR Elements**|
+|**[View Used FHIR Elements](explore_assessment_scales.html#mapping-for-assessment-scales-practitionerrole)**|**View All FHIR Elements**|
