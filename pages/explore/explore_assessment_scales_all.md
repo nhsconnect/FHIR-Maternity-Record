@@ -26,6 +26,18 @@ The following profiles are referenced from the Assessment scales list structure:
 
 {% include custom/assessment_scales.svg %}
 
+## Maternity Data Standard Mapping to FHIR profiles ##
+
+## Mapping Overview ##
+
+|**Data Standard Element**|**FHIR Profile**|**FHIR target**|
+|Date/Time Recorded|[List](explore_assessment_scales.html#mapping-for-assessment-scales-list)|entry.date|
+|ODS/ORD Site Code|[Location](explore_assessment_scales.html#mapping-for-assessment-scales-location)|identifier|
+|Performing Professional|[Practitioner](explore_assessment_scales.html#mapping-for-assessment-scales-practitioner)|name|
+|SDS Job Role Name|[PractitionerRole](explore_assessment_scales.html#mapping-for-assessment-scales-practitionerRole)|code|
+|Coded Assessment Tool Type|[Observation](explore_assessment_scales.html#mapping-for-assessment-scales-observation)|code<br/>value<br/>component.code<br/>component.value|
+|Comment|[Observation](explore_assessment_scales.html#mapping-for-assessment-scales-observation)|comment|
+
 ## Mapping for Assessment Scales List ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|

@@ -28,6 +28,18 @@ The following profiles are referenced from the Assessment scales list structure:
 
 {% include custom/assessment_scales.svg %}
 
+## Maternity Data Standard Mapping to FHIR profiles ##
+
+## Mapping Overview ##
+
+|**Data Standard Element**|**FHIR Profile**|**FHIR target**|
+|Date/Time Recorded|[List](explore_assessment_scales.html#mapping-for-assessment-scales-list)|entry.date|
+|ODS/ORD Site Code|[Location](explore_assessment_scales.html#mapping-for-assessment-scales-location)|identifier|
+|Performing Professional|[Practitioner](explore_assessment_scales.html#mapping-for-assessment-scales-practitioner)|name|
+|SDS Job Role Name|[PractitionerRole](explore_assessment_scales.html#mapping-for-assessment-scales-practitionerRole)|code|
+|Coded Assessment Tool Type|[Observation](explore_assessment_scales.html#mapping-for-assessment-scales-observation)|code<br/>value<br/>component.code<br/>component.value|
+|Comment|[Observation](explore_assessment_scales.html#mapping-for-assessment-scales-observation)|comment|
+
 ## Mapping for Assessment Scales List ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
@@ -54,7 +66,7 @@ The following profiles are referenced from the Assessment scales list structure:
 |  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
 |   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color='red'>This is the subject of the Assessment scales List.<br/>This MUST use the CareConnect patient profile. </font>See [patient resource reference](explore_assessment_scales.html#patient-reference) for information on how to populate the resource. |
 |  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
-|  - date | 0..1 | Mandatory | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When the list was prepared<br/><font color='red'> This MUST contain a system date to indicate when the list created or updated</font> |
+|  - date | 0..1 | Mandatory | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When the list was prepared<br/><font color='red'> This MUST contain a system date to indicate when the list created or updated</font><font color='red'><b>Mapping to Maternity data item = 'Date/Time Recorded'</b></font> |
 |  - note | 0..* | Optional | [Annotation](http://hl7.org/fhir/stu3/datatypes.html#annotation "Annotation") | Comments about the list |
 |   |  | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | <font color='red'>Who authored the comment on the list.</font>  |
 |  - - time | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When the annotation was made |
