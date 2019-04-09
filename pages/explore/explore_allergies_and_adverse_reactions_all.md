@@ -10,7 +10,7 @@ summary: "The FHIR profiles used for the Allergies and Adverse Reactions list"
 ## Heading Description ##
 The details of any known allergies, intolerances or adverse reactions.
 
-The following FHIR profiles are used to form the Allergies and reactions list structure:
+The following FHIR profiles are used to form the Allergies and adverse reactions list structure:
 
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-AllergyIntolerance-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1)
@@ -25,6 +25,25 @@ The following profiles are referenced from the Allergies and reactions list stru
 {% include custom/allergy_adverse.svg %}
 
 ## Maternity Data Standard Mapping to FHIR profiles ##
+
+
+## Mapping Overview ##
+
+|**Data Standard Element**|**FHIR Profile**|**FHIR target**|
+|Date/Time Recorded|[List](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-list)|entry.date|
+|Date/Time Asserted|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|assertedDate|
+|Causative Agent|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|Code.coding<br/>code.text|
+|Description of Reaction|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|reaction.manifestation.coding<br/>code.text|
+|Type of Reaction|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|type|
+|Certainty|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|verificationStatus|
+|Severity|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|severity|
+|Evidence|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|note|
+|Date First Experienced|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|onset|
+|Comment|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|note|
+
+
+
+
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 

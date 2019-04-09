@@ -25,6 +25,20 @@ The following profiles are referenced from the Allergies and reactions list stru
 
 ## Maternity Data Standard Mapping to FHIR profiles ##
 
+## Mapping Overview ##
+
+|**Data Standard Element**|**FHIR Profile**|**FHIR target**|
+|Date/Time Recorded|[List](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-list)|entry.date|
+|Date/Time Asserted|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|assertedDate|
+|Causative Agent|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|Code.coding<br/>code.text|
+|Description of Reaction|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|reaction.manifestation.coding<br/>code.text|
+|Type of Reaction|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|type|
+|Certainty|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|verificationStatus|
+|Severity|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|severity|
+|Evidence|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|note|
+|Date First Experienced|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|onset|
+|Comment|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|note|
+
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
 ## Mapping for Allergies and Adverse Reactions List ##
@@ -59,7 +73,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - time | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When the annotation was made |
 |  - - text | 1..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The annotation - text content |
 |  - entry | 0..* | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Entries in the list<br/><font color='red'>The entries MUST be as per the diagram for this PRSB headings list with the AllergyIntolerance resource being the focal resource. Multiple resources MAY be present</font> |
-|  - - date | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When item added to list<br/><font color='red'>The SHOULD contain a system time of when the item was added to the list.</font> |
+|  - - date | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When item added to list<br/><font color='red'>The SHOULD contain a system time of when the item was added to the list.</font><font color='red'><b>Mapping to Maternity data item = 'Date/Time Recorded'</b></font> |
 |  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to an AllergyIntolerance resource included in the list<br/>This MUST use the CareConnect AllergyIntolence profile. </font>See [AllergyIntolerance resource](explore_allergies_and_adverse_reactions.html#mapping-for-allergies-and-adverse-reactions) for information on how to populate the resource. |
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included AllergyIntolerance resource.</font> |
 
@@ -101,7 +115,7 @@ The Allergies and adverse reactions list has a mandated subject reference to the
 |   |  | Required | [Age](http://hl7.org/fhir/stu3/datatypes.html#age "Age") |  |
 |   |  | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") |  |
 |  - assertedDate | 1..1 | Mandatory | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Date record was believed accurate<br/><font color='red'><b>Mapping to Maternity data item = 'Date/Time Asserted'.</b></font> |
-|  - note | 0..* | Required | [Annotation](http://hl7.org/fhir/stu3/datatypes.html#annotation "Annotation") | Additional text not captured in other fields<br/><font color='red'>Any additional comment or clarification about the allergy or adverse reaction</font><br/><font color='red'>Mapping to Maternity data item = 'Comment'.</b></font><br/><font color='red'>This element is also used to carry text that is the results of investigations that confirmed the certainty of the diagnosis. Examples might include results of skin prick allergy tests.</font><br/><font color='red'><b>Mapping to Maternity data item = 'Evidence'.</b></font> |
+|  - note | 0..* | Required | [Annotation](http://hl7.org/fhir/stu3/datatypes.html#annotation "Annotation") | Additional text not captured in other fields<br/><font color='red'>Any additional comment or clarification about the allergy or adverse reaction</font><br/><font color='red'>Mapping to Maternity data item = 'Comment'.</font><br/><font color='red'>This element is also used to carry text that is the results of investigations that confirmed the certainty of the diagnosis. Examples might include results of skin prick allergy tests.</font><br/><font color='red'><b>Mapping to Maternity data item = 'Evidence'.</b></font> |
 |  - - text | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The annotation - text content |
 |  - - manifestation | 1..* | Required | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Clinical symptoms/signs associated with the Event<br/>Binding (extensible): Clinical symptoms and/or signs that are observed or associated with an Adverse Reaction Event. [CareConnect-AllergyManifestation-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-AllergyManifestation-1)<br/><font color='red'>A description of the manifestation of the allergic or adverse reaction experienced by the patient. For example, skin rash, swelling at injection site etc.</font><br/><font color='red'><b>Mapping to Maternity data item = 'Description of Reaction'.</b></font>  |
 |  - - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
