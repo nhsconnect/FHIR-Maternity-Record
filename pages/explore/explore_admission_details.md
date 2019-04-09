@@ -31,7 +31,7 @@ The following profiles are referenced from the Admission details list structure:
 
 ## Mapping Overview ##
 
-|Data Standard Element|FHIR Profile|FHIR target|
+|**Data Standard Element**|**FHIR Profile**|**FHIR target**|
 |Date and Time of admission|Encounter|period.start|
 |ODS/ORD Site Code|Location|identifier|
 |Responsible Clinician|Practitioner|identifier</br>name|
