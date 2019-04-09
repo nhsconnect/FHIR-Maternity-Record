@@ -32,15 +32,15 @@ The following profiles are referenced from the Admission details list structure:
 ## Mapping Overview ##
 
 |**Data Standard Element**|**FHIR Profile**|**FHIR target**|
-|Date and Time of admission|Encounter|period.start|
-|ODS/ORD Site Code|Location|identifier|
-|Responsible Clinician|Practitioner|identifier</br>name|
-|Patient Location|Location|text|
-|Reason for admission|Encounter|reason|
-|Admission Method|Encounter|AdmissionMethod extension|
-|Specialty admitted to|Location|type|
-|Source of Admission|Encounter|admitSource|
-|Person accompanying patient|RelatedPerson|name|
+|Date and Time of admission|[Encounter](explore_admission_details.html#mapping-for-admission-details-encounter)|period.start|
+|ODS/ORD Site Code|[Location](explore_admission_details.html#mapping-for-admission-details-location)|identifier|
+|Responsible Clinician|[Practitioner](explore_admission_details.html#mapping-for-admission-details-practitioner)|identifier and name|
+|Patient Location|[Location](explore_admission_details.html#mapping-for-admission-details-location)|text|
+|Reason for admission|[Encounter](explore_admission_details.html#mapping-for-admission-details-encounter)|reason|
+|Admission Method|[Encounter](explore_admission_details.html#mapping-for-admission-details-encounter)|AdmissionMethod extension|
+|Specialty admitted to|[Location](explore_admission_details.html#mapping-for-admission-details-location)|type|
+|Source of Admission|[Encounter](explore_admission_details.html#mapping-for-admission-details-encounter)|admitSource|
+|Person accompanying patient|[RelatedPerson](explore_admission_details.html#mapping-for-admission-details-relatedperson)|name|
 
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
