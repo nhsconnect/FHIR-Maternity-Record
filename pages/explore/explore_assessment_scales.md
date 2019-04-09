@@ -32,11 +32,11 @@ The following profiles are referenced from the Assessment scales list structure:
 
 ## Mapping Overview ##
 
-|**Data Standard Element**|**FHIR Profile**|**FHIR target**|
+|**Data Standard Element**|**FHIR Profile Mapping**|**FHIR Element**|
 |Date/Time Recorded|[List](explore_assessment_scales.html#mapping-for-assessment-scales-list)|entry.date|
 |ODS/ORD Site Code|[Location](explore_assessment_scales.html#mapping-for-assessment-scales-location)|identifier|
 |Performing Professional|[Practitioner](explore_assessment_scales.html#mapping-for-assessment-scales-practitioner)|name|
-|SDS Job Role Name|[PractitionerRole](explore_assessment_scales.html#mapping-for-assessment-scales-practitionerRole)|code|
+|SDS Job Role Name|[PractitionerRole](explore_assessment_scales.html#mapping-for-assessment-scales-practitionerrole)|code|
 |Coded Assessment Tool Type|[Observation](explore_assessment_scales.html#mapping-for-assessment-scales-observation)|code<br/>value<br/>component.code<br/>component.value|
 |Comment|[Observation](explore_assessment_scales.html#mapping-for-assessment-scales-observation)|comment|
 

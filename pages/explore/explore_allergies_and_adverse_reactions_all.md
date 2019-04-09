@@ -29,7 +29,7 @@ The following profiles are referenced from the Allergies and reactions list stru
 
 ## Mapping Overview ##
 
-|**Data Standard Element**|**FHIR Profile**|**FHIR target**|
+|**Data Standard Element**|**FHIR Profile Mapping**|**FHIR Element**|
 |Date/Time Recorded|[List](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-list)|entry.date|
 |Date/Time Asserted|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|assertedDate|
 |Causative Agent|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|Code.coding<br/>code.text|
