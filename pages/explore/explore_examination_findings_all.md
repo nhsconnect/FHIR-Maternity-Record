@@ -1,6 +1,6 @@
 ---
 title: Examination Findings Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_examination_findings_all.html

@@ -1,6 +1,6 @@
 ---
 title: Patient Demographics Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_patient_demographics_all.html

@@ -1,6 +1,6 @@
 ---
 title: Procedures Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_procedures_all.html

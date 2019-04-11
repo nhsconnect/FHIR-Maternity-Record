@@ -1,6 +1,6 @@
 ---
 title: Baby Details (person) Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_baby_details.html

@@ -1,6 +1,6 @@
 ---
 title: Personal Contacts Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_personal_contacts.html

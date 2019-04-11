@@ -1,6 +1,6 @@
 ---
 title: Legal Information Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_legal_information.html

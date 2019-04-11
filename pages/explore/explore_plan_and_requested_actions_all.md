@@ -1,6 +1,6 @@
 ---
 title: Plan and Requested Actions Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_plan_and_requested_actions.html

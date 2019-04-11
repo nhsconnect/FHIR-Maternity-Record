@@ -1,6 +1,6 @@
 ---
 title: Information and Advice Given Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_information_and_advice_given.html

@@ -1,6 +1,6 @@
 ---
 title: Discharge Details Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_discharge_details_all.html

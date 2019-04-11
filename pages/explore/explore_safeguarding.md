@@ -1,6 +1,6 @@
 ---
 title: Safeguarding Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_safeguarding.html

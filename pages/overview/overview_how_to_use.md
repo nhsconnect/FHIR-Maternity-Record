@@ -1,6 +1,6 @@
 ---
 title: About this specification.
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: overview_how_to_use.html

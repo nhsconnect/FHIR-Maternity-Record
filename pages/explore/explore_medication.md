@@ -1,6 +1,6 @@
 ---
 title: Medication and Medical Devices Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_medication.html

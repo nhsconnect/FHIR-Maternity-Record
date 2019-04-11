@@ -1,6 +1,6 @@
 ---
 title: Pregnancy Outcome Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_pregnancy_outcome_all.html

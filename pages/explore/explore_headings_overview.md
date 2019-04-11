@@ -15,9 +15,11 @@ This section details each of the PRSB headings used in the Maternity record and 
 
 This specification is currently under development and the following PRSB Heading have so far been documented.
 - [Admission details](explore_admission_details.html)
-- [Demographics history](explore_demographics_history.html)
 - [Allergies and adverse reactions](explore_allergies_and_adverse_reactions.html)
-- [Patient demographics](explore_patient_demographics.html) 
+- [Assessment scales](explore_assessment_scales.html)
+- [Demographics history](explore_demographics_history.html)
+- [Patient demographics](explore_patient_demographics.html)
+- [Vaccinations](explore_vaccinations.html) 
 
 ## PRSB Version Used ##
 

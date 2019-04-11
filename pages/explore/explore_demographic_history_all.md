@@ -1,6 +1,6 @@
 ---
 title: Demographic History List
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_demographic_history_all.html

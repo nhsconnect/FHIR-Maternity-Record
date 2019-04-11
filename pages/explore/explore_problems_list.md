@@ -1,6 +1,6 @@
 ---
 title: Problems List Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_problems_list.html

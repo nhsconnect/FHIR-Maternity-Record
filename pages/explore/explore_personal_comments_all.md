@@ -1,6 +1,6 @@
 ---
 title: Personal Comment Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_personal_comment_all.html

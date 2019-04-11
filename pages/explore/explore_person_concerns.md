@@ -1,6 +1,6 @@
 ---
 title: Person Concerns Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_person_concerns.html

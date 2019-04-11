@@ -1,6 +1,6 @@
 ---
 title: Professional Contacts Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_professional_contacts_all.html

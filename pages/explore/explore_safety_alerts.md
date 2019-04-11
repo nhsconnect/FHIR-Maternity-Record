@@ -1,6 +1,6 @@
 ---
 title: Safety Alerts Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_safety_alerts.html

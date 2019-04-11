@@ -1,6 +1,6 @@
 ---
 title: Referral Details Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_referral_details.html

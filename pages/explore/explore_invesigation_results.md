@@ -1,6 +1,6 @@
 ---
 title: Investigation Results Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_investigation_results.html

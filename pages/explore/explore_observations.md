@@ -1,6 +1,6 @@
 ---
 title: Observations Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_observations.html

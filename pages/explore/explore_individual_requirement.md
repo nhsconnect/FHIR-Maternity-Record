@@ -1,6 +1,6 @@
 ---
 title: Individual Requirements Bundle
-keywords:  bundles
+keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_individual_requirement.html
