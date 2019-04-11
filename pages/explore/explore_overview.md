@@ -9,7 +9,19 @@ summary: "Overview of the Architecture Used for the Maternity Record"
 
 ## Overview ##
 
-The Maternity Record specification is the first use by NHS Digital of PRSB headings in a structured record, previously PRSB headings have only been used in document (composition) based exchanges. The Maternity Record is not document based and makes no use of the Composition resource.
+The Maternity Record specification is the first by NHS Digital to use PRSB headings in a structured record, previously PRSB headings have only been used in document (composition) based exchanges. The Maternity Record is not document based and makes no use of the Composition resource. Points to note are:
+
+- The PRSB headings do not map 1 to 1 with FHIR resources in majority of cases
+- A heading will have multiple resources associated with it and these need to be identified
+- Some method is required to carry the PRSB headings as a label or identifier
+- FHIR has resources for the purpose of grouping (“Groupers”)
+- The List resource has been chosen as a candidate for this purpose and is used in this specification 
+
+## Basic Structure ##
+
+{% include images/explore/basic_structure.png %}
+
+
 This specification details the structure of the Maternity record to satisfy some overarching business requirements. These are:
 
 - To group, maintain context, query and retrieve the data using PRSB headings in a FHIR based Maternity record at the PRSB heading level
