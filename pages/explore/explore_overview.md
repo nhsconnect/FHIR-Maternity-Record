@@ -36,7 +36,7 @@ The proposal is to use a FHIR Bundle resource which contains a number of FHIR Li
 
 This document details the options considered for the PRSB heading for the current Maternity Record approach 
 
-<a href="images/explore_FHIR Structures Using PRSB Headings.pdf" target="_blank" style="width: 100%;max-width: 100%;"><b>Click to open in a new window</b></a>
+<a href="images/explore/FHIR Structures Using PRSB Headings.pdf" target="_blank" style="width: 100%;max-width: 100%;"><b>Click to open in a new window</b></a>
 
 ## Bundle Structure Overview Diagram ##
 
