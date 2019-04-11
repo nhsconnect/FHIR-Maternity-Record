@@ -208,3 +208,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/CodeSystem/CareConnect-SDSJobRoleName-1'</font> |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Representation defined by the system<br/><font color='red'>The role code of the practitioner</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color='red'>The role name of the practitioner</font> |
+
+## Assessment Scales Heading Example ##
+
+<script src="https://gist.github.com/IOPS-DEV/d5626a186024b0d18dffa952144d2a54.js"></script>

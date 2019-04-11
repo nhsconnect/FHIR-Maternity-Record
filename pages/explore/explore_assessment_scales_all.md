@@ -982,3 +982,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 |   |  | Not Used | [Endpoint](http://hl7.org/fhir/stu3/StructureDefinition/Endpoint "Endpoint") | **** |
 |  - - reference | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | **Literal reference, Relative, internal or absolute URL** |
 |  - - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | **Logical reference, when literal reference is not known** |
+
+## Assessment Scales Heading Example ##
+
+<script src="https://gist.github.com/IOPS-DEV/d5626a186024b0d18dffa952144d2a54.js"></script>
