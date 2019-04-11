@@ -314,3 +314,4 @@ The Allergies and adverse reactions list has a mandated subject reference to the
 |  - - - time | 0..1 | Not Used | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When the annotation was made |
 |  - - - text | 1..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The annotation - text content |
 
+<script src="https://gist.github.com/IOPS-DEV/28b5a5f2f854ec8393ff9aa808c8ef9c.js"></script>

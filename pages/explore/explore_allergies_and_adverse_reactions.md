@@ -127,3 +127,4 @@ The Allergies and adverse reactions list has a mandated subject reference to the
 |  - - onset | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Date(/time) when manifestations showed |
 |  - - severity | 0..1 | Required | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | mild : moderate : severe (of event as a whole)<br/>Binding (required): Clinical assessment of the severity of a reaction event as a whole, potentially considering multiple different manifestations. [CareConnect-ReactionEventSeverity-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ReactionEventSeverity-1)<br/><font color='red'>This required valueSet has mappings to SNOMED CT</font> |
 
+<script src="https://gist.github.com/IOPS-DEV/28b5a5f2f854ec8393ff9aa808c8ef9c.js"></script>
