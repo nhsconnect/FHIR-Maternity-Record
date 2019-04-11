@@ -862,7 +862,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 |  - - - reference | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | **Literal reference, Relative, internal or absolute URL** |
 |  - - - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | **Logical reference, when literal reference is not known** |
 
-## Mapping for Assessment Scales PracitionerRole ##
+## Mapping for Assessment Scales PractitionerRole ##
 
 |>|Level 1|[PractitionerRole Resource](http://hl7.org/fhir/stu3/practitionerRole.html)|>|Level 2|[CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)|>|Level 3|None|
 
