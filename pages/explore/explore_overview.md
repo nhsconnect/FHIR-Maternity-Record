@@ -34,7 +34,9 @@ Maternity record will only use CareConnect level 2 profiles. There will be no le
 
 The proposal is to use a FHIR Bundle resource which contains a number of FHIR List resources, one List resource per PRSB Heading.
 
-This document details the options considered for the PRSB heading for the current Maternity Record approach [PRSB headings in FHIR structured record](images/explore_FHIR Structures Using PRSB Headings.pdf)
+This document details the options considered for the PRSB heading for the current Maternity Record approach 
+
+<a href="images/explore_FHIR Structures Using PRSB Headings.pdf" target="_blank" style="width: 100%;max-width: 100%;"><b>Click to open in a new window</b></a>
 
 ## Bundle Structure Overview Diagram ##
 
