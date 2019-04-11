@@ -19,7 +19,7 @@ The Maternity Record specification is the first by NHS Digital to use PRSB headi
 
 ## Basic Structure ##
 
-{% include images/explore/basic_structure.png %}
+{% include images/explore_basic_structure.png %}
 
 
 This specification details the structure of the Maternity record to satisfy some overarching business requirements. These are:
@@ -33,6 +33,8 @@ Maternity record will only use CareConnect level 2 profiles. There will be no le
 
 
 The proposal is to use a FHIR Bundle resource which contains a number of FHIR List resources, one List resource per PRSB Heading.
+
+This document details the options considered for the PRSB heading for the current Maternity Record approach [PRSB headings in FHIR structured record](images/explore_FHIR Structures Using PRSB Headings.pdf)
 
 ## Bundle Structure Overview Diagram ##
 
