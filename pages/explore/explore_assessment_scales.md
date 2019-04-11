@@ -7,7 +7,6 @@ permalink: explore_assessment_scales.html
 summary: "The FHIR profiles used for the Assessment Scales List structure"
 ---
 
-
 ## Heading Description ##
 Details of the woman’s assessment scales.
 

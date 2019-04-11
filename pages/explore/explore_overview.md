@@ -19,7 +19,7 @@ The Maternity Record specification is the first by NHS Digital to use PRSB headi
 
 ## Basic Structure ##
 
-{% include images/explore_basic_structure.png %}
+<img src="images/explore/basic_structure.png" style="width: auto %;height: auto%;"/>
 
 
 This specification details the structure of the Maternity record to satisfy some overarching business requirements. These are:
