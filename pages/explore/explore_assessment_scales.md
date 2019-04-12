@@ -211,4 +211,4 @@ The Admission details list has a mandated subject reference to the Patient resou
 
 ## Assessment Scales Heading Example ##
 
-<script src="https://gist.github.com/IOPS-DEV/d5626a186024b0d18dffa952144d2a54.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/9216149861f148520680e97336625a36.js"></script>
