@@ -120,5 +120,4 @@ plugins:
    - jekyll-redirect-from
    - jekyll-seo-tag
    - jekyll-sitemap
-   - jekyll-feed
    - jekyll-gist
