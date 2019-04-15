@@ -8,7 +8,7 @@ summary: "The FHIR profiles used for the Personal contacts Bundle"
 ---
 
 ## Heading Description ##
-Details of the women’s personal contacts
+Details of the woman’s personal contacts
 
 ## Mapping for Bundle ##
 
