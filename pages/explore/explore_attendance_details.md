@@ -32,3 +32,8 @@ The following profiles are referenced from the Attendance details list structure
 
 ## Mapping Overview ##
 
+|**Data Standard Element**|**FHIR Profile Mapping**|**FHIR Element**|
+|Date/Time|[List](explore_attendance_details.html#mapping-for-attendance_details-list)|encounter.period|
+|ODS/ORD Site Code|[Location](explore_attendance_details.html#mapping-for-attendance_details-list)|encounter.period|
+|Location Type|[Location](explore_attendance_details.html#mapping-for-attendance_details-location)|type|
+
