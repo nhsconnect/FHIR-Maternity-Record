@@ -34,6 +34,11 @@ The following profiles are referenced from the Attendance details list structure
 
 |**Data Standard Element**|**FHIR Profile Mapping**|**FHIR Element**|
 |Date/Time|[List](explore_attendance_details.html#mapping-for-attendance_details-list)|encounter.period|
-|ODS/ORD Site Code|[Location](explore_attendance_details.html#mapping-for-attendance_details-list)|encounter.period|
+|ODS/ORD Site Code|[Location](explore_attendance_details.html#mapping-for-attendance_details-location)|location.identifier|
 |Location Type|[Location](explore_attendance_details.html#mapping-for-attendance_details-location)|type|
+|Professional Name|[Practitioner](explore_attendance_details.html#mapping-for-attendance_details-practitioner)|practitioner.name|
+|SDS Job Role Name|[PractitionerRole](explore_attendance_details.html#mapping-for-attendance_details-practitionerrole)|encounter.period|
 
+|Contact type|[](explore_attendance_details.html#mapping-for-attendance_details-list)|encounter.period|
+|Date/Time|[List](explore_attendance_details.html#mapping-for-attendance_details-list)|encounter.period|
+|SDS  |[List](explore_attendance_details.html#mapping-for-attendance_details-list)|encounter.period|

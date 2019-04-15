@@ -9,7 +9,7 @@ summary: "How to use this specification"
 
 ## The Approach ##
 
-This specification uses a different approach to profiling and detailing how the constraints the particular business use cases are applied to the FHIR resources. 
+This specification uses a different approach to profiling and how the constraints for a particular business use case are applied to the FHIR resources. 
 
 ## Profiles ##
 This implementation has no business specific profiles and uses the CareConnect level two profiles with additional textual constraints and guidance. This additional text will form part of any conformance testing implemented later in development. 
