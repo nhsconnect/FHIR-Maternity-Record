@@ -467,6 +467,14 @@ The Admission details list has a mandated subject reference to the Patient resou
 |**[View Used FHIR Elements](explore_attendance_details.html#mapping-for-attendance-details-practitionerrole)**|**View All FHIR Elements**|  
 
 
+## Mapping for Attendance Details RelatedPerson ##
+
+|>|Level 1|[RelatedPerson Resource](http://hl7.org/fhir/stu3/relatedperson.html)|>|Level 2|[CareConnect-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1)|>|Level 3|None|
+
+|**[View Used FHIR Elements](explore_attendance_details_all.html#mapping-for-attendance-details-relatedperson)**|**View All FHIR Elements**|  
+
+
+
 ## Mapping for Attendance Details Location ##
 
 |>|Level 1|[Location Resource](http://hl7.org/fhir/stu3/location.html)|>|Level 2|[CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)|>|Level 3|None|
