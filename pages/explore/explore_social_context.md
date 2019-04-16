@@ -34,6 +34,11 @@ The social setting in which the woman lives, such as their household, occupation
 |Occupation|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 |Asylum Status|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 
+
+## Social Context Details Structure ##
+
+{% include custom/Social_Context.svg %}
+
 Social Risk Factors 
 
 ## Mapping for Social Context Details List ##
