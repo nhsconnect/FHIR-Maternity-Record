@@ -266,7 +266,7 @@ Smoking Status|[Observation](explore_social_context.html#mapping-for-social-cont
 
 ## Data Items in Observation ##
 
-Drug/substance use|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
+|Drug/substance use|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 |Drug/substance use - details|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 |Date stopped|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 
@@ -278,7 +278,7 @@ Drug/substance use|[Observation](explore_social_context.html#mapping-for-social-
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
 |  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
-|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT 361055000 | Misuses drugs OR 371422002 | History of substance abuse OR 228368007 | Has never misused drugs OR 783241000000102 | Declined to give substance misuse history</font> |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT 361055000 \| Misuses drugs OR 371422002 | History of substance abuse OR 228368007 \| Has never misused drugs OR 783241000000102 \| Declined to give substance misuse history</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">This SHOULD be the preferred term for the SNOMED concept</font> |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date the person stopped using the drug/substance</font> |
 |  - component | 0..* | Optional | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Component results<br/><font color="red">Detailed history of drug/substance use</font> |
@@ -295,7 +295,7 @@ Drug/substance use|[Observation](explore_social_context.html#mapping-for-social-
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
 |  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
-|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT 219006 | Current drinker of alcohol (finding) OR 105542008 | current non-drinker of alcohol OR 228274009 | Lifetime non-drinker OR 1104551000000109 | Declined to provide information about alcholol use OR 371434005 | History of alcohol abuse</font> |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT 219006 \| Current drinker of alcohol (finding) OR 105542008 \| current non-drinker of alcohol OR 228274009 \| Lifetime non-drinker OR 1104551000000109 \| Declined to provide information about alcholol use OR 371434005 \| History of alcohol abuse</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">This SHOULD be the preferred term for the SNOMED concept</font> |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date the person stopped usual pattern of drinking</font> |
 |  - component | 0..* | Optional | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Component results<br/><font color="red">Detailed history of alcohol e use</font> |
@@ -311,24 +311,79 @@ Drug/substance use|[Observation](explore_social_context.html#mapping-for-social-
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
 |  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
-|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT 777651000000101 | Higher risk alcohol drinking (finding) OR 66590003 | Alcohol dependence (disorder) OR 105542008 | Current non-drinker of alcohol (finding) OR 160580001 |Alcohol consumption unknown (finding) OR 160593006 | Alcohol intake within recommended sensible limits (finding)</font> |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT 777651000000101 \| Higher risk alcohol drinking (finding) OR 66590003 \| Alcohol dependence (disorder) OR 105542008 \| Current non-drinker of alcohol (finding) OR 160580001 \|Alcohol consumption unknown (finding) OR 160593006 \| Alcohol intake within recommended sensible limits (finding)</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">This SHOULD be the preferred term for the SNOMED concept</font> |
 |  - effective[x] | 0..1 | Not Used | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date the person stopped usual pattern of drinking</font> |
 |  - component | 0..* | Not Used | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Component results<br/><font color="red">Detailed history of alcohol e use</font> |
 |  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
 
 
-## Social Context Observation Data Item - Education Level ##
+## Social Context Observation Data Item - Education ##
 
-## Social Context Observation Data Item - Number of years in education ##
+## Data Items in Observation ##
+
+|Education Level|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
+|Number of years in Education|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
+
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maernity Implementation** |
+| :--- | :--- | :--- | :--- | :--- |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/><font color="red">Education Details</font> |
+|  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
+|  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>Codesystem TBA</font> |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Codes TBA</font> |
+|  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">TBA</font> |
+|  - - text | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
+|  - value[x] | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/><font color="red">The number of years that the person spent in education</font> |
 
 ## Social Context Observation Data Item - Employment Status ##
 
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maernity Implementation** |
+| :--- | :--- | :--- | :--- | :--- |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/><font color="red">Employment Status</font> |
+|  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
+|  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>Codesystem TBA</font> |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Codes TBA</font> |
+|  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">TBA</font> |
+|  - - text | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
+
+
 ## Social Context Observation Data Item - Occupation ##
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maernity Implementation** |
+| :--- | :--- | :--- | :--- | :--- |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/><font color="red">Occupation</font> |
+|  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
+|  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>Codesystem TBA</font> |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Codes TBA</font> |
+|  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">TBA</font> |
+|  - - text | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
 
 ## Social Context Observation Data Item - Asylum Status ##
 
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maernity Implementation** |
+| :--- | :--- | :--- | :--- | :--- |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/><font color="red">Asylum Status</font> |
+|  - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
+|  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
+|  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
+|  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT 390790000 \| Asylum seeker (person) OR 446654005 \| Refugee (person) OR 729851000000109 \| Asylum seeker with discretionary leave to remain (person) OR 729851000000109 \|Asylum seeker with discretionary leave to remain (person) OR 160702009 \| Illegal migrant (finding)(TBA) OR 224619008 | Migrant (person)(TBA)</font> |
+|  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">This SHOULD be the preferred term for the SNOMED concept</font> |
+|  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
+
 ## Social Context Observation Data Item - Social Risk Factors ##
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maernity Implementation** |
+| :--- | :--- | :--- | :--- | :--- |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/><font color="red">Social Risk Factors</font> |
+|  - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
+|  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
+|  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
+|  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT 390790000 \| Asylum seeker (person) OR 446654005 \| Refugee (person) OR 729851000000109 \| Asylum seeker with discretionary leave to remain (person) OR 729851000000109 \|Asylum seeker with discretionary leave to remain (person) OR 160702009 \| Illegal migrant (finding)(TBA) OR 224619008 | Migrant (person)(TBA)</font> |
+|  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">This SHOULD be the preferred term for the SNOMED concept</font> |
+|  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
 
 ## Social Context Observation Data Item - Alcohol Use ##
 
