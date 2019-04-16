@@ -1,4 +1,4 @@
----
+﻿---
 title: Personal Contacts Bundle
 keywords:  list
 tags: [fhir]
@@ -18,6 +18,8 @@ The following profiles are referenced from the Patient demographics list structu
 - [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
 
 ## Personal Contacts Structure ##
+
+{% include custom/personal_contacts.svg %}
 
 |>|Level 1|[Bundle Resource](http://hl7.org/fhir/stu3/bundle.html)|>|Level 2| None|>|Level 3|[NHSD-Bundle-1 Profile](http://xxx)|
 
