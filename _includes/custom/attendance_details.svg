@@ -262,14 +262,6 @@
 			</v:userDefs>
 			<path d="M0 385.54 L-38.38 385.54" class="st4"/>
 		</g>
-		<g id="shape20-86" v:mID="20" v:groupContext="shape" transform="translate(404.571,-348.923)">
-			<title>1..1 M subject</title>
-			<desc>1..1 M subject</desc>
-			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
-			<v:textRect cx="24.9449" cy="380.859" width="49.89" height="23.5276"/>
-			<rect x="0" y="369.095" width="49.8898" height="23.5276" class="st6"/>
-			<text x="14.35" y="378.46" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>1..1 M<v:newlineChar/><tspan
-						x="12.96" dy="1.2em" class="st3">subject</tspan></text>		</g>
 		<a xlink:href="explore_attendance_details.html#mapping-for-attendance-details-communication">
 			<g id="shape21-90" v:mID="21" v:groupContext="shape" transform="translate(163.749,-92.1581)">
 				<title>Communication Resource</title>
