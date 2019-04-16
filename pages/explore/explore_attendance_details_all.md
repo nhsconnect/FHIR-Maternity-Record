@@ -32,6 +32,7 @@ The following profiles are referenced from the Attendance details list structure
 
 ## Mapping Overview ##
 
+
 |**Data Standard Element**|**FHIR Profile Mapping**|**FHIR Element**|
 |Date/Time|[List](explore_attendance_details.html#mapping-for-attendance_details-list)|period|
 |ODS/ORD Site Code|[Location](explore_attendance_details.html#mapping-for-attendance_details-location)|identifier|
@@ -48,7 +49,7 @@ The following profiles are referenced from the Attendance details list structure
 |First Given Name|[RelatedPerson](explore_attendance_details.html#mapping-for-attendance_details-relatedperson)|name|
 |Family Name|[RelatedPerson](explore_attendance_details.html#mapping-for-attendance_details-relatedperson)|name|
 |Relationship of person accompanying patient|[Encounter](explore_attendance_details.html#mapping-for-attendance_details-encounter)|participant.type|
-|Outcome of contact|Currently not mapped|Currently not mapped|
+|Outcome of contact|OutcomeOfAttendance extension |Currently not mapped due to "required" valueSet issues|
 
 
 ## Mapping for Attendance Details List ##
