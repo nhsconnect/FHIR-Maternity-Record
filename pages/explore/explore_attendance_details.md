@@ -48,7 +48,7 @@ The following profiles are referenced from the Attendance details list structure
 |First Given Name|[RelatedPerson](explore_attendance_details.html#mapping-for-attendance_details-relatedperson)|name|
 |Family Name|[RelatedPerson](explore_attendance_details.html#mapping-for-attendance_details-relatedperson)|name|
 |Relationship of person accompanying patient|[Encounter](explore_attendance_details.html#mapping-for-attendance_details-encounter)|participant.type|
-|Outcome of contact|[OutcomeOfAttendance extension |Currently not mapped due to "required" valueSet issues|
+|Outcome of contact|OutcomeOfAttendance extension |Currently not mapped due to "required" valueSet issues|
 
 ## Mapping for Attendance Details List ##
 
@@ -84,7 +84,7 @@ The following profiles are referenced from the Attendance details list structure
 |  - - text | 1..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The annotation - text content |
 |  - entry | 0..* | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Entries in the list<br/><font color='red'>The entries MUST be as per the diagram for this PRSB headings list with the encounter resource being the focal resource. Multiple Encounters with associated resources MAY be present</font> |
 |  - - date | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When item added to list<br/><font color='red'>The SHOULD contain a system time of when the item was added to the list.</font> |
-|  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to an Encounter resource included in the list<br/>This MUST use the CareConnect Encounter profile. </font>See [Encounter resource](explore_Attendance_details.html#mapping-for-Attendance-details-encounter) for information on how to populate the resource. |
+|  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to an Encounter resource included in the list<br/>This MUST use the CareConnect Encounter profile. </font>See [Encounter resource](explore_attendance_details.html#mapping-for-attendance-details-encounter) for information on how to populate the resource. |
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included Encounter resource.</font> |
 
 
@@ -128,7 +128,7 @@ The following profiles are referenced from the Attendance details list structure
 |  - - start | 0..1 | Not Used | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Starting time with inclusive boundary<br/><font color='red'>The date and time of Attendance</font><br/><font color='red'><b>Mapping to Maternity data item = 'Date and Time of Attendance'.</b></font> |
 |  - location | 0..1 | Required | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | List of locations where the patient has been |
 |  - - location | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Location the encounter takes place<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>The site code of the unit to which the person was admitted</font> |
-|   |  | Mandatory | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") | "<font color='red'>The location<br/>This MUST use the CareConnect Location profile. </font>See [Location resource](explore_Attendance_details.html#mapping-for-Attendance-details-location) for information on how to populate the resource." |
+|   |  | Mandatory | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") | "<font color='red'>The location<br/>This MUST use the CareConnect Location profile. </font>See [Location resource](explore_attendance_details.html#mapping-for-attendance-details-location) for information on how to populate the resource." |
 |  - - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the Location resource included in the Attendance details list</font>  |
 
 ## Patient Reference ##
