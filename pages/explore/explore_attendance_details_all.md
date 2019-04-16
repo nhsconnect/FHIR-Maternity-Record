@@ -433,6 +433,45 @@ The following profiles are referenced from the Attendance details list structure
 |  - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
 
 
+## Patient Reference ##
+
+The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
+
+
+## Mapping for Attendance Details Communication ##
+
+|>|Level 1|[Communication Resource](http://hl7.org/fhir/stu3/communication.html)|>|Level 2|[CareConnect-Communication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Communication -1)|>|Level 3|None|
+
+|**[View Used FHIR Elements](explore_attendance_details.html#mapping-for-attendance-details-communication)**|**View All FHIR Elements**|  
+
+
+## Mapping for Attendance Details EpisodeOfCare ##
+
+|>|Level 1|[EpisodeOfCare Resource](http://hl7.org/fhir/stu3/episodeofcare.html)|>|Level 2|[CareConnect-EpisodeOfCare-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1)|>|Level 3|None|
+
+|**[View Used FHIR Elements](explore_attendance_details.html#mapping-for-attendance-details-episodeofcare)**|**View All FHIR Elements**|  
+
+
+## Mapping for Attendance Details Practitioner ##
+
+|>|Level 1|[Practitioner Resource](http://hl7.org/fhir/stu3/practitioner.html)|>|Level 2|[CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)|>|Level 3|None|
+
+|**[View Used FHIR Elements](explore_attendance_details.html#mapping-for-attendance-details-practitioner)**|**View All FHIR Elements**|  
+
+
+## Mapping for Attendance Details PractitionerRole ##
+
+|>|Level 1|[PractitionerRole Resource](http://hl7.org/fhir/stu3/practitionerrole.html)|>|Level 2|[CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)|>|Level 3|None|
+
+|**[View Used FHIR Elements](explore_attendance_details.html#mapping-for-attendance-details-practitionerrole)**|**View All FHIR Elements**|  
+
+
+## Mapping for Attendance Details Location ##
+
+|>|Level 1|[Location Resource](http://hl7.org/fhir/stu3/location.html)|>|Level 2|[CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)|>|Level 3|None|
+
+|**[View Used FHIR Elements](explore_attendance_details_all.html#mapping-for-attendance-details-location)**|**View All FHIR Elements**|  
+
 ## Attendance Details Heading Example ##
 
 <script src="https://gist.github.com/IOPS-DEV/9216149861f148520680e97336625a36.js"></script>
