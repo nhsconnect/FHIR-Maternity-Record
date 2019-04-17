@@ -52,7 +52,7 @@
 		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="9"
 				v:shadowOffsetY="-9"/>
 		<v:layer v:name="Connector" v:index="0"/>
-		<g id="group1-1" transform="translate(18.25,-18.25)" v:mID="1" v:groupContext="group">
+				<g id="group1-1" transform="translate(18.25,-18.25)" v:mID="1" v:groupContext="group">
 			<title>Sheet.1</title>
 			<g id="group2-2" v:mID="2" v:groupContext="group">
 				<v:userDefs>
@@ -66,6 +66,7 @@
 					</v:userDefs>
 					<path d="M19.94 174.47 L3.82 209.09 L0 217.29" class="st1"/>
 				</g>
+				<a xlink:href="explore_personal_contacts.html#mapping-for-personal-contacts-observation">
 				<g id="shape4-9" v:mID="4" v:groupContext="shape" transform="translate(0.0852999,7.67386E-13)">
 					<title>Observation Resource</title>
 					<desc>Observation Resource</desc>
@@ -81,6 +82,8 @@
 					<rect x="0" y="149.258" width="90.7086" height="68.0314" class="st3"/>
 					<text x="19.83" y="180.27" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Observation<v:newlineChar/><tspan
 								x="26.27" dy="1.2em" class="st5">Resource</tspan></text>				</g>
+				</a>
+				<a xlink:href="explore_personal_contacts.html#mapping-for-personal-contacts-relatedperson">
 				<g id="shape5-13" v:mID="5" v:groupContext="shape" transform="translate(102.133,7.67386E-13)">
 					<title>RelatedPerson Resource</title>
 					<desc>RelatedPerson Resource</desc>
@@ -96,6 +99,7 @@
 					<rect x="0" y="149.258" width="90.7086" height="68.0314" class="st3"/>
 					<text x="15.07" y="180.27" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>RelatedPerson<v:newlineChar/><tspan
 								x="26.27" dy="1.2em" class="st5">Resource</tspan></text>				</g>
+					</a>
 				<g id="shape6-17" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(112.536,-68.0328)">
 					<title>Reference from Personal Contacts List to RelatedPerson</title>
 					<v:userDefs>
@@ -120,7 +124,9 @@
 					<v:textRect cx="24.9449" cy="205.525" width="49.89" height="23.5276"/>
 					<rect x="0" y="193.762" width="49.8897" height="23.5276" class="st6"/>
 					<text x="15.63" y="203.13" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..* R<v:newlineChar/><tspan
-								x="7.38" dy="1.2em" class="st5">entry.item  </tspan>  </text>				</g>
+								x="7.38" dy="1.2em" class="st5">entry.item  </tspan>  </text>
+				</g>
+					<a xlink:href="explore_personal_contacts.html#mapping-for-personal-contacts-list">
 				<g id="shape10-30" v:mID="10" v:groupContext="shape" transform="translate(51.7056,-110.839)">
 					<title>Personal Contacts List Resource</title>
 					<desc>Personal Contacts List Resource</desc>
@@ -136,6 +142,7 @@
 					<rect x="0" y="149.258" width="90.7086" height="68.0314" class="st8"/>
 					<text x="8.17" y="180.27" class="st4" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Personal Contacts<v:newlineChar/><tspan
 								x="18.07" dy="1.2em" class="st5">List Resource</tspan></text>				</g>
+				</a>
 				<g id="shape11-36" v:mID="11" v:groupContext="shape" transform="translate(153.071,-153.599)">
 					<title>1..1 M subject</title>
 					<desc>1..1 M subject</desc>
@@ -145,6 +152,7 @@
 					<rect x="0" y="193.762" width="49.8897" height="23.5276" class="st9"/>
 					<text x="14.35" y="203.13" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>1..1 M<v:newlineChar/><tspan
 								x="12.96" dy="1.2em" class="st5">subject</tspan></text>				</g>
+				<a xlink:href="explore_personal_contacts.html#patient-reference">
 				<g id="shape12-40" v:mID="12" v:groupContext="shape" transform="translate(210.309,-108.919)">
 					<title>Reference to Patient resource</title>
 					<desc>Reference to Patient resource</desc>
@@ -168,6 +176,7 @@
 								 A9.58316 9.58316 -180 0 0 -0 155 L0 207.71 L9.58 217.29 Z" class="st10"/>
 					<text x="21.35" y="178.35" class="st11" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Reference to <v:newlineChar/><tspan
 								x="13.71" dy="1.2em" class="st5">Patient resource  </tspan>  </text>				</g>
+				</a>
 				<g id="shape13-44" v:mID="13" v:groupContext="shape" v:layerMember="0" transform="translate(145.701,-144.853)">
 					<title>Reference from Personal Contacts List to Patient</title>
 					<v:userDefs>
