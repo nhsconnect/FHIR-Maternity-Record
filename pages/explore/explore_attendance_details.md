@@ -160,6 +160,24 @@ The Admission details list has a mandated subject reference to the Patient resou
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_attendance_details_all.html#mapping-for-attendance-details-episodeofcare)**|  
 
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
+| --- | --- | --- | --- | --- |
+|  EpisodeOfCare | ​ |  |  | An association of a Patient with an Organization and Healthcare Provider(s) for a period of time that the Organization assumes some level of responsibility<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
+|  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
+|  - meta | 1..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | M"Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1'</font>"<br/> |
+|  - identifier | 0..* | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Business Identifier(s) relevant for this EpisodeOfCare |
+|  - - system | 0..1 | Required | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | The namespace for the identifier value |
+|  - - value | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique |
+|  - status | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | planned : waitlist : active : onhold : finished : cancelled : entered-in-error<br/>Binding (required): The status of the episode of care. [EpisodeOfCareStatus](http://hl7.org/fhir/stu3/valueset-episode-of-care-status.html)<br/><font color='red'>This MUST contain the value finished</font> |
+|  - type | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type/class - e.g. specialist referral, disease management<br/>Binding (example): The type of the episode of care [EpisodeOfCareType](http://hl7.org/fhir/stu3/valueset-episodeofcare-type.html) |
+|  - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system |
+|  - - - system | 0..1 | Required | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system |
+|  - - - code | 0..1 | Required | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system |
+|  - - - display | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system |
+|  - patient | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | The patient who is the focus of this episode of care<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the EpisodeOfCare.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color='red'>This is the subject of the Episode of Care.This MUST use the CareConnect patient profile.</font> <br/>See [patient resource ](https://nhsconnect.github.io/FHIR-Maternity-Record/explore_attendance_details.html#patient-reference) reference for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle.</font> |
+
 
 ## Mapping for Attendance Details Practitioner ##
 
