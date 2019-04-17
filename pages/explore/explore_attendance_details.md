@@ -140,6 +140,19 @@ The Admission details list has a mandated subject reference to the Patient resou
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_attendance_details_all.html#mapping-for-attendance-details-communication)**|  
 
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description/Constraints** |
+| :--- | :--- | :--- | :--- | :--- |
+|  Communication | ​ |  |  | A record of information transmitted from a sender to a receiver<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource<br/>Constraint (com-1): Not Done Reason can only be specified if NotDone is "true" |
+|  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
+|  - meta | 1..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Communication-1'</font> |
+|  - identifier | 0..* | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Unique identifier |
+|  - - system | 0..1 | Required | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | The namespace for the identifier value |
+|  - - value | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique |
+|  - medium | 0..* | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | A channel of communication<br/>Binding (example): Codes for communication mediums such as phone, fax, email, in person, etc. [Participation-Mode](http://hl7.org/fhir/stu3/v3/ParticipationMode/vs.html)<br/><font color='red'>This example valueSet MUST not be used the follow valueSet from NHS Data Dictionary should be used instead</font>[CONSULTATION MEDIUM USED}(https://www.datadictionary.nhs.uk/data_dictionary/attributes/c/cons/consultation_medium_used_de.asp?shownav=1?query=%22CONSULTATION+MEDIUM+USED&rank=100&shownav=1) <br/><font color='red'><b>Mapping to Maternity data item = 'Consultation method'</b></font> |
+|  - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system |
+|  - - - system | 0..1 | Required | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>This MUST contain the value 'https://www.datadictionary.nhs.uk'</font> |
+|  - - - code | 0..1 | Required | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color='red'>The code MUST be  from the stated valueSet</font> |
+|  - - - display | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color='red'>The display MUST be the text assoicated with the code</font> |
 
 ## Mapping for Attendance Details EpisodeOfCare ##
 
