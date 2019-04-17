@@ -279,4 +279,4 @@ The Admission details list has a mandated subject reference to the Patient resou
 
 ## Attendance Details Heading Example ##
 
-<script src="https://gist.github.com/IOPS-DEV/9216149861f148520680e97336625a36.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/6017a8a572e62dc45106b60311425ab4.js"></script>
