@@ -17,6 +17,7 @@ This specification is currently under development and the following PRSB Heading
 - [Admission details](explore_admission_details.html)
 - [Allergies and adverse reactions](explore_allergies_and_adverse_reactions.html)
 - [Assessment scales](explore_assessment_scales.html)
+- [Attendance details](explore_attendance_details.html)
 - [Demographics history](explore_demographics_history.html)
 - [Patient demographics](explore_patient_demographics.html)
 - [Vaccinations](explore_vaccinations.html) 
