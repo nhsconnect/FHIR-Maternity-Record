@@ -39,8 +39,6 @@ The social setting in which the woman lives, such as their household, occupation
 
 {% include custom/Social_Context.svg %}
 
-Social Risk Factors 
-
 ## Mapping for Social Context Details List ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
@@ -142,7 +140,7 @@ Social Risk Factors
 |  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included Encounter resource.</font> |
 
-## Mappings for Social Context Person Observation ##
+## Generic Mappings for Social Context Person Observation ##
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -157,19 +155,22 @@ Social Risk Factors
 |  - - - system | 0..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color="red">This MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 0..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">A concept from SNOMED CT Termonology</font> |
 |  - - - display | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">A SNOMED CT description that MUST match the concept code used</font> |
-|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/><font color="red">A SNOMED CT copncept that respresents the PRSB Maternity data item name</font> |
+|REPLACE WITH DATA ITEM SPECIFIC MAPPING SECTION (CODE)- START|||||
+|  - **code** | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/><font color="red">A SNOMED CT copncept that respresents the PRSB Maternity data item name</font> |
 |  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
 |  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">A SNOMED CT code that represents the maternity data item for social context person</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">Social context - care record element (record artifact)</font> |
+|DATA ITEM SPECIFIC MAPPING SECTION END|||||
 |  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
 |  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">Date and time the social context (person) information was recorded</font> |
 |   |  | Mandatory | [Period](http://hl7.org/fhir/stu3/datatypes.html#period "Period") |  |
-|  - value[x] | 0..1 | Required | [Quantity](http://hl7.org/fhir/stu3/datatypes.html#quantity "Quantity") | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present |
+|DATA ITEM SPECIFIC MAPPING SECTION (VALUE) - START|||||
+|  - **value[x]** | 0..1 | Required | [Quantity](http://hl7.org/fhir/stu3/datatypes.html#quantity "Quantity") | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present |
 |   |  | Required | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") |  |
 |   |  | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") |  |
 |   |  | Required | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") |  |
@@ -178,7 +179,9 @@ Social Risk Factors
 |   |  | Required | [Period](http://hl7.org/fhir/stu3/datatypes.html#period "Period") |  |
 |  - comment | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Comments about result |
 
-The following section contains PRSB data items that MAY be used with the [Mappings for Social Context Person Observation](explore_social_context.html#mappings-for-social-context-person-observation) to create a new 'data item specific observation.
+## Data Item Specific Mappings ##
+
+The follwoing sections contain mappings for social context person data items. These should be used to create a data item specific observation entry. Each data item within social context is made up of an individual observation.
 
 ## Social Context Observation Data Item - Social Circumstances ##
 
@@ -210,9 +213,9 @@ The following section contains PRSB data items that MAY be used with the [Mappin
 
 ## Social Context Observation Data Item - Smoking Details ##
 
-## Data Items in Observation ##
+## Multiple Data Items in this Observation ##
 
-Smoking Status|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
+|Smoking Status|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 |Smoking Status- details|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 |Type of Nicotine Replacement used|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 
@@ -269,7 +272,7 @@ Smoking Status|[Observation](explore_social_context.html#mapping-for-social-cont
 
 ## Social Context Observation Data Item - Drug Substance Use ##
 
-## Data Items in Observation ##
+## Multiple Data Items in this Observation ##
 
 |Drug/substance use|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 |Drug/substance use - details|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
@@ -325,7 +328,7 @@ Smoking Status|[Observation](explore_social_context.html#mapping-for-social-cont
 
 ## Social Context Observation Data Item - Education ##
 
-## Data Items in Observation ##
+## Multiple Data Items in Observation ##
 
 |Education Level|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
 |Number of years in Education|[Observation](explore_social_context.html#mapping-for-social-context-details-list)|
@@ -389,9 +392,6 @@ Smoking Status|[Observation](explore_social_context.html#mapping-for-social-cont
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT 390790000 \| Asylum seeker (person) OR 446654005 \| Refugee (person) OR 729851000000109 \| Asylum seeker with discretionary leave to remain (person) OR 729851000000109 \|Asylum seeker with discretionary leave to remain (person) OR 160702009 \| Illegal migrant (finding)(TBA) OR 224619008 | Migrant (person)(TBA)</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">This SHOULD be the preferred term for the SNOMED concept</font> |
 |  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-
-## Social Context Observation Data Item - Alcohol Use ##
-
 
 
 ## Patient Reference ##
