@@ -181,8 +181,11 @@ entries:
         - title: Screening review
           url: /explore_screening_review.html
           output: web
-        - title: Social context
+        - title: Social context Household
           url: /explore_social_context.html
+          output: web
+        - title: Social context Person
+          url: /explore_social_context_person.html
           output: web
       - title: U - Z
         output: web
