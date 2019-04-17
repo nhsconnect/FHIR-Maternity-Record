@@ -182,7 +182,7 @@ entries:
           url: /explore_screening_review.html
           output: web
         - title: Social context Household
-          url: /explore_social_context.html
+          url: /explore_social_context_household.html
           output: web
         - title: Social context Person
           url: /explore_social_context_person.html
