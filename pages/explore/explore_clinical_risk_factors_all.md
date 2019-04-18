@@ -33,22 +33,14 @@ The following profiles are referenced from the Attendance details list structure
 ## Mapping Overview ##
 
 |**Data Standard Element**|**FHIR Profile Mapping**|**FHIR Element**|
-|Date/Time|[List](explore_attendance_details.html#mapping-for-attendance-details-list)|period|
-|ODS/ORD Site Code|[Location](explore_attendance_details.html#mapping-for-attendance-details-location)|identifier|
-|Location Type|[Encounter](explore_attendance_details.html#mapping-for-attendance-details-location)|class|
-|Professional Name|[Practitioner](explore_attendance_details.html#mapping-for-attendance-details-practitioner)|name|
-|SDS Job Role Name|[PractitionerRole](explore_attendance_details.html#mapping-for-attendance-details-practitionerrole)|identifier|
-|Contact type|[Encounter](explore_attendance_details.html#mapping-for-attendance-details-encounter)|type|
-|Consultation method|[Communication](explore_attendance_details.html#mapping-for-attendance-details-communication)|medium|
-|Care setting|[Location](explore_attendance_details.html#mapping-for-attendance-details-location)|type|
-|Service|[EpisodeOfCare](explore_attendance_details.html#mapping-for-attendance-details-episodeofcare)|type|
-|Care professional present (name)|[Practitioner](explore_attendance_details.html#mapping-for-attendance-details-practitioner)|name|
-|Care professional present (role)|[PractitionerRole](explore_attendance_details.html#mapping-for-attendance-details-practitionerrole)|role|
-|Care professionals present type|[Encounter](explore_attendance_details.html#mapping-for-attendance-details-encounter)|participant.type|
-|First Given Name|[RelatedPerson](explore_attendance_details.html#mapping-for-attendance-details-relatedperson)|name|
-|Family Name|[RelatedPerson](explore_attendance_details.html#mapping-for-attendance-details-relatedperson)|name|
-|Relationship of person accompanying patient|[Encounter](explore_attendance_details.html#mapping-for-attendance-details-encounter)|participant.type|
-|Outcome of contact|OutcomeOfAttendance extension |Currently not mapped due to "required" valueSet issues|
+|Date/Time|[RiskAssessement](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-list)|period|
+|ODS/ORD Site Code|[Location](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-location)|identifier|
+|SDS Job Role Name|[PractitionerRole](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitionerrole)|identifier|
+|Professional Name|[Practitioner](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitioner)|name|
+|Relevant Clinical Risk Factor|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|basis reference.display|
+|Clinical Risk Assessment|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|code|
+|Risk Mitigation|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|mitigation.string|
+
 
 
 ## Mapping for Clinical Risk Factors List ##
