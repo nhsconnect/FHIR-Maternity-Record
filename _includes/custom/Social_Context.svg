@@ -47,7 +47,7 @@
 		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
 				v:shadowOffsetY="-8.50394"/>
 		<v:layer v:name="Connector" v:index="0"/>
-		<a xlink:href="explore_social_context.html#mapping-for-social-context-details-list">
+		<a xlink:href="explore_social_context_person.html#mapping-for-social-context-details-list">
 		<g id="shape16-1" v:mID="16" v:groupContext="shape" transform="translate(61.7759,-238.984)">
 			<title>Social Context List Resource</title>
 			<desc>Social Context List Resource</desc>
@@ -64,7 +64,7 @@
 			<text x="9.96" y="289.84" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Social Context<v:newlineChar/><tspan
 						x="12.61" dy="1.2em" class="st3">List Resource</tspan></text>		</g>
 						</a>
-						<a xlink:href="explore_social_context.html#mapping-for-social-context-household-list">
+						<a xlink:href="explore_social_context_household.html#mapping-for-social-context-household-list">
 		<g id="shape17-7" v:mID="17" v:groupContext="shape" transform="translate(122.721,-125.599)">
 			<title>Family and Household List Resource</title>
 			<desc>Family and Household List Resource</desc>
@@ -81,10 +81,10 @@
 			<text x="18.21" y="282.64" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Family and <tspan
 						x="18.57" dy="1.2em" class="st3">Household <v:newlineChar/></tspan><tspan x="12.61" dy="1.2em" class="st3">List Resource</tspan></text>		</g>
 						</a>
-			<a xlink:href="explore_social_context.html#mappings-for-social-context-person-list">			
+			<a xlink:href="explore_social_context_person.html#mappings-for-social-context-person-list">			
 		<g id="shape18-13" v:mID="18" v:groupContext="shape" transform="translate(18.75,-126.611)">
-			<title>Personal List Resource</title>
-			<desc>Personal List Resource</desc>
+			<title>Person List Resource</title>
+			<desc>Person List Resource</desc>
 			<v:custProps>
 				<v:cp v:nameU="Row_1" v:lbl="title" v:type="0" v:langID="2057" v:val="VT4(Bundle)"/>
 			</v:custProps>
