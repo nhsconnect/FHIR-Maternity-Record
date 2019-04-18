@@ -10,8 +10,4 @@ summary: "The FHIR profiles used for the Individual requirements Bundle"
 ## Heading Description ##
 The Individual requirements that a woman has, e.g. communication, cultural, cognitive or mobility needs.
 
-## Mapping for Bundle ##
-
-|>|Level 1|[Bundle Resource](http://hl7.org/fhir/stu3/bundle.html)|>|Level 2| None|>|Level 3|[NHSD-Bundle-1 Profile](http://xxx)|
-
-|**View All FHIR Elements**|    |**[View Used Elements Only](explore_individual_requirement.html#mapping-for-bundle)**| 
+{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
