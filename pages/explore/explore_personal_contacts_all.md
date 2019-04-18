@@ -9,6 +9,9 @@ summary: "The FHIR profiles used for the Personal contacts Bundle"
 
 ## Heading Description ##
 This heading gives details of the women’s personal contacts.  
+
+{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
+
 The following FHIR profiles are used to form the Personal contacts list structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1)
@@ -21,7 +24,19 @@ The following profiles are referenced from the Patient demographics list structu
 
 {% include custom/personal_contacts.svg %}  
 
-## Maternity data standard Mapping to FHIR profiles ##
+## Maternity data standard Mapping to FHIR profiles ##  
+
+## Mapping Overview ##
+
+|**Data Standard Element**|**FHIR Resource Mapping**|**FHIR Element**|
+|Date/time|Currently not mapped|Currently not mapped|
+|First given name|[RelatedPerson](explore_personal_contacts.html#mapping-for-personal-contacts-relatedperson)|name.given|
+|Family name|[RelatedPerson](explore_personal_contacts.html#mapping-for-personal-contacts-relatedperson)|name.family|
+|Contact details|[RelatedPerson](explore_personal_contacts.html#mapping-for-personal-contacts-relatedperson)|telecom|
+|Relationship type|[RelatedPerson](explore_personal_contacts.html#mapping-for-personal-contacts-relatedperson)|relationship|
+|Household member|[Observation](explore_personal_contacts.html#mapping-for-personal-contacts-observation)|code (subject to appropriate national codes being available)|
+|Parental responsibility|[Observation](explore_personal_contacts.html#mapping-for-personal-contacts-observation)|code (subject to appropriate national codes being available)|
+|Significant individual|[Observation](explore_personal_contacts.html#mapping-for-personal-contacts-observation)|code (subject to appropriate national codes being available)|
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
