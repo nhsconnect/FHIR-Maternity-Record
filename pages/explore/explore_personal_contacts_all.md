@@ -307,7 +307,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system |
 |  - - - userSelected | 0..1 | Not Used | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") | If this coding was chosen directly by the user |
 |  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/><font color='red'>This example valueSet is not used by Maternity record.</font><br/><font color='red'><b>Mapping to Maternity data items = 'Household member', 'Parental responsibility', 'Significant individual' (subject to appropriate national codes being available)</b></font> |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/><font color='red'>This example ValueSet is not used by Maternity record.</font><br/><font color='red'><b>Mapping to Maternity data items = 'Household member', 'Parental responsibility', 'Significant individual' (subject to appropriate national codes being available)</b></font> |
 |  - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
 |  - - - extension (snomedCTDescriptionID) | 0..1 | Not Used | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
@@ -489,6 +489,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
 |  - referenceRange | 0..* | Not Used | [see Observation.referenceRange](https://fhir.hl7.org.uk/STU3/StructureDefinition/details.html#Observation.referenceRange "see Observation.referenceRange") | Provides guide for interpretation of component result |  
 
-## Personal Contacts Heading Example ##
+## Personal Contacts Heading Example ##  
+Note that the Observation resource is not present in the example because an approach to linking the RelatedPerson and Observation resources has not yet been finalised.
 
 <script src="https://gist.github.com/IOPS-DEV/815ef1147dd3d78fa4d4ac0fced32bff.js"></script>
