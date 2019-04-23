@@ -134,7 +134,7 @@ The Personal contacts list has a mandated subject reference to the Patient resou
 |  - - value | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique |
 |  - - assigner | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |  - status | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | registered : preliminary : final : amended +<br/>Binding (required): Codes providing the status of an observation. [ObservationStatus](http://hl7.org/fhir/stu3/valueset-observation-status.html)<br/><font color='red'>MUST contain the value 'final'.</font> |
-|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/><font color='red'>This example valueSet is not used by Maternity record.</font><br/><font color='red'><b>Mapping to Maternity data items = 'Household member', 'Parental responsibility', 'Significant individual' (subject to appropriate national codes being available)</b></font> |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/><font color='red'>This example ValueSet is not used by Maternity record.</font><br/><font color='red'><b>Mapping to Maternity data items = 'Household member', 'Parental responsibility', 'Significant individual' (subject to appropriate national codes being available)</b></font> |
 |  - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
@@ -145,6 +145,7 @@ The Personal contacts list has a mandated subject reference to the Patient resou
 |   |  | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") |  |
 |   |  | Optional | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") |  |  
 
-## Personal Contacts Heading Example ##
+## Personal Contacts Heading Example ##  
+Note that the Observation resource is not present in the example because an approach to linking the RelatedPerson and Observation resources has not yet been finalised.
 
 <script src="https://gist.github.com/IOPS-DEV/815ef1147dd3d78fa4d4ac0fced32bff.js"></script>
