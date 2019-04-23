@@ -487,4 +487,8 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system |
 |  - - - userSelected | 0..1 | Not Used | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") | If this coding was chosen directly by the user |
 |  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - referenceRange | 0..* | Not Used | [see Observation.referenceRange](https://fhir.hl7.org.uk/STU3/StructureDefinition/details.html#Observation.referenceRange "see Observation.referenceRange") | Provides guide for interpretation of component result |
+|  - referenceRange | 0..* | Not Used | [see Observation.referenceRange](https://fhir.hl7.org.uk/STU3/StructureDefinition/details.html#Observation.referenceRange "see Observation.referenceRange") | Provides guide for interpretation of component result |  
+
+## Personal Contacts Heading Example ##
+
+<script src="https://gist.github.com/IOPS-DEV/815ef1147dd3d78fa4d4ac0fced32bff.js"></script>
