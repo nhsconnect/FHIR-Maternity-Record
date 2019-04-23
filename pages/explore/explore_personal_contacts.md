@@ -143,4 +143,8 @@ The Personal contacts list has a mandated subject reference to the Patient resou
 |  - value[x] | 0..1 | Required | | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present |
 |   |  | Optional | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") |  |
 |   |  | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") |  |
-|   |  | Optional | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") |  |
+|   |  | Optional | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") |  |  
+
+## Personal Contacts Heading Example ##
+
+<script src="https://gist.github.com/IOPS-DEV/815ef1147dd3d78fa4d4ac0fced32bff.js"></script>
