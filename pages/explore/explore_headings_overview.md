@@ -20,6 +20,7 @@ This specification is currently under development and the following PRSB Heading
 - [Attendance details](explore_attendance_details.html)
 - [Demographics history](explore_demographics_history.html)
 - [Patient demographics](explore_patient_demographics.html)
+- [Personal contacts](explore_personal_contacts.html)
 - [Vaccinations](explore_vaccinations.html) 
 
 ## PRSB Version Used ##
