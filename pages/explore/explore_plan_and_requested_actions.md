@@ -1,5 +1,5 @@
 ﻿---
-title: Plan and Requested Actions Bundle
+title: Plan and Requested Actions List
 keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
@@ -42,7 +42,9 @@ The following profiles are referenced from the Patient demographics list structu
 |Type (of professional plan)|[CarePlan](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)|category (values tbc)|
 |Plan due date|[CarePlan](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)|period.start|
 |Plan details|[CarePlan](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)|description| 
-|Date Plan agreed|[CarePlan](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)|description| 
+|Date Plan agreed|[CarePlan](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)|activity.detail.scheduledPeriod.start| 
+|Actions|[CarePlan](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)|description| 
+|Recipient|[RelatedPerson](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-relatedperson)|relationship| 
  
 
 ## Mapping for Plan and Requested Actions List ##  
