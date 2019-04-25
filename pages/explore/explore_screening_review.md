@@ -11,7 +11,7 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 
 ## Social Context Details Structure ##
 
-{% include custom/screening_review.svg %}
+
 
 
 
