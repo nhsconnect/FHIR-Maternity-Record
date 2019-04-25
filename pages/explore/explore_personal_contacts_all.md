@@ -34,9 +34,9 @@ The following profiles are referenced from the Patient demographics list structu
 |Family name|[RelatedPerson](explore_personal_contacts.html#mapping-for-personal-contacts-relatedperson)|name.family|
 |Contact details|[RelatedPerson](explore_personal_contacts.html#mapping-for-personal-contacts-relatedperson)|telecom|
 |Relationship type|[RelatedPerson](explore_personal_contacts.html#mapping-for-personal-contacts-relatedperson)|relationship|
-|Household member|[Observation](explore_personal_contacts.html#mapping-for-personal-contacts-observation)|code (subject to appropriate national codes being available)|
-|Parental responsibility|[Observation](explore_personal_contacts.html#mapping-for-personal-contacts-observation)|code (subject to appropriate national codes being available)|
-|Significant individual|[Observation](explore_personal_contacts.html#mapping-for-personal-contacts-observation)|code (subject to appropriate national codes being available)|  
+|Household member|[Observation](explore_personal_contacts.html#mapping-for-personal-contacts-observation)|code/value[x] (subject to appropriate national codes being available)|
+|Parental responsibility|[Observation](explore_personal_contacts.html#mapping-for-personal-contacts-observation)|code/value[x] (subject to appropriate national codes being available)|
+|Significant individual|[Observation](explore_personal_contacts.html#mapping-for-personal-contacts-observation)|code/value[x] (subject to appropriate national codes being available)|  
 
 Note that an approach to linking the RelatedPerson and Observation resources has not yet been finalised.
 
