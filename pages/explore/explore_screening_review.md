@@ -14,7 +14,6 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 {% include custom/screening_review.svg %}
 
 
-## Mapping for Screening Review List ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
 
