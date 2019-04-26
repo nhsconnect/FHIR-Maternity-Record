@@ -430,12 +430,133 @@ The following profiles are referenced from the Clinical risk factors list struct
 
 |**[View Used FHIR Elements](explore_clinical_risk_factors.html#mapping-for-clinical-risks-factors-riskassessment)**|**View All FHIR Elements**| 
 
-
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
+| --- | --- | --- | --- | --- |
+|  RiskAssessment | ​ |  |  | Potential outcomes for a subject with likelihood<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
+|  - id | 0..1 | Optional | Id | Logical id of this artifact |
+|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-RiskAssessment-1'</font> |
+|  - implicitRules | 0..1 | Not Used | Uri | A set of rules under which this content was created |
+|  - language | 0..1 | Not Used | Code | Language of the resource content<br/>Binding (extensible): A human language. [Common Languages](http://hl7.org/fhir/stu3/valueset-languages.html) |
+|  - text | 0..1 | Not Used | Narrative | Text summary of the resource, for human interpretation |
+|  - contained | 0..* | Not Used | Resource | Contained, inline Resources |
+|  - modifierExtension | 0..* | Not Used | Extension | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>Slicing: Description: Extensions are always sliced by (at least) url, Discriminator: url, Ordering: false, Rules: Open |
+|  - identifier | 0..1 | Required | Identifier | Unique identifier for the assessment |
+|  - - use | 0..1 | Not Used | Code | usual : official : temp : secondary (If known)<br/>Binding (required): Identifies the purpose for this identifier, if known. [IdentifierUse](http://hl7.org/fhir/stu3/valueset-identifier-use.html) |
+|  - - type | 0..1 | Not Used | CodeableConcept | Description of identifier<br/>Binding (extensible): A coded type for an identifier that can be used to determine which identifier to use for a specific purpose. [Identifier Type Codes](http://hl7.org/fhir/stu3/valueset-identifier-type.html) |
+|  - - - coding | 0..* | Not Used | Coding | Code defined by a terminology system |
+|  - - - - system | 0..1 | Not Used | Uri | Identity of the terminology system |
+|  - - - - version | 0..1 | Not Used | String | Version of the system - if relevant |
+|  - - - - code | 0..1 | Not Used | Code | Symbol in syntax defined by the system |
+|  - - - - display | 0..1 | Not Used | String | Representation defined by the system |
+|  - - - - userSelected | 0..1 | Not Used | Boolean | If this coding was chosen directly by the user |
+|  - - - text | 0..1 | Not Used | String | Plain text representation of the concept |
+|  - - system | 0..1 | Required | Uri | The namespace for the identifier value |
+|  - - value | 0..1 | Required | String | The value that is unique |
+|  - - period | 0..1 | Not Used | Period | Time period when id is/was valid for use<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
+|  - - - start | 0..1 | Not Used | dateTime | Starting time with inclusive boundary |
+|  - - - end | 0..1 | Not Used | dateTime | End time with inclusive boundary, if not ongoing |
+|  - - assigner | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Not Used | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") |  |
+|  - - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
+|  - - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
+|  - - - display | 0..1 | Not Used | String | Text alternative for the resource |
+|  - basedOn | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Request fulfilled by this assessment<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Not Used | [Resource](http://hl7.org/fhir/stu3/StructureDefinition/Resource "Resource") |  |
+|  - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Not Used | String | Text alternative for the resource.<br/> |
+|  - parent | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Part of this occurrence<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Not Used | [Resource](http://hl7.org/fhir/stu3/StructureDefinition/Resource "Resource") |  |
+|  - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Not Used | String | Text alternative for the resource |
+|  - status | 1..1 | Mandatory | Code | registered : preliminary : final : amended +<br/>Binding (required): The status of the risk assessment; e.g. preliminary, final, amended, etc. [ObservationStatus](http://hl7.org/fhir/stu3/valueset-observation-status.html)<br/><font color='red'>This SHOULD contain a value of 'final'</font> |
+|  - method | 1..1 | Mandatory | CodeableConcept | Evaluation mechanism<br/>Binding (example): The mechanism or algorithm used to make the assessment; e.g. TIMI, PRISM, Cardiff Type 2 diabetes, etc.<br/><font color='red'><b>Mapping to Maternity data item = 'Clinical Risk Assessment'.</b></font> |
+|  - - coding | 0..* | Required | Coding | Code defined by a terminology system |
+|  - - - system | 0..1 | Not Used | Uri | Identity of the terminology system<br/><font color='red'>Must contain the value 'http://snomed.info/sct'</font> |
+|  - - - version | 0..1 | Not Used | String | Version of the system - if relevant |
+|  - - - code | 0..1 | Not Used | Code | Symbol in syntax defined by the system |
+|  - - - display | 0..1 | Not Used | String | Representation defined by the system |
+|  - - - userSelected | 0..1 | Not Used | Boolean | If this coding was chosen directly by the user |
+|  - - text | 0..1 | Required | String | Plain text representation of the concept<br/><font color='red'>Specific assessments undertaken in relation to the risk</font><br/><font color='red'><b>Mapping to Maternity data item = 'Clinical Risk Assessment'</b></font> |
+|  - code | 0..1 | Not Used | CodeableConcept | Type of assessment |
+|  - - coding | 0..* | Not Used | Coding | Code defined by a terminology system |
+|  - - - system | 0..1 | Not Used | Uri | Identity of the terminology system |
+|  - - - version | 0..1 | Not Used | String | Version of the system - if relevant |
+|  - - - code | 0..1 | Not Used | Code | Symbol in syntax defined by the system |
+|  - - - display | 0..1 | Not Used | String | Representation defined by the system |
+|  - - - userSelected | 0..1 | Not Used | Boolean | If this coding was chosen directly by the user |
+|  - - text | 0..1 | Not Used | String | Plain text representation of the concept |
+|  - subject | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who/what does assessment apply to?<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Not Used | [Group](http://hl7.org/fhir/stu3/StructureDefinition/Group "Group") |  |
+|   |  | Not Used | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
+|  - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Not Used | String | Text alternative for the resource |
+|  - context | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Where was assessment performed?<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Not Used | [CareConnect-EpisodeOfCare-1](https://fhir.nhs.uk/STU3/StructureDefinition/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1 "CareConnect-EpisodeOfCare-1") |  |
+|   |  | Required | [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1 "CareConnect-Encounter-1") | <font color='red'>This MUST use the CareConnect Encounter profile. </font>See [Encounter resource](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-encounter) for information on how to populate the resource. |
+|  - - reference | 0..1 | Required | String | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Not Used | String | Text alternative for the resource |
+|  - occurrence[x] | 0..1 | Required | dateTime | When was assessment made?<br/><font color='red'><b>Mapping to Maternity data item = 'Date/Time'.</b></font>  |
+|   |  | Not Used | Period |  |
+|  - condition | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Condition assessed<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Not Used | [CareConnect-Condition-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1 "CareConnect-Condition-1") |  |
+|  - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Not Used | String | Text alternative for the resource |
+|  - performer | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who did assessment?<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Not Used | [Device](http://hl7.org/fhir/stu3/StructureDefinition/Device "Device") |  |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color='red'>This MUST use the CareConnect Practitioner profile. </font>See [Practitioner resource](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitioner) for information on how to populate the resource. |
+|  - - reference | 0..1 | Required | String | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Not Used | String | Text alternative for the resource |
+|  - reason[x] | 0..1 | Not Used | CodeableConcept | Why the assessment was necessary? |
+|   |  | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") |  |
+|   |  | Not Used | [Resource](http://hl7.org/fhir/stu3/StructureDefinition/Resource "Resource") |  |
+|  - basis | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Information used in assessment<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>Factors that have been shown to be associated with the development of a medical condition being considered as a diagnosis. E.g. being overweight, smoker,  enzyme deficiency.</font><br/><font color='red'><b>Mapping to Maternity data item = 'Relevant Clinical Risk Factor'</b></font> |
+|   |  | Required | [Resource](http://hl7.org/fhir/stu3/StructureDefinition/Resource "Resource") | <font color='red'>The coded information used in an assessment<br/>This MUST use the CareConnect  observation profile. </font>See [Observation resource](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-observation) for information on how to populate the resource. |
+|  - - reference | 0..1 | Required | String | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Not Used | String | Text alternative for the resource |
+|  - prediction | 0..* | Not Used | BackboneElement | Outcome predicted<br/>Constraint (ras-2): Must be <= 100 |
+|  - - modifierExtension | 0..* | Not Used | Extension | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
+|  - - outcome | 1..1 | Not Used | CodeableConcept | Possible outcome for the subject<br/>Binding (example): The condition or other outcome; e.g. death, remission, amputation, infection, etc. |
+|  - - - coding | 0..* | Not Used | Coding | Code defined by a terminology system |
+|  - - - - system | 0..1 | Not Used | Uri | Identity of the terminology system |
+|  - - - - version | 0..1 | Not Used | String | Version of the system - if relevant |
+|  - - - - code | 0..1 | Not Used | Code | Symbol in syntax defined by the system |
+|  - - - - display | 0..1 | Not Used | String | Representation defined by the system |
+|  - - - - userSelected | 0..1 | Not Used | Boolean | If this coding was chosen directly by the user |
+|  - - - text | 0..1 | Not Used | String | Plain text representation of the concept |
+|  - - probability[x] | 0..1 | Not Used | Decimal | Likelihood of specified outcome<br/>Constraint (ras-1): Low And High Must Be Percentages, If Present |
+|   |  | Not Used | [Range](http://hl7.org/fhir/stu3/datatypes.html#range "Range") |  |
+|  - - qualitativeRisk | 0..1 | Not Used | CodeableConcept | Likelihood of specified outcome as a qualitative value<br/>Binding (example): The likelihood of the occurrence of a specified outcome [Risk Probability](http://hl7.org/fhir/stu3/valueset-risk-probability.html) |
+|  - - - coding | 0..* | Not Used | Coding | Code defined by a terminology system |
+|  - - - - system | 0..1 | Not Used | Uri | Identity of the terminology system |
+|  - - - - version | 0..1 | Not Used | String | Version of the system - if relevant |
+|  - - - - code | 0..1 | Not Used | Code | Symbol in syntax defined by the system |
+|  - - - - display | 0..1 | Not Used | String | Representation defined by the system |
+|  - - - - userSelected | 0..1 | Not Used | Boolean | If this coding was chosen directly by the user |
+|  - - - text | 0..1 | Not Used | String | Plain text representation of the concept |
+|  - - relativeRisk | 0..1 | Not Used | Decimal | Relative likelihood |
+|  - - when[x] | 0..1 | Not Used | Period | Timeframe or age range<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
+|   |  | Not Used | [Range](http://hl7.org/fhir/stu3/datatypes.html#range "Range") |  |
+|  - - rationale | 0..1 | Not Used | String | Explanation of prediction |
+|  - mitigation | 0..1 | Required | String | How to reduce risk |
+|  - comment | 0..1 | Not Used | String | Comments on the risk assessment |
 
 
 ## Patient Reference ##
 
 The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
+
+## Mapping for Clinical Risk Factors Observation ##
+
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None| 
+
+|**[View Used FHIR Elements](explore_clinical_risks_factors.html#mapping-for-clinical-risk-factors-observation)**|**View All FHIR Elements**|
 
 
 ## Mapping for Clinical Risk Factors Practitioner ##
