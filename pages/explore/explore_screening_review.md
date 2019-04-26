@@ -83,6 +83,41 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included resources.</font> |
 
+## Mapping for National Antenatal Screening Programme Procedure Request ##
+
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedurerequest.html)|>|Level 2| None|>|Level 3|[CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)|
+
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-diabetic-eye-screening-observation)**|
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
+| --- | --- | --- | --- | --- |
+|  - id | 0..1 | Optional | Id | Logical id of this artifact |
+|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
+|  - identifier | 0..* | Required | Identifier | Identifiers assigned to this order |
+|  - - system | 0..1 | Required | Uri | The namespace for the identifier value |
+|  - - value | 0..1 | Mandatory | String | The value that is unique |
+|  - - assigner | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|  - - - identifier | 0..1 | Required | Identifier | Logical reference, when literal reference is not known |
+|  - status | 1..1 | Mandatory | Code | draft : active : suspended : completed : entered-in-error : cancelled<br/>Binding (required): The status of a procedure or diagnostic order. [RequestStatus](http://hl7.org/fhir/stu3/valueset-request-status.html)<br/><font color="red">MUST be set to 'completed'</font> |
+|  - intent | 1..1 | Mandatory | Code | proposal : plan : order +<br/>Binding (required): The kind of procedure or diagnostic request [RequestIntent](http://hl7.org/fhir/stu3/valueset-request-intent.html)<br/><font color="red">Must be set to 'order'</font> |
+|  - category | 0..* | Required | CodeableConcept | Classification of procedure<br/>Binding (example): Classification of the procedure [Procedure Category Codes (SNOMED CT)](http://hl7.org/fhir/stu3/valueset-procedure-category.html)<br/><font color="red">National Antenatal Screening Programme - Screening Category MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ScreeningProgramme-1)</font> |
+|  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system |
+|  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
+|  - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
+|  - - - display | 0..1 | Mandatory | String | Representation defined by the system |
+|  - - text | 0..1 | Optional | String | Plain text representation of the concept |
+|  - code | 1..1 | Mandatory | CodeableConcept | What is being requested/ordered<br/><font color="red">Diabetic Eye Screening Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DiabeticEyeScreeningTest-1)</font><br/><font color="red">Infectious Diseases Screening Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-InfectiousDiseasesTests -1)</font><br/><font color="red">FA Downs, Edwards and Pataus Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-FADownsPatausTests -1)</font><br/><font color="red">Sickle Cell and Thalassaemia Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-SickleCellThalassaemiaTests -1)</font><br/><font color="red">FA Structural Anomalies Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-FAStructuralAnomaliesTests -1)</font> |
+|  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system |
+|  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
+|  - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
+|  - - - display | 0..1 | Mandatory | String | Representation defined by the system |
+|  - - text | 0..1 | Optional | String | Plain text representation of the concept |
+|  - subject | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Individual the service is ordered for<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
+|  - authoredOn | 0..1 | Mandatory | dateTime | Date request signed<br/><font color="red">Date when the screening test was offered</font> |
+
+
 ## Mapping for National Antenatal Screening Programme Procedure ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedure.html)|>|Level 2| None|>|Level 3|[CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)|
@@ -125,14 +160,13 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |  - subject | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who the procedure was performed on<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
 |  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
-|  - performed[x] | 0..1 | Mandatory | dateTime | Date/Period the procedure was performed<br/><font color="red">The date/time of the test offer or blood test taken (if screening declined use same date)</font> |
+|  - performed[x] | 0..1 | Mandatory | dateTime | Date/Period the procedure was performed<br/><font color="red">The date/time the screening outcome was recorded</font> |
 |  - performer | 0..* | Required | BackboneElement | The people who performed the procedure |
 |  - - actor | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | The reference to the practitioner<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") |  |
 |  - location | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Where the procedure happened<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Required | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") |  |
 |  - - reference | 0..1 | Required | String | Literal reference, Relative, internal or absolute URL |
-|  - reasonCode | 0..* | Mandatory | CodeableConcept | Coded reason procedure performed<br/>Binding (example): A code that identifies the reason a procedure is required. [Procedure Reason Codes](http://hl7.org/fhir/stu3/valueset-procedure-reason.html) |
 |  - outcome | 0..1 | Mandatory | CodeableConcept | The result of procedure<br/><font color="red">Diabetic Eye Screening Outcome MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DiabeticEyeScreeningOutcome-1)</font><br/><font color="red">Infectious Diseases Screening Outcome MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-InfectiousDiseasesOutcome-1)</font><br/><font color="red">FA Downs, Edwards and Pataus Outcome MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-FADownsPatausOutcome-1)</font><br/><font color="red">Sickle Cell and Thalassaemia Outcome MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-SickleCellThalassaemiaOutcome-1)</font><br/><font color="red">FA Structural Anomalies Outcome MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-FAStructuralAnomaliesOutcome-1)</font><br/><font color="red">Values used for screening outcome MUST be compatible with the values used in screening process</font> |
 |  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system |
 |  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system |
@@ -172,6 +206,7 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
 |  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">MUST only be used for Sickle Cell and Thalassaemia Family Origins Questionnaire completion date</font><br/> |
+|  - value[x] | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/><font color="red">MUST contain gestational age value</font> |
 
 
 ## Mapping for Screening Practitioner ##
