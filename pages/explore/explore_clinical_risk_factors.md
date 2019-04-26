@@ -83,7 +83,7 @@ The following profiles are referenced from the Clinical risk factors list struct
 
 |>|Level 1|[Encounter Resource](http://hl7.org/fhir/stu3/encounter.html)|>|Level 2|[CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|>|Level 3|None|
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_clinical_risk_factors_all.html#mapping-for-clinical-risks-factors-encounter)**| 
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_clinical_risk_factors_all.html#mapping-for-clinical-risk-factors-encounter)**| 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -104,7 +104,7 @@ The following profiles are referenced from the Clinical risk factors list struct
 
 |>|Level 1|[RiskAssessment Resource](http://hl7.org/fhir/stu3/riskassessment.html)|>|Level 2|[CareConnect-RiskAssessment-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RiskAssessment-1)|>|Level 3|None|
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_clinical_risk_factors_all.html#mapping-for-clinical-risks-factors-riskassessment)**| 
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_clinical_risk_factors_all.html#mapping-for-clinical-risk-factors-riskassessment)**| 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | --- | --- | --- | --- | --- |
@@ -139,13 +139,13 @@ The Admission details list has a mandated subject reference to the Patient resou
 
 |>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None| 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_clinical_risks_factors_all.html#mapping-for-clinical-risk-factors-observation)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_clinical_risk_factors_all.html#mapping-for-clinical-risk-factors-observation)**|
 
 ## Mapping for Clinical Risk Factors Practitioner ##
 
 |>|Level 1|[Practitioner Resource](http://hl7.org/fhir/stu3/practitioner.html)|>|Level 2|[CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)|>|Level 3|None| 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_clinical_risks_factors_all.html#mapping-for-clinical-risk-factors-practitioner)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_clinical_risk_factors_all.html#mapping-for-clinical-risk-factors-practitioner)**|
 
 ## Mapping for Clinical Risk Factors PractitionerRole ##
 
