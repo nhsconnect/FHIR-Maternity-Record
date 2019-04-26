@@ -4,14 +4,11 @@ keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_personal_contacts_all.html
-summary: "The FHIR profiles used for the Personal contacts Bundle"
+summary: "The FHIR profiles used for the Personal contacts List"
 ---
 
 ## Heading Description ##
 This heading gives details of the women’s personal contacts.  
-
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
-
 The following FHIR profiles are used to form the Personal contacts List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1)
@@ -487,7 +484,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system |
 |  - - - userSelected | 0..1 | Not Used | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") | If this coding was chosen directly by the user |
 |  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - referenceRange | 0..* | Not Used | [see Observation.referenceRange](https://fhir.hl7.org.uk/STU3/StructureDefinition/details.html#Observation.referenceRange "see Observation.referenceRange") | Provides guide for interpretation of component result |  
+|  - referenceRange | 0..* | Not Used | [see Observation.referenceRange](https://www.hl7.org/fhir/stu3/observation.html#Observation.referenceRange "see Observation.referenceRange") | Provides guide for interpretation of component result |  
 
 ## Personal Contacts Heading Example ##  
 Note that the Observation resource is not present in the example because an approach to linking the RelatedPerson and Observation resources has not yet been finalised.
