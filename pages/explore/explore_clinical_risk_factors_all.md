@@ -569,7 +569,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 
 |>|Level 1|[PractitionerRole Resource](http://hl7.org/fhir/stu3/practitionerrole.html)|>|Level 2|[CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)|>|Level 3|None|
 
-|**[View Used FHIR Elements](explore_attendance_details.html#mapping-for-clinical-risk-factors-practitionerrole)**|**View All FHIR Elements**| 
+|**[View Used FHIR Elements](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitionerrole)**|**View All FHIR Elements**| 
 
 
 ## Mapping for Clinical Risk Factors Location ##
