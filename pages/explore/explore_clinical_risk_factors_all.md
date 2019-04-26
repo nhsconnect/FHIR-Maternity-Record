@@ -37,8 +37,8 @@ The following profiles are referenced from the Clinical risk factors list struct
 |ODS/ORD Site Code|[Location](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-location)|identifier|
 |SDS Job Role Name|[PractitionerRole](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitionerrole)|identifier|
 |Professional Name|[Practitioner](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitioner)|name|
-|Relevant Clinical Risk Factor|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|basis reference.display|
-|Clinical Risk Assessment|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|code|
+|Relevant Clinical Risk Factor|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|basis reference.display<br/>basis reference|
+|Clinical Risk Assessment|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|method|
 |Risk Mitigation|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|mitigation.string|
 
 
