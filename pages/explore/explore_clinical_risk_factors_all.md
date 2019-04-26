@@ -47,7 +47,7 @@ The following profiles are referenced from the Clinical risk factors list struct
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
-|**[View Used FHIR Elements](explore_clinical_risk_factors.html#mapping-for-clinical-risk_factors-list)**|**View All FHIR Elements**|
+|**[View Used FHIR Elements](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-list)**|**View All FHIR Elements**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
