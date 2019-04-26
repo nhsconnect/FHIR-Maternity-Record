@@ -20,7 +20,7 @@
 		.st6 {fill:none;stroke:#c7c8c8;stroke-width:0.25}
 		.st7 {fill:#000000;font-family:Calibri;font-size:0.666664em;font-weight:bold}
 		.st8 {fill:#4672c4;fill-opacity:0;stroke:#c7c8c8;stroke-width:0.25}
-		.st9 {fill:url(#grad0-83);stroke:#2d5171;stroke-width:0.75}
+		.st9 {fill:url(#grad0-84);stroke:#2d5171;stroke-width:0.75}
 		.st10 {fill:#4bacc6;stroke:#c7c8c8;stroke-width:0.25}
 		.st11 {fill:#000000;font-family:Calibri;font-size:0.833336em;font-weight:bold}
 		.st12 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
@@ -28,7 +28,7 @@
 	</style>
 
 	<defs id="Patterns_And_Gradients">
-		<linearGradient id="grad0-83" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(250 0.5 0.5)">
+		<linearGradient id="grad0-84" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(250 0.5 0.5)">
 			<stop offset="0" stop-color="#386288" stop-opacity="1"/>
 			<stop offset="0.48" stop-color="#386288" stop-opacity="1"/>
 			<stop offset="0.82" stop-color="#41719c" stop-opacity="1"/>
@@ -53,7 +53,7 @@
 		<v:layer v:name="Connector" v:index="0"/>
 		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-practitioner"
 				xlink:title="Link to Practitioner resource mapping">
-			<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(149.214,-119.253)">
+			<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(112.193,-135.712)">
 				<title>Practitioner Resource</title>
 				<desc>Practitioner Resource</desc>
 				<v:custProps>
@@ -69,23 +69,23 @@
 				<text x="20.77" y="381.81" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Practitioner<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st3">Resource</tspan></text>			</g>
 		</a>
-		<g id="shape2-5" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(252.809,-330.485)">
+		<g id="shape2-5" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(241.497,-332.275)">
 			<title>Reference from Plan and requested actions List to CarePlan</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M0 418.82 L-27.81 453.9" class="st4"/>
+			<path d="M0 419.62 L-34.39 429.66" class="st4"/>
 		</g>
-		<g id="shape3-11" v:mID="3" v:groupContext="shape" v:layerMember="0" transform="translate(351.593,-218.579)">
+		<g id="shape3-11" v:mID="3" v:groupContext="shape" v:layerMember="0" transform="translate(321.512,-250.414)">
 			<title>Reference from Encounter to Location</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M7.09 418.82 L7.09 441.08" class="st4"/>
+			<path d="M0 418.82 L16.7 456.76" class="st4"/>
 		</g>
 		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-encounter"
 				xlink:title="Link to Encounter resource mapping">
-			<g id="shape4-16" v:mID="4" v:groupContext="shape" transform="translate(313.326,-218.579)">
+			<g id="shape4-16" v:mID="4" v:groupContext="shape" transform="translate(260.056,-250.18)">
 				<title>Encounter Resource</title>
 				<desc>Encounter Resource</desc>
 				<v:custProps>
@@ -103,7 +103,7 @@
 		</a>
 		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-practitionerrole"
 				xlink:title="Linnk to PractitionerRole resource mapping">
-			<g id="shape5-20" v:mID="5" v:groupContext="shape" transform="translate(149.886,-18.25)">
+			<g id="shape5-20" v:mID="5" v:groupContext="shape" transform="translate(111.681,-36.0808)">
 				<title>PractitionerRole Resource</title>
 				<desc>PractitionerRole Resource</desc>
 				<v:custProps>
@@ -119,16 +119,16 @@
 				<text x="11.52" y="381.81" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>PractitionerRole<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st3">Resource</tspan></text>			</g>
 		</a>
-		<g id="shape6-24" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(303.764,-330.485)">
-			<title>Reference from Plans and requested actions List to Encounter</title>
+		<g id="shape6-24" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(203.454,-276.949)">
+			<title>Reference from CarePlan to Encounter</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M0 418.82 L25.72 455.31" class="st4"/>
+			<path d="M0 411.89 L47.56 411.63" class="st4"/>
 		</g>
 		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-location"
 				xlink:title="Link to Location resource mapping">
-			<g id="shape7-29" v:mID="7" v:groupContext="shape" transform="translate(313.326,-119.253)">
+			<g id="shape7-29" v:mID="7" v:groupContext="shape" transform="translate(313.326,-136.169)">
 				<title>Rectangle.3091</title>
 				<desc>Location Resource</desc>
 				<v:custProps>
@@ -144,28 +144,36 @@
 				<text x="27.66" y="381.81" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Location<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st3">Resource</tspan></text>			</g>
 		</a>
-		<g id="shape8-33" v:mID="8" v:groupContext="shape" v:layerMember="0" transform="translate(201.991,-86.2815)">
+		<g id="shape8-33" v:mID="8" v:groupContext="shape" v:layerMember="0" transform="translate(150.205,-104.112)">
 			<title>Reference from PractitionerRole to Practitioner</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M-6.98 418.82 L-7.14 394.89" class="st4"/>
+			<path d="M7.01 418.82 L7.12 396.26" class="st4"/>
 		</g>
-		<g id="shape9-38" v:mID="9" v:groupContext="shape" v:layerMember="0" transform="translate(186.95,-220.294)">
+		<g id="shape9-38" v:mID="9" v:groupContext="shape" v:layerMember="0" transform="translate(164.793,-249.86)">
 			<title>Reference from CarePlan to Practitioner</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M6.55 418.82 L7.33 442.8" class="st4"/>
+			<path d="M-6.93 418.82 L-7.18 455.9" class="st4"/>
 		</g>
-		<g id="shape10-43" v:mID="10" v:groupContext="shape" v:layerMember="0" transform="translate(147.052,-260.513)">
-			<title>Reference from CarePlan to RelatedPerson</title>
+		<g id="shape10-43" v:mID="10" v:groupContext="shape" v:layerMember="0" transform="translate(282.204,-250.009)">
+			<title>Reference from Encounter to RelatedPerson</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M0 425.65 L-29.05 426.05" class="st4"/>
+			<path d="M0 418.82 L-17.47 456.43" class="st4"/>
 		</g>
-		<g id="shape12-48" v:mID="12" v:groupContext="shape" transform="translate(333.138,-303.751)">
+		<g id="shape12-48" v:mID="12" v:groupContext="shape" transform="translate(206.81,-288.521)">
+			<title>0..1 R context</title>
+			<desc>0..1 R context</desc>
+			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
+			<v:textRect cx="24.9449" cy="407.058" width="49.89" height="23.5276"/>
+			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st6"/>
+			<text x="15.6" y="404.66" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..<tspan class="st3"
+						v:langID="2057">1 R<v:newlineChar/></tspan><tspan x="12.35" dy="1.2em" class="st3" v:langID="2057">context</tspan></text>		</g>
+		<g id="shape13-53" v:mID="13" v:groupContext="shape" transform="translate(143.675,-320.278)">
 			<title>0..* R entry.item</title>
 			<desc>0..* R entry.item</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
@@ -173,15 +181,7 @@
 			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st6"/>
 			<text x="15.63" y="404.66" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..* R<v:newlineChar/><tspan
 						x="7.38" dy="1.2em" class="st3">entry.item </tspan> </text>		</g>
-		<g id="shape13-52" v:mID="13" v:groupContext="shape" transform="translate(158.584,-299.275)">
-			<title>0..* R entry.item</title>
-			<desc>0..* R entry.item</desc>
-			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
-			<v:textRect cx="24.9449" cy="407.058" width="49.89" height="23.5276"/>
-			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st6"/>
-			<text x="15.63" y="404.66" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..* R<v:newlineChar/><tspan
-						x="7.38" dy="1.2em" class="st3">entry.item </tspan> </text>		</g>
-		<g id="shape14-56" v:mID="14" v:groupContext="shape" transform="translate(137.652,-90.2351)">
+		<g id="shape14-57" v:mID="14" v:groupContext="shape" transform="translate(102.614,-108.709)">
 			<title>0..1 R practitioner</title>
 			<desc>0..1 R practitioner</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
@@ -189,23 +189,23 @@
 			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st8"/>
 			<text x="15.6" y="404.66" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
 						x="5.26" dy="1.2em" class="st3">practitioner</tspan></text>		</g>
-		<g id="shape15-60" v:mID="15" v:groupContext="shape" transform="translate(132.305,-192.126)">
-			<title>0..1 R performer</title>
-			<desc>0..1 R performer</desc>
+		<g id="shape15-61" v:mID="15" v:groupContext="shape" transform="translate(102.614,-212.598)">
+			<title>0..1 R author</title>
+			<desc>0..1 R author</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="24.9449" cy="407.058" width="49.89" height="23.5276"/>
 			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st8"/>
 			<text x="15.6" y="404.66" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
-						x="7.84" dy="1.2em" class="st3">performer</tspan></text>		</g>
-		<g id="shape16-64" v:mID="16" v:groupContext="shape" transform="translate(103.06,-258.465)">
-			<title>0..1 R performer</title>
-			<desc>0..1 R performer</desc>
+						x="13.72" dy="1.2em" class="st3" v:langID="2057">author</tspan></text>		</g>
+		<g id="shape16-65" v:mID="16" v:groupContext="shape" transform="translate(208.913,-212.598)">
+			<title>0..1 R participant</title>
+			<desc>0..1 R participant</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="24.9449" cy="407.058" width="49.89" height="23.5276"/>
 			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st8"/>
-			<text x="15.6" y="404.66" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
-						x="7.84" dy="1.2em" class="st3">performer</tspan></text>		</g>
-		<g id="shape17-68" v:mID="17" v:groupContext="shape" transform="translate(301.4,-192.717)">
+			<text x="15.6" y="404.66" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/><v:newlineChar/>0..1 R<v:newlineChar/><tspan
+						x="6.72" dy="1.2em" class="st3" v:langID="2057">participant</tspan><v:newlineChar/></text>		</g>
+		<g id="shape17-69" v:mID="17" v:groupContext="shape" transform="translate(346.961,-212.598)">
 			<title>0..1 R location</title>
 			<desc>0..1 R location</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
@@ -215,7 +215,7 @@
 						x="11.5" dy="1.2em" class="st3">location</tspan></text>		</g>
 		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan"
 				xlink:title="Link to CarePlan resource mapping">
-			<g id="shape18-72" v:mID="18" v:groupContext="shape" transform="translate(147.052,-220.294)">
+			<g id="shape18-73" v:mID="18" v:groupContext="shape" transform="translate(112.746,-249.86)">
 				<title>CarePlan Resource</title>
 				<desc>CarePlan Resource</desc>
 				<v:custProps>
@@ -233,7 +233,7 @@
 		</a>
 		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-relatedperson"
 				xlink:title="Link to RelatedPerson resource mapping">
-			<g id="shape19-76" v:mID="19" v:groupContext="shape" transform="translate(18.25,-218.528)">
+			<g id="shape19-77" v:mID="19" v:groupContext="shape" transform="translate(210.949,-136.169)">
 				<title>RelatedPerson Resource</title>
 				<desc>RelatedPerson Resource</desc>
 				<v:custProps>
@@ -251,9 +251,9 @@
 		</a>
 		<a xlink:href="/explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-list"
 				xlink:title="Link to Plan and requested actions List resource mapping">
-			<g id="shape20-80" v:mID="20" v:groupContext="shape" transform="translate(234.427,-330.485)">
-				<title>Plan and Requested Actions List Resource</title>
-				<desc>Plan and Requested Actions List Resource</desc>
+			<g id="shape20-81" v:mID="20" v:groupContext="shape" transform="translate(196.143,-331.48)">
+				<title>Plan and requested actions List resource</title>
+				<desc>Plan and requested actions List resource</desc>
 				<v:custProps>
 					<v:cp v:nameU="Row_1" v:lbl="title" v:type="0" v:langID="2057" v:val="VT4(Bundle)"/>
 				</v:custProps>
@@ -267,7 +267,7 @@
 				<text x="4.08" y="375.81" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Plan and Requested <tspan
 							x="29.91" dy="1.2em" class="st3">Actions<v:newlineChar/></tspan><tspan x="18.07" dy="1.2em" class="st3">List Resource</tspan></text>			</g>
 		</a>
-		<g id="shape21-87" v:mID="21" v:groupContext="shape" transform="translate(178.53,-370.361)">
+		<g id="shape21-88" v:mID="21" v:groupContext="shape" transform="translate(143.675,-370.913)">
 			<title>1..1 M subject</title>
 			<desc>1..1 M subject</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
@@ -276,7 +276,7 @@
 			<text x="14.35" y="404.66" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>1..1 M<v:newlineChar/><tspan
 						x="12.96" dy="1.2em" class="st3">subject</tspan></text>		</g>
 		<a xlink:href="explore_plan_and_requested_actions.html#patient-reference" xlink:title="Link to Patient reference">
-			<g id="shape22-91" v:mID="22" v:groupContext="shape" transform="translate(75.6238,-328.696)">
+			<g id="shape22-92" v:mID="22" v:groupContext="shape" transform="translate(37.3393,-328.696)">
 				<title>Reference to Patient resource</title>
 				<desc>Reference to Patient resource</desc>
 				<v:userDefs>
@@ -304,12 +304,12 @@
 				<text x="21.35" y="379.88" class="st11" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Reference to <v:newlineChar/><tspan
 							x="13.72" dy="1.2em" class="st3">Patient resource </tspan> </text>			</g>
 		</a>
-		<g id="shape23-95" v:mID="23" v:groupContext="shape" v:layerMember="0" transform="translate(234.427,-357.481)">
+		<g id="shape23-96" v:mID="23" v:groupContext="shape" v:layerMember="0" transform="translate(196.143,-372.158)">
 			<title>Reference from Plan and requested actions List to Patient</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
 			</v:userDefs>
-			<path d="M0 411.8 L-5.31 411.8 L-5.31 411.67 L-53.93 411.67" class="st4"/>
+			<path d="M0 425.73 L-53.93 426.03" class="st4"/>
 		</g>
 	</g>
 </svg>
