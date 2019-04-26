@@ -4,14 +4,11 @@ keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_personal_contacts.html
-summary: "The FHIR profiles used for the Personal contacts Bundle"
+summary: "The FHIR profiles used for the Personal contacts List"
 ---
 
 ## Heading Description ##
 This heading gives details of the women’s personal contacts.  
-
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
-
 The following FHIR profiles are used to form the Personal contacts List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1)
