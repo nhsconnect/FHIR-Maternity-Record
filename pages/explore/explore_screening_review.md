@@ -13,6 +13,8 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 
 {% include custom/screening_review.svg %}
 
+## Mapping for Screening Review List ##
+
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
 
 
@@ -52,7 +54,7 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review.html#mapping-for-screening-review-list)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-national-antenatal-screening-programme-list)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -83,12 +85,16 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included resources.</font> |
 
+## Patient Reference ##
+
+The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
+
 ## Mapping for National Antenatal Screening Programme Procedure Request ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedurerequest.html)|>|Level 2| None|>|Level 3|[CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-diabetic-eye-screening-observation)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-national-antenatal-screening-programme-procedure-request)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | --- | --- | --- | --- | --- |
@@ -123,7 +129,7 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedure.html)|>|Level 2| None|>|Level 3|[CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-diabetic-eye-screening-observation)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-national-antenatal-screening-programme-procedure)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description/Constraints** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -182,7 +188,7 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-diabetic-eye-screening-gestational-age-observation)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-generic-screening-review-data-items-observation)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -214,7 +220,7 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |>|Level 1|[Practitioner Resource](http://hl7.org/fhir/stu3/practitioner.html)|>|Level 2|[CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)|>|Level 3|None|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-diabetic-eye-screening-practitioner)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-screening-practitioner)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -236,7 +242,7 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |>|Level 1|[PractitionerRole Resource](http://hl7.org/fhir/stu3/practitionerrole.html)|>|Level 2|[CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)|>|Level 3|None|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-diabetic-eye-screening-practitioner-role)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-screening-practitioner-role)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -262,7 +268,7 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |   |  | Not Used | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") | <font color='red'>The location where the clinician performed the vaccination.<br/>This MUST use the CareConnect Location profile. </font>See [Location resource](explore_vaccination_details.html#mapping-for-vaccination-details-location) for information on how to populate the resource. |
 |  - - reference | 0..1 | Not Used | String | Literal reference, Relative, internal or absolute URL |
 
-## Mapping for Diabetic Eye Screening Location ##
+## Mapping for Screening Review Location ##
 
 |>|Level 1|[Location Resource](http://hl7.org/fhir/stu3/location.html)|>|Level 2|[CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)|>|Level 3|None|
 
@@ -284,3 +290,36 @@ summary: "The FHIR profiles used for the Screening Review Bundle"
 |  - - - display | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color='red'>This MUST contain the display associated with the code</font> |
 |  - physicalType | 0..1 | Required | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Physical form of the location<br/>Binding (example): Physical form of the location [LocationType](http://hl7.org/fhir/stu3/valueset-location-physical-type.html) |
 |  - - text | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept<br/><font color='red'>This is the physical location of the person. E.g hospital ward, bed, theatre. For ambulatory care, eg, health centre, clinic, resource centre, person’s home maximum 150 characters</font><br/><font color='red'><b>Maternity Date set mapping = 'Patient Location'</b></font> |
+
+## Mapping for Structural Anomalies Flag ##
+
+|>|Level 1|[Location Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2|[CareConnect-Flag-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3|None|
+
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-structural-anomalies-flag)**|
+
+|  **Name** | **Card.** | Conformance | **Type** | **Description/Constraints** |
+| :--- | :--- | --- | :--- | :--- |
+|  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
+|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource |
+|  - identifier | 0..* | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Business identifier |
+|  - - - - system | 0..1 | Required | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system |
+|  - - value | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique |
+|  - - assigner | 0..1 | Required | Reference | Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|  - - - reference | 0..1 | Required | Identifier | Logical reference, when literal reference is not known |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Coded or textual message to display to user<br/>Binding (example): Detail codes identifying specific flagged issues. ( http://hl7.org/fhir/stu3/valueset-flag-code.html )<br/><font color="red">Flag to indicate abnormal Antenatal Screening Ultrasound</font> |
+|  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
+|  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | SNOMED CT representation identifying specific flagged issues |
+|  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension "Extension") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid |
+|  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">SNOMED CT code MUST be fixed to 169665005</font> |
+|  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">SNOMED CT description must be fixed to Antenatal ultrasound scan abnormal</font> |
+|  - - text | 0..1 | Optional | String | Plain text representation of the concept |
+|  - subject | 1..1 | Mandatory | Reference | Who/What is flag about?<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Mandatory | CareConnect-Patient-1 | <font color="red">This is the subject of the Screening Review List.</font><br/><font color="red">This MUST use the CareConnect patient profile</font><br/><font>See [patient resource reference](explore_screening_review.html#patient-reference) for information on how to populate the resource.</font> |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+
+## Screening Review Example ##
+
+<script src="https://gist.github.com/IOPS-DEV/d67ae40be9978094c77f9a6c45b15911.js"></script>
+
