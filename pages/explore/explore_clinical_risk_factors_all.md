@@ -9,7 +9,6 @@ summary: "The FHIR profiles used for the Clinical risk factors List"
 ## Heading Description ##
 Details of clinical risk factors to the woman, foetus or child after birth’.
 
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
 
 The following FHIR profiles are used to form the Clinical risk factors list structure:
 
