@@ -15,6 +15,7 @@ The following FHIR profiles are used to form the Clinical risk factors list stru
 
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)
+- [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
 - [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
 - [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
 - [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)
@@ -37,10 +38,9 @@ The following profiles are referenced from the Clinical risk factors list struct
 |ODS/ORD Site Code|[Location](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-location)|identifier|
 |SDS Job Role Name|[PractitionerRole](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitionerrole)|identifier|
 |Professional Name|[Practitioner](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitioner)|name|
-|Relevant Clinical Risk Factor|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|basis reference.display<br/>basis reference|
+|Relevant Clinical Risk Factor|[Observation](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-observation)|code|
 |Clinical Risk Assessment|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|method|
 |Risk Mitigation|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|mitigation.string|
-
 
 
 ## Mapping for Clinical Risk Factors List ##
@@ -608,7 +608,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 |  - - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system |
 |  - - - userSelected | 0..1 | Not Used | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") | If this coding was chosen directly by the user |
 |  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/><font color='red'>The woman’s phenotypic sex. Determines how the woman will be treated clinically.</font> |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/> |
 |  - - coding | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1)<br/><font color='red'>This uses a SNOMED CT concept to describe this observation as one related to clinical risk assessment</font><br/><font color='red'><b>Mapping to Maternity data item = 'Relevant Clinical Risk Factor'</b></font> |
 |  - - - extension (snomedCTDescriptionID) | 0..1 | Not Used | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |

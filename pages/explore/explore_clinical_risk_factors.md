@@ -15,6 +15,7 @@ The following FHIR profiles are used to form the Clinical risk factors list stru
 
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)
+- [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
 - [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
 - [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
 - [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)
@@ -38,7 +39,7 @@ The following profiles are referenced from the Clinical risk factors list struct
 |ODS/ORD Site Code|[Location](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-location)|identifier|
 |SDS Job Role Name|[PractitionerRole](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitionerrole)|identifier|
 |Professional Name|[Practitioner](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-practitioner)|name|
-|Relevant Clinical Risk Factor|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|basis reference.display<br/>basis reference|
+|Relevant Clinical Risk Factor|[Observation](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-observation)|code|
 |Clinical Risk Assessment|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|method|
 |Risk Mitigation|[RiskAssessment](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-riskassessment)|mitigation.string|
 
@@ -147,7 +148,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 |  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Observation-1'</font> |
 |  - status | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | registered : preliminary : final : amended +<br/>Binding (required): Codes providing the status of an observation. [ObservationStatus](http://hl7.org/fhir/stu3/valueset-observation-status.html)<br/><font color='red'>This MUST contain the value 'final'</font> |
-|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/><font color='red'>The woman’s phenotypic sex. Determines how the woman will be treated clinically.</font> |
+|  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/> |
 |  - - coding | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1)<br/><font color='red'>This uses a SNOMED CT concept to describe this observation as one related to clinical risk assessment</font><br/><font color='red'><b>Mapping to Maternity data item = 'Relevant Clinical Risk Factor'</b></font> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
