@@ -1,10 +1,10 @@
 ---
-title: Vaccinations Bundle
+title: Vaccinations List
 keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_vaccinations_all.html
-summary: "The FHIR profiles used for the Vaccinations Bundle"
+summary: "The FHIR profiles used for the Vaccinations List"
 ---
 
 ## Heading Description ##

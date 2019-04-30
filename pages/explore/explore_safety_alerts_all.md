@@ -1,10 +1,10 @@
 ---
-title: Safety Alerts Bundle
+title: Safety Alerts List
 keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_safety_alerts_all.html
-summary: "The FHIR profiles used for the Safety alerts Bundle"
+summary: "The FHIR profiles used for the Safety alerts List"
 ---
 
 ## Heading Description ##

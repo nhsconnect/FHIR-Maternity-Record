@@ -1,10 +1,10 @@
 ---
-title: Social Context Household Bundle
+title: Social Context Household List
 keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_social_context_household.html
-summary: "The FHIR profiles used for the Social context Household Bundle"
+summary: "The FHIR profiles used for the Social context Household List"
 ---
 
 ## Heading Description ##

@@ -1,10 +1,10 @@
 ---
-title: Screening Review Bundle
+title: Screening Review List
 keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_screening_review_all.html
-summary: "The FHIR profiles used for the Screening Review Bundle"
+summary: "The FHIR profiles used for the Screening Review List"
 ---
 
 ## Heading Description ##

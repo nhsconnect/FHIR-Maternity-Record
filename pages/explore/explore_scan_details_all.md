@@ -1,10 +1,10 @@
 ---
-title: Scan Details Bundle
+title: Scan Details List
 keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_scan_details_all.html
-summary: "The FHIR profiles used for the Scan details Bundle"
+summary: "The FHIR profiles used for the Scan details List"
 ---
 
 ## Heading Description ##

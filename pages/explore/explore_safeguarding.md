@@ -1,10 +1,10 @@
 ---
-title: Safeguarding Bundle
+title: Safeguarding List
 keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_safeguarding.html
-summary: "The FHIR profiles used for the Safeguarding Bundle"
+summary: "The FHIR profiles used for the Safeguarding List"
 ---
 
 ## Heading Description ##

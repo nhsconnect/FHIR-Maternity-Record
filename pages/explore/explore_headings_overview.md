@@ -18,9 +18,14 @@ This specification is currently under development and the following PRSB Heading
 - [Allergies and adverse reactions](explore_allergies_and_adverse_reactions.html)
 - [Assessment scales](explore_assessment_scales.html)
 - [Attendance details](explore_attendance_details.html)
+- [Clinical risk factors](explore_clinical_risk_factors.html)
 - [Demographics history](explore_demographics_history.html)
 - [Patient demographics](explore_patient_demographics.html)
 - [Personal contacts](explore_personal_contacts.html)
+- [Safety Alerts](explore_safety_alerts.html)
+- [Screening review](explore_screening_review.html)
+- [Social context(person)](explore_social_context_household.html)
+- [Social context(household)](explore_social_context_household.html)
 - [Vaccinations](explore_vaccinations.html) 
 
 ## PRSB Version Used ##
