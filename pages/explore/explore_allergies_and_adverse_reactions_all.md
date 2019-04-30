@@ -179,7 +179,7 @@ The Allergies and adverse reactions list has a mandated subject reference to the
 |  - meta | 1..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource |
 |  - - versionId | 0..1 | Not Used | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Version specific identifier |
 |  - - lastUpdated | 0..1 | Not Used | [Instant](http://hl7.org/fhir/stu3/datatypes.html#instant "Instant") | When the resource version last changed |
-|  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1'</font> |
+|  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1'</font> |
 |  - - security | 0..* | Not Used | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Security Labels applied to this resource<br/>Binding (extensible): Security Labels from the Healthcare Privacy and Security Classification System. [All Security Labels](http://hl7.org/fhir/stu3/valueset-security-labels.html) |
 |  - - - system | 0..1 | Not Used | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system |
 |  - - - version | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Version of the system - if relevant |
