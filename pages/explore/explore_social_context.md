@@ -111,9 +111,13 @@ The social setting in which the woman lives, such as their household, occupation
 |  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included Encounter resource.</font> |
 
+## Patient Reference ##
+
+The social context (person) list has a mandated subject reference to the Patient resource. This means that any exchange of the spcial context (person) heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
+
 ## Generic Mappings for Social Context Person Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#generic-mappings-for-social-context-person-observation)**|
 

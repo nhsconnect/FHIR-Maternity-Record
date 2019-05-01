@@ -77,7 +77,7 @@ The details of a women’s vaccinations.
 
 ## Patient Reference ##
 
-The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
+The vaccination details list has a mandated subject reference to the Patient resource. This means that any exchange of the vaccination details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
 ## Mapping for Vaccinations ##
 

@@ -52,7 +52,7 @@ Details of the concern, risk or issues in relation to safeguarding.
 
 ## Patient Reference ##
 
-The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
+The safety alerts list has a mandated subject reference to the Patient resource. This means that any exchange of the safety alerts heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-national-antenatal-screening-programme-list)**|

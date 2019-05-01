@@ -87,7 +87,7 @@ summary: "The FHIR profiles used for the Screening Review List"
 
 ## Patient Reference ##
 
-The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
+The screening review details list has a mandated subject reference to the Patient resource. This means that any exchange of the screening review details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
 ## Mapping for National Antenatal Screening Programme Procedure Request ##
 
