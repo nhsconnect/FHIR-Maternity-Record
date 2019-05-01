@@ -69,6 +69,7 @@
 			</v:userDefs>
 			<path d="M6.92 208.13 L7.16 232.52" class="st4"/>
 		</g>
+		<a xlink:href="explore_safety_alerts.html#mapping-for-safety-alerts">
 		<g id="shape3-11" v:mID="3" v:groupContext="shape" transform="translate(145.316,-18.25)">
 			<title>Flag Resource</title>
 			<desc>Flag Resource</desc>
@@ -91,8 +92,9 @@
 			</v:userDefs>
 			<path d="M0 208.13 L34.65 235.9" class="st4"/>
 		</g>
+		</a>
 		<g id="shape5-20" v:mID="5" v:groupContext="shape" transform="translate(140.27,-91.9508)">
-			<title>Sheet.5</title>
+			<title>0..* R entry.item</title>
 			<desc>0..* R entry.item</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="24.9449" cy="196.367" width="49.89" height="23.5276"/>
