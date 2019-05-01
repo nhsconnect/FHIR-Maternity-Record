@@ -15,7 +15,6 @@ The following FHIR profiles are used to form the Discharge details list structur
 
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)
-- [CareConnect-RelatedPerson](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1)
 - [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
 - [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1)
 
