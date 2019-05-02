@@ -54,8 +54,25 @@ entries:
     - title: Overview
       url: /explore_headings_overview.html
       output: web
-      type: homepage
+      
+
       subfolders:
+      - title: Common Headings
+        output: web
+        subfolderitems:
+        - title: Practitioner
+          url: /explore_practitioner.html
+          output: web
+        - title: PractitionerRole
+          url: /explore_practitioner_role.html
+          output: web
+        - title: Location
+          url: /explore_location.html
+          output: web
+        - title: RelatedPerson
+          url: /explore_related_person.html
+          output: web
+          
       - title: A - G
         output: web
         subfolderitems:
