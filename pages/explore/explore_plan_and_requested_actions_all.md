@@ -666,6 +666,20 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - identifier | 0..1 | Not Used | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
 |  - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |  
 
+## Mapping for Plan and Requested Actions Location ##  
 
+The plan and requested actions details has reference(s) to the Location resource. This means that any exchange of the plan and requested actions details heading data must also include the [Location Details](explore_location.html#mapping-for-location)
+
+## Mapping for Plan and Requested Actions Practitioner ## 
+
+The plan and requested actions details has reference(s) to the Practitioner resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
+
+## Mapping for Plan and Requested Actions PractitionerRole ##  
+
+The plan and requested actions details has reference(s) to the Practitioner Role resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
+## Mapping for Plan and Requested Actions RelatedPerson ##  
+
+The plan and requested actions details has reference(s) to the related person resource. This means that any exchange of the plan and requested actions details heading data must also include the [Related Person Details](explore_related_person.html#mapping-for-related_person)
 ## Plan and Requested Actions Example ##  
 <script src="https://gist.github.com/IOPS-DEV/8826bf095efd3fd9cc79db88416e1099.js"></script>
