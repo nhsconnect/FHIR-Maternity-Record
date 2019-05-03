@@ -373,4 +373,5 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - prefix | 0..* | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Parts that come before the name |
 |  - - suffix | 0..* | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Parts that come after the name |
 
-
+## Plan and Requested Actions Example ##  
+<script src="https://gist.github.com/IOPS-DEV/8826bf095efd3fd9cc79db88416e1099.js"></script>
