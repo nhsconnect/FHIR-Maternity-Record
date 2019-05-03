@@ -77,7 +77,7 @@
 				<text x="19.83" y="180.28" class="st4" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Observation<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st5">Resource</tspan></text>			</g>
 		</a>
-		<a xlink:href="explore_personal_contacts.html#mapping-for-personal-contacts-relatedperson">
+		<a xlink:href="explore_related_person.html">
 				xlink:title="RelatedPerson resource">
 			<g id="shape3-11" v:mID="3" v:groupContext="shape" transform="translate(120.383,-18.25)">
 					<title>RelatedPerson Resource</title>
