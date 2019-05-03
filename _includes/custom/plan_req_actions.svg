@@ -51,8 +51,7 @@
 		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
 				v:shadowOffsetY="-8.50394"/>
 		<v:layer v:name="Connector" v:index="0"/>
-		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-practitioner"
-				xlink:title="Link to Practitioner resource mapping">
+		<a xlink:href="explore_practitioner.html" xlink:title="Link to Practitioner resource mapping">
 			<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(112.193,-135.712)">
 				<title>Practitioner Resource</title>
 				<desc>Practitioner Resource</desc>
@@ -101,8 +100,7 @@
 				<text x="24.06" y="381.81" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Encounter<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st3">Resource</tspan></text>			</g>
 		</a>
-		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-practitionerrole"
-				xlink:title="Linnk to PractitionerRole resource mapping">
+		<a xlink:href="explore_practitioner_role.html" xlink:title="Link to PractitionerRole resource mapping">
 			<g id="shape5-20" v:mID="5" v:groupContext="shape" transform="translate(111.681,-36.0808)">
 				<title>PractitionerRole Resource</title>
 				<desc>PractitionerRole Resource</desc>
@@ -126,8 +124,7 @@
 			</v:userDefs>
 			<path d="M0 411.89 L47.56 411.63" class="st4"/>
 		</g>
-		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-location"
-				xlink:title="Link to Location resource mapping">
+		<a xlink:href="explore_location.html" xlink:title="Link to Location resource mapping">
 			<g id="shape7-29" v:mID="7" v:groupContext="shape" transform="translate(313.326,-136.169)">
 				<title>Location Resource</title>
 				<desc>Location Resource</desc>
@@ -231,8 +228,7 @@
 				<text x="26.9" y="381.81" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>CarePlan<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st3">Resource</tspan></text>			</g>
 		</a>
-		<a xlink:href="explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-relatedperson"
-				xlink:title="Link to RelatedPerson resource mapping">
+		<a xlink:href="explore_related_person.html" xlink:title="Link to RelatedPerson resource mapping">
 			<g id="shape19-77" v:mID="19" v:groupContext="shape" transform="translate(210.949,-136.169)">
 				<title>RelatedPerson Resource</title>
 				<desc>RelatedPerson Resource</desc>
