@@ -1086,3 +1086,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - period | 0..1 | Not Used | [Period](http://hl7.org/fhir/stu3/datatypes.html#period "Period") | Period of time that this relationship is considered valid<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
 |  - - start | 0..1 | Not Used | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Starting time with inclusive boundary |
 |  - - end | 0..1 | Not Used | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | End time with inclusive boundary, if not ongoing |
+
+
+## Plan and Requested Actions Example ##  
+<script src="https://gist.github.com/IOPS-DEV/8826bf095efd3fd9cc79db88416e1099.js"></script>
