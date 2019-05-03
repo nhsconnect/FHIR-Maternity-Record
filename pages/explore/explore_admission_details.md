@@ -137,7 +137,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 
 ## Mapping for Admission Details RelatedPerson ##
 
-The admission details has reference(s) to the related person resource. This means that any exchange of the admission details heading data must also include the [Related Person Details](explore_related-person.html#mapping-for-related_person)
+The admission details has reference(s) to the related person resource. This means that any exchange of the admission details heading data must also include the [Related Person Details](explore_related_person.html#mapping-for-related_person)
 
 ## Mapping for Admission Details Practitioner ##
 

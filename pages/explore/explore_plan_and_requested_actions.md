@@ -11,6 +11,8 @@ summary: "The FHIR profiles used for the Plan and requested actions List"
 This heading gives details of planned investigations, procedures and treatment for a woman’s identified conditions and priorities.  
 
 
+{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
+
 The following FHIR profiles are used to form the Plan and requested actions List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)  
 - [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)  
@@ -288,6 +290,24 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
 |  - - - identifier | 0..1 | Optional | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
 |  - - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
+
+## Mapping for Plan and Requested Actions Location ##  
+
+The plan and requested actions details has reference(s) to the Location resource. This means that any exchange of the plan and requested actions details heading data must also include the [Location Details](explore_location.html#mapping-for-location)
+
+## Mapping for Plan and Requested Actions Practitioner ## 
+
+The plan and requested actions details has reference(s) to the Practitioner resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
+
+## Mapping for Plan and Requested Actions PractitionerRole ##  
+
+The plan and requested actions details has reference(s) to the Practitioner Role resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
+## Mapping for Plan and Requested Actions RelatedPerson ##  
+
+The plan and requested actions details has reference(s) to the related person resource. This means that any exchange of the plan and requested actions details heading data must also include the [Related Person Details](explore_related_person.html#mapping-for-related_person)
+
+
 
 ## Plan and Requested Actions Example ##  
 <script src="https://gist.github.com/IOPS-DEV/8826bf095efd3fd9cc79db88416e1099.js"></script>

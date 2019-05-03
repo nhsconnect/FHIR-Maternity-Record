@@ -153,7 +153,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 ## Mapping for Personal contacts RelatedPerson ##
 
-The personal contacts details has reference(s) to the related person resource. This means that any exchange of the personal contacts details heading data must also include the [Related Person Details](explore_related-person.html#mapping-for-related_person)
+The personal contacts details has reference(s) to the related person resource. This means that any exchange of the personal contacts details heading data must also include the [Related Person Details](explore_related_person.html#mapping-for-related_person)
 
 ## Mapping for Personal contacts Observation ##
 
