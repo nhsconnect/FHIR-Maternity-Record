@@ -306,6 +306,5 @@ The plan and requested actions details has reference(s) to the Practitioner Role
 The plan and requested actions details has reference(s) to the related person resource. This means that any exchange of the plan and requested actions details heading data must also include the [Related Person Details](explore_related_person.html#mapping-for-related_person)
 
 
-
 ## Plan and Requested Actions Example ##  
 <script src="https://gist.github.com/IOPS-DEV/8826bf095efd3fd9cc79db88416e1099.js"></script>
