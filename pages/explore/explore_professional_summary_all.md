@@ -10,8 +10,6 @@ summary: "The FHIR profiles used for the Professional summary List"
 ## Heading Description ##
 A brief description of the encounter.
 
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
-
 The following FHIR profiles are used to form the Professional summary List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)  
 - [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)  
