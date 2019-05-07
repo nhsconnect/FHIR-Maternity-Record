@@ -267,12 +267,12 @@
 			<text x="15.6" y="285.63" class="st7" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
 						x="11.5" dy="1.2em" class="st3" v:langID="2057">location</tspan></text>		</g>
 		<g id="shape26-83" v:mID="26" v:groupContext="shape" transform="translate(171.307,-185.328)">
-			<title>0..1 R context</title>
-			<desc>0..1 R context</desc>
+			<title>0..1 R encounter</title>
+			<desc>0..1 R encounter</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="23.5596" cy="288.026" width="47.12" height="23.5276"/>
 			<rect x="0" y="276.262" width="47.1191" height="23.5276" class="st6"/>
 			<text x="14.21" y="285.63" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>0<tspan class="st3"
-						v:langID="1033">..1 </tspan>R<v:newlineChar/><tspan x="10.96" dy="1.2em" class="st3">context</tspan></text>		</g>
+						v:langID="1033">..1 </tspan>R<v:newlineChar/><tspan x="6.46" dy="1.2em" class="st3">encounter</tspan></text>		</g>
 	</g>
 </svg>
