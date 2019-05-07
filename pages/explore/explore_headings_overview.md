@@ -23,6 +23,7 @@ This specification is currently under development and the following PRSB Heading
 - [Patient demographics](explore_patient_demographics.html)
 - [Personal contacts](explore_personal_contacts.html)
 - [Plan and requested actions](explore_plan_and_requested_actions.html)
+- [Professional summary](explore_professional_summary.html)
 - [Safety Alerts](explore_safety_alerts.html)
 - [Screening review](explore_screening_review.html)
 - [Social context(person)](explore_social_context_household.html)
