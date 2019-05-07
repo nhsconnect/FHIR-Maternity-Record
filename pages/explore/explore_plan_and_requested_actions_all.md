@@ -48,7 +48,7 @@ The following profiles are referenced from the Patient demographics list structu
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
-|**[View Used FHIR Elements](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-list)**|**[View All FHIR Elements]**| 
+|**[View Used FHIR Elements](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-list)**|**View All FHIR Elements**| 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | --- | --- | --- | --- | --- |
@@ -165,7 +165,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 |>|Level 1|[CarePlan Resource](http://hl7.org/fhir/stu3/careplan.html)|>|Level 2|[CareConnect-CarePlan-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1)|>|Level 3|None|
 
-|**[View Used FHIR Elements](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)**|**[View All FHIR Elements]**| 
+|**[View Used FHIR Elements](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)**|**View All FHIR Elements**| 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | --- | --- | --- | --- | --- |
@@ -236,10 +236,10 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
 |  - - identifier | 0..1 | Optional | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
 |  - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
-|  context | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Created in context of<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|  context | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Created in context of<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Not Used | [CareConnect-EpisodeOfCare-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1 "CareConnect-EpisodeOfCare-1") |  |
-|   |  | Mandatory | [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1 "CareConnect-Encounter-1") |  |
-|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+|   |  | Required | [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1 "CareConnect-Encounter-1") |  |
+|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
 |  - - identifier | 0..1 | Optional | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
 |  - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
 |  - period | 1..1 | Mandatory | [Period](http://hl7.org/fhir/stu3/datatypes.html#period "Period") | Time period plan covers<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
