@@ -43,7 +43,7 @@ The following tables detail how to populate the FHIR resources and the mapping t
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
-|**[View Used FHIR Elements](explore_personal_contacts.html#mapping-for-personal-contacts-list)**|**[View All FHIR Elements]**|
+|**[View Used FHIR Elements](explore_personal_contacts.html#mapping-for-personal-contacts-list)**|**View All FHIR Elements**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | --- | --- | --- | --- | --- |
