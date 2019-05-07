@@ -36,7 +36,7 @@ The following profiles are referenced from the Patient demographics list structu
 |**Data Standard Element**|**FHIR Resource Mapping**|**FHIR Element**|
 |Date/time|[Encounter](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-encounter)|period.start|
 |ODS/ORD Site Code|[Location](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-location)|identifier|
-|SDS Job Role Name|[Practitioner](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-practitioner)|code|
+|SDS Job Role Name|[PractitionerRole](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-practitionerrole)|code|
 |Professional Name|[Practitioner](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-practitioner)|name|
 |Status (of professional plan)|[CarePlan](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)|status (values may require discussion)|
 |Type (of professional plan)|[CarePlan](explore_plan_and_requested_actions.html#mapping-for-plan-and-requested-actions-careplan)|category (values tbc)|
@@ -54,7 +54,7 @@ The following profiles are referenced from the Patient demographics list structu
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_plan_and_requested_actions_all.html#mapping-for-plan-and-requested-actions-list)**| 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
-| :--- | :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- | --- |
 |  List | ​ |  |  | Information summarized from a list of other resources<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource<br/>Constraint (lst-2): The deleted flag can only be used if the mode of the list is "changes"<br/>Constraint (lst-1): A list can only have an emptyReason if it is empty |
 |  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1'</font> |
@@ -92,7 +92,6 @@ The following profiles are referenced from the Patient demographics list structu
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included CarePlan resource.</font> |  
 
 
-
 ## Patient Reference ##
 
 The Plan and requested actions List has a mandated subject reference to the Patient resource. This means that any exchange of the Plan and requested actions heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
@@ -101,7 +100,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 |>|Level 1|[CarePlan Resource](http://hl7.org/fhir/stu3/careplan.html)|>|Level 2|[CareConnect-CarePlan-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1)|>|Level 3|None|
 
-|**[View Used FHIR Elements]**|**[View All FHIR Elements](explore_plan_and_requested_actions_all.html#mapping-for-plan-and-requested-actions-careplan)**| 
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_plan_and_requested_actions_all.html#mapping-for-plan-and-requested-actions-careplan)**| 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
 | --- | --- | --- | --- | --- |
@@ -246,10 +245,10 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 |>|Level 1|[Encounter Resource](http://hl7.org/fhir/stu3/encounter.html)|>|Level 2|[CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|>|Level 3|None|
 
-|**[View Used FHIR Elements]**|**[View All FHIR Elements](explore_plan_and_requested_actions_all.html#mapping-for-plan-and-requested-actions-encounter)**| 
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_plan_and_requested_actions_all.html#mapping-for-plan-and-requested-actions-encounter)**| 
 
 |  **Name** | **Card.** | **Conformance** | **Type** | Description, Constraints and mapping for Implementation |
-| :--- | :--- | :--- | :--- | :--- |
+| --- | --- | --- | --- | --- |
 |  Encounter | ​ |  |  | An interaction during which services are provided to the patient<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
 |  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1'</font> |
