@@ -10,6 +10,10 @@ summary: "The FHIR profiles used for the Referral details Bundle"
 ## Heading Description ##
 The details of the individual or team who referred the woman.
 
+## Referral Structure Details ##
+
+{% include custom/referral_request.svg %}
+
 ## Mapping for Referral List ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
@@ -40,6 +44,10 @@ The details of the individual or team who referred the woman.
 |  - - date | 0..1 | Required | dateTime | When item added to list<br/><font color='red'>The SHOULD contain a system time of when the item was added to the list.</font> |
 |  - - item | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">A reference to an Encounter resource included in the list This MUST use the CareConnect Observation profile. |
 |  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
+
+## Patient Reference ##
+
+The Plan and requested actions List has a mandated subject reference to the Patient resource. This means that any exchange of the Plan and requested actions heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
 ## Mapping for Referral ##
 
@@ -78,4 +86,6 @@ The details of the individual or team who referred the woman.
 |   |  | Optional | CareConnect-Patient-1 |  |
 |   |  | Optional | CareConnect-RelatedPerson-1 |  |
 |   |  | Optional | CareConnect-Practitioner-1 |  |
+
+## Referral Example ##
 
