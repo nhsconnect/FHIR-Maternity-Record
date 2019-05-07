@@ -440,3 +440,6 @@ The Professional summary details has reference(s) to the Practitioner Role resou
 ## Mapping for Professional summary RelatedPerson ##  
 
 The Professional summary details has reference(s) to the related person resource. This means that any exchange of the Professional summary details heading data must also include the [Related Person Details](explore_related_person.html#mapping-for-related_person)
+
+## Professional Summary Example ##  
+<script src="https://gist.github.com/IOPS-DEV/b6289490d2831809d0f61f07d2ed0db9.js"></script>
