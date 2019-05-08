@@ -1,4 +1,4 @@
-﻿---
+---
 title: Professional Summary List
 keywords:  list
 tags: [fhir]
