@@ -12,7 +12,7 @@
 	<style type="text/css">
 	<![CDATA[
 		.st1 {fill:#4672c4;stroke:#c7c8c8;stroke-width:0.25}
-		.st2 {fill:#feffff;font-family:Calibri;font-size:1.00001em;font-weight:bold}
+		.st2 {fill:#feffff;font-family:Calibri;font-size:0.833336em;font-weight:bold}
 		.st3 {font-size:1em}
 		.st4 {marker-end:url(#mrkr4-10);stroke:#4672c4;stroke-linecap:round;stroke-linejoin:round;stroke-width:2}
 		.st5 {fill:#4672c4;fill-opacity:1;stroke:#4672c4;stroke-opacity:1;stroke-width:0.44247787610619}
@@ -47,6 +47,7 @@
 		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
 				v:shadowOffsetY="-8.50394"/>
 		<v:layer v:name="Connector" v:index="0"/>
+		<a href="explore_referral_details.html#mapping-for-plan-and-requested-actions-practitionerrole">
 		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(153.097,-18.8275)">
 			<title>PractitionerRole Resource</title>
 			<desc>PractitionerRole Resource</desc>
@@ -62,6 +63,7 @@
 			<rect x="0" y="246.193" width="90.7087" height="68.0315" class="st1"/>
 			<text x="4.75" y="276.61" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>PractitionerRole<v:newlineChar/><tspan
 						x="22.45" dy="1.2em" class="st3">Resource</tspan></text>		</g>
+						</a>
 		<g id="shape2-5" v:mID="2" v:groupContext="shape" v:layerMember="0" transform="translate(109.459,-147.804)">
 			<title>Dynamic connector.3212</title>
 			<v:userDefs>
@@ -83,6 +85,7 @@
 			</v:userDefs>
 			<path d="M7.09 314.22 L7.09 288.84" class="st4"/>
 		</g>
+
 		<g id="shape5-21" v:mID="5" v:groupContext="shape" transform="translate(19.6935,-18.25)">
 			<title>Organization Resource</title>
 			<desc>Organization Resource</desc>
@@ -137,6 +140,8 @@
 			<rect x="0" y="290.697" width="49.8898" height="23.5276" class="st8"/>
 			<text x="15.6" y="300.06" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
 						x="5.68" dy="1.2em" class="st3">onBeHalfOf</tspan></text>		</g>
+						
+						<a xlink:href="explore_referral_details.html#mapping-for-referral-list">
 		<g id="shape11-47" v:mID="11" v:groupContext="shape" transform="translate(18.75,-222.708)">
 			<title>Referral Details List Resource</title>
 			<desc>Referral Details List Resource</desc>
@@ -152,6 +157,8 @@
 			<rect x="0" y="246.193" width="90.7087" height="68.0315" class="st9"/>
 			<text x="6.79" y="276.61" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Referral Details<v:newlineChar/><tspan
 						x="12.61" dy="1.2em" class="st3">List Resource</tspan></text>		</g>
+						</a>				
+						<a xlink:href="explore_referral_details.html#mapping-for-referral">
 		<g id="shape12-53" v:mID="12" v:groupContext="shape" transform="translate(18.75,-120.465)">
 			<title>ReferralRequest Resource</title>
 			<desc>ReferralRequest Resource</desc>
@@ -167,6 +174,8 @@
 			<rect x="0" y="246.193" width="90.7087" height="68.0315" class="st1"/>
 			<text x="5" y="276.61" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>ReferralRequest<v:newlineChar/><tspan
 						x="22.45" dy="1.2em" class="st3">Resource</tspan></text>		</g>
+						</a>
+						<a xlink:href="explore_referral_details.html#mapping-for-plan-and-requested-actions-practitioner">
 		<g id="shape13-57" v:mID="13" v:groupContext="shape" transform="translate(153.097,-121.285)">
 			<title>Practitioner Resource</title>
 			<desc>Practitioner Resource</desc>
@@ -182,6 +191,8 @@
 			<rect x="0" y="246.193" width="90.7087" height="68.0315" class="st1"/>
 			<text x="15.85" y="276.61" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Practitioner<v:newlineChar/><tspan
 						x="22.45" dy="1.2em" class="st3">Resource</tspan></text>		</g>
+						</a>
+						<a href="explore_referral_details.html#patient-reference">
 		<g id="shape14-61" v:mID="14" v:groupContext="shape" transform="translate(172.582,-224.099)">
 			<title>Reference to Patient resource</title>
 			<desc>Reference to Patient resource</desc>
@@ -209,6 +220,7 @@
 						 9.58317 -180 0 0 0 251.93 L0 304.64 L9.58 314.22 Z" class="st10"/>
 			<text x="21.35" y="275.29" class="st11" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Reference to <v:newlineChar/><tspan
 						x="13.72" dy="1.2em" class="st3">Patient resource </tspan> </text>		</g>
+						</a>
 		<g id="shape15-65" v:mID="15" v:groupContext="shape" v:layerMember="0" transform="translate(109.714,-267.152)">
 			<title>Dynamic connector.2216</title>
 			<v:userDefs>

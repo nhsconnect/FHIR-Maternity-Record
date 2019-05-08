@@ -47,6 +47,7 @@
 		<v:pageProperties v:drawingScale="0.0393701" v:pageScale="0.0393701" v:drawingUnits="24" v:shadowOffsetX="8.50394"
 				v:shadowOffsetY="-8.50394"/>
 		<v:layer v:name="Connector" v:index="0"/>
+		<a href="explore_scan_details.html#mapping-for-scan-details-practitioner">
 		<g id="shape1-1" v:mID="1" v:groupContext="shape" transform="translate(290.731,-18.25)">
 			<title>Practitioner Resource</title>
 			<desc>Practitioner Resource</desc>
@@ -62,6 +63,8 @@
 			<rect x="0" y="246.736" width="90.7087" height="68.0315" class="st1"/>
 			<text x="15.85" y="277.15" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Practitioner<v:newlineChar/><tspan
 						x="22.45" dy="1.2em" class="st3">Resource</tspan></text>		</g>
+						</a>
+						<a href="explore_scan_details.html#mapping-for-scan-details-practitioner-role">
 		<g id="shape2-5" v:mID="2" v:groupContext="shape" transform="translate(145.206,-18.9174)">
 			<title>PractitionerRole Resource</title>
 			<desc>PractitionerRole Resource</desc>
@@ -77,6 +80,7 @@
 			<rect x="0" y="246.736" width="90.7087" height="68.0315" class="st1"/>
 			<text x="4.75" y="277.15" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>PractitionerRole<v:newlineChar/><tspan
 						x="22.45" dy="1.2em" class="st3">Resource</tspan></text>		</g>
+						</a>
 		<g id="shape3-9" v:mID="3" v:groupContext="shape" v:layerMember="0" transform="translate(235.915,-59.6861)">
 			<title>Dynamic connector.3263</title>
 			<v:userDefs>
@@ -91,6 +95,7 @@
 			</v:userDefs>
 			<path d="M0 307.68 L-66.15 307.68" class="st4"/>
 		</g>
+		<a href="explore_scan_details.html#mapping-for-scan-report-observation">
 		<g id="shape5-20" v:mID="5" v:groupContext="shape" transform="translate(275.037,-122.493)">
 			<title>Observation Resource</title>
 			<desc>Observation Resource</desc>
@@ -106,6 +111,7 @@
 			<rect x="0" y="246.736" width="90.7087" height="68.0315" class="st1"/>
 			<text x="14.73" y="277.15" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Observation<v:newlineChar/><tspan
 						x="22.45" dy="1.2em" class="st3">Resource</tspan></text>		</g>
+						</a>
 		<g id="shape6-24" v:mID="6" v:groupContext="shape" v:layerMember="0" transform="translate(165.442,-122.493)">
 			<title>Dynamic connector.3268</title>
 			<v:userDefs>
@@ -113,6 +119,7 @@
 			</v:userDefs>
 			<path d="M0.9 314.77 L10.3 341.77" class="st4"/>
 		</g>
+		<a href="explore_scan_details.html#mapping-for-scan-report-group-observation">
 		<g id="shape7-29" v:mID="7" v:groupContext="shape" transform="translate(109.143,-122.493)">
 			<title>Observation (Group) Resource</title>
 			<desc>Observation (Group) Resource</desc>
@@ -128,6 +135,7 @@
 			<rect x="0" y="246.736" width="90.7087" height="68.0315" class="st1"/>
 			<text x="14.73" y="269.95" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Observation <tspan
 						x="25.99" dy="1.2em" class="st3">(Group) </tspan><tspan x="22.45" dy="1.2em" class="st3">Resource </tspan> </text>		</g>
+						</a>
 		<g id="shape8-34" v:mID="8" v:groupContext="shape" v:layerMember="0" transform="translate(179.59,-224.541)">
 			<title>Dynamic connector.3270</title>
 			<v:userDefs>
@@ -182,6 +190,7 @@
 			<rect x="0" y="291.24" width="49.8898" height="23.5276" class="st8"/>
 			<text x="15.6" y="300.6" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
 						x="5.26" dy="1.2em" class="st3">practitioner</tspan></text>		</g>
+						<a href="explore_scan_details.html#mapping-for-scan-report-list">
 		<g id="shape15-64" v:mID="15" v:groupContext="shape" transform="translate(145.155,-224.541)">
 			<title>Scan Details List Resource</title>
 			<desc>Scan Details List Resource</desc>
@@ -197,6 +206,7 @@
 			<rect x="0" y="246.736" width="90.7087" height="68.0315" class="st9"/>
 			<text x="15.28" y="277.15" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Scan Details<v:newlineChar/><tspan
 						x="12.61" dy="1.2em" class="st3">List Resource</tspan></text>		</g>
+						</a>
 		<g id="shape16-70" v:mID="16" v:groupContext="shape" transform="translate(239.31,-272.99)">
 			<title>1..1 M subject</title>
 			<desc>1..1 M subject</desc>
@@ -205,8 +215,9 @@
 			<rect x="0" y="291.24" width="49.8898" height="23.5276" class="st8"/>
 			<text x="14.35" y="300.6" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>1..1 M<v:newlineChar/><tspan
 						x="12.96" dy="1.2em" class="st3">subject</tspan></text>		</g>
+						<a href="explore_scan_details.html#patient-reference">
 		<g id="shape17-74" v:mID="17" v:groupContext="shape" transform="translate(291.992,-224.099)">
-			<title>Snip and Round Corner Rectangle.2272</title>
+			<title>Reference to Patient resource</title>
 			<desc>Reference to Patient resource</desc>
 			<v:userDefs>
 				<v:ud v:nameU="CTypeTopLeftSnip" v:prompt="" v:val="VT0(0):5"/>
@@ -232,6 +243,7 @@
 						 9.58317 -180 0 0 0 252.48 L0 305.18 L9.58 314.77 Z" class="st10"/>
 			<text x="21.35" y="275.83" class="st11" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Reference to <v:newlineChar/><tspan
 						x="13.72" dy="1.2em" class="st3">Patient resource </tspan> </text>		</g>
+						</a>
 		<g id="shape18-78" v:mID="18" v:groupContext="shape" v:layerMember="0" transform="translate(236.516,-266.191)">
 			<title>Dynamic connector.2273</title>
 			<v:userDefs>

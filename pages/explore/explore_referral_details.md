@@ -87,5 +87,14 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |   |  | Optional | CareConnect-RelatedPerson-1 |  |
 |   |  | Optional | CareConnect-Practitioner-1 |  |
 
+## Mapping for Plan and Requested Actions Practitioner ## 
+
+The plan and requested actions details has reference(s) to the Practitioner resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
+
+## Mapping for Plan and Requested Actions PractitionerRole ##  
+
+The plan and requested actions details has reference(s) to the Practitioner Role resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
 ## Referral Example ##
 
+<script src="https://gist.github.com/IOPS-DEV/bda39816eded889855782144de5bc3aa.js"></script>

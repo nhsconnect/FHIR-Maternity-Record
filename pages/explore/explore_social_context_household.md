@@ -11,7 +11,7 @@ summary: "The FHIR profiles used for the Social context Household List"
 The social setting in which the woman lives
 
 |**Data Standard Element**|**FHIR Profile**|**FHIR target**|
-|Date/Time|[Observation](household.html#mapping-for-social-context-details-list)|
+|Date/Time|[Observation](explore_social_context_household.html#mapping-for-social-context-details-list)|
 |Smoking Status|[Observation](explore_social_context_household.html#social-context-observation-data-item---smoking-details)|
 |Smoking Status- details|[Observation](explore_social_context_household.html#social-context-observation-data-item---smoking-details)|
 |Drug/substance use|[Observation](explore_social_context_household.html#social-context-observation-data-item---drug-substance-use)|
