@@ -21,6 +21,7 @@ This specification is currently under development and the following PRSB Heading
 - [Clinical risk factors](explore_clinical_risk_factors.html)
 - [Demographics history](explore_demographics_history.html)
 - [Patient demographics](explore_patient_demographics.html)
+- [Personal comment](explore_personal_comment.html)
 - [Personal contacts](explore_personal_contacts.html)
 - [Plan and requested actions](explore_plan_and_requested_actions.html)
 - [Professional summary](explore_professional_summary.html)
