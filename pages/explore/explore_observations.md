@@ -12,7 +12,7 @@ The record of physiological observations, e.g., weight, height, heart rate, bloo
 
 ## Observation Structure Details ##
 
-
+{% include custom/observations.svg %}
 
 ## Mapping for Observation List ##
 
@@ -89,6 +89,24 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Code MUST be 72313002\|Systolic arterial pressure OR 1091811000000102 \|Diastolic arterial pressure</font> |
 |  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
 |  - value[x] | 0..1 | Required | [Quantity](http://hl7.org/fhir/stu3/datatypes.html#quantity "Quantity") | Actual component result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/><font color="red">The blood pressure value of the person. This value MUST only be be for Systolic or Diastolic readings. Quantity.system MUST be fixed to 'http://unitsofmeasure.org' and Quantity.code MUST be fixed to 'mm[Hg]'</font> |
+
+## Mapping for Observation Encounter ##
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
+| :--- | :--- | :--- | :--- | :--- |
+|  - id | 0..1 | Optional | Id | Logical id of this artifact |
+|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Encounter-1'</font> |
+|  - identifier | 0..* | Required | Identifier | Identifier(s) by which this encounter is known<br/><font color='red'>An identifier for this Encounter</font> |
+|  - - system | 1..1 | Mandatory | Uri | The namespace for the identifier value<br/><font color='red'>The system from which the identifier came from</font> |
+|  - - value | 1..1 | Mandatory | String | The value that is unique<br/><font color='red'>An identifier for this observation encounter</font> |
+|  - status | 1..1 | Mandatory | Code | planned : arrived : triaged : in-progress : onleave : finished : cancelled +<br/>Binding (required): Current state of the encounter [EncounterStatus](http://hl7.org/fhir/stu3/valueset-encounter-status.html) |
+|  - period | 0..1 | Mandatory | Period | The start and end time of the encounter<br/>Constraint (per-1): If present, start SHALL have a lower value than end<br/><font color="red">The date on which the observation was recorded</font> |
+|  - - start | 0..1 | Mandatory | dateTime | Starting time with inclusive boundary |
+|  - - end | 0..1 | Required | dateTime | End time with inclusive boundary, if not ongoing |
+|  - location | 0..* | Required | BackboneElement | List of locations where the patient has been |
+|  - - location | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Location the encounter takes place<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>Where the observation took place</font> |
+|   |  | Mandatory | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") | This MUST use the CareConnect Location profile. </font>See [Location resource](explore_observation.html#mapping-for-observation-location) for information on how to populate the resource. |
+|  - - - reference | 0..1 | Required | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the Location resource included in the observation details list</font>  |
 
 ## Mapping for Plan and Requested Actions Practitioner ## 
 
