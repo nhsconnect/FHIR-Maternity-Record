@@ -202,4 +202,7 @@ The plan and requested actions details has reference(s) to the Practitioner reso
 
 ## Mapping for Personal comment PractitionerRole ##  
 
-The plan and requested actions details has reference(s) to the Practitioner Role resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+The plan and requested actions details has reference(s) to the Practitioner Role resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)  
+
+## Personal comment Example ##  
+<script src="https://gist.github.com/IOPS-DEV/ba7c91d1e5da2b563eb3b08e01c955ff.js"></script>
