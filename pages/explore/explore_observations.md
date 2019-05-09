@@ -12,9 +12,11 @@ The record of physiological observations, e.g., weight, height, heart rate, bloo
 
 ## Observation Structure Details ##
 
+
+
 ## Mapping for Observation List ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/referralrequest.html)|>|Level 2| None|>|Level 3|[CareConnect-ReferralRequest-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_referral_details_all.html#mapping-for-referral)**|
@@ -47,12 +49,12 @@ The record of physiological observations, e.g., weight, height, heart rate, bloo
 
 The Plan and requested actions List has a mandated subject reference to the Patient resource. This means that any exchange of the Plan and requested actions heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
-## Mapping for Observation Details ##
+## Mapping for Blood Pressure Observation Details ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/referralrequest.html)|>|Level 2| None|>|Level 3|[CareConnect-ReferralRequest-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_referral_details_all.html#mapping-for-referral)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-blood-pressure-observation-details)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -77,7 +79,16 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date on which the observation was recorded</font><br/> |
 |  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the observation</font> |
-|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the safeguarding issue</font> |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the observation</font> |
+|  - component | 0..* | Required | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Component results<br/><font color="red">Component MUST be used to group together Systolic and Diastolic blood pressure readings of the patient</font> |
+|  - - code | 1..1 | Required | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of component observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html) |
+|  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
+|  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
+|  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
+|  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
+|  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Code MUST be 72313002\|Systolic arterial pressure OR 1091811000000102 \|Diastolic arterial pressure</font> |
+|  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
+|  - value[x] | 0..1 | Required | [Quantity](http://hl7.org/fhir/stu3/datatypes.html#quantity "Quantity") | Actual component result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/><font color="red">The blood pressure value of the person. This value MUST only be be for Systolic or Diastolic readings. Quantity.system MUST be fixed to 'http://unitsofmeasure.org' and Quantity.code MUST be fixed to 'mm[Hg]'</font> |
 
 ## Mapping for Plan and Requested Actions Practitioner ## 
 
