@@ -87,8 +87,8 @@
 			</v:userDefs>
 			<path d="M5.35 411.99 L5.57 411.7 L95.46 296.93" class="st6"/>
 		</g>
-		<a xlink:href="explore_problem_list.html#mapping-for-problem-list-encounter"
-				xlink:title="Link to Problem list Encounter resource mapping">
+		<a xlink:href="explore_problems_list.html#mapping-for-problems-list-encounter"
+				xlink:title="Link to Problems list Encounter resource mapping">
 			<g id="shape4-17" v:mID="4" v:groupContext="shape" transform="translate(172.136,-256.401)">
 				<title>Encounter Resource</title>
 				<desc>Encounter Resource</desc>
@@ -193,8 +193,8 @@
 			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st9"/>
 			<text x="15.6" y="404.66" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
 						x="11.5" dy="1.2em" class="st3">location</tspan></text>		</g>
-		<a xlink:href="explore_problem_list#mapping-for-problem-list-condition"
-				xlink:title="Link to Problem list Condition resource mapping">
+		<a xlink:href="explore_problems_list#mapping-for-problems-list-condition"
+				xlink:title="Link to Problems list Condition resource mapping">
 			<g id="shape18-60" v:mID="18" v:groupContext="shape" transform="translate(26.1976,-256.81)">
 				<title>Condition Resource</title>
 				<desc>Condition Resource</desc>
@@ -211,8 +211,8 @@
 				<text x="25.09" y="381.81" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Condition<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st3">Resource</tspan></text>			</g>
 		</a>
-		<a xlink:href="explore_problem_list#mapping-for-problem-list-observation"
-				xlink:title="Link to Problem List Observation resource mapping">
+		<a xlink:href="explore_problems_list#mapping-for-problems-list-observation"
+				xlink:title="Link to Problems List Observation resource mapping">
 			<g id="shape19-64" v:mID="19" v:groupContext="shape" transform="translate(312.954,-256.81)">
 				<title>Observation Resource</title>
 				<desc>Observation Resource</desc>
@@ -229,11 +229,11 @@
 				<text x="19.83" y="381.81" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Observation<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st3">Resource</tspan></text>			</g>
 		</a>
-		<a xlink:href="explore_problem_list.html#mapping-for-problem-list-problem-list"
-				xlink:title="Link to Problem list Problem List resource mapping">
+		<a xlink:href="explore_problems_list.html#mapping-for-problems-list-problem-list"
+				xlink:title="Link to Problems list Problem List resource mapping">
 			<g id="shape20-68" v:mID="20" v:groupContext="shape" transform="translate(172.136,-330.834)">
-				<title>Problem List resource</title>
-				<desc>Problem list Problem List Resource</desc>
+				<title>Problems List Problem List Resource</title>
+				<desc>Problems List Problem List Resource</desc>
 				<v:custProps>
 					<v:cp v:nameU="Row_1" v:lbl="title" v:type="0" v:langID="2057" v:val="VT4(Bundle)"/>
 				</v:custProps>
