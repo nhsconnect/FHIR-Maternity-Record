@@ -153,7 +153,7 @@ The Admission details list has a mandated subject reference to the Patient resou
 |  - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system |
 |  - - - system | 0..1 | Required | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>This MUST contain the value 'https://www.datadictionary.nhs.uk'</font> |
 |  - - - code | 0..1 | Required | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color='red'>The code MUST be  from the stated ValueSet</font> |
-|  - - - display | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color='red'>The display MUST be the text assoicated with the code</font> |
+|  - - - display | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color='red'>The display MUST be the text associated with the code</font> |
 
 ## Mapping for Attendance Details EpisodeOfCare ##
 
