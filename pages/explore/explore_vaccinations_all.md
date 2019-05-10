@@ -41,7 +41,7 @@ The details of a women’s vaccinations.
 
 ## Mapping for Vaccination Details List ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3| None|
 
 
 |**[View Used FHIR Elements](explore_vaccinations.html#mapping-for-vaccination-details-list)**|**View All FHIR Elements**|
@@ -158,7 +158,7 @@ The vaccination details list has a mandated subject reference to the Patient res
 
 ## Mapping for Vaccinations ##
 
-|>|Level 1|[Immunization Resource](http://hl7.org/fhir/stu3/immunization.html)|>|Level 2| None|>|Level 3|[CareConnect-Immunization-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1)|
+|>|Level 1|[Immunization Resource](http://hl7.org/fhir/stu3/immunization.html)|>|Level 2|[CareConnect-Immunization-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1)|>|Level 3| None|
 
 
 |**[View Used FHIR Elements](explore_vaccinations_all.html#mapping-for-immunization)**|**View All FHIR Elements**|

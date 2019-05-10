@@ -16,7 +16,7 @@ The details of the individual or team who referred the woman.
 
 ## Mapping for Referral List ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 2| None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_referral_details_all.html#mapping-for-referral-list)**|
@@ -51,7 +51,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Referral ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/referralrequest.html)|>|Level 2| None|>|Level 3|[CareConnect-ReferralRequest-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/referralrequest.html)|>|Level 2|[CareConnect-ReferralRequest-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1)|>|Level 3| None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_referral_details_all.html#mapping-for-referral)**|

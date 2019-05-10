@@ -12,7 +12,7 @@ The safeguarding details of the woman.
 
 ## Mapping for Safeguarding Details List ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3| None|
 
 
 |**[View Used FHIR Elements](explore_safeguarding.html#mapping-for-safeguarding-list)**|**View All FHIR Elements**|
@@ -130,7 +130,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Safeguarding Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3| None|
 
 
 |**[View Used FHIR Elements](explore_safeguarding.html#mapping-for-safeguarding-observation)**|**View All FHIR Elements**|
