@@ -54,7 +54,7 @@
 			</v:userDefs>
 			<path d="M6.74 300.37 L7.22 321.59" class="st1"/>
 		</g>
-		<a xlink:href="explore_birth_details.html#mapping-for-bundle">
+		<a xlink:href="explore_observations.html#mapping-for-observation-location">
 			<g id="shape2-7" v:mID="2" v:groupContext="shape" transform="translate(285.303,-18.25)">
 				<title>Location Resource</title>
 				<desc>Location Resource</desc>
@@ -92,7 +92,7 @@
 			</v:userDefs>
 			<path d="M0 307.28 L-30.72 307.55" class="st1"/>
 		</g>
-		<a xlink:href="explore_birth_details.html#mapping-for-bundle">
+		<a xlink:href="explore_observations.html#mapping-for-plan-and-requested-actions-practitionerrole">
 			<g id="shape6-26" v:mID="6" v:groupContext="shape" transform="translate(24.2177,-19.3689)">
 				<title>PractitionerRole Resource</title>
 				<desc>PractitionerRole Resource</desc>
@@ -164,7 +164,6 @@
 			<rect x="0" y="276.843" width="49.8898" height="23.5276" class="st6"/>
 			<text x="15.6" y="286.21" class="st7" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
 						x="5.26" dy="1.2em" class="st5">practitioner</tspan></text>		</g>
-		<a xlink:href="explore_birth_details.html#mapping-for-bundle">
 			<g id="shape14-59" v:mID="14" v:groupContext="shape" transform="translate(156.849,-115.001)">
 				<title>Observation Resource</title>
 				<desc>Observation Resource</desc>
@@ -180,8 +179,8 @@
 				<rect x="0" y="232.339" width="90.7087" height="68.0315" class="st3"/>
 				<text x="19.83" y="263.36" class="st4" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Observation<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st5">Resource</tspan></text>			</g>
-		</a>
-		<a xlink:href="explore_birth_details.html#mapping-for-bundle">
+
+		<a xlink:href="explore_observations.html#mapping-for-plan-and-requested-actions-practitioner">
 			<g id="shape15-63" v:mID="15" v:groupContext="shape" transform="translate(26.381,-114.255)">
 				<title>Practitioner Resource</title>
 				<desc>Practitioner Resource</desc>
@@ -198,7 +197,7 @@
 				<text x="20.77" y="263.36" class="st4" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Practitioner<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st5">Resource</tspan></text>			</g>
 		</a>
-		<a xlink:href="explore_birth_details.html#mapping-for-bundle">
+		<a xlink:href="explore_observations.html#mapping-for-observation-encounter">
 			<g id="shape16-67" v:mID="16" v:groupContext="shape" transform="translate(285.303,-116.194)">
 				<title>Encounter Resource</title>
 				<desc>Encounter Resource</desc>
@@ -215,7 +214,7 @@
 				<text x="24.06" y="263.36" class="st4" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Encounter<v:newlineChar/><tspan
 							x="26.27" dy="1.2em" class="st5">Resource</tspan></text>			</g>
 		</a>
-		<a xlink:href="explore_birth_details.html#mapping-for-bundle">
+		<a xlink:href="explore_observations.html#mapping-for-observation-list">
 			<g id="shape17-71" v:mID="17" v:groupContext="shape" transform="translate(155.395,-213.293)">
 				<title>Observations List Resource</title>
 				<desc>Observations List Resource</desc>
