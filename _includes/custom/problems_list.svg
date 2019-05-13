@@ -255,7 +255,7 @@
 			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st9"/>
 			<text x="14.35" y="404.66" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>1..1 M<v:newlineChar/><tspan
 						x="12.96" dy="1.2em" class="st3">subject</tspan></text>		</g>
-		<a xlink:href="explore_problem_list.html#patient-reference" xlink:title="Link to Patient reference">
+		<a xlink:href="explore_problems_list.html#patient-reference" xlink:title="Link to Patient reference">
 			<g id="shape22-79" v:mID="22" v:groupContext="shape" transform="translate(19.6002,-328.819)">
 				<title>Reference to Patient resource</title>
 				<desc>Reference to Patient resource</desc>
