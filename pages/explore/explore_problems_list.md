@@ -254,4 +254,7 @@ The Problems list details has reference(s) to the Practitioner resource. This me
 
 ## Mapping for Problems list PractitionerRole ##  
 
-The Problems list details has reference(s) to the Practitioner Role resource. This means that any exchange of the Problems list details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+The Problems list details has reference(s) to the Practitioner Role resource. This means that any exchange of the Problems list details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)  
+
+## Problems list Example ##  
+<script src="https://gist.github.com/IOPS-DEV/448b7b14f38376f19093e6fcb37166d3.js"></script>
