@@ -10,7 +10,6 @@ summary: "The FHIR profiles used for the Problems list List"
 ## Heading Description ##
 A summary of the problems that require investigation or treatment.
 
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
 The following FHIR profiles are used to form the Problems list Problem List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)  
 - [CareConnect-Condition-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1)
