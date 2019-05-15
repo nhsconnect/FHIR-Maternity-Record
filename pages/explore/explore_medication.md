@@ -46,6 +46,19 @@ The details of and instructions for medications and medical equipment the woman 
 | :--- | :--- | :--- | :--- | :--- |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
+|  - extension (changeSummary) | 0..* | Optional | [Extension-CareConnect-MedicationChangeSummary-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationChangeSummary-1 "Extension-CareConnect-MedicationChangeSummary-1") | Optional Extensions Element<br/> |
+|   - - extension (status) | 0..1 | Optional | Extension | The change status of a medication<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">The nature of any change made to the medication</font> |
+|  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: status |
+|  - - - valueCode | 0..1 | Optional | Code | The change status of a medication.<br/>Binding (required): A ValueSet to identify the change status of a medication. (https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationChangeStatus-1 ) |
+|  - - extension (indicationForChange) | 0..1 | Optional | Extension | Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">Reason for change in medication, e.g. sub-therapeutic dose, patient intolerant.</font> |
+|  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: indicationForChange |
+|  - - - valueCodeableConcept | 0..1 | Optional | CodeableConcept | Value of extension |
+|  - - extension (dateChanged) | 0..1 | Optional | Extension | Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">The date of the latest change - addition, or amendment</font> |
+|  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: dateChanged |
+|  - - - valueDateTime | 0..1 | Optional | dateTime | Value of extension |
+|  - - extension (detailsOfAmendment) | 0..1 | Optional | Extension | Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">Where a change is made to the medication i.e. one drug stopped and another started or e.g. dose, frequency or route is changed.</font> |
+|  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: detailsOfAmendment |
+|  - - - valueString | 0..1 | Optional | String | Value of extension |
 |  - identifier | 0..* | Required | Identifier | External identifier |
 |  - - system | 1..1 | Mandatory | Uri | The namespace for the identifier value |
 |  - - value | 1..1 | Required | String | The value that is unique |
@@ -83,3 +96,15 @@ The details of and instructions for medications and medical equipment the woman 
 |  - - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
 |  - - - - display | 0..1 | Mandatory | String | Representation defined by the system |
 |  - - - text | 0..1 | Optional | String | Plain text representation of the concept |
+
+## Mapping for Medications and Medical Devices Practitioner ##
+
+The medications and medical devices  details has reference(s) to the Practitioner resource. This means that any exchange of the medications and medical devices details heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
+
+## Mapping for Medications and Medical Devices Practitioner Role ##
+
+The medications and medical devices  details has reference(s) to the Practitioner Role resource. This means that any exchange of the medications and medical devices  details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
+## Mapping for Medications and Medical Devices Organisation ##
+
+The medications and medical devices  details has reference(s) to the Practitioner Role resource. This means that any exchange of the medications and medical devices  details heading data must also include the [Practitioner Role Details](explore_organisation_role.html#mapping-for-practitioner_role)
