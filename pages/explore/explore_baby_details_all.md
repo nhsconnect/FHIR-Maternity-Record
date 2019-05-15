@@ -30,6 +30,26 @@ The following profiles are referenced from the Baby Details (person) details lis
 
 ## Mapping Overview ##
 
+|  **Data Standard Element** | **FHIR Profile Mapping** | **FHIR Element** |
+| :--- | :--- | :--- |
+|  Family Name | Patient | name.family |
+|  First Given Name | Patient | name.given |
+|  Other given names (s) | Patient | name.given |
+|  NHS Number | Patient | identifier.nhsNumber |
+|  Local Patient Identifier | Patient | identifer |
+|  Phenotypic Sex (Baby) | Observation | code and value |
+|  Birth Order | Patient | multipleBirthInteger |
+|  Number of Births in confinement | Observation | code and value |
+|  Birth Weight | Observation | code and value |
+|  Locally calculated birth weight centile | Observation | code and value |
+|  Length of Gestation at Birth | Observation | code and value |
+|  Still Born Indicator | Observation | code and value |
+|  Rhesus Status | Observation | code and value |
+|  Suspected Congenital Abnormality Indicator | Observation | code and value |
+|  Investigations Requested | ProcedureRequest | code |
+
+The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
+
 ## Mapping for Baby Details (Person) List ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
