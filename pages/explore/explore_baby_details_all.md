@@ -32,21 +32,21 @@ The following profiles are referenced from the Baby Details (person) details lis
 
 |  **Data Standard Element** | **FHIR Profile Mapping** | **FHIR Element** |
 | :--- | :--- | :--- |
-|  Family Name | Patient | name.family |
-|  First Given Name | Patient | name.given |
-|  Other given names (s) | Patient | name.given |
-|  NHS Number | Patient | identifier.nhsNumber |
-|  Local Patient Identifier | Patient | identifer |
-|  Phenotypic Sex (Baby) | Observation | code and value |
-|  Birth Order | Patient | multipleBirthInteger |
-|  Number of Births in confinement | Observation | code and value |
-|  Birth Weight | Observation | code and value |
-|  Locally calculated birth weight centile | Observation | code and value |
-|  Length of Gestation at Birth | Observation | code and value |
-|  Still Born Indicator | Observation | code and value |
-|  Rhesus Status | Observation | code and value |
-|  Suspected Congenital Abnormality Indicator | Observation | code and value |
-|  Investigations Requested | ProcedureRequest | code |
+|  Family Name | [Patient](explore_baby_details_all.html#mapping-for-baby-details-person-list) | name.family |
+|  First Given Name | [Patient](explore_baby_details_all.html#mapping-for-baby-details-person-list) | name.given |
+|  Other given names (s) | [Patient](explore_baby_details_all.html#mapping-for-baby-details-person-list) | name.given |
+|  NHS Number | [Patient](explore_baby_details_all.html#mapping-for-baby-details-person-list) | identifier.nhsNumber |
+|  Local Patient Identifier | [Patient](explore_baby_details_all.html#mapping-for-baby-details-person-list) | identifer |
+|  Phenotypic Sex (Baby) | [Observation](explore_baby_details_all.html#mapping-for-observation-resource) | code and value |
+|  Birth Order | [Patient](explore_baby_details_all.html#mapping-for-baby-details-person-list) | multipleBirthInteger |
+|  Number of Births in confinement | [Observation](explore_baby_details_all.html#mapping-for-observation-resource) | code and value |
+|  Birth Weight | [Observation](explore_baby_details_all.html#mapping-for-observation-resource) | code and value |
+|  Locally calculated birth weight centile | [Observation](explore_baby_details_all.html#mapping-for-observation-resource) | code and value |
+|  Length of Gestation at Birth | [Observation](explore_baby_details_all.html#mapping-for-observation-resource) | code and value |
+|  Still Born Indicator | [Observation](explore_baby_details_all.html#mapping-for-observation-resource) | code and value |
+|  Rhesus Status | [Observation](explore_baby_details_all.html#mapping-for-observation-resource) | code and value |
+|  Suspected Congenital Abnormality Indicator | [Observation](explore_baby_details_all.html#mapping-for-observation-resource) | code and value |
+|  Investigations Requested | [ProcedureRequest](explore_baby_details_all.html#mapping-for-procedurerequest-resource) | code |
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
@@ -80,3 +80,5 @@ The Baby Details (Person) list has a mandated subject reference to the Patient r
 |>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_baby_details.html#mapping-for-observation-resource)**|
+
+## Baby Details (Person) Heading Example ##
