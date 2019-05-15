@@ -25,7 +25,7 @@ Insert SVG
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_baby_details.html#mapping-for-baby-details-(person)-list)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_baby_details.html#mapping-for-baby-details-person-list)**|
 
 ## Patient Reference ##
 
@@ -34,13 +34,20 @@ The Baby Details (Person) list has a mandated subject reference to the Patient r
 
 ## Mapping for Patient Resource (baby) ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/patient.html)|>|Level 2|[CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)|>|Level 3|None|
+|>|Level 1|[Patient Resource](http://hl7.org/fhir/stu3/patient.html)|>|Level 2|[CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)|>|Level 3|None|
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_baby_details.html#mapping-for-patient-resource-(baby))**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_baby_details.html#mapping-for-patient-resource-baby)**|
 
 
 ## Mapping for ProcedureRequest Resource ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedurerequest.html)|>|Level 2|[CareConnect-ProcedureRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)|>|Level 3|None|
+|>|Level 1|[ProcedureRequest Resource](http://hl7.org/fhir/stu3/procedurerequest.html)|>|Level 2|[CareConnect-ProcedureRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)|>|Level 3|None|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_baby_details.html#mapping-for-procedurerequest-resource)**|
+
+
+## Mapping for Observation Resource ##
+
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_baby_details.html#mapping-for-observation-resource)**|
