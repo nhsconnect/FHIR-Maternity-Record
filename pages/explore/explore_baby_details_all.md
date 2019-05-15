@@ -6,16 +6,25 @@ sidebar: foundations_sidebar
 permalink: explore_baby_details_all.html
 summary: "The FHIR profiles used for the Baby details (person) List"
 ---
+{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
+
 ## Heading Description ##
 Birth details of the baby.
 
-## Mapping for Bundle ##
+The following FHIR profiles are used to form the Baby Details (person) details list structure:
 
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
+- [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+- [CareConnect-Observation](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
+- [CareConnect-ProcedureRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)
+
+The following profiles are referenced from the Baby Details (person) details list structure:
+
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
 
 ## Baby Details (Person) Structure ##
 
-Insert SVG
+{% include custom/baby_details_person.svg %}
 
 ## Maternity Data Standards Mapping to FHIR profiles ##
 
