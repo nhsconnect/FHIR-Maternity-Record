@@ -59,15 +59,18 @@ entries:
       subfolders:
       - title: Common Headings
         output: web
-        subfolderitems:
+        subfolderitems:  
+        - title: Location
+          url: /explore_location.html
+          output: web
+        - title: Organization
+          url: /explore_organization.html
+          output: web
         - title: Practitioner
           url: /explore_practitioner.html
           output: web
         - title: PractitionerRole
           url: /explore_practitioner_role.html
-          output: web
-        - title: Location
-          url: /explore_location.html
           output: web
         - title: RelatedPerson
           url: /explore_related_person.html
