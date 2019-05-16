@@ -10,11 +10,52 @@ summary: "The FHIR profiles used for the Medication and medical devices Bundle"
 ## Heading Description ##
 The details of and instructions for medications and medical equipment the woman is using or has been using but discontinued.
 
+## Mapping Headings ##
+
+*Medication Item Cluster*
+
+|Date/Time|[MedicationStatement](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1)|effective.effectivePeriod.start|
+|Medication Name||medicationReference[Medication.code.coding]|
+|Form||medicationReference[Medication.form]|
+|Route||dosage.route|
+|Site||dosage.site|
+|Method||dosage.method|
+|Dose directions description||dosage.patientInstruction|
+|Dose amount description||dosage.text|
+|Dose timing description||dosage.timing|
+|Structured dose direction cluster||dosage.timing|
+|Dose direction duration||dosage.timing.duration|
+|Additional instruction||dosage.additionlInstructions|
+
+*Medication Change Item Cluster*
+
+|Status|[MedicationStatement](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1)|Extension-CareConnect-MedicationChangeSummary-1.status|
+|Indication||Extension-CareConnect-MedicationChangeSummary-1.indicationForChange|
+|Date of latest change||Extension-CareConnect-MedicationChangeSummary-1.dateChanged|
+|Description of amendment||Extension-CareConnect-MedicationChangeSummary-1.detailsOfAmendment|
+|Medical devices entry||TBC |
+
+*Discontinued Medication Item Cluster*
+
+
+|Name of discontinued medication|[MedicationStatement](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1)
+|Status||status|
+|Indication||Extension-CareConnect-MedicationChangeSummary-1.indicationForChange|
+|Date of latest change||Extension-CareConnect-MedicationChangeSummary-1.dateChanged|
+|Description of amendment||Extension-CareConnect-MedicationChangeSummary-1.detailsOfAmendment|
+|Comment|| note - TBC |
+
+
 ## Medications and Medical Devices Details Structure ##
 
 {% include custom/medicationstatement.svg %}
 
 ## Mapping for Medication Statement List ##
+
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
+
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_medication_all.html#mapping-for-medication-statement-list)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -42,7 +83,12 @@ The details of and instructions for medications and medical equipment the woman 
 
 ## Mapping for Medication Statement (Cluster) ##
 
-|  **Name** | **Card.** | **Conformance** | **Type** | Description, Constraints and mapping for Digotal Maternity Implementation |
+|>|Level 1|[MedicationStatement Resource](http://hl7.org/fhir/stu3/medicationstatement.html)|>|Level 2|[CareConnect-MedicationStatement-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1)|>|Level 3|None|
+
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_medication_all.html#mapping-for-medication-statement-cluster)**|
+
+|  **Name** | **Card.** | **Conformance** | **Type** | Description, Constraints and mapping for Digital Maternity Implementation |
 | :--- | :--- | :--- | :--- | :--- |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
@@ -95,6 +141,98 @@ The details of and instructions for medications and medical equipment the woman 
 |  - - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system |
 |  - - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
 |  - - - - display | 0..1 | Mandatory | String | Representation defined by the system |
+|  - - - text | 0..1 | Optional | String | Plain text representation of the concept |
+
+## Mapping for Discontinued Medication Item Cluster ##
+
+|>|Level 1|[MedicationStatement Resource](http://hl7.org/fhir/stu3/medicationstatement.html)|>|Level 2|[CareConnect-MedicationStatement-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1)|>|Level 3|None|
+
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_medication_all.html#mapping-for-discontinued-medication-item-cluster)**|
+
+|  **Name** | **Card.** | **Conformance** | **Type** | Description, Constraints and mapping for Digital Maternity Implementation |
+| :--- | :--- | :--- | :--- | :--- |
+|  - id | 0..1 | Optional | Id | Logical id of this artifact |
+|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
+|  - extension (changeSummary) | 0..* | Optional | [Extension-CareConnect-MedicationChangeSummary-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationChangeSummary-1 "Extension-CareConnect-MedicationChangeSummary-1") | Optional Extensions Element<br/> |
+|   - - extension (status) | 0..1 | Optional | Extension | The change status of a medication<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">The nature of any change made to the medication</font> |
+|  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: status |
+|  - - - valueCode | 0..1 | Optional | Code | The change status of a medication.<br/>Binding (required): A ValueSet to identify the change status of a medication. [https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationChangeStatus-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationChangeStatus-1 ) |
+|  - - extension (indicationForChange) | 0..1 | Optional | Extension | Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">The clinical indication for any changes in medication status</font> |
+|  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: indicationForChange |
+|  - - - valueCodeableConcept | 0..1 | Optional | CodeableConcept | Value of extension |
+|  - - extension (dateChanged) | 0..1 | Optional | Extension | Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">The date of the discontinuation</font> |
+|  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: dateChanged |
+|  - - - valueDateTime | 0..1 | Optional | dateTime | Value of extension |
+|  - - extension (detailsOfAmendment) | 0..1 | Optional | Extension | Additional Content defined by implementations<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">A description of any amendment</font> |
+|  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: detailsOfAmendment |
+|  - - - valueString | 0..1 | Optional | String | Value of extension |
+|  - identifier | 0..* | Required | Identifier | External identifier |
+|  - - system | 1..1 | Mandatory | Uri | The namespace for the identifier value |
+|  - - value | 1..1 | Required | String | The value that is unique |
+|  - status | 1..1 | Mandatory | Code | active : completed : entered-in-error : intended : stopped : on-hold<br/>Binding (required): A coded concept indicating the current status of a MedicationStatement. [MedicationStatementStatus](http://hl7.org/fhir/stu3/valueset-medication-statement-status.html)<br/><font color="red">The nature of any change made to the medication.  MUST contain STOPPED</font> |
+|  - medicationReference | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | What medication was taken<br/><font color="red">Name of discontinued medication</font> |
+|   |  | Mandatory | [CareConnect-Medication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1 "CareConnect-Medication-1") | <font color="red">This MUST use the CareConnect Medication profile. See Location resource for information on how to populate the resource.</font> |
+|   | 0..1 | Mandatory | [Period](http://hl7.org/fhir/stu3/datatypes.html#period "Period") |  |
+|  - subject | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is/was taking the medication<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|  - taken | 1..1 | Mandatory | Code | y : n : unk : na<br/>Binding (required): A coded concept identifying level of certainty if patient has taken or has not taken the medication [MedicationStatementTaken](http://hl7.org/fhir/stu3/valueset-medication-statement-taken.html) |
+|  - note | 0..* | Optional | Annotation | Further information about the statement<br/><font color="red">Any additional comment about the medication change.</font> |
+|  - - author[x] | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Individual responsible for the annotation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") |  |
+|  - - text | 1..1 | Mandatory | String | The annotation - text content<br/><font color="red">Any additional comment about the medication change.</font> |
+
+
+## Mapping for Medication ##
+
+|>|Level 1|[MedicationStatement Resource](http://hl7.org/fhir/stu3/medication.html)|>|Level 2|[CareConnect-Medication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1)|>|Level 3|None|
+
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_medication_all.html#mapping-for-medication)**|
+
+|  **Name** | **Card.** | **Conformance** | **Type** | Description, Constraints and mapping for Digital Maternity Implementation |
+| :--- | :--- | :--- | :--- | :--- |
+|  - id | 0..1 | Optional | Id | Logical id of this artifact |
+|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Medication-1'</font> |
+|  - code | 0..1 | Required | CodeableConcept | Codes that identify this medication<br/>Binding (required): A code from the SNOMED Clinical Terminology UK coding system that describes a medication from the VTM/VMP/VMPP/AMP/AMPP subsets from the dm+d terminology [CareConnect-MedicationCode-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationCode-1) |
+|  - - coding | 0..* | Required | Coding | Code defined by a terminology system |
+|  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
+|  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
+|  - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
+|  - - - display | 0..1 | Mandatory | String | Representation defined by the system |
+|  - - text | 0..1 | Required | String | Plain text representation of the concept |
+
+## Mapping for Medication Administration ##
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
+| --- | --- | --- | --- | --- |
+|  - id | 0..1 | Optional | Id | Logical id of this artifact |
+|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
+|  - identifier | 0..* | Required | Identifier | External identifier |
+|  - status | 1..1 | Mandatory | Code | in-progress | on-hold | completed | entered-in-error | stopped | unknown<br/>Binding (required): A set of codes indicating the current status of a MedicationAdministration. (http://hl7.org/fhir/stu3/valueset-medication-admin-status.html )<br/><font color="red">The nature of any change made to the medication. MUST be marked as COMPLETED once administered</font> |
+|  - medicationReference | 1..1 | Required | Reference ( Medication |CareConnect-Medication-1 ) | What was administered<br/>Binding (example): Codes identifying substance or product that can be administered. (http://hl7.org/fhir/stu3/valueset-medication-codes.html ) |
+|  - subject | 1..1 | Mandatory | Reference ( Group |CareConnect-Patient-1 ) | Who received medication<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
+|  - effective[x] | 1..1 | Mandatory | dateTime | Period | Start and end time of administration |
+|  - performer | 0..* | Required | BackboneElement | Who administered substance |
+|  - - actor | 1..1 | Mandatory | Reference ( Device |CareConnect-Patient-1 |CareConnect-RelatedPerson-1 | CareConnect-Practitioner-1) | Individual who was performing<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the administration</font> |
+|  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color="red">The reference to the included Practitioner resource</font> |
+|  - - onBehalfOf | 0..1 | Required | Reference ( CareConnect-Organization-1 ) | Organization organization was acting for<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">The site code of the organisation associated with the professional performing the administration</font> |
+|  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color="red">The reference to the included Organization resource</font> |
+|  - dosage | 0..1 | Optional | BackboneElement | Details of how medication was taken<br/>Constraint (mad-1): SHALL have at least one of dosage.dose or dosage.rate[x] |
+|  - - text | 0..1 | Optional | String | Free text dosage instructions e.g. SIG<br/><font color="red">A plain text description of medication single dose amount, as described in the AoMRC medication headings. Comment: e.g. "30 mg" or "2 tabs". UK Secondary care clinicians and systems normally minimally structure their dose directions, separating Dose amount and Dose timing (often referred to as Dose and Frequency). This format is not normally used in GP systems, which will always import Dose and Frequency descriptions concatenated into the single Dose directions description.</font> |
+|  - - site | 0..1 | Optional | CodeableConcept | Body site administered to<br/>Binding (example): A coded concept describing the site location the medicine enters into or onto the body. ( http://hl7.org/fhir/stu3/valueset-approach-site-codes.html )<br/><font color="red">The anatomical site at which the medication is to be administered. Comment: e.g. "Left eye"</font> |
+|  - - - coding | 0..* | Required | Coding | Code defined by a terminology system |
+|  - - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system |
+|  - - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
+|  - - - - display | 0..1 | Mandatory | String | Representation defined by the system |
+|  - - - text | 0..1 | Optional | String | Plain text representation of the concept |
+|  - - route | 0..1 | Optional | CodeableConcept | Path of substance into body<br/>Binding (example): A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject. ( http://hl7.org/fhir/stu3/valueset-route-codes.html )<br/><font color="red">Medication administration description (oral, IM, IV, etc.): may include method of administration, (e.g., by infusion, via nebuliser, via NG tube) and/or site of use, (e.g., ‘to wound’, ‘to left eye’, etc.).</font> |
+|  - - - coding | 0..* | Required | Coding | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
+|  - - - coding (snomedCT) | 0..1 | Required | Coding | Code defined by a terminology system<br/>Binding (example): A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration. ( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1 ) |
+|  - - - - extension (SnomedCTDescriptionId) | 0..1 | Required | Extension | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid |
+|  - - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct |
+|  - - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system |
+|  - - - - display | 1..1 | Mandatory | String | Representation defined by the system |
 |  - - - text | 0..1 | Optional | String | Plain text representation of the concept |
 
 ## Mapping for Medications and Medical Devices Practitioner ##
