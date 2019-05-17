@@ -1,14 +1,55 @@
----
-title: Professional Contacts Bundle
+﻿---
+title: Professional contacts List
 keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
 permalink: explore_professional_contacts.html
-summary: "The FHIR profiles used for the Professional contacts Bundle"
+summary: "The FHIR profiles used for the Professional contacts List"
 ---
 
 ## Heading Description ##
 The details of the woman’s professional contacts.
 
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
+{% include custom/under.construction.html content="Please check back later for any updates to this page" %}  
+
+The following FHIR profiles are used to form the Professional contacts List structure:  
+- [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)  
+- [CareConnect-EpisodeOfCare-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1)
+- [CareConnect-CareTeam-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CareTeam-1)  
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)  
+- [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
+- [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
+
+The following profiles are referenced from the Patient demographics list structure:  
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)  
+
+## Professional contacts Structure ##
+
+{% include custom/prof_contacts.svg %}  
+
+## Maternity data standard Mapping to FHIR profiles ##  
+
+## Mapping Overview ##
+
+|**Data Standard Element**|**FHIR Resource Mapping**|**FHIR Element**|
+|Organisation|[Organization](explore_professional_contacts.html#mapping-for-professional-contacts-organization)|identifier|
+|Team|[CareTeam](explore_professional_contacts.html#mapping-for-professional-contacts-careteam)|name|
+|Name|[Practitioner](explore_professional_contacts.html#mapping-for-professional-contacts-practitioner)|name|  
+|Role|[PractitionerRole](explore_professional_contacts.html#mapping-for-professional-contacts-practitionerrole)|code|
+|CareSetting||unmapped|
+|Keyworker|[PractitionerRole](explore_professional_contacts.html#mapping-for-professional-contacts-practitionerrole)|code|
+|Care Professional Association|[EpisodeOfCare](explore_professional_contacts.html#mapping-for-professional-contacts-episodeofcare)|type|
+|Contact details|[Organization](explore_professional_contacts.html#mapping-for-professional-contacts-organization)/[Practitioner](explore_professional_contacts.html#mapping-for-professional-contacts-practitioner)|telecom| 
+|Start date|[CareTeam](explore_professional_contacts.html#mapping-for-professional-contacts-careteam)|period.start| 
+|End date|[CareTeam](explore_professional_contacts.html#mapping-for-professional-contacts-careteam)|period.end| 
+|Reason|[EpisodeOfCare](explore_professional_contacts.html#mapping-for-professional-contacts-episodeofcare)|reason| 
+
+
+## Mapping for Professional contacts List ##  
+
+
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|  
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_professional_contacts_all.html#mapping-for-professional-contacts-list)**| 
+
 
