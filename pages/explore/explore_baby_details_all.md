@@ -80,18 +80,19 @@ The following Observation codes and value data types should be used for the Obse
 
 |  **Observation** | **Code** | **Value[x]** |
 | :--- | --- | --- |
-|  Phenotypic Sex (Baby) | TBC | **CodeableConcept:** <br>A snomed code from ^999002891000000103 |Person phenotypic sex findings simple reference set (foundation metadata concept) |
+|  Phenotypic Sex (Baby) | TBC | **CodeableConcept:** <br>A snomed code from ^999002891000000103|Person phenotypic sex findings simple reference set (foundation metadata concept) |
 |  Number of Births in confinement | TBC | **Quantity** |
 |  Birth Weight | Snomed CT: 364589006 - Birth weight (observable entity) | **Quantity** |
 |  Locally calculated birth weight centile | Snomed CT: 301334000 - Birth weight centile (observable entity) | **Quantity** |
 |  Length of Gestation at Birth | Snomed CT: 412726003 - Length of gestation at birth (observable entity) | **Quantity** |
-|  Still Born Indicator | TBC | **CodeableConcept:** <br>A Snomed code from <302080006 |Finding of birth outcome (finding) |
+|  Still Born Indicator | TBC | **CodeableConcept:** <br>A Snomed code from <302080006|Finding of birth outcome (finding) |
 |  Rhesus Status | TBC | **CodeableConcept:** <br>A Snomed code of '165747007 - RhD positive (finding)' or '165746003 - RhD negative (finding)' |
 |  Suspected Congenital Abnormality Indicator | Snomed CT: 1097291000000101 - Suspected congenital abnormality (situation) | **Boolean** |
 
 |>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_baby_details.html#mapping-for-observation-resource)**|
+
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
 |  Observation | ​ |  |  | Measurements and simple assertions<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource<br/>Constraint (obs-7): If code is the same as a component code then the value element associated with the code SHALL NOT be present<br/>Constraint (obs-6): dataAbsentReason SHALL only be present if Observation.value[x] is not present |
