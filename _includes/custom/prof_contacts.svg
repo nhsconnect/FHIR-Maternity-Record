@@ -21,7 +21,7 @@
 		.st7 {fill:none;stroke:#c7c8c8;stroke-width:0.25}
 		.st8 {fill:#000000;font-family:Calibri;font-size:0.666664em;font-weight:bold}
 		.st9 {fill:#4672c4;fill-opacity:0;stroke:#c7c8c8;stroke-width:0.25}
-		.st10 {fill:url(#grad0-73);stroke:#2d5171;stroke-width:0.75}
+		.st10 {fill:url(#grad0-74);stroke:#2d5171;stroke-width:0.75}
 		.st11 {fill:#4bacc6;stroke:#c7c8c8;stroke-width:0.25}
 		.st12 {fill:#000000;font-family:Calibri;font-size:0.833336em;font-weight:bold}
 		.st13 {fill:none;fill-rule:evenodd;font-size:12px;overflow:visible;stroke-linecap:square;stroke-miterlimit:3}
@@ -29,7 +29,7 @@
 	</style>
 
 	<defs id="Patterns_And_Gradients">
-		<linearGradient id="grad0-73" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(250 0.5 0.5)">
+		<linearGradient id="grad0-74" x1="0" y1="0" x2="1" y2="0" gradientTransform="rotate(250 0.5 0.5)">
 			<stop offset="0" stop-color="#386288" stop-opacity="1"/>
 			<stop offset="0.48" stop-color="#386288" stop-opacity="1"/>
 			<stop offset="0.82" stop-color="#41719c" stop-opacity="1"/>
@@ -150,7 +150,7 @@
 			<v:textRect cx="24.9449" cy="407.058" width="49.89" height="23.5276"/>
 			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st7"/>
 			<text x="14.35" y="404.66" class="st8" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>1<tspan class="st3"
-						v:langID="1033">..</tspan>1 M<v:newlineChar/><tspan x="12.35" dy="1.2em" class="st3">context</tspan></text>		</g>
+						v:langID="1033">..</tspan>1 M<v:newlineChar/><tspan x="16.32" dy="1.2em" class="st3">team</tspan></text>		</g>
 		<g id="shape13-45" v:mID="13" v:groupContext="shape" transform="translate(328.727,-321.307)">
 			<title>0..* R entry.item</title>
 			<desc>0..* R entry.item</desc>
@@ -173,10 +173,10 @@
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="27.3086" cy="403.514" width="54.62" height="30.6142"/>
 			<rect x="0" y="388.207" width="54.6172" height="30.6142" class="st9"/>
-			<text x="17.96" y="396.31" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
-						x="10.79" dy="1.2em" class="st3" v:langID="2057">Managing<v:newlineChar/></tspan><tspan x="5.95" dy="1.2em"
-						class="st3" v:langID="2057">Organization</tspan></text>		</g>
-		<g id="shape16-58" v:mID="16" v:groupContext="shape" transform="translate(102.614,-212.598)">
+			<text x="16.72" y="396.31" class="st8" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>1<tspan class="st3"
+						v:langID="1033">..1 </tspan>M<v:newlineChar/><tspan x="11.04" dy="1.2em" class="st3">managing<v:newlineChar/></tspan><tspan
+						x="5.95" dy="1.2em" class="st3">Organization</tspan></text>		</g>
+		<g id="shape16-59" v:mID="16" v:groupContext="shape" transform="translate(102.614,-212.598)">
 			<title>0..1 R participant</title>
 			<desc>0..1 R participant</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
@@ -186,7 +186,7 @@
 						x="6.72" dy="1.2em" class="st3" v:langID="2057">participant</tspan><v:newlineChar/></text>		</g>
 		<a xlink:href="explore_professional_contacts.html#mapping-for-professional-contacts-careteam"
 				xlink:title="Link to CareTeam resource mapping">
-			<g id="shape18-62" v:mID="18" v:groupContext="shape" transform="translate(135.834,-240.488)">
+			<g id="shape18-63" v:mID="18" v:groupContext="shape" transform="translate(135.834,-240.488)">
 				<title>CareTeam Resource</title>
 				<desc>CareTeam Resource</desc>
 				<v:custProps>
@@ -203,7 +203,7 @@
 							x="26.27" dy="1.2em" class="st3">Resource</tspan></text>			</g>
 		</a>
 		<a xlink:href="explore_organization.html" xlink:title="Link to Organization resource mapping">
-			<g id="shape19-66" v:mID="19" v:groupContext="shape" transform="translate(285.431,-141.427)">
+			<g id="shape19-67" v:mID="19" v:groupContext="shape" transform="translate(285.431,-141.427)">
 				<title>Organization Resource</title>
 				<desc>Organization Resource</desc>
 				<v:custProps>
@@ -221,7 +221,7 @@
 		</a>
 		<a xlink:href="explore_professional_contacts.html#mapping-for-professional-contacts-list"
 				xlink:title="Link to Professional contacts List resource mapping">
-			<g id="shape20-70" v:mID="20" v:groupContext="shape" transform="translate(234.547,-331.48)">
+			<g id="shape20-71" v:mID="20" v:groupContext="shape" transform="translate(234.547,-331.48)">
 				<title>Professional contacts List Resource</title>
 				<desc>Professional contacts List Resource</desc>
 				<v:custProps>
@@ -238,7 +238,7 @@
 							x="27.87" dy="1.2em" class="st3">contacts<v:newlineChar/></tspan><tspan x="18.07" dy="1.2em"
 							class="st3">List Resource</tspan></text>			</g>
 		</a>
-		<g id="shape21-77" v:mID="21" v:groupContext="shape" transform="translate(182.08,-370.913)">
+		<g id="shape21-78" v:mID="21" v:groupContext="shape" transform="translate(182.08,-370.913)">
 			<title>1..1 M subject</title>
 			<desc>1..1 M subject</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
@@ -247,7 +247,7 @@
 			<text x="14.35" y="404.66" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>1..1 M<v:newlineChar/><tspan
 						x="12.96" dy="1.2em" class="st3">subject</tspan></text>		</g>
 		<a xlink:href="explore_professional_contacts.html#patient-reference" xlink:title="Link to Patient reference">
-			<g id="shape22-81" v:mID="22" v:groupContext="shape" transform="translate(81.6877,-328.696)">
+			<g id="shape22-82" v:mID="22" v:groupContext="shape" transform="translate(81.6877,-328.696)">
 				<title>Reference to Patient resource</title>
 				<desc>Reference to Patient resource</desc>
 				<v:userDefs>
@@ -275,7 +275,7 @@
 				<text x="21.35" y="379.88" class="st12" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Reference to <v:newlineChar/><tspan
 							x="13.72" dy="1.2em" class="st3">Patient resource </tspan> </text>			</g>
 		</a>
-		<g id="shape23-85" v:mID="23" v:groupContext="shape" v:layerMember="0" transform="translate(234.547,-372.159)">
+		<g id="shape23-86" v:mID="23" v:groupContext="shape" v:layerMember="0" transform="translate(234.547,-372.159)">
 			<title>Reference from Professional contacts List to Patient</title>
 			<v:userDefs>
 				<v:ud v:nameU="visVersion" v:val="VT0(15):26"/>
