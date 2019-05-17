@@ -8,14 +8,49 @@ summary: "The FHIR profiles used for the Screening Review List"
 ---
 
 ## Heading Description ##
+The detais of the womans infectious diseases screening.
+
+The following FHIR profiles are used to form the infectious diseases screemning review details list structure:
+
+- [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
+- [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
+- [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
+- [CareConnect-ProcedureRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)
+- [CareConnect-Procedure-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)
+- [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
+
+The following profiles are referenced from the infectious diseases screening details list structure:
+
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
 
 ## Social Context Details Structure ##
 
 {% include custom/screening_review.svg %}
 
+## Mapping Overview ##
+
+
+|Date/Time|[ProcedureRequest](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure-request)| authoredOn.DateTime|
+|Performing Professional| [Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|performer.actor|
+|SDS Job Role Name |[PractitionerRole]|(explore_practitioner_role.html)|code|
+|Location|[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|location |
+|Gestational Age| [Observation](explore_screening_review.html#mapping-for-generic-screening-review-data-items-observation)|code + value |
+|Screening Offer Status|[ProcedureRequest](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure-request)| code|
+|Screening Declined|[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|noDoneReason|
+|Screening Process|[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|code|
+|Date/Time|[Observation](explore_screening_review.html#mapping-for-generic-screening-review-data-items-observation)|effective[x]|
+|Screening Outcome - HIV|[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|outcome|
+|Screening Outcome - Syphilis|[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|outcome|
+|Screening Outcome - Hepatitis B|[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|outcome|
+|Comment|[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|note|
+|Outcome - Hepatitis C|[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|outcome|
+|Outcome Chlamydia|[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|outcome|
+|Screening Outcome - Bacteriuria |[Procedure](explore_screening_review.html#mapping-for-national-antenatal-screening-programme-procedure)|outcome|
+
 ## Mapping for Screening Review List ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| [CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review.html#mapping-for-screening-review-list)**|
@@ -51,7 +86,7 @@ summary: "The FHIR profiles used for the Screening Review List"
 
 ## Mapping for National Antenatal Screening Programme List ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| [CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-national-antenatal-screening-programme-list)**|
@@ -91,7 +126,7 @@ The screening review details list has a mandated subject reference to the Patien
 
 ## Mapping for National Antenatal Screening Programme Procedure Request ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedurerequest.html)|>|Level 2| None|>|Level 3|[CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedurerequest.html)|>|Level 2| [CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)|>|Level 3|None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-national-antenatal-screening-programme-procedure-request)**|
@@ -126,7 +161,7 @@ The screening review details list has a mandated subject reference to the Patien
 
 ## Mapping for National Antenatal Screening Programme Procedure ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedure.html)|>|Level 2| None|>|Level 3|[CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedure.html)|>|Level 2| [CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)|>|Level 3|None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-national-antenatal-screening-programme-procedure)**|
@@ -185,7 +220,7 @@ The screening review details list has a mandated subject reference to the Patien
 |Gestational Age|[Observation](explore_social_context_household.html#mapping-for-social-context-details-list)|
 |Family Origins Questionnaire|[Observation](explore_social_context_household.html#mapping-for-social-context-details-list)|
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1|>|Level 3|)None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-generic-screening-review-data-items-observation)**|
@@ -244,11 +279,15 @@ The screening review details list has a mandated subject reference to the Patien
 
 ## Mapping for Screening Review Practitioner ##
 
-The Screening Review details has reference(s) to the Practitioner resource. This means that any exchange of the screening review details heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
+The screening review details has reference(s) to the Practitioner resource. This means that any exchange of the screening review details heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
 
 ## Mapping for Screening Review Practitioner Role ##
 
-The Screening Review details has reference(s) to the Practitioner Role resource. This means that any exchange of the screening review details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+The screening review details has reference(s) to the Practitioner Role resource. This means that any exchange of the screening review details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
+## Mapping for Screening Review Organisation ##
+
+The screening review details has reference(s) to the Organization resource. This means that any exchange of the scan details details heading data must also include the [Organization Details](explore_organization.html)
 
 ## Mapping for Screening Review Location ##
 

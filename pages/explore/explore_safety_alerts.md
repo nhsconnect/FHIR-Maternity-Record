@@ -10,14 +10,36 @@ summary: "The FHIR profiles used for the Safety alerts List"
 ## Heading Description ##
 Details of the concern, risk or issues in relation to safeguarding.
 
+- [CareConnect-Flag-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)
+- [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
+- [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
+
+The following profiles are referenced from the safety alerts details list structure:
+
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+
 ## Safety Alerts Structure ##
 
 {% include custom/safety_alerts.svg %}
 
+## Mappings Overview ##
+
+|Date/Time|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|period.start|
+|ODS/ORD Site Code|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|author.[organization]|
+|Performing Professional|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|performer.[practitioner]|
+|SDS Job Role Name|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|name.[practitionerRole]|
+|Risk to self|[Flag](explore_safety_alerts.html#mapping-for-safety-alerts)|code.text|
+|End date (risk to self)||period.end|
+|Risk to others||code.text|
+|End date (risk to others)||period.end|
+|Risk from others||code.text|
+|End date (risk from others)||period.end|
+|Additional Information||code.text|
 
 ## Mapping for Safety Alerts List ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
+|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| [CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_safety_alerts_all.html#mapping-for-safety-alerts-list)**|
 
@@ -59,7 +81,7 @@ The safety alerts list has a mandated subject reference to the Patient resource.
 
 ## Mapping for Safety Alerts ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2| None|>|Level 3|[CareConnect-Flag-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|
+|>|Level 1|[Flag Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2| [CareConnect-Flag-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3|None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_safety_alerts_all.html#mapping-for-safety-alerts)**|
@@ -96,6 +118,10 @@ The safety alerts details has reference(s) to the Practitioner resource. This me
 ## Mapping for Safety Alerts Practitioner Role ##
 
 The safety alerts details has reference(s) to the Practitioner Role resource. This means that any exchange of the safety alerts details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
+## Mapping for Safety Alerts Organisation ##
+
+The safety alerts details has reference(s) to the Organization resource. This means that any exchange of the safety alerts details heading data must also include the [Organization Details](explore_organization.html)
 
 ## Safety Alerts Example ##
 

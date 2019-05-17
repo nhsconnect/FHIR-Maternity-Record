@@ -173,6 +173,7 @@
 			</v:userDefs>
 			<path d="M7.09 303.95 L7.09 324.55" class="st4"/>
 		</g>
+		<a href="explore_medication.html#mapping-for-medication-administration">
 		<g id="shape11-48" v:mID="11" v:groupContext="shape" transform="translate(148.544,-116.222)">
 			<title>Medication Administration Resource</title>
 			<desc>Medication Administration Resource</desc>
@@ -189,6 +190,7 @@
 			<text x="21.66" y="260.93" class="st2" v:langID="2057"><v:paragraph v:horizAlign="1"/><v:tabList/>Medication<v:newlineChar/><tspan
 						x="14.13" dy="1.2em" class="st3">Administration<v:newlineChar/></tspan><tspan x="26.27" dy="1.2em"
 						class="st3">Resource</tspan></text>		</g>
+						</a>
 		<g id="shape13-53" v:mID="13" v:groupContext="shape" transform="translate(118.576,-260.376)">
 			<title>1..1 M subject</title>
 			<desc>1..1 M subject</desc>

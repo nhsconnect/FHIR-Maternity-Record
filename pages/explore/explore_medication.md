@@ -8,7 +8,25 @@ summary: "The FHIR profiles used for the Medication and medical devices Bundle"
 ---
 
 ## Heading Description ##
-The details of and instructions for medications and medical equipment the woman is using or has been using but discontinued.
+The details of and instructions for medications and medical devices the woman is using or has been using but discontinued.
+
+The following FHIR profiles are used to form the https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1 details list structure:
+
+- [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
+- [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
+- [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
+- [CareConnect-Medication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1)
+- [CareConnect-MedicationStatement-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1)
+- [CareConnect-MedicationAdministration-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationAdministration-1)
+
+The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1 details list structure:
+
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+
+## Medications and Medical Devices Details Structure ##
+
+{% include custom/medicationstatement.svg %}
 
 ## Mapping Headings ##
 
@@ -21,8 +39,8 @@ The details of and instructions for medications and medical equipment the woman 
 |Site||dosage.site|
 |Method||dosage.method|
 |Dose directions description||dosage.patientInstruction|
-|Dose amount description||dosage.text|
-|Dose timing description||dosage.timing|
+|Dose amount description||<font color="red">dosage.text - TBC</font>|
+|Dose timing description||<font color="red">dosage.text - TBC</font>|
 |Structured dose direction cluster||dosage.timing|
 |Dose direction duration||dosage.timing.duration|
 |Additional instruction||dosage.additionlInstructions|
@@ -33,7 +51,7 @@ The details of and instructions for medications and medical equipment the woman 
 |Indication||Extension-CareConnect-MedicationChangeSummary-1.indicationForChange|
 |Date of latest change||Extension-CareConnect-MedicationChangeSummary-1.dateChanged|
 |Description of amendment||Extension-CareConnect-MedicationChangeSummary-1.detailsOfAmendment|
-|Medical devices entry||TBC |
+|Medical devices entry||<font color="red">TBC</font> |
 
 *Discontinued Medication Item Cluster*
 
@@ -43,13 +61,7 @@ The details of and instructions for medications and medical equipment the woman 
 |Indication||Extension-CareConnect-MedicationChangeSummary-1.indicationForChange|
 |Date of latest change||Extension-CareConnect-MedicationChangeSummary-1.dateChanged|
 |Description of amendment||Extension-CareConnect-MedicationChangeSummary-1.detailsOfAmendment|
-|Comment|| note - TBC |
-
-
-## Medications and Medical Devices Details Structure ##
-
-{% include custom/medicationstatement.svg %}
-
+|Comment|| <font color="red">note - TBC</font> |
 ## Mapping for Medication Statement List ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
@@ -208,13 +220,16 @@ The details of and instructions for medications and medical equipment the woman 
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
 |  - identifier | 0..* | Required | Identifier | External identifier |
-|  - status | 1..1 | Mandatory | Code | in-progress | on-hold | completed | entered-in-error | stopped | unknown<br/>Binding (required): A set of codes indicating the current status of a MedicationAdministration. (http://hl7.org/fhir/stu3/valueset-medication-admin-status.html )<br/><font color="red">The nature of any change made to the medication. MUST be marked as COMPLETED once administered</font> |
-|  - medicationReference | 1..1 | Required | Reference ( Medication |CareConnect-Medication-1 ) | What was administered<br/>Binding (example): Codes identifying substance or product that can be administered. (http://hl7.org/fhir/stu3/valueset-medication-codes.html ) |
-|  - subject | 1..1 | Mandatory | Reference ( Group |CareConnect-Patient-1 ) | Who received medication<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|  - status | 1..1 | Mandatory | Code | in-progress \| on-hold \| completed \| entered-in-error \| stopped \| unknown<br/>Binding (required): A set of codes indicating the current status of a MedicationAdministration. (http://hl7.org/fhir/stu3/valueset-medication-admin-status.html )<br/><font color="red">The nature of any change made to the medication. MUST be marked as COMPLETED once administered</font> |
+|  - medicationReference | 1..1 | Required | Reference  | What was administered<br/>Binding (example): Codes identifying substance or product that can be administered. (http://hl7.org/fhir/stu3/valueset-medication-codes.html )<br/><font color="red">The reference to the included Organization resource</font> |
+|   |  | Mandatory | CareConnect-Medication-1 | <font color="red">This MUST use the CareConnect Medication profile.</font> See [Medication](explore_medication.html#mapping-for-medication) resource for information on how to populate the resource.” |
+|  - subject | 1..1 | Mandatory | Reference | Who received medication<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Mandatory | CareConnect-Patient-1 |  |
 |  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
-|  - effective[x] | 1..1 | Mandatory | dateTime | Period | Start and end time of administration |
+|  - effective[x] | 1..1 | Mandatory | dateTime | Start and end time of administration |
 |  - performer | 0..* | Required | BackboneElement | Who administered substance |
-|  - - actor | 1..1 | Mandatory | Reference ( Device |CareConnect-Patient-1 |CareConnect-RelatedPerson-1 | CareConnect-Practitioner-1) | Individual who was performing<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the administration</font> |
+|  - - actor | 1..1 | Mandatory | Reference | Individual who was performing<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the administration</font> |
+|   |  | Mandatory | CareConnect-Practitioner-1 | <font color="red">This MUST use the CareConnect Location profile.</font> See [Practitioner](explore_practitioner.html#mapping-for-practitioner) resource for information on how to populate the resource.” |
 |  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color="red">The reference to the included Practitioner resource</font> |
 |  - - onBehalfOf | 0..1 | Required | Reference ( CareConnect-Organization-1 ) | Organization organization was acting for<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">The site code of the organisation associated with the professional performing the administration</font> |
 |  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color="red">The reference to the included Organization resource</font> |
@@ -241,8 +256,12 @@ The medications and medical devices  details has reference(s) to the Practitione
 
 ## Mapping for Medications and Medical Devices Practitioner Role ##
 
-The medications and medical devices  details has reference(s) to the Practitioner Role resource. This means that any exchange of the medications and medical devices  details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+The medications and medical devices  details has reference(s) to the Practitioner Role resource. This means that any exchange of the medications and medical devices details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
 
 ## Mapping for Medications and Medical Devices Organisation ##
 
-The medications and medical devices  details has reference(s) to the Practitioner Role resource. This means that any exchange of the medications and medical devices  details heading data must also include the [Practitioner Role Details](explore_organisation_role.html#mapping-for-practitioner_role)
+The medications and medical devices  details has reference(s) to the Organization resource. This means that any exchange of the medications and medical devices details heading data must also include the [Organization Details](explore_organization.html)
+
+## Example of Medications and Medical Devices ##
+
+<script src="https://gist.github.com/IOPS-DEV/a523e41e2220c7ad2382b581351a298e.js"></script>

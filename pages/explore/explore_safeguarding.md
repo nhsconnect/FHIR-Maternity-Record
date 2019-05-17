@@ -10,9 +10,28 @@ summary: "The FHIR profiles used for the Safeguarding List"
 ## Heading Description ##
 The safeguarding details of the woman.
 
+- [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
+- [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
+- [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
+- [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
+
+The following profiles are referenced from the safety alerts details list structure:
+
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+
 ## Safeguarding Structure Details ##
 
 {% include custom/safeguarding.svg %}
+
+## Mapping Overview ##
+
+|Date/Time|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|period.start|
+|ODS/ORD Site Code|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|author.[organization]|
+|SDS Job Role Name|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|name.[practitionerRole]|
+|Professional Name|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|performer.[practitioner]|
+|Safeguarding Risk|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|valueCodeableConcept.coding|
+|||valueCodeableConcept.text|
 
 
 ## Mapping for Safeguarding Details List ##
@@ -97,6 +116,10 @@ The safeguarding details has reference(s) to the Practitioner resource. This mea
 ## Mapping for safeguarding Practitioner Role ##
 
 The safeguarding details has reference(s) to the Practitioner Role resource. This means that any exchange of the safeguarding details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
+## Mapping for Referral Request Organisation ##
+
+The safeguarding details has reference(s) to the Organization resource. This means that any exchange of the safeguarding details heading data must also include the [Organization Details](explore_organization.html)
 
 ## Safeguarding Example ##
 

@@ -10,6 +10,19 @@ summary: "The FHIR profiles used for the Observations Bundle"
 ## Heading Description ##
 The record of physiological observations, e.g., weight, height, heart rate, blood pressure, temperature, pulse, respiratory rate and oxygen saturation. Use of National Early Warning Score (NEWS) scores where appropriate. 
 
+The following FHIR profiles are used to form the https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1 details list structure:
+
+- [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
+- [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
+- [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
+- [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
+
+
+The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1 details list structure:
+
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+
 ## Observation Structure Details ##
 
 {% include custom/observations.svg %}

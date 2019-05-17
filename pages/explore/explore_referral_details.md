@@ -10,9 +10,28 @@ summary: "The FHIR profiles used for the Referral details Bundle"
 ## Heading Description ##
 The details of the individual or team who referred the woman.
 
+- [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
+- [CareConnect-ReferralRequest-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1)
+
+The following profiles are referenced from the safety alerts details list structure:
+
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+
 ## Referral Structure Details ##
 
 {% include custom/referral_request.svg %}
+
+## Mapping Overview ##
+
+|Date/Time of Referral|[referralRequest](explore_referral_details.html#mapping-for-referral)| authoredOn|
+|ODS/ORD Site Code||requester.onBehlafOf[organization.identifier]|
+|Service Referred to||speciality|
+|Source of Referral||type|
+|Urgency||priority|
+|Reason||reasonCode|
+|Comment||note|
+
 
 ## Mapping for Referral List ##
 
@@ -94,6 +113,10 @@ The plan and requested actions details has reference(s) to the Practitioner reso
 ## Mapping for Plan and Requested Actions PractitionerRole ##  
 
 The plan and requested actions details has reference(s) to the Practitioner Role resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
+## Mapping for Referral Request Organisation ##
+
+The referral request details has reference(s) to the Organization resource. This means that any exchange of the referral request details heading data must also include the [Organization Details](explore_organization.html)
 
 ## Referral Example ##
 

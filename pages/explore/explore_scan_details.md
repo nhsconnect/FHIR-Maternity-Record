@@ -10,9 +10,43 @@ summary: "The FHIR profiles used for the Scan details Bundle"
 ## Heading Description ##
 The details of any scan performed.
 
+The following FHIR profiles are used to form the Admission details list structure:
+
+- [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
+- [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1)
+- [CareConnect-PractitionerRole-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-PractitionerRole-1)
+- [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)
+
+The following profiles are referenced from the Admission details list structure:
+
+- [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1)
+
 ## Scan Report Structure ##
 
 {% include custom/scan_report.svg %}
+
+## Mapping Overview ##
+
+|Date/Time|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|effective[x]|
+|ODS/ORD Site Code|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|performer.organization|
+|Professional Name|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|performer.practitioner|
+|SDS Job Role Name|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|practitionerRole|
+|Type of Scan|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|EDD Date|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Number of Fetuses|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Fetal Order|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Local Fetal Identifier|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Fetal Movements|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Presentation|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Twin type /chorionicity| [Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Head and Neck Findings - Multiple Observations|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Cardiovascular Findings - Multiple Observations|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Abdominal Findings - Multiple Observations|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Spine Findings - Multiple Observations|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Limbs Findings - Multiple Observations|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Uterine Cavity - Multiple Observations|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Measurements - Multiple Observations|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
+|Comment|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|code + value|
 
 
 ## Mapping for Scan Report List ##
@@ -56,9 +90,9 @@ The scan report list has a mandated subject reference to the Patient resource. T
 
 ## Mapping for Scan Report Group Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_safety_alerts_all.html#mapping-for-safety-alerts-list)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_scan_details.html#mapping-for-scan-report-group-observation)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -94,9 +128,9 @@ The scan report list has a mandated subject reference to the Patient resource. T
 
 ## Mapping for Scan Report Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_safety_alerts_all.html#mapping-for-safety-alerts-list)**|
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_scan_details.html#mapping-for-scan-report-group-observation)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -114,7 +148,7 @@ The scan report list has a mandated subject reference to the Patient resource. T
 |  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">Code MUST be from one of the valueset https://fhir.hl7.org.uk/ValueSet/CareConnect-HeadAndNeckFindings-1</font><br/><font color="red">Code MUST be from one of the valueset https://fhir.hl7.org.uk/ValueSet/CareConnect-CardivascularFindings-1</font><br/><font color="red">Code MUST be from one of the valueset https://fhir.hl7.org.uk/ValueSet/CareConnect-AbdominalFindings-1</font><br/><font color="red">Code MUST be from one of the valueset https://fhir.hl7.org.uk/ValueSet/CareConnect-SpineFindings-1</font><br/><font color="red">Code MUST be from one of the valueset https://fhir.hl7.org.uk/ValueSet/CareConnect-UterineCavityFindings-1</font><br/><font color="red">Code MUST be from one of the valueset https://fhir.hl7.org.uk/ValueSet/CareConnect-Measurements-1</font> |
-|  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">MUST match the code provided in the valueset defined within the code element</font>)</font> |
+|  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">MUST match the code provided in the valueset defined within the code element</font> |
 |  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
 |  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
@@ -126,7 +160,11 @@ The scan report list has a mandated subject reference to the Patient resource. T
 |  - - target | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Resource that is related to this one<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><fonr color="red">Where an observation is part of a scan group e.g Head and Neck, this MUST relate back to the parent observation group</font> |
 |   |  | Mandatory | [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1 "CareConnect-Observation-1") |  |
 
-## Mapping for Estimated Date of Delivery ##
+## Mapping for Estimated Date of Delivery Observation ##
+
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_scan_details.html#mapping-for-estimated-date-of-delivery)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -156,7 +194,11 @@ The scan report list has a mandated subject reference to the Patient resource. T
 |  - - target | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Resource that is related to this one<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><fonr color="red">Where an observation is part of a scan group e.g Head and Neck, this MUST relate back to the parent observation group</font> |
 |   |  | Mandatory | [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1 "CareConnect-Observation-1") |  |
 
-## Mapping for Number of Fetuses ##
+## Mapping for Number of Fetuses Observation ##
+
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_scan_details.html#mapping-for-number-of-fetuses)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -185,7 +227,11 @@ The scan report list has a mandated subject reference to the Patient resource. T
 |  - - target | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Resource that is related to this one<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><fonr color="red">Where an observation is part of a scan group e.g Head and Neck, this MUST relate back to the parent observation group</font> |
 |   |  | Mandatory | [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1 "CareConnect-Observation-1") |  |
 
-## Mapping for Fetal Order ##
+## Mapping for Fetal Order Observation ##
+
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_scan_details.html#mapping-for-fetal-order)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -215,7 +261,11 @@ The scan report list has a mandated subject reference to the Patient resource. T
 |   |  | Mandatory | [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1 "CareConnect-Observation-1") |  |
 
 
-## Mapping for Fetal Movements ##
+## Mapping for Fetal Movements Observation ##
+
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_scan_details.html#mapping-for-fetal-movements)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -243,7 +293,11 @@ The scan report list has a mandated subject reference to the Patient resource. T
 |  - - target | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Resource that is related to this one<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><fonr color="red">Where an observation is part of a scan group e.g Head and Neck, this MUST relate back to the parent observation group</font> |
 |   |  | Mandatory | [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1 "CareConnect-Observation-1") |  |
 
-## Mapping for Presentation ##
+## Mapping for Presentation Observation ##
+
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_scan_details.html#mapping-for-presentation)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -272,7 +326,11 @@ The scan report list has a mandated subject reference to the Patient resource. T
 |  - - target | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Resource that is related to this one<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><fonr color="red">Where an observation is part of a scan group e.g Head and Neck, this MUST relate back to the parent observation group</font> |
 |   |  | Mandatory | [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1 "CareConnect-Observation-1") |  |
 
-## Mapping for Twin Type / Chorioncity ##
+## Mapping for Twin Type / Chorioncity Observation ##
+
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_scan_details.html#mapping-for-twin-type--chorioncity-observation)**|
 
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
@@ -308,6 +366,10 @@ The scan details details has reference(s) to the Practitioner resource. This mea
 ## Mapping for Scan Details Practitioner Role ##
 
 The scan details details has reference(s) to the Practitioner Role resource. This means that any exchange of the scan details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
+## Mapping for Scan Details Organisation ##
+
+The scan details details has reference(s) to the Organization resource. This means that any exchange of the scan details details heading data must also include the [Organization Details](explore_organization.html)
 
 ## Example for Scan Report ##
 
