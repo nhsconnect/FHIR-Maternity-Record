@@ -80,12 +80,12 @@ The following Observation codes and value data types should be used for the Obse
 
 |  **Observation** | **Code** | **Value[x]** |
 | :--- | --- | --- |
-|  Phenotypic Sex (Baby) | TBC | **CodeableConcept:** <br>A snomed code from ^999002891000000103|Person phenotypic sex findings simple reference set (foundation metadata concept) |
+|  Phenotypic Sex (Baby) | TBC | **CodeableConcept:** <br>A snomed code from ^999002891000000103:Person phenotypic sex findings simple reference set (foundation metadata concept) |
 |  Number of Births in confinement | TBC | **Quantity** |
 |  Birth Weight | Snomed CT: 364589006 - Birth weight (observable entity) | **Quantity** |
 |  Locally calculated birth weight centile | Snomed CT: 301334000 - Birth weight centile (observable entity) | **Quantity** |
 |  Length of Gestation at Birth | Snomed CT: 412726003 - Length of gestation at birth (observable entity) | **Quantity** |
-|  Still Born Indicator | TBC | **CodeableConcept:** <br>A Snomed code from <302080006|Finding of birth outcome (finding) |
+|  Still Born Indicator | TBC | **CodeableConcept:** <br>A Snomed code from <302080006:Finding of birth outcome (finding) |
 |  Rhesus Status | TBC | **CodeableConcept:** <br>A Snomed code of '165747007 - RhD positive (finding)' or '165746003 - RhD negative (finding)' |
 |  Suspected Congenital Abnormality Indicator | Snomed CT: 1097291000000101 - Suspected congenital abnormality (situation) | **Boolean** |
 
