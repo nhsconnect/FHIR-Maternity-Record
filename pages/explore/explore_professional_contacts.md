@@ -53,3 +53,32 @@ The following profiles are referenced from the Patient demographics list structu
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_professional_contacts_all.html#mapping-for-professional-contacts-list)**| 
 
 
+## Mapping for Professional contacts EpisodeOfCare ##  
+
+
+|>|Level 1|[EpisodeOfCare Resource](http://hl7.org/fhir/stu3/episodeofcare.html)|>|Level 2|[CareConnect-EpisodeOfCare-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1)|>|Level 3|None|  
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_professional_contacts_all.html#mapping-for-professional-contacts-episodeofcare)**| 
+
+
+## Mapping for Professional contacts CareTeam ##  
+
+
+|>|Level 1|[CareTeam Resource](http://hl7.org/fhir/stu3/careteam.html)|>|Level 2|[CareConnect-CareTeam-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CareTeam-1)|>|Level 3|None|  
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_professional_contacts_all.html#mapping-for-professional-contacts-careteam)**| 
+
+
+## Mapping for Professional contacts Practitioner ## 
+
+The Professional contacts List has reference(s) to the Practitioner resource. This means that any exchange of the Professional contacts List heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
+
+## Mapping for Professional contacts PractitionerRole ##  
+
+The Professional contacts List has reference(s) to the Practitioner Role resource. This means that any exchange of the Professional contacts List heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)  
+
+## Mapping for Professional contacts Organization ##  
+
+The Professional contacts List has reference(s) to the Organization resource. This means that any exchange of the Professional contacts List heading data must also include the [Organization Details](explore_organization.html#mapping-for-organization)
+
+
