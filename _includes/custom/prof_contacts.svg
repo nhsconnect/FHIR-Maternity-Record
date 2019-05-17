@@ -144,8 +144,8 @@
 			<path d="M0 418.82 L100.23 449.9" class="st4"/>
 		</g>
 		<g id="shape12-40" v:mID="12" v:groupContext="shape" transform="translate(231.271,-283.72)">
-			<title>1..1 M context</title>
-			<desc>1..1 M context</desc>
+			<title>1..1 M team</title>
+			<desc>1..1 M team</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="24.9449" cy="407.058" width="49.89" height="23.5276"/>
 			<rect x="0" y="395.294" width="49.8898" height="23.5276" class="st7"/>
@@ -168,8 +168,8 @@
 			<text x="15.6" y="404.66" class="st8" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>0..1 R<v:newlineChar/><tspan
 						x="5.26" dy="1.2em" class="st3">practitioner</tspan></text>		</g>
 		<g id="shape15-53" v:mID="15" v:groupContext="shape" transform="translate(228.372,-191.339)">
-			<title>0..1 R Managing Organization</title>
-			<desc>0..1 R Managing Organization</desc>
+			<title>1..1 M managing Organization</title>
+			<desc>1..1 M managing Organization</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)" v:tabSpace="42.5197"/>
 			<v:textRect cx="27.3086" cy="403.514" width="54.62" height="30.6142"/>
 			<rect x="0" y="388.207" width="54.6172" height="30.6142" class="st9"/>
