@@ -10,6 +10,8 @@ summary: "The FHIR profiles used for the Personal comment List"
 ## Heading Description ##
 This heading gives details of any comment recorded by the woman or her representative.  
 
+{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
+
 The following FHIR profiles are used to form the Personal comment List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)
@@ -202,5 +204,5 @@ The plan and requested actions details has reference(s) to the Practitioner reso
 
 The plan and requested actions details has reference(s) to the Practitioner Role resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)  
 
-## Personal comment Example ##  
+## Personal Comment Example ##  
 <script src="https://gist.github.com/IOPS-DEV/ba7c91d1e5da2b563eb3b08e01c955ff.js"></script>
