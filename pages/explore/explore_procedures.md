@@ -84,4 +84,29 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - entry | 0..* | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Entries in the list<br/><font color='red'>The entries MUST be as per the diagram for this PRSB headings list with the Procedures resource being the focal resource. </font> |
 |  - - date | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When item added to list<br/><font color='red'>The SHOULD contain a system time of when the item was added to the list.</font> |
 |  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to a Procedure resource included in the list</font><br/> |
-|  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/> |
+|  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/> |  
+
+
+## Mapping for Procedures List Procedure ##
+
+|>|Level 1|[Procedure Resource](http://hl7.org/fhir/stu3/procedure.html)|>|Level 2|[CareConnect-Procedure-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)|>|Level 3|None| 
+ 
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_procedures_all.html#mapping-for-procedures-list-procedure)**| 
+
+
+
+
+
+## Mapping for Procedures list Organization ##  
+
+The Procedures list details has reference(s) to the Organization resource. This means that any exchange of the Procedures list details heading data must also include the [Organization Details](explore_organization.html#mapping-for-organization)
+
+## Mapping for Procedures list Practitioner ## 
+
+The Procedures list details has reference(s) to the Practitioner resource. This means that any exchange of the Procedures list details heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
+
+## Mapping for Procedures list PractitionerRole ##  
+
+The Procedures list details has reference(s) to the Practitioner Role resource. This means that any exchange of the Procedures list details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)  
+
+## Procedures list Example ##  
