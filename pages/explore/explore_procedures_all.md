@@ -153,4 +153,28 @@ The following tables detail how to populate the FHIR resources and the mapping t
 |  - - - code | 0..1 | Not Used | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system |
 |  - - - display | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system |
 |  - - - userSelected | 0..1 | Not Used | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") | If this coding was chosen directly by the user |
-|  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
+|  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |  
+
+
+## Mapping for Procedures List Procedure ##
+
+|>|Level 1|[Procedure Resource](http://hl7.org/fhir/stu3/procedure.html)|>|Level 2|[CareConnect-Procedure-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)|>|Level 3|None| 
+ 
+|**[View Used FHIR Elements](explore_procedures.html#mapping-for-procedures-list-procedure)**|**View All FHIR Elements**| 
+ 
+
+
+
+## Mapping for Procedures list Organization ##  
+
+The Procedures list details has reference(s) to the Organization resource. This means that any exchange of the Procedures list details heading data must also include the [Organization Details](explore_organization.html#mapping-for-organization)
+
+## Mapping for Procedures list Practitioner ## 
+
+The Procedures list details has reference(s) to the Practitioner resource. This means that any exchange of the Procedures list details heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
+
+## Mapping for Procedures list PractitionerRole ##  
+
+The Procedures list details has reference(s) to the Practitioner Role resource. This means that any exchange of the Procedures list details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)  
+
+## Procedures list Example ##  
