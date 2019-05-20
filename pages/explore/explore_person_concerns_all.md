@@ -159,6 +159,7 @@ The following profiles are referenced from the Patient demographics list structu
 The Plan and requested actions List has a mandated subject reference to the Patient resource. This means that any exchange of the Plan and requested actions heading data must also include the [Patient demographics List.](explore_patient_demographics.html)  
 
 ## Mapping for Person concerns CarePlan ##  
-|>|Level 1|[CarePlan Resource](http://hl7.org/fhir/stu3/careplan.html)|>|Level 2|[CareConnect-CarePlan-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1)|>|Level 3|None|
+|>|Level 1|[CarePlan Resource](http://hl7.org/fhir/stu3/careplan.html)|>|Level 2|[CareConnect-CarePlan-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1)|>|Level 3|None|  
+
 |**[View Used FHIR Elements](explore_person_concerns.html#mapping-for-person-concerns-careplan)**|**View All FHIR Elements**| 
 
