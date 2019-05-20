@@ -3,7 +3,7 @@ title: Person Concerns Bundle
 keywords:  list
 tags: [fhir]
 sidebar: foundations_sidebar
-permalink: explore_person_concerns_all_all.html
+permalink: explore_person_concerns_all.html
 summary: "The FHIR profiles used for the Person concerns Bundle"
 ---
 
