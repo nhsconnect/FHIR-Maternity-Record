@@ -36,7 +36,7 @@ The following profiles are referenced from the Patient demographics list structu
 |Planned delivery setting|[Location](explore_person_concerns_all.html#mapping-for-person-concerns-location)|type|
 |Reason for change of planned delivery setting|[CarePlan](explore_person_concerns_all.html#mapping-for-person-concerns-careplan)|activity.detail.reasonCode|
 |Advance Statement Date|[Contract](explore_person_concerns_all.html#mapping-for-person-concerns-contract)|meta.lastUpdated|
-|Advance Statement Details|[CarePlan](explore_person_concerns_all.html#mapping-for-person-concerns-contract)|text|
+|Advance Statement Details|[Contract](explore_person_concerns.html#mapping-for-person-concerns-contract)|text|
 |Location of Advance Statement Document||unmapped| 
 
 ## Mapping for Person concerns List ##  
@@ -784,4 +784,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |   |  | Not Used | [DocumentReference](http://hl7.org/fhir/stu3/StructureDefinition/DocumentReference "DocumentReference") |  |
 
 
+## Mapping for Person concerns Location ##  
+
+The Person concerns List has reference(s) to the Location resource. This means that any exchange of the plan and requested actions details heading data must also include the [Location Details](explore_location.html#mapping-for-location)
 
