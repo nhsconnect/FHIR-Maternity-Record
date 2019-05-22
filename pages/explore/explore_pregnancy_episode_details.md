@@ -81,20 +81,21 @@ The following profiles are referenced from the Patient demographics list structu
 |  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to the Condition, Observation or Patient (Baby patient) resources included in the list</font><br/> |
 |  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/> |
 
-
-
+## Patient Reference ##
+The Pregnancy episode details List has a mandated subject reference to the Patient resource. This means that any exchange of the Plan and requested actions heading data must also include the [Patient demographics List.](explore_patient_demographics.html)  
 
 
 ## Mapping for Pregnancy episode details Condition ##  
 
 |>|Level 1|[Condition Resource](http://hl7.org/fhir/stu3/condition.html)|>|Level 2|[CareConnect-Condition-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1)|>|Level 3|None|  
 
-|**View Used FHIR Elements**|**[View All FHIR Elements](explore_pregnancy_episode_all.html#mapping-for-pregnancy-episode-details-condition)| 
+|**View Used FHIR Elements**|[View All FHIR Elements](explore_pregnancy_episode_all.html#mapping-for-pregnancy-episode-details-condition)| 
 
 
 ## Mapping for Pregnancy episode details Observation ## 
 
 |>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|  
+
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_pregnancy_episode_all.html#mapping-for-pregnancy-episode-details-observation)**| 
 
