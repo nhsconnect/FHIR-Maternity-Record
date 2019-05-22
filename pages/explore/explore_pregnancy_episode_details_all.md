@@ -155,6 +155,9 @@ The following profiles are referenced from the Patient demographics list structu
 |  - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |  
 
 
+## Patient Reference ##
+The Pregnancy episode details List has a mandated subject reference to the Patient resource. This means that any exchange of the Plan and requested actions heading data must also include the [Patient demographics List.](explore_patient_demographics.html)  
+
 ## Mapping for Pregnancy episode details Condition ##  
 
 |>|Level 1|[Condition Resource](http://hl7.org/fhir/stu3/condition.html)|>|Level 2|[CareConnect-Condition-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Condition-1)|>|Level 3|None|  
