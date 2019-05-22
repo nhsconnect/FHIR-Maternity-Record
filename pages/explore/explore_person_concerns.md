@@ -30,7 +30,7 @@ The following profiles are referenced from the Patient demographics list structu
 ## Mapping Overview ##
 
 |**Data Standard Element**|**FHIR Resource Mapping**|**FHIR Element**|
-|Date/time|[CarePlan](explore_person_concerns.html#mapping-for-person-concerns-careplan)|activity.detail.scheduled|
+|Date/time|[CarePlan](explore_person_concerns.html#mapping-for-person-concerns-careplan)|period.start/note.time|
 |Concern, wishes or goals details|[CarePlan](explore_person_concerns.html#mapping-for-person-concerns-careplan)|goal/note|
 |Maternity Care Plan Type|[CarePlan](explore_person_concerns.html#mapping-for-person-concerns-careplan)|category|
 |Planned delivery setting|[Location](explore_person_concerns.html#mapping-for-person-concerns-location)|type|
@@ -232,4 +232,45 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |   |  | Optional | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") |  |
 |   |  | Optional | [CareConnect-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1 "CareConnect-RelatedPerson-1") |  |
 |  - - time | 1..1 | Mandatory | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When the annotation was made <br><font color='red'><b>Mapping to Digital Maternity data item 'Date/time'</b></font>  |
-|  - - text | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The annotation - text content |
+|  - - text | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The annotation - text content |  
+
+
+## Mapping for Person concerns Contract ##  
+
+|>|Level 1|[Contract Resource](http://hl7.org/fhir/stu3/contract.html)|>|Level 2|[CareConnect-Contract-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Contract-1)|>|Level 3|None|  
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_person_concerns_all.html#mapping-for-person-concerns-contract)**| 
+
+
+|  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Implementation** |
+| --- | --- | --- | --- | --- |
+|  Contract | ​ |  |  | Legal Agreement<br/>Constraint (dom-2): If the resource is contained in another resource, it SHALL NOT contain nested Resources<br/>Constraint (dom-1): If the resource is contained in another resource, it SHALL NOT contain any narrative<br/>Constraint (dom-4): If a resource is contained in another resource, it SHALL NOT have a meta.versionId or a meta.lastUpdated<br/>Constraint (dom-3): If the resource is contained in another resource, it SHALL be referred to from elsewhere in the resource |
+|  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
+|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource <br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1' <br><b>The lastUpdated element maps to Digital Maternity data item = 'Advance Statement data'</b></font>  |
+|  - text | 0..1 | Required | [Narrative](http://hl7.org/fhir/stu3/narrative.html#Narrative "Narrative") | Text summary of the resource, for human interpretation<br><font color='red'><b>Mapping to Digital Maternity data item = 'Advance statement details'</b></font>  |
+|  - identifier | 0..1 | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Contract number<br/><font color='red'>An identifier for this Person concerns Contract</font> |
+|  - - assigner | 0..1 | Optional | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Optional | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") |  |
+|  - - - reference | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+|  - - - identifier | 0..1 | Optional | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
+|  - status | 0..1 | Optional | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | amended : appended : cancelled : disputed : entered-in-error : executable : executed : negotiable : offered : policy : rejected : renewed : revoked : resolved : terminated<br/>Binding (required): A code specifying the state of the resource instance. [Contract Resource Status Codes](http://hl7.org/fhir/stu3/valueset-contract-status.html) |
+|  - issued | 0..1 | Optional | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When this Contract was issued |
+|  - applies | 0..1 | Optional | [Period](http://hl7.org/fhir/stu3/datatypes.html#period "Period") | Effective time<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
+|  - - start | 0..1 | Optional | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Starting time with inclusive boundary |
+|  - - end | 0..1 | Optional | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | End time with inclusive boundary, if not ongoing |
+|  - subject | 0..* | Optional | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Contract Target Entity<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Optional | [Resource](http://hl7.org/fhir/stu3/StructureDefinition/Resource "Resource") |  |
+|  - - reference | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Optional | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
+|  - topic | 0..* | Optional | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Context of the Contract<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Optional | [Resource](http://hl7.org/fhir/stu3/StructureDefinition/Resource "Resource") |  |
+|  - - reference | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Optional | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
+|  - authority | 0..* | Optional | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Authority under which this Contract has standing<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Optional | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") |  |
+|  - - reference | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+|  - - identifier | 0..1 | Optional | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
