@@ -245,7 +245,7 @@ The Pregnancy episode details List has a mandated subject reference to the Patie
 |  - - reference | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
 |  - - identifier | 0..1 | Optional | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
 |  - - display | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Text alternative for the resource |
-|  - onset[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Estimated or actual date, date-time, or age <br><font color='red'><b>Mapping to Digital Maternity data item ='Maternity Episode Start Date'</b></font><br/> |
+|  - onset[x] | 1..1 | Mandatory | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Estimated or actual date, date-time, or age <br><font color='red'><b>Mapping to Digital Maternity data item ='Maternity Episode Start Date'</b></font><br/> |
 |   |  | Not Used | [Age](http://hl7.org/fhir/stu3/datatypes.html#age "Age") |  |
 |   |  | Not Used | [Period](http://hl7.org/fhir/stu3/datatypes.html#period "Period") |  |
 |   |  | Not Used | [Range](http://hl7.org/fhir/stu3/datatypes.html#range "Range") |  |
