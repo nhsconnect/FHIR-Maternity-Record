@@ -144,7 +144,7 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 |  - - route | 0..1 | Optional | CodeableConcept | How drug should enter body<br/>Binding (example): A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject. [SNOMED CT Route Codes](http://hl7.org/fhir/stu3/valueset-route-codes.html)<br/><font color="red">Medication administration description (oral, IM, IV, etc.): may include method of administration (e.g., by infusion, via nebuliser, via NG tube) .</font> |
 |  - - - coding | 0..* | Required | Coding | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
 |  - - - coding (snomedCT) | 0..1 | Required | Coding | Code defined by a terminology system<br/>Binding (example): A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration. [CareConnect-MedicationDosageRoute-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1) |
-|  - - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
+|  - - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system |
 |  - - - - display | 1..1 | Mandatory | String | Representation defined by the system |
 |  - - - text | 0..1 | Optional | String | Plain text representation of the concept |
@@ -208,7 +208,7 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 |  - code | 0..1 | Required | CodeableConcept | Codes that identify this medication<br/>Binding (required): A code from the SNOMED Clinical Terminology UK coding system that describes a medication from the VTM/VMP/VMPP/AMP/AMPP subsets from the dm+d terminology [CareConnect-MedicationCode-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationCode-1) |
 |  - - coding | 0..* | Required | Coding | Code defined by a terminology system |
 |  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
-|  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
+|  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
 |  - - - display | 0..1 | Mandatory | String | Representation defined by the system |
 |  - - text | 0..1 | Required | String | Plain text representation of the concept |
