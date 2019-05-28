@@ -10,7 +10,6 @@ summary: "The FHIR profiles used for the Procedures List"
 ## Heading Description ##
 The details of any procedures performed.
 
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
 The following FHIR profiles are used to form the Personal comment List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
 - [CareConnect-Procedure-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Procedure-1)
