@@ -10,8 +10,6 @@ summary: "The FHIR profiles used for the Professional contacts List"
 ## Heading Description ##
 The details of the woman’s professional contacts.
 
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}  
-
 The following FHIR profiles are used to form the Professional contacts List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)  
 - [CareConnect-EpisodeOfCare-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1)
