@@ -10,7 +10,6 @@ summary: "The FHIR profiles used for the Personal comment List"
 ## Heading Description ##
 This heading gives details of any comment recorded by the woman or her representative.  
 
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}
 
 The following FHIR profiles are used to form the Personal comment List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)
