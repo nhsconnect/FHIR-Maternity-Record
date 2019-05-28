@@ -10,8 +10,6 @@ summary: "The FHIR profiles used for the Person concerns List"
 ## Heading Description ##
 Details of the woman’s concerns, expectations and wishes.
 
-{% include custom/under.construction.html content="Please check back later for any updates to this page" %}  
-
 The following FHIR profiles are used to form the Person concerns List structure:  
 - [CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)  
 - [CareConnect-CarePlan-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-CarePlan-1)
