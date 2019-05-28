@@ -25,10 +25,10 @@ The following profiles are referenced from the investigation results details lis
 
 ## Mapping Overview ##
 
-|GP Name|[Practitioner](http://localhost:4005/explore_gp_practice.html#mapping-for-gp-practice-practitioner)|name|
-|GP practice details|[Organization](http://localhost:4005/explore_gp_practice.html#mapping-for-gp-practice-organization)|name|
+|GP Name|[Practitioner](explore_gp_practice.html#mapping-for-gp-practice-practitioner)|name|
+|GP practice details|[Organization](explore_gp_practice.html#mapping-for-gp-practice-organization)|name|
 |GP practice identifier||identifier|
-|GP Opt Out Indicator|[Flag](http://localhost:4005/explore_gp_practice.html#mapping-for-gp-practice-gp-opt-out-flag)|code|
+|GP Opt Out Indicator|[Flag](explore_gp_practice.html#mapping-for-gp-practice-gp-opt-out-flag)|code|
 
 
 ## Mapping for GP Practice List ##
