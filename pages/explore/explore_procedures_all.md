@@ -417,3 +417,4 @@ The Procedures list details has reference(s) to the Practitioner resource. This 
 The Procedures list details has reference(s) to the Practitioner Role resource. This means that any exchange of the Procedures list details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)  
 
 ## Procedures list Example ##  
+<script src="https://gist.github.com/IOPS-DEV/cd21e032d3012dca86078b2bfc57216d.js"></script>
