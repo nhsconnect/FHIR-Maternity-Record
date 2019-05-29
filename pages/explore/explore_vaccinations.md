@@ -70,10 +70,10 @@ The details of a women’s vaccinations.
 |   |  | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | <font color='red'>Who authored the comment on the list.</font>  |
 |  - - time | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When the annotation was made |
 |  - - text | 1..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The annotation - text content |
-|  - entry | 0..* | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Entries in the list<br/><font color='red'>The entries MUST be as per the diagram for this PRSB headings list with the encounter resource being the focal resource. Multiple Encounters with associated resources MAY be present</font> |
+|  - entry | 0..* | Mandatory | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Entries in the list<br/><font color='red'>The entries MUST be as per the diagram for this PRSB headings list with the immunization resource being the focal resource. Multiple Encounters with associated resources MAY be present</font> |
 |  - - date | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | When item added to list<br/><font color='red'>The SHOULD contain a system time of when the item was added to the list.</font> |
-|  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to an Encounter resource included in the list<br/>This MUST use the CareConnect Encounter profile. </font>See [Encounter resource](explore_vaccinations_details.html#mapping-for-vaccinations-details-encounter) for information on how to populate the resource. |
-|  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included Encounter resource.</font> |
+|  - - item | 1..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>A reference to an immunization resource included in the list<br/>This MUST use the CareConnect Encounter profile. </font>See [Immunization resource](explore_vaccinations.html#mapping-for-vaccinations) for information on how to populate the resource. |
+|  - - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>The reference to the included Immunization resource.</font> |
 
 ## Patient Reference ##
 
@@ -89,12 +89,11 @@ The vaccination details list has a mandated subject reference to the Patient res
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | --- |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
-|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
-|  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to<br/><font color="red">The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-AllergyIntolerance-1'</font> |
-|  - extension (vaccinationProcedure) | 0..1 | Required | [Extension-CareConnect-VaccinationProcedure-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-VaccinationProcedure-1 "Extension-CareConnect-VaccinationProcedure-1") | An extension to hold an immunization procedure code<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">Only use SNOMED CT coding or free text where no SNOMED CT code is available.</font><br/> |
+|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource <font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1'</font>|
+|  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to<br/><font color="red">The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Immunization-1'</font> |
 |  - identifier | 0..* | Required | Identifier | Business identifier |
-|  - - system | 1..1 | Mandatory | Uri | The namespace for the identifier value |
-|  - - value | 1..1 | Mandatory | String | The value that is unique |
+|  - - system | 1..1 | Mandatory | Uri | The namespace for the identifier value|
+|  - - value | 1..1 | Mandatory | String | The value that is unique|
 |  - - assigner | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |  - - - display | 0..1 | Required | String | Text alternative for the resource |
 |  - status | 1..1 | Mandatory | Code | Completed<br/>Binding (required): A set of codes indicating the current status of an Immunization [Immunization Status Codes](http://hl7.org/fhir/stu3/valueset-immunization-status.html)<br/><font color='red'>The status of the list MUST contain the value 'Completed'</font> |
@@ -105,8 +104,9 @@ The vaccination details list has a mandated subject reference to the Patient res
 |  - - - code | 0..1 | Optional | Code | Symbol in syntax defined by the system |
 |  - - - display | 0..1 | Optional | String | Representation defined by the system |
 |  - - text | 0..1 | Optional | String | Plain text representation of the concept |
-|  - patient | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who was immunized<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
-|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><br/><font color='red'>This must use the CareConnect Patient profile.</font>See [patient resource reference](explore_vaccinations.html#patient-reference) for information on how to populate the resource |
+|  - patient | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who the sensitivity is for<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | A reference to the Patient resource.  |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>This MUST use the CareConnect Patient profile.</font>See [patient resource reference](explore_vaccinations.html#patient-reference) for information on how to populate the resource. |
 |  - encounter | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Encounter administered as part of<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the vaccination encounter.</font> |
 |  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the encounter resource included in the vaccination list within the FHIR Bundle.</font>  |
 |  - date | 0..1 | Mandatory | dateTime | Vaccination administration date<br/><font color="red">The date/time on which the immunisation intervention was carried out or was meant to be administered</font> |
@@ -118,21 +118,20 @@ The vaccination details list has a mandated subject reference to the Patient res
 |  - - - display | 0..1 | Mandatory | String | Representation defined by the system |
 |  - location | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Where vaccination occurred<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
 |  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
-|  - manufacturer | 0..1 | Optional | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Vaccine manufacturer<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
+|  - manufacturer | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Vaccine manufacturer<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+| ||Required |[CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1)|A reference to the Organization resource.|
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL <font color="red">This MUST use the CareConnect Patient profile</font>See [organization resource reference](explore_organization.html#mapping-for-organization) for information on how to populate the resource.|
 |  - lotNumber | 0..1 | Optional | String | Vaccine lot number<br/><font color="red">The batch number of the vaccine product</font> |
 |  - site | 0..1 | Optional | CodeableConcept | Body site vaccine was administered<br/>Binding (examle): The site at which the vaccine was administered [Codes for Immunization Site of Administration](http://hl7.org/fhir/stu3/valueset-immunization-site.html)<br/><font color="red">The immunization site does not use the preferred value set but uses SNOMED CT concepts instead Mapping to Maternity data item = 'site'.<br/><br/> |
 |  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
-|  - - coding (snomedCT) | 0..1 | Optional | Coding | Code defined by a terminology system<br/><font color="red">The immunization site does not use the preferred value set but uses SNOMED CT concepts instead Mapping to Maternity data item = 'site'. |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
+|  - - coding (snomedCT) | 0..1 | Optional | Coding | Code defined by a terminology system<br/><font color="red">A SNOMED CT concept from 91723000 </font> |
 |  - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
-|  - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<br/><font color="red">A SNOMED CT code</font> |
+|  - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<br/><font color="red">A SNOMED CT code from 91723000</font> |
 |  - - - display | 1..1 | Mandatory | String | Representation defined by the system<br/><font color="red">The display associated with the SNOMED CT concept. This SHOULD be the preferred term</font> |
 |  - - text | 0..1 | Optional | String | Plain text representation of the concept<br/>This element SHOULD only be populated when the Immunisation cannot be coded or when stating one of the following statements: 'No known site' Or 'Information not available'. |
 |  - route | 0..1 | Optional | CodeableConcept | How vaccine entered body<br/>Binding (example): The route by which the vaccine was administered [Immunization Route Codes](http://hl7.org/fhir/stu3/valueset-immunization-route.html)<br/><font color="red">Note the example valueSet is not used for Maternity and the following should be used instead<br/>Coded text - SNOMED CT (<284009009  \|Route of administration value (qualifier value))</font> |
 |  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Optional | Coding | Code defined by a terminology system<br/>Binding (example): A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration. [CareConnect-MedicationDosageRoute-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1)<br/><font color="red">Note the example valueSet is not used for Maternity and the following should be used instead<br/>Coded text - SNOMED CT (<284009009  \|Route of administration value (qualifier value))</font> |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<br/><font color="red">Coded text - SNOMED CT (<284009009  \|Route of administration value (qualifier value))</font> |
 |  - - - display | 1..1 | Mandatory | String | Representation defined by the system<br/><font color="red">This SHOULD be the preferred term for the SNOMED concept</font> |
@@ -149,9 +148,9 @@ The vaccination details list has a mandated subject reference to the Patient res
 |  - - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
 |  - - - - display | 0..1 | Mandatory | String | Representation defined by the system |
 |  - - - text | 0..1 | Optional | String | Plain text representation of the concept |
-|  - - actor | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Individual who was performing<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">This MUST be a reference to the Practitioner resource</font> |
-|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color='red'>The responsible clinician for the encounter.<br/>This MUST use the CareConnect Practitioner profile. </font>See [Practitioner resource](explore_vaccination_details.html#mapping-for-vaccination-details-encounter) for information on how to populate the resource. |
-|  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/>A reference to the Practitioner resource included in the Immunisation details list |
+|  - - actor | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Individual who was performing<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided|
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") |The responsible clinician for the immunization.|
+|  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<font color='red'>This MUST use the CareConnect Practitioner profile. </font>See [Practitioner resource](explore_vaccination_details.html#mapping-for-vaccination-details-encounter) for information on how to populate the resource. |
 |  - note | 0..* | Optional | Annotation | Vaccination notes |
 |  - explanation | 0..1 | Optional | BackboneElement | Administration/non-administration reasons<br/><font color="red">The clinical indication or reason for administering or recording an historical vaccination. </font> |
 |  - - reason | 0..* | Optional | CodeableConcept | Why immunization occurred<br/>Binding (example): The reason why a vaccine was administered [CareConnect-ImmunizationExplanationReason-2 ](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ImmunizationExplanationReason-2) |
@@ -188,9 +187,9 @@ The vaccination details list has a mandated subject reference to the Patient res
 |  - - - start | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Starting time with inclusive boundary |
 |  - - - end | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | End time with inclusive boundary, if not ongoing |
 |  - location | 0..1 | Required | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | List of locations where the patient has been |
-|  - - location | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Location the encounter takes place<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>The site code of the location where teh vaccination was administered.</font> |
-|   |  | Mandatory | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") | "<font color='red'>The location<br/>This MUST use the CareConnect Location profile. </font>See [Location resource](explore_vaccinations.html#mapping-for-vaccination-location) for information on how to populate the resource." |
-|  - - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the Location resource included in the Vaccination list</font>  |
+|  - - location | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Location the encounter takes place<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Mandatory | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") | A reference to the Location resource. |
+|  - - - reference | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color='red'>This MUST use the CareConnect Location profile.</font>See [location resource reference](explore_vaccinations.html#mapping-for-vaccination-location) for information on how to populate the resource. |
 
 ## Mapping for Vaccination Practitioner ##
 
