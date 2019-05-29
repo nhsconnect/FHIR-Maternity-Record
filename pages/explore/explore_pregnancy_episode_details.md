@@ -28,7 +28,7 @@ The following profiles are referenced from the Patient demographics list structu
 ## Mapping Overview ##
 
 |**Data Standard Element**|**FHIR Resource Mapping**|**FHIR Element**|
-|Pregnancy identifier|[Observation](explore_pregnancy_episode.html#mapping-for-pregnancy-episode-details-onservation)|code|
+|Pregnancy identifier|[Observation](explore_pregnancy_episode.html#mapping-for-pregnancy-episode-details-observation)|code/valueBoolean|
 |Local Fetal Identifier|[Patient (Baby patient)](explore_pregnancy_episode.html#mapping-for-pregnancy-episode-details-baby-patient)|identifier (local identifier)|
 |Maternity Episode Start Date|[EpisodeOfCare](explore_pregnancy_episode.html#mapping-for-pregnancy-episode-details-episodeofcare)|period.start|
 |Maternity Episode End Date|[EpisodeOfCare](explore_pregnancy_episode.html#mapping-for-pregnancy-episode-details-episodeofcare)|period.end|
