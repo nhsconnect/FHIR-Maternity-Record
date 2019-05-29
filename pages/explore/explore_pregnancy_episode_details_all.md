@@ -670,7 +670,10 @@ The Pregnancy episode details List has a mandated subject reference to the Patie
 
 ## Mapping for Pregnancy episode details Location ##  
 
-The Pregnancy episode details List has reference(s) to the Location resource. This means that any exchange of the plan and requested actions details heading data must also include the [Location Details](explore_location.html#mapping-for-location)
+The Pregnancy episode details List has reference(s) to the Location resource. This means that any exchange of the plan and requested actions details heading data must also include the [Location Details](explore_location.html#mapping-for-location)  
+
+## Pregnancy episode example ##
+<script src="https://gist.github.com/IOPS-DEV/22bda6a4a215cad7408525067161a26f.js"></script>
 
 
 

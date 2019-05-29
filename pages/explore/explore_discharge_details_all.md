@@ -1,4 +1,4 @@
----
+﻿---
 title: Discharge Details List
 keywords:  list
 tags: [fhir]
@@ -449,5 +449,8 @@ The Discharge details List has reference(s) to the Practitioner resource. This m
 
 ## Mapping for Discharge details PractitionerRole ##  
 
-The Discharge details List has reference(s) to the PractitionerRole resource. This means that any exchange of the Discharge details details heading data must also include the [PractitionerRole Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+The Discharge details List has reference(s) to the PractitionerRole resource. This means that any exchange of the Discharge details details heading data must also include the [PractitionerRole Details](explore_practitioner_role.html#mapping-for-practitioner_role)  
+
+## Discharge details example ##
+<script src="https://gist.github.com/IOPS-DEV/3c545457b33671273336ef182b1bc24c.js"></script>
 

@@ -278,3 +278,6 @@ The Person concerns List has a mandated subject reference to the Patient resourc
 
 The Person concerns List has reference(s) to the Location resource. This means that any exchange of the plan and requested actions details heading data must also include the [Location Details](explore_location.html#mapping-for-location)
 
+
+## Person concerns example ##
+<script src="https://gist.github.com/IOPS-DEV/c835755b9f7c98dd79063e48e17e1441.js"></script>

@@ -223,6 +223,10 @@ The Professional contacts List has reference(s) to the Practitioner Role resourc
 
 ## Mapping for Professional contacts Organization ##  
 
-The Professional contacts List has reference(s) to the Organization resource. This means that any exchange of the Professional contacts List heading data must also include the [Organization Details](explore_organization.html#mapping-for-organization)
+The Professional contacts List has reference(s) to the Organization resource. This means that any exchange of the Professional contacts List heading data must also include the [Organization Details](explore_organization.html#mapping-for-organization)  
+
+## Professional contacts example ## 
+<script src="https://gist.github.com/IOPS-DEV/76dac78bc76248976fbde7049b7791c2.js"></script>
+
 
 

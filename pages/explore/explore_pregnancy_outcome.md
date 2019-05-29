@@ -1,4 +1,4 @@
----
+﻿---
 title: Pregnancy Outcome List
 keywords:  list
 tags: [fhir]
@@ -518,10 +518,6 @@ The following combination of Condition codes and other elements should be used f
 |  - multipleBirth[x] | 0..1 | Optional | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") | Whether patient is part of a multiple birth |
 |   |  | Optional | [Integer](http://hl7.org/fhir/stu3/datatypes.html#integer "Integer") |  |
 
-
-
-
-
 ## Mapping for Pregnancy outcome Practitioner ## 
 
 The Pregnancy outcome List has reference(s) to the Practitioner resource. This means that any exchange of the Pregnancy outcome List heading data must also include the [Practitioner Details](explore_practitioner.html#mapping-for-practitioner)
@@ -540,4 +536,7 @@ The Pregnancy outcome List has reference(s) to the Location resource. This means
 
 ## Mapping for Pregnancy outcome Organization ##  
 
-The Pregnancy outcome List has reference(s) to the Organization resource. This means that any exchange of the Pregnancy outcome List heading data must also include the [Organization Details](explore_organization.html#mapping-for-organization)
+The Pregnancy outcome List has reference(s) to the Organization resource. This means that any exchange of the Pregnancy outcome List heading data must also include the [Organization Details](explore_organization.html#mapping-for-organization)  
+
+## Pregnancy Outcome example ##
+<script src="https://gist.github.com/IOPS-DEV/a35c499a232355f4e35582279b83e013.js"></script>

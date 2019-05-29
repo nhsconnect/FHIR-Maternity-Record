@@ -1,4 +1,4 @@
----
+﻿---
 title: Pregnancy Outcome List
 keywords:  list
 tags: [fhir]
@@ -1319,4 +1319,7 @@ The Pregnancy outcome List has reference(s) to the Location resource. This means
 
 ## Mapping for Pregnancy outcome Organization ##  
 
-The Pregnancy outcome List has reference(s) to the Organization resource. This means that any exchange of the Pregnancy outcome List heading data must also include the [Organization Details](explore_organization.html#mapping-for-organization)
+The Pregnancy outcome List has reference(s) to the Organization resource. This means that any exchange of the Pregnancy outcome List heading data must also include the [Organization Details](explore_organization.html#mapping-for-organization)  
+
+## Pregnancy Outcome example ##
+<script src="https://gist.github.com/IOPS-DEV/a35c499a232355f4e35582279b83e013.js"></script>
