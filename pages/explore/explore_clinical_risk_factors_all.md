@@ -353,7 +353,7 @@ The following profiles are referenced from the Clinical risk factors list struct
 |  - - - - display | 1..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system |
 |  - - - - userSelected | 0..1 | Not Used | [Boolean](http://hl7.org/fhir/stu3/datatypes.html#boolean "Boolean") | If this coding was chosen directly by the user |
 |  - - - text | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept<br/> |
-|  - - reAdmission | 0..1 | Not Used | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | The type of hospital re-Attendance that has occurred (if any). If the value is absent, then this is not identified as a reAttendance<br/>Binding (example): The reason for re-admission of this hospitalization encounter. [v2 Re-admission Indicator](http://hl7.org/fhir/ValueSet/v2-0092) |
+|  - - reAdmission | 0..1 | Not Used | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | The type of hospital re-Attendance that has occurred (if any). If the value is absent, then this is not identified as a reAttendance<br/>Binding (example): The reason for re-admission of this hospitalization encounter. [v2 Re-admission Indicator](https://hl7.org/fhir/STU3/v2/0092/index.html) |
 |  - - - coding | 0..* | Not Used | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
 |  - - - coding (snomedCT) | 0..1 | Not Used | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system |
 |  - - - - extension (snomedCTDescriptionID) | 0..1 | Not Used | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
@@ -493,7 +493,7 @@ The following profiles are referenced from the Clinical risk factors list struct
 |  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |
 |  - - display | 0..1 | Not Used | String | Text alternative for the resource |
 |  - context | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Where was assessment performed?<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Not Used | [CareConnect-EpisodeOfCare-1](https://fhir.nhs.uk/STU3/StructureDefinition/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1 "CareConnect-EpisodeOfCare-1") |  |
+|   |  | Not Used | [CareConnect-EpisodeOfCare-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-EpisodeOfCare-1 "CareConnect-EpisodeOfCare-1") |  |
 |   |  | Required | [CareConnect-Encounter-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1 "CareConnect-Encounter-1") | <font color='red'>This MUST use the CareConnect Encounter profile. </font>See [Encounter resource](explore_clinical_risk_factors.html#mapping-for-clinical-risk-factors-encounter) for information on how to populate the resource. |
 |  - - reference | 0..1 | Required | String | Literal reference, Relative, internal or absolute URL |
 |  - - identifier | 0..1 | Not Used | Identifier | Logical reference, when literal reference is not known |

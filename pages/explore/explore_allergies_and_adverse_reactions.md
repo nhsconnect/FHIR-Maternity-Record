@@ -28,16 +28,16 @@ The following profiles are referenced from the Allergies and reactions list stru
 ## Mapping Overview ##
 
 |**Data Standard Element**|**FHIR Profile Mapping**|**FHIR Element**|
-|Date/Time Recorded|[List](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-list)|entry.date|
-|Date/Time Asserted|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|assertedDate|
-|Causative Agent|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|code.coding<br/>code.text|
-|Description of Reaction|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|reaction.manifestation.coding<br/>code.text|
-|Type of Reaction|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|type|
-|Certainty|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|verificationStatus|
-|Severity|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|severity|
-|Evidence|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|note|
-|Date First Experienced|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|onset|
-|Comment|[AllergyIntolerance](explore_allergy-and-adverse-reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|note|
+|Date/Time Recorded|[List](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-list)|entry.date|
+|Date/Time Asserted|[AllergyIntolerance](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|assertedDate|
+|Causative Agent|[AllergyIntolerance](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|code.coding<br/>code.text|
+|Description of Reaction|[AllergyIntolerance](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|reaction.manifestation.coding<br/>code.text|
+|Type of Reaction|[AllergyIntolerance](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|type|
+|Certainty|[AllergyIntolerance](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|verificationStatus|
+|Severity|[AllergyIntolerance](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|severity|
+|Evidence|[AllergyIntolerance](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|note|
+|Date First Experienced|[AllergyIntolerance](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|onset|
+|Comment|[AllergyIntolerance](explore_allergies_and_adverse_reactions.html#mapping-for-allergy-and-adverse-reactions-allergyintolerance)|note|
 
 The following tables detail how to populate the FHIR resources and the mapping to the Maternity data standard.
 
