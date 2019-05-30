@@ -19,7 +19,7 @@ This specification is currently under development and the following PRSB Heading
 - [Assessment scales](explore_assessment_scales.html)
 - [Attendance details](explore_attendance_details.html)
 - [Clinical risk factors](explore_clinical_risk_factors.html)
-- [Demographics history](explore_demographics_history.html)
+- [Demographics history](explore_demographic_history.html)
 - [Patient demographics](explore_patient_demographics.html)
 - [Personal comment](explore_personal_comment.html)
 - [Personal contacts](explore_personal_contacts.html)
