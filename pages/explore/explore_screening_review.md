@@ -126,7 +126,7 @@ The screening review details list has a mandated subject reference to the Patien
 
 ## Mapping for National Antenatal Screening Programme Procedure Request ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/procedurerequest.html)|>|Level 2| [CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)|>|Level 3|None|
+|>|Level 1|[ProcedureRequest Resource](http://hl7.org/fhir/stu3/procedurerequest.html)|>|Level 2| [CareConnect-Procedure-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ProcedureRequest-1)|>|Level 3|None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-national-antenatal-screening-programme-procedure-request)**|
@@ -135,6 +135,7 @@ The screening review details list has a mandated subject reference to the Patien
 | --- | --- | --- | --- | --- |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
+|  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-procedurerequest-1'</font> |
 |  - identifier | 0..* | Required | Identifier | Identifiers assigned to this order |
 |  - - system | 0..1 | Required | Uri | The namespace for the identifier value |
 |  - - value | 0..1 | Mandatory | String | The value that is unique |
@@ -154,8 +155,9 @@ The screening review details list has a mandated subject reference to the Patien
 |  - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
 |  - - - display | 0..1 | Mandatory | String | Representation defined by the system |
 |  - - text | 0..1 | Optional | String | Plain text representation of the concept |
-|  - subject | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Individual the service is ordered for<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
+|  - patient | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who the sensitivity is for<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | A reference to the Patient resource.  |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>This MUST use the CareConnect Patient profile.</font>See [patient resource reference](explore_allergies_and_adverse_reactions.html#patient-reference) for information on how to populate the resource. |
 |  - authoredOn | 0..1 | Mandatory | dateTime | Date request signed<br/><font color="red">Date when the screening test was offered</font> |
 
 
@@ -194,7 +196,6 @@ The screening review details list has a mandated subject reference to the Patien
 |  - code | 0..1 | Mandatory | CodeableConcept | Identification of the procedure<br/>Binding (preferred): A code to identify a specific procedure. [Procedure Codes (SNOMED CT)](http://hl7.org/fhir/stu3/valueset-procedure-code.html)<br/><font color="red">Diabetic Eye Screening Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-DiabeticEyeScreeningProcess-1)</font><br/><font color="red">Infectious Diseases Screening Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-InfectiousDiseasesProcess -1)</font><br/><font color="red">FA Downs, Edwards and Pataus Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-FADownsPatausProcess -1)</font><br/><font color="red">Sickle Cell and Thalassaemia Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-SickleCellThalassaemiaProcess -1)</font><br/><font color="red">FA Structural Anomalies Process MUST be from the preferred valueset (SNOMED CT)( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-FAStructuralAnomaliesProcess -1)</font><br/><font color="red">Values used for screening process MUST be compatible with the values used in screening outcome</font> |
 |  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Mandatory | Coding | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK. [CareConnect-ProcedureCode-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ProcedureCode-1) |
-|  - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<br/><font color="red">134395001</font> |
 |  - - - display | 1..1 | Mandatory | String | Representation defined by the system<br/><font color="red">Diabetic retinopathy screening (procedure)</font> |
@@ -212,7 +213,7 @@ The screening review details list has a mandated subject reference to the Patien
 |  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system |
 |  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system |
 |  - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
-|  - - - display | 0..1 | Mandatory | String | Representation defined by the system<br/><font color="red">SNOMED CT \description tat MUST match code</font> |
+|  - - - display | 0..1 | Mandatory | String | Representation defined by the system<br/><font color="red">SNOMED CT description tat MUST match code</font> |
 |  - - text | 0..1 | Optional | String | Plain text representation of the concept<br/><font color="red">Free text field to be used if no coded text available</font> |
 
 ## Mapping for Generic Screening Review Data Items Observation ##
@@ -220,7 +221,7 @@ The screening review details list has a mandated subject reference to the Patien
 |Gestational Age|[Observation](explore_social_context_household.html#mapping-for-social-context-details-list)|
 |Family Origins Questionnaire|[Observation](explore_social_context_household.html#mapping-for-social-context-details-list)|
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1|>|Level 3|)None|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| [CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-generic-screening-review-data-items-observation)**|
@@ -228,7 +229,8 @@ The screening review details list has a mandated subject reference to the Patien
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
 |  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
-|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1'</font> |
+|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource |
+|  - - profile | 0..* | Mandatory | Uri | Profiles this resource claims to conform to<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1'</font> |
 |  - identifier | 0..* | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Business Identifier for observation<br/><font color='red'>An identifier for this Diabetic Screening Gestational Age Observation</font> |
 |  - - system | 1..1 | Required | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | The namespace for the identifier value |
 |  - - value | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique |
@@ -238,7 +240,6 @@ The screening review details list has a mandated subject reference to the Patien
 |  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type) |
 |  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">57036006</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">Fetal gestational age (observable entity)</font> |
@@ -251,7 +252,7 @@ The screening review details list has a mandated subject reference to the Patien
 
 ## Mapping for Structural Anomalies Flag ##
 
-|>|Level 1|[Location Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2|[CareConnect-Flag-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3|None|
+|>|Level 1|[Flag Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2|[CareConnect-Flag-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3|None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_screening_review_all.html#mapping-for-structural-anomalies-flag)**|
@@ -260,6 +261,7 @@ The screening review details list has a mandated subject reference to the Patien
 | :--- | :--- | --- | :--- | :--- |
 |  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource |
+|  - - profile | 0..* | Mandatory | Uri | Profiles this resource claims to conform to<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1'</font> |
 |  - identifier | 0..* | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Business identifier |
 |  - - - - system | 0..1 | Required | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system |
 |  - - value | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique |
@@ -268,7 +270,6 @@ The screening review details list has a mandated subject reference to the Patien
 |  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Coded or textual message to display to user<br/>Binding (example): Detail codes identifying specific flagged issues. ( http://hl7.org/fhir/stu3/valueset-flag-code.html )<br/><font color="red">Flag to indicate abnormal Antenatal Screening Ultrasound</font> |
 |  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | SNOMED CT representation identifying specific flagged issues |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Optional | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension "Extension") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">SNOMED CT code MUST be fixed to 169665005</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">SNOMED CT description must be fixed to Antenatal ultrasound scan abnormal</font> |

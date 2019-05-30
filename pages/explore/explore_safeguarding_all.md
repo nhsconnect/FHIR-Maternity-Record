@@ -376,4 +376,4 @@ The safeguarding details has reference(s) to the Practitioner Role resource. Thi
 
 ## Safeguarding Example ##
 
-<script src="https://gist.github.com/IOPS-DEV/aa07faf73ddcbba06f3cfa1aeebc0943.js"></script>
+<script src="https://gist.github.com/IOPS-DEV/19d32b9eaee56a4213980615a639e206.js"></script>
