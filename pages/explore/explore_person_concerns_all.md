@@ -760,21 +760,21 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |   |  | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") |  |
 |   |  | Not Used | [DocumentReference](http://hl7.org/fhir/stu3/StructureDefinition/DocumentReference "DocumentReference") |  |
 |   |  | Not Used | [QuestionnaireResponse](http://hl7.org/fhir/stu3/StructureDefinition/QuestionnaireResponse "QuestionnaireResponse") |  |
-|   |  | Not Used | [CareConnect-Composition-1](https://fhir.nhs.uk/STU3/StructureDefinition/STU3/StructureDefinition/CareConnect-Composition-1 "CareConnect-Composition-1") |  |
+|   |  | Not Used | [CareConnect-Composition-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1 "CareConnect-Composition-1") |  |
 |  - friendly | 0..* | Not Used | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Contract Friendly Language |
 |  - - modifierExtension | 0..* | Not Used | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension "Extension") | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
 |  - - content[x] | 1..1 | Not Used | [Attachment](http://hl7.org/fhir/stu3/datatypes.html#attachment "Attachment") | Easily comprehended representation of this Contract<br/>Constraint (att-1): It the Attachment has data, it SHALL have a contentType |
 |   |  | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") |  |
 |   |  | Not Used | [DocumentReference](http://hl7.org/fhir/stu3/StructureDefinition/DocumentReference "DocumentReference") |  |
 |   |  | Not Used | [QuestionnaireResponse](http://hl7.org/fhir/stu3/StructureDefinition/QuestionnaireResponse "QuestionnaireResponse") |  |
-|   |  | Not Used | [CareConnect-Composition-1](https://fhir.nhs.uk/STU3/StructureDefinition/STU3/StructureDefinition/CareConnect-Composition-1 "CareConnect-Composition-1") |  |
+|   |  | Not Used | [CareConnect-Composition-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1 "CareConnect-Composition-1") |  |
 |  - legal | 0..* | Not Used | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Contract Legal Language |
 |  - - modifierExtension | 0..* | Not Used | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension "Extension") | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
 |  - - content[x] | 1..1 | Not Used | [Attachment](http://hl7.org/fhir/stu3/datatypes.html#attachment "Attachment") | Contract Legal Text<br/>Constraint (att-1): It the Attachment has data, it SHALL have a contentType |
 |   |  | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") |  |
 |   |  | Not Used | [DocumentReference](http://hl7.org/fhir/stu3/StructureDefinition/DocumentReference "DocumentReference") |  |
 |   |  | Not Used | [QuestionnaireResponse](http://hl7.org/fhir/stu3/StructureDefinition/QuestionnaireResponse "QuestionnaireResponse") |  |
-|   |  | Not Used | [CareConnect-Composition-1](https://fhir.nhs.uk/STU3/StructureDefinition/STU3/StructureDefinition/CareConnect-Composition-1 "CareConnect-Composition-1") |  |
+|   |  | Not Used | [CareConnect-Composition-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Composition-1 "CareConnect-Composition-1") |  |
 |  - rule | 0..* | Not Used | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Computable Contract Language |
 |  - - modifierExtension | 0..* | Not Used | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension "Extension") | Extensions that cannot be ignored<br/>Constraint (ext-1): Must have either extensions or value[x], not both |
 |  - - content[x] | 1..1 | Not Used | [Attachment](http://hl7.org/fhir/stu3/datatypes.html#attachment "Attachment") | Computable Contract Rules<br/>Constraint (att-1): It the Attachment has data, it SHALL have a contentType |

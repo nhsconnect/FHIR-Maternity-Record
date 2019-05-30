@@ -9,7 +9,7 @@ summary: "The FHIR profiles used for Practitioner"
 
 ## Heading Description ##
 
-A generic practitioner resource based on the CareConnect L2 [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect_practitioner-1) profile, using the elements required to support its use within the Digital Maternity Messaging Specfication.
+A generic practitioner resource based on the CareConnect L2 [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1) profile, using the elements required to support its use within the Digital Maternity Messaging Specfication.
 
 ## Mapping for Practitioner ##
 
@@ -100,7 +100,7 @@ A generic practitioner resource based on the CareConnect L2 [CareConnect-Practit
 |  - - - period | 0..1 | Not Used | [Period](http://hl7.org/fhir/stu3/datatypes.html#period "Period") | **Time period when id is/was valid for use<br/>Constraint (per-1): If present, start SHALL have a lower value than end** |
 |  - - - assigner | 0..1 | Not Used | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | **Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided** |
 |   |  | Not Used | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") | **** |
-|  - - code | 1..1 | Not Used | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | **Coded representation of the qualification<br/>Binding (example): Specific qualification the practitioner has to provide a service [v2 table 0360, Version 2.7](http://hl7.org/fhir/ValueSet/v2-2.7-0360)** |
+|  - - code | 1..1 | Not Used | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | **Coded representation of the qualification<br/>Binding (example): Specific qualification the practitioner has to provide a service [v2 table 0360, Version 2.7](http://hl7.org/fhir/STU3/v2/0360/2.7/index.html)** |
 |  - - - coding | 0..* | Not Used | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | **Code defined by a terminology system** |
 |  - - - - system | 0..1 | Not Used | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | **Identity of the terminology system** |
 |  - - - - version | 0..1 | Not Used | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | **Version of the system - if relevant** |

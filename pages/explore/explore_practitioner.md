@@ -9,7 +9,7 @@ summary: "The FHIR profiles used for Practitioner"
 
 ## Heading Description ##
 
-A generic practitioner resource based on the CareConnect L2 [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect_practitioner-1) profile, using the elements required to support its use within the Digital Maternity Messaging Specfication.
+A generic practitioner resource based on the CareConnect L2 [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1) profile, using the elements required to support its use within the Digital Maternity Messaging Specfication.
 
 ## Mapping for Practitioner ##
 
