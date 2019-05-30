@@ -1,4 +1,4 @@
----
+﻿---
 title: Help & Support - About 
 keywords: support, communications, community 
 tags: [support]
@@ -24,7 +24,7 @@ FHIR components specified within this site have been developed by NHS Digital an
 
 The INTEROPen vision is to create a library of nationally defined HL7® FHIR® resources and interaction patterns that implementers can adopt to simplify integration and interoperability within UK health and social care.
 
-See [CareConnect FHIR Profiles](support_careconnect.html) for further clarification on the use of CareConnect FHIR profiles within this specification.
+See [CareConnect FHIR Profiles](https://fhir.hl7.org.uk/StructureDefinition) for further clarification on the use of CareConnect FHIR profiles within this specification.
 
 Find out more on the [INTEROPen website](http://interopen.org).
 
