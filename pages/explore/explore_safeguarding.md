@@ -26,11 +26,11 @@ The following profiles are referenced from the safety alerts details list struct
 
 ## Mapping Overview ##
 
-|Date/Time|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|period.start|
-|ODS/ORD Site Code|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|author.[organization]|
-|SDS Job Role Name|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|name.[practitionerRole]|
-|Professional Name|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|performer.[practitioner]|
-|Safeguarding Risk|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|valueCodeableConcept.coding|
+|Date/Time|[Observation](explore_safeguarding.html#mapping-for-safeguarding-observation)|period.start|
+|ODS/ORD Site Code|[Observation](explore_safeguarding.html#mapping-for-safeguarding-observation)|author.[organization]|
+|SDS Job Role Name|[Observation](explore_safeguarding.html#mapping-for-safeguarding-observation)|name.[practitionerRole]|
+|Professional Name|[Observation](explore_safeguarding.html#mapping-for-safeguarding-observation)|performer.[practitioner]|
+|Safeguarding Risk|[Observation](explore_safeguarding.html#mapping-for-safeguarding-observation)|valueCodeableConcept.coding|
 |||valueCodeableConcept.text|
 
 
@@ -84,8 +84,9 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
 |  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
-|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Observation-1'</font> |
-|  - identifier | 0..* | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Business Identifier for observation<br/><font color='red'>An identifier for this Scan Report Group Observation</font> |
+|  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource |
+|  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to |
+|  - identifier | 0..* | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Business Identifier for observation<br/><font color='red'>An identifier for this Safeguarding Observation</font> |
 |  - - system | 1..1 | Required | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | The namespace for the identifier value |
 |  - - value | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique |
 |  - - assigner | 0..1 | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Organization that issued id (may be just text)<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
@@ -94,18 +95,19 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/><font color="red">Safeguarding Observation</font> |
 |  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">SNOMED CT code 1077911000000105</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">MUST be 'Safeguarding')</font> |
 |  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - patient | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color='red'>This is the subject of the Social Context details List.<br/>This MUST use the CareConnect patient profile. </font>See[patient resource reference](explore_safety_alerts.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
+|  - encounter | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Encounter administered as part of<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the vaccination encounter.</font> |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date/time the safeguarding issue was recorded</font><br/> |
 |  - performer | 0..* | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") | <font color="red">The Site Code of where the safeguarding issue was recorded</font> |
-|   |  | Mandatory | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the safeguarding issue</font> |
+|   |  | Mandatory | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") | <br/><font color='red'>This MUST use the CareConnect Organization and/or CareConnect-Prctitioner profile.</font>See [Organization resource reference](explore_scan_details.html#mapping-for-scan-details-organisation) and [Practitioner resource reference](explore_scan_details.html#mapping-for-scan-details-practitioner)for information on how to populate these resources.  |
+|   |  | Mandatory | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect Organization and/or CareConnect-Prctitioner profile.</font>See [Organization resource reference](explore_scan_details.html#mapping-for-scan-details-organisation) and [Practitioner resource reference](explore_scan_details.html#mapping-for-scan-details-practitioner)for information on how to populate these resources.  |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner or Organization resource included in the safegaurding list|
 |  - value[x] | 0..1 | Required | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/><font color="red">The type of safeguarding risk recorded. 404684003 \|Clinical finding (finding) OR \|999002381000000108 OR \|Safeguarding issues simple reference set (foundation metadata concept)</font><br/><font color="red">Where no SNOMED CT code is available, coding.text MUST be used.</font> |
 
 

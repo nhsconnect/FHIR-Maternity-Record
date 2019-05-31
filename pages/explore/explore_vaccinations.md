@@ -19,9 +19,9 @@ The details of a women’s vaccinations.
 ## Mapping Overview ##
 
 |**Data Standard Element**|**FHIR Profile**|**FHIR target**|
-|Date and Time of vaccinations|[Encounter](explore_vaccinations.html#mapping-for-vaccinations-details-encounter)|period.start|
-|ODS/ORD Site Code|[Location](explore_vaccinations.html#mapping-for-vaccinations-details-location)|identifier|
-|Performing Professional|[Practitioner](explore_vaccinations.html#mapping-for-vaccinations-details-practitioner)|identifier and name|
+|Date and Time of vaccinations|[Encounter](explore_vaccinations_details.html#mapping-for-vaccinations-details-encounter)|period.start|
+|ODS/ORD Site Code|[Location](explore_vaccinations_details.html#mapping-for-vaccinations-details-location)|identifier|
+|Performing Professional|[Practitioner](explore_vaccinations_details.html#mapping-for-vaccinations-details-practitioner)|identifier and name|
 |SDS Job Role Name| [PractitionerRole](explore_vaccinations.html#mapping-for-vaccination-practitioner-role)|code|
 |Reported Date|[Immunization](explore_vaccinations.html#mapping-for-vaccinations)|date|
 |Primary Source|[Immunization](explore_vaccinations.html#mapping-for-vaccinations)|primarySource|
@@ -150,7 +150,7 @@ The vaccination details list has a mandated subject reference to the Patient res
 |  - - - text | 0..1 | Optional | String | Plain text representation of the concept |
 |  - - actor | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Individual who was performing<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided|
 |   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") |The responsible clinician for the immunization.|
-|  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<font color='red'>This MUST use the CareConnect Practitioner profile. </font>See [Practitioner resource](explore_vaccinations.html#mapping-for-vaccination-details-encounter) for information on how to populate the resource. |
+|  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<font color='red'>This MUST use the CareConnect Practitioner profile. </font>See [Practitioner resource](explore_vaccination_details.html#mapping-for-vaccination-details-encounter) for information on how to populate the resource. |
 |  - note | 0..* | Optional | Annotation | Vaccination notes |
 |  - explanation | 0..1 | Optional | BackboneElement | Administration/non-administration reasons<br/><font color="red">The clinical indication or reason for administering or recording an historical vaccination. </font> |
 |  - - reason | 0..* | Optional | CodeableConcept | Why immunization occurred<br/>Binding (example): The reason why a vaccine was administered [CareConnect-ImmunizationExplanationReason-2 ](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ImmunizationExplanationReason-2) |

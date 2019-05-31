@@ -49,19 +49,19 @@ The following profiles are referenced from the safety alerts details list struct
 |  - - period | 0..1 | Mandatory | Period | Time period when id is/was valid for use<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
 |  - status | 1..1 | Mandatory | Code | current : retired : entered-in-error<br/>Binding (required): The current state of the list [ListStatus](http://hl7.org/fhir/stu3/valueset-list-status.html)<br/><font color='red'>The status of the list MUST contain the value 'current'</font> |
 |  - mode | 1..1 | Mandatory | Code | working : snapshot : changes<br/>Binding (required): The processing mode that applies to this list [ListMode](http://hl7.org/fhir/stu3/valueset-list-mode.html)<br/><font color='red'>The mode of the list MUST contain the value 'snapshot'</font> |
-|  - title | 0..1 | Mandatory | String | Descriptive name for the list<br/><font color='red'>This MUST contain the value 'Referralt'</font><br/><font color='red'><b>Mapping to Maternity data item = 'PSRB Heading Referral'</b></font>  |
+|  - title | 0..1 | Mandatory | String | Descriptive name for the list<br/><font color='red'>This MUST contain the value 'Referral'</font><br/><font color='red'><b>Mapping to Maternity data item = 'PSRB Heading Referral'</b></font>  |
 |  - code | 0..1 | Mandatory | CodeableConcept | What the purpose of this list is<br/>Binding (preferred): What the purpose of a list is [CareConnect-ListCode-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ListCode-1)<br/><font color='red'>The PRSB heading for this list. Note: for Maternity the value stated below is used which is not from the preferred value set </font> |
 |  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system<br/><font color='red'>The SNOMED CT concept for the PRSB heading type</font> |
 |  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>This MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system<br/><font color='red'>This MUST contain the value '3457005'</font> |
 |  - - - display | 0..1 | Mandatory | String | Representation defined by the system<br/><font color='red'>Mapping to Maternity data item = 'PSRB Heading Referral'</font>  |
 |  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Admission details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the referral details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
 |  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - date | 0..1 | Required | dateTime | When the list was prepared<br/><font color="red">This MUST contain a system date to indicate when the list was created or updated</font> |
-|  - entry | 0..* | Required | BackboneElement | Entries in the list<br/><font color="red">The entries MUST be as per the diagram for this PRSB headings list with the encounter resource being the focal resource. Multiple Observations with associated resources MAY be present</font> |
+|  - entry | 0..* | Required | BackboneElement | Entries in the list<br/><font color="red">The entries MUST be as per the diagram for this PRSB headings list with the referralrequest resource being the focal resource.</font> |
 |  - - date | 0..1 | Required | dateTime | When item added to list<br/><font color='red'>The SHOULD contain a system time of when the item was added to the list.</font> |
-|  - - item | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">A reference to an Encounter resource included in the list This MUST use the CareConnect Observation profile. |
+|  - - item | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Actual entry<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">A reference to an Encounter resource included in the list This MUST use the CareConnect referralRequest profile. |
 |  - - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
 
 ## Patient Reference ##
@@ -70,7 +70,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Referral ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/referralrequest.html)|>|Level 2|[CareConnect-ReferralRequest-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1)|>|Level 3| None|
+|>|Level 1|[ReferralRequest Resource](http://hl7.org/fhir/stu3/referralrequest.html)|>|Level 2|[CareConnect-ReferralRequest-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-ReferralRequest-1)|>|Level 3| None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_referral_details_all.html#mapping-for-referral)**|
@@ -84,10 +84,13 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - value | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique |
 |  - type | 0..1 | Required | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Referral/Transition of care request type<br/>Binding (example): Codes for types of referral; e.g. consult, transfer, temporary transfer. (http://hl7.org/fhir/stu3/valueset-referral-type.html )<br/><font color="red">A classification which identifies the source of referral</font> |
 |  - priority | 0..1 | Required | Code | Urgency of referral / transfer of care request<br/>Binding (required): Codes indicating the relative priority of the referral. ( http://hl7.org/fhir/stu3/valueset-request-priority.html )<br/><font color="red">This is the priority of a request for services</font> |
-|  - subject | 1..1 | Mandatory | Reference | Patient referred to care or transfer<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the referral details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - authoredOn | 0..1 | Mandatory | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Date of creation/activation<br/><font color="red">The date the Referral was made</font> |
 |  - - onBehalfOf | 0..1 | Required | Reference | Organization agent is acting for<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Required | CareConnect-Organization-1 |  |
+|   |  | Mandatory | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") | <br/><font color='red'>This MUST use the CareConnect Organization profile.</font>See [Organization resource reference](explore_scan_details.html#mapping-for-scan-details-organisation) for information on how to populate this resource.  |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Organization resource included in the referral list|
 |  - specialty | 0..1 | Mandatory | CodeableConcept | The clinical specialty (discipline) that the referral is requested for<br/>Binding (example): Codes indicating the types of capability the referred to service provider must have. (http://hl7.org/fhir/stu3/valueset-practitioner-specialty.html ) |
 |  - - coding | 0..* | Mandatory | Coding | Code defined by a terminology system |
 |  - - - system | 0..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system |
@@ -102,9 +105,10 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
 |  - note | 0..* | Optional | [Annotation](http://hl7.org/fhir/stu3/datatypes.html#annotation "Annotation") | Comments made about referral request<br/><font color="red">Comment related to referral</font> |
 |  - - author[x] | 0..1 | Required | String | Individual responsible for the annotation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Optional | CareConnect-Patient-1 |  |
-|   |  | Optional | CareConnect-RelatedPerson-1 |  |
-|   |  | Optional | CareConnect-Practitioner-1 |  |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red"> A reference to the Patient, RelatedPerson or Practitioner|
+|   |  | Optional | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1) | <br/><font color='red'>This MUST use the CareConnect Patient profile.</font>See [Patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate these resources.  |
+|   |  | Optional | [CareConnect-RelatedPerson-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RelatedPerson-1) | <br/><font color='red'>This MUST use the CareConnect RelatedPerson profile.</font>See [RelatedPerson resource reference](explore_referral_details.html#mapping-for-referral) |
+|  |  | Optional | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect-Prctitioner profile.</font>See [Practitioner resource reference](explore_referral_details.html#mapping-for-plan-and-requested-actions-practitioner)for information on how to populate these resources.  |
 
 ## Mapping for Plan and Requested Actions Practitioner ## 
 

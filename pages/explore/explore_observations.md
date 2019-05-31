@@ -81,7 +81,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Weight Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-blood-pressure-observation-details)**|
@@ -100,18 +100,17 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/><font color="red">Weight Observation</font> |
 |  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">SNOMED CT code 27113001</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">MUST be 'Body weight'</font> |
 |  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date/time the obsrvation was recorded</font><br/> |
-|  - performer | 0..* | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") | <font color="red">The Site Code of where the obsrvation was recorded</font> |
-|   |  | Mandatory | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the observation</font> |
+|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect-Practitioner profile.</font>See [Practitioner resource reference](explore_observations.html#mapping-for-plan-and-requested-actions-practitioner) for information on how to populate this resource.  |
+|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner resource included in the observation list|
 |  - valueQuantity | 0..1 | Required | Quantity | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/>Binding (required): Common UCUM units for recording Vital Signs ( http://hl7.org/fhir/stu3/valueset-ucum-vitals-common.html ) |
 |  - - value | 1..1 | Mandatory | Decimal | Numerical value (with implicit precision) |
 |  - - unit | 1..1 | Mandatory | String | Unit representation |
@@ -120,7 +119,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Length Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-blood-pressure-observation-details)**|
@@ -144,13 +143,13 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">SNOMED CT code 50373000</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">MUST be 'Body height measure')</font> |
 |  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date/time the obsrvation was recorded</font><br/> |
-|  - performer | 0..* | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") | <font color="red">The Site Code of where the obsrvation was recorded</font> |
-|   |  | Mandatory | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the observation</font> |
+|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect-Practitioner profile.</font>See [Practitioner resource reference](explore_observations.html#mapping-for-plan-and-requested-actions-practitioner) for information on how to populate this resource.  |
+|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner resource included in the observation list|
 |  - valueQuantity | 0..1 | Required | Quantity | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/>Binding (required): Common UCUM units for recording Vital Signs ( http://hl7.org/fhir/stu3/valueset-ucum-vitals-common.html ) |
 |  - - value | 1..1 | Mandatory | Decimal | Numerical value (with implicit precision) |
 |  - - unit | 1..1 | Mandatory | String | Unit representation |
@@ -159,7 +158,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for BMI Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-blood-pressure-observation-details)**|
@@ -183,13 +182,13 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">SNOMED CT code 60621009</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">MUST be 'Body mass index')</font> |
 |  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date/time the obsrvation was recorded</font><br/> |
-|  - performer | 0..* | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") | <font color="red">The Site Code of where the obsrvation was recorded</font> |
-|   |  | Mandatory | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the observation</font> |
+|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect-Practitioner profile.</font>See [Practitioner resource reference](explore_observations.html#mapping-for-plan-and-requested-actions-practitioner) for information on how to populate this resource.  |
+|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner resource included in the observation list|
 |  - valueQuantity | 0..1 | Required | Quantity | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/>Binding (required): Common UCUM units for recording Vital Signs ( http://hl7.org/fhir/stu3/valueset-ucum-vitals-common.html ) |
 |  - - value | 1..1 | Mandatory | Decimal | Numerical value (with implicit precision) |
 |  - - unit | 1..1 | Mandatory | String | Unit representation |
@@ -198,7 +197,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Blood Pressure Observation Details ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-BloodPressure-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-BloodPressure-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-BloodPressure-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-BloodPressure-Observation-1)|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-blood-pressure-observation-details)**|
@@ -221,12 +220,13 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">MUSt contain code '75367002'</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">MUST be 'Blood pressure'</font> |
 |  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date on which the observation was recorded</font><br/> |
-|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the observation</font> |
-|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the observation</font> |
+|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect-Practitioner profile.</font>See [Practitioner resource reference](explore_observations.html#mapping-for-plan-and-requested-actions-practitioner) for information on how to populate this resource.  |
+|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner resource included in the observation list|
 |  - component | 0..* | Required | BackboneElement | Used when reporting systolic and diastolic blood pressure.<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - code | 1..1 | Mandatory | CodeableConcept | Type of component observation (code / type)<br/>Slice discriminator: Code<br/>Binding (extensible): Codes identifying names of simple observations. ( http://hl7.org/fhir/stu3/valueset-observation-vitalsignresult.html ) |
 |  - - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/>Fixed Value: <http://loinc.org> |
@@ -262,7 +262,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Heart Rate Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-BloodPressure-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HeartRate-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-BloodPressure-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-HeartRate-Observation-1)|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-heart-rate-observation-details)**|
@@ -286,12 +286,13 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct |
 |  - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<br/>Fixed Value: 75367002 |
 |  - - - display | 0..1 | Required | Representation defined by the system<br/>Fixed Value: Blood pressure|
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date on which the observation was recorded</font><br/> |
-|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the observation</font> |
-|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the observation</font> |
+|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect-Practitioner profile.</font>See [Practitioner resource reference](explore_observations.html#mapping-for-plan-and-requested-actions-practitioner) for information on how to populate this resource.  |
+|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner resource included in the observation list|
 |  - valueQuantity | 0..1 | Required | Quantity | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/>Binding (required): Common UCUM units for recording Vital Signs ( http://hl7.org/fhir/stu3/valueset-ucum-vitals-common.html ) |
 |  - - value | 1..1 | Mandatory | Decimal | Numerical value (with implicit precision) |
 |  - - unit | 1..1 | Mandatory | String | Unit representation |
@@ -300,7 +301,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Body Temperature Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-BodyTemperature-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-BodyTemperature-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-BodyTemperature-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-BodyTemperature-Observation-1)|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-heart-rate-observation-details)**|
@@ -326,12 +327,13 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct |
 |  - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<br/>Fixed Value: 276885007 |
 |  - - - display | 1..1 | Required | String | Representation defined by the system<br/>Fixed Value: Blood pressure |
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date on which the observation was recorded</font><br/> |
-|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the observation</font> |
-|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the observation</font> |
+|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect-Practitioner profile.</font>See [Practitioner resource reference](explore_observations.html#mapping-for-plan-and-requested-actions-practitioner) for information on how to populate this resource.  |
+|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner resource included in the observation list|
 |  - valueQuantity | 0..1 | Required | Quantity | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/>Binding (required): Common UCUM units for recording Vital Signs ( http://hl7.org/fhir/stu3/valueset-ucum-vitals-common.html ) |
 |  - - value | 1..1 | Mandatory | Decimal | Numerical value (with implicit precision) |
 |  - - unit | 1..1 | Mandatory | String | Unit representation |
@@ -340,7 +342,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Oxygen Saturation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-OxygenSaturation-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-OxygenSaturation-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3|[CareConnect-OxygenSaturation-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-OxygenSaturation-Observation-1)|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-heart-rate-observation-details)**|
@@ -365,12 +367,13 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct |
 |  - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<br/>Fixed Value: 103228002 |
 |  - - - display | 1..1 | Required | String | Representation defined by the system<br/>Fixed Value: Blood oxygen saturation |
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date on which the observation was recorded</font><br/> |
-|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the observation</font> |
-|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the observation</font> |
+|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect-Practitioner profile.</font>See [Practitioner resource reference](explore_observations.html#mapping-for-plan-and-requested-actions-practitioner) for information on how to populate this resource.  |
+|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner resource included in the observation list|
 |  - valueQuantity | 0..1 | Required | Quantity | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/>Binding (required): Common UCUM units for recording Vital Signs ( http://hl7.org/fhir/stu3/valueset-ucum-vitals-common.html ) |
 |  - - value | 1..1 | Mandatory | Decimal | Numerical value (with implicit precision) |
 |  - - unit | 1..1 | Mandatory | String | Unit representation |
@@ -379,7 +382,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Respiratory Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RespiratoryRate-Observation-1)|>|Level 3|[CareConnect-BloodPressure-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RespiratoryRate-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/Observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RespiratoryRate-Observation-1)|>|Level 3|[CareConnect-BloodPressure-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-RespiratoryRate-Observation-1)|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-heart-rate-observation-details)**|
@@ -404,12 +407,13 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct |
 |  - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system<br/>Fixed Value: 86290005 |
 |  - - - display | 1..1 | Required | String | Representation defined by the system<br/>Fixed Value: Respiratory rate |
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
-|  - - identifier | 0..1 | Mandatory | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Logical reference, when literal reference is not known |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_referral_details.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - effective[x] | 0..1 | Required | [dateTime](http://hl7.org/fhir/stu3/datatypes.html#datetime "dateTime") | Clinically relevant time/time-period for observation<br/><font color="red">The date on which the observation was recorded</font><br/> |
-|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the observation</font> |
-|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <font color="red">Name of Professional recording the observation</font> |
+|  - performer | 0..* | Required | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who is responsible for the observation<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
+|   |  | Required | [CareConnect-Practitioner-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Practitioner-1 "CareConnect-Practitioner-1") | <br/><font color='red'>This MUST use the CareConnect-Practitioner profile.</font>See [Practitioner resource reference](explore_observations.html#mapping-for-plan-and-requested-actions-practitioner) for information on how to populate this resource.  |
+|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner resource included in the observation list|
 |  - valueQuantity | 0..1 | Required | Quantity | Actual result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/>Binding (required): Common UCUM units for recording Vital Signs ( http://hl7.org/fhir/stu3/valueset-ucum-vitals-common.html ) |
 |  - - value | 1..1 | Mandatory | Decimal | Numerical value (with implicit precision) |
 |  - - unit | 1..1 | Mandatory | String | Unit representation |
@@ -419,7 +423,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Observation Encounter ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/encounter.html)|>|Level 2|[CareConnect-Encounter-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|>|Level 3|None|
+|>|Level 1|[Encounter Resource](http://hl7.org/fhir/stu3/encounter.html)|>|Level 2|[CareConnect-Encounter-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Encounter-1)|>|Level 3|None|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_observations_all.html#mapping-for-observation-encounter)**|
 
@@ -446,6 +450,10 @@ The plan and requested actions details has reference(s) to the Practitioner reso
 ## Mapping for Plan and Requested Actions PractitionerRole ##  
 
 The plan and requested actions details has reference(s) to the Practitioner Role resource. This means that any exchange of the plan and requested actions details heading data must also include the [Practitioner Role Details](explore_practitioner_role.html#mapping-for-practitioner_role)
+
+## Mapping for Referral Request Organisation ##
+
+The referral request details has reference(s) to the Organization resource. This means that any exchange of the referral request details heading data must also include the [Organization Details](explore_organization.html)
 
 ## Mapping for Observation Location ##
 

@@ -25,10 +25,10 @@ The following profiles are referenced from the safety alerts details list struct
 
 ## Mappings Overview ##
 
-|Date/Time|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|period.start|
-|ODS/ORD Site Code|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|author.[organization]|
-|Performing Professional|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|performer.[practitioner]|
-|SDS Job Role Name|[Observation](explore_scan_details.html#mapping-for-scan-report-group-observation)|name.[practitionerRole]|
+|Date/Time|[Flag](explore_safety_alerts.html#mapping-for-safety-alerts)|period.start|
+|ODS/ORD Site Code|[Organization](explore_safety_alerts.html#mapping-for-safety-alerts-organisation)|author.[organization]|
+|Performing Professional|[Practitioner](explore_safety_alerts.html#mapping-for-safety-alerts-practitioner)|performer.[practitioner]|
+|SDS Job Role Name|[PractitionerRole](explore_safety_alerts.html#mapping-for-safety-alerts-practitioner-role)|identifier|
 |Risk to self|[Flag](explore_safety_alerts.html#mapping-for-safety-alerts)|code.text|
 |End date (risk to self)||period.end|
 |Risk to others||code.text|
@@ -90,9 +90,9 @@ The safety alerts list has a mandated subject reference to the Patient resource.
 | :--- | :--- | --- | :--- | :--- |
 |  - id | 0..1 | Optional | [Id](http://hl7.org/fhir/stu3/datatypes.html#id "Id") | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | [Meta](http://hl7.org/fhir/stu3/resource.html#Meta "Meta") | Metadata about the resource<br/><font color="red">The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1'</font> |
-|  - identifier | 0..* | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Business identifier |
-|  - - system | 1..1 | Required | Uri | The namespace for the identifier value |
-|  - - value | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique |
+|  - identifier | 0..* | Required | [Identifier](http://hl7.org/fhir/stu3/datatypes.html#identifier "Identifier") | Business identifier <font color="red">An identifier for this Allergies and adverse reactions list</font>|
+|  - - system | 1..1 | Required | Uri | The namespace for the identifier value <font color="red">The system from which the identifier came from</font>|
+|  - - value | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | The value that is unique <font color="red">An identifier for this safety alerts list</font>|
 |  - - period | 0..1 | Mandatory | Period | Time period when id is/was valid for use<br/>Constraint (per-1): If present, start SHALL have a lower value than end |
 |  - - - start | 0..1 | Mandatory | dateTime | Starting time with inclusive boundary<br/><font color="red">The date on which the safety alert was recorded</font> |
 |  - - - end | 0..1 | Required | dateTime | End time with inclusive boundary, if not ongoing |
@@ -101,15 +101,16 @@ The safety alerts list has a mandated subject reference to the Patient resource.
 |  - status | 1..1 | Mandatory | Code | active \| inactive \| entered-in-error<br/>Binding (required): Indicates whether this flag is active and needs to be displayed to a user, or whether it is no longer needed or entered in error. ( http://hl7.org/fhir/stu3/valueset-flag-status.html )<br/><font color="red">Status of the safety alert</font> |
 |  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Coded or textual message to display to user<br/>Binding (example): Detail codes identifying specific flagged issues. ( http://hl7.org/fhir/stu3/valueset-flag-code.html )<br/><font color="red">Data item maps to one of PRSB 'Risk to Self' OR 'Risk to Other' OR 'Risk from Others'. Not Coded therefore code.text MUST be used. </font> |
 |  - - text | 0..1 | Optional | String | Plain text representation of the concept<br/><font color="red">Narative that describes the 'risk' being recorded. MUST prefix 'Risk to Self' OR 'Risk to Other' OR 'Risk from Others' to narrative to indicate type of risk.</font> |
-|  - subject | 1..1 | Mandatory | Reference | Who/What is flag about?<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | CareConnect-Patient-1 |  |
-|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color='red'>This is the subject of the Social Context details List.<br/>This MUST use the CareConnect patient profile. </font>See[patient resource reference](explore_safety_alerts.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
+|  - encounter | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Encounter administered as part of<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the vaccination encounter.</font> |
 |  - period | 0..1 | Mandatory | Period | Time period when flag is active<br/>Constraint (per-1): If present, start SHALL have a lower value than end<br/><font color="red">The date on which the safety alert was recorded</font> |
 |  - - start | 0..1 | Mandatory | dateTime | Starting time with inclusive boundary |
 |  - - end | 0..1 | Required | dateTime | End time with inclusive boundary, if not ongoing |
 |  - author | 0..1 | Required | Reference | Flag creator<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Required |  CareConnect-Organization-1 | <font color="red">The Site Code of where the safety alert recorded</font> |
-|  - - reference | 0..1 | Required | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+|   |  | Mandatory | [CareConnect-Organization-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Organization-1 "CareConnect-Organization-1") | <br/><font color='red'>This MUST use the CareConnect Organization profile.</font>See [Organization resource reference](explore_safety_alerts.html#mapping-for-safety-alerts-organisation) for information on how to populate these resources.  |
+|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL<font color="red">A reference to the Practitioner resource included in the scan list|
 
 ## Mapping for Safety Alerts Practitioner ##
 
