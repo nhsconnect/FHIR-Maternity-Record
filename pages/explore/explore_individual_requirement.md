@@ -71,7 +71,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for Individual Requirements GP Opt Out Flag ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2|[CareConnect-Flag-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3| None|
+|>|Level 1|[Flag Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2|[CareConnect-Flag-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3| None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_individual_requirement.html#mapping-for-individual-requirements-gp-opt-out-flag)**|
@@ -87,19 +87,18 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Coded or textual message to display to user<br/>Binding (example): Detail codes identifying specific flagged issues. ( http://hl7.org/fhir/stu3/valueset-flag-code.html )<br/><font color="red">MUST use a code from the valueSet https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-OptOutReason-1</font> |
 |  - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | SNOMED CT representation identifying specific flagged issues |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension](http://hl7.org/fhir/stu3/extensibility.html#Extension "Extension") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system |
 |  - - text | 0..1 | Optional | String | Plain text representation of the concept |
-|  - subject | 1..1 | Mandatory | Reference | Who/What is flag about?<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | CareConnect-Patient-1 |  |
-|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_observations.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 
 
 ## Mapping for Individual Needs Person Indicator Flag ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2|[CareConnect-Flag-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3| None|
+|>|Level 1|[Flag Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2|[CareConnect-Flag-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3| None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_individual_requirement.html#mapping-for-individual-needs-person-indicator-flag)**|
@@ -118,13 +117,13 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system <font color="red">MUST use a value from https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-IndividualNeedsPerson-1</font>|
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system |
 |  - - text | 0..1 | Optional | String | Plain text representation of the concept |
-|  - subject | 1..1 | Mandatory | Reference | Who/What is flag about?<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | CareConnect-Patient-1 |  |
-|  - - reference | 0..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Literal reference, Relative, internal or absolute URL |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_observations.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 
 ## Mapping for Individual Needs Person Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3| None|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|>|Level 3| None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_individual_requirement.html#mapping-for-individual-needs-person-observation)**|
@@ -143,19 +142,18 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of observation (code / type)<br/><font color="red">The type of investigation performed</font> |
 |  - - coding | 0..* | Mandatory | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system<br/><font color="red">1078911000000106</font> |
 |  - - - display | 1..1 | Mandatory | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Representation defined by the system<br/><font color="red">Individual requirements</font> |
 |  - - text | 0..1 | Optional | [String](http://hl7.org/fhir/stu3/datatypes.html#string "String") | Plain text representation of the concept |
-|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Who and/or what this is about<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") |  |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_observations.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - comment | 0..1 | Required | String |Comments about result <font color="red">Individual requirements that a person has. These may be communication, cultural, learning or mobility needs related to themselves or their primary carer</font>
 |  - component | 0..* | Required | [BackboneElement](http://hl7.org/fhir/stu3/backboneelement.html "BackboneElement") | Component results<br/><font color="red">Component is used to carry multiple individual person needs information.</font> Information MUST inlcude a code and value pair that is selected from the [Individual Needs](explore_individual_requirement.html#individual-needs-person-reference-sets) Reference sets table |
 |  - - code | 1..1 | Mandatory | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Type of component observation (code / type)<br/>Binding (example): Codes identifying names of simple observations. [LOINC Codes](http://hl7.org/fhir/stu3/valueset-observation-codes.html)<br/><font color="red">MUST be a code from one of the pre-defined reference sets</font> |
 |  - - coding | 0..* | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Slicing: Discriminator: code, Ordering: false, Rules: Open |
 |  - - coding (snomedCT) | 0..1 | Required | [Coding](http://hl7.org/fhir/stu3/datatypes.html#coding "Coding") | Code defined by a terminology system<br/>Binding (extensible): A code from the SNOMED Clinical Terminology UK coding system describing a type of observation [CareConnect-ObservationType-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-ObservationType-1) |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display.<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Identity of the terminology system<br/><font color='red'>The value attribute of the profile element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 1..1 | Mandatory | [Code](http://hl7.org/fhir/stu3/datatypes.html#code "Code") | Symbol in syntax defined by the system |
 |  - value[x] | 0..1 | Required | [CodeableConcept](http://hl7.org/fhir/stu3/datatypes.html#codeableconcept "CodeableConcept") | Actual component result<br/>Constraint (qty-3): If a code for the unit is present, the system SHALL also be present<br/><font color="red">Specific information on the requirement</font> |

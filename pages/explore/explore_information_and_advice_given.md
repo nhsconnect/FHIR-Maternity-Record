@@ -115,7 +115,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 |  - - end | 0..1 | Required | dateTime | End time with inclusive boundary, if not ongoing |
 |  - location | 0..* | Required | BackboneElement | List of locations where the patient has been |
 |  - - location | 1..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | Location the encounter takes place<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>Details of where the information and advice was given</font> |
-|   |  | Mandatory | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") | This MUST use the CareConnect Location profile. </font>See [Location resource](explore_observations.html#mapping-for-observation-location) for information on how to populate the resource. |
+|   |  | Mandatory | [CareConnect-Location-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Location-1 "CareConnect-Location-1") |<font color="red"> This MUST use the CareConnect Location profile. </font>See [Location resource](explore_observations.html#mapping-for-observation-location) for information on how to populate the resource. |
 |  - - - reference | 0..1 | Required | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the Location resource included in the Communication details</font>  |
 
 ## Mapping for Information and Advice Given RelatedPerson ##

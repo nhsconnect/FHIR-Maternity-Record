@@ -117,7 +117,7 @@ The social context (person) list has a mandated subject reference to the Patient
 
 ## Generic Mappings for Social Context Person Observation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#generic-mappings-for-social-context-person-observation)**|
 
@@ -152,7 +152,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Social Context Observation Data Item - Social Circumstances ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---social-circumstances)**|
 
@@ -169,7 +169,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Social Context Observation Data Item - Lifestyle ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---lifestyle)**|
 
@@ -194,7 +194,7 @@ The following sections contain mappings for social context person data items. Th
 |Type of Nicotine Replacement used|[Observation](explore_social_context_person.html#mapping-for-social-context-details-list)|
 |Date stopped smoking|[Observation](explore_social_context_person.html#social-context-observation-data-item---smoking-details)|
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---smoking-details)**|
 
@@ -221,7 +221,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Social Context Observation Data Item - CO Screening Status ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---co-screening-status)**|
 
@@ -238,7 +238,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Social Context Observation Data Item - CO Screening Result ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---co-screening-result)**|
 
@@ -262,7 +262,7 @@ The following sections contain mappings for social context person data items. Th
 |Drug/substance use - details|[Observation](explore_social_context_person.html#mapping-for-social-context-details-list)|
 |Date stopped|[Observation](explore_social_context_person.html#mapping-for-social-context-details-list)|
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---drug-substance-use)**|
 
@@ -288,7 +288,7 @@ The following sections contain mappings for social context person data items. Th
 |Alcohol use - details|[Observation](explore_social_context_person.html#social-context-observation-data-item---alcohol-use)|
 |Date stopped usual pattern of drinking|[Observation](explore_social_context_person.html#social-context-observation-data-item---alcohol-use)|
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---alcohol-use)**|
 
@@ -308,7 +308,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Social Context Observation Data Item - Alcohol Drinking Status ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---alcohol-drinking-status)**|
 
@@ -332,7 +332,7 @@ The following sections contain mappings for social context person data items. Th
 |Education Level|[Observation](explore_social_context_person.html#mapping-for-social-context-details-list)|
 |Number of years in Education|[Observation](explore_social_context_person.html#mapping-for-social-context-details-list)|
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---education)**|
 
@@ -348,7 +348,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Social Context Observation Data Item - Employment Status ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---employment-status)**|
 
@@ -364,7 +364,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Social Context Observation Data Item - Occupation ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_all.html#social-context-observation-data-item---occupation)**|
 
@@ -379,7 +379,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Social Context Observation Data Item - Asylum Status ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_person.html#social-context-observation-data-item---asylum-status)**|
 
@@ -395,7 +395,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Social Context Observation Data Item - Social Risk Factors ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-List-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
+|>|Level 1|[Observation Resource](http://hl7.org/fhir/stu3/observation.html)|>|Level 2| None|>|Level 3|[CareConnect-Observation-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Observation-1)|
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_social_context_person.html#social-context-observation-data-item---social-risk-factors)**|
 
@@ -412,7 +412,7 @@ The following sections contain mappings for social context person data items. Th
 
 ## Patient Reference ##
 
-The Admission details list has a mandated subject reference to the Patient resource. This means that any exchange of the Admission details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
+The social context person details list has a mandated subject reference to the Patient resource. This means that any exchange of the social context person details heading data must also include the [Patient demographics List.](explore_patient_demographics.html)
 
 
 ## Social Context Person Observation Details Heading Example ##

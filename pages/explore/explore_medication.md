@@ -62,6 +62,7 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 |Date of latest change||Extension-CareConnect-MedicationChangeSummary-1.dateChanged|
 |Description of amendment||Extension-CareConnect-MedicationChangeSummary-1.detailsOfAmendment|
 |Comment|| <font color="red">note - TBC</font> |
+
 ## Mapping for Medication Statement List ##
 
 |>|Level 1|[List Resource](http://hl7.org/fhir/stu3/list.html)|>|Level 2|[CareConnect-List-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1)|>|Level 3|None|
@@ -72,7 +73,7 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | :--- | :--- | :--- | :--- | :--- |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
-|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-List-1'</font> |
+|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-List-1'</font> |
 |  - identifier | 0..* | Required | Identifier | Business identifier<br/><font color='red'>An identifier for this Medication Statement details list</font> |
 |  - - system | 1..1 | Required | Uri | The namespace for the identifier value<br/><font color='red'>The system from which the identifier came from</font> |
 |  - - value | 1..1 | Mandatory | String | The value that is unique<br/><font color='red'>An identifier for this Medication Statement details list</font> |
@@ -104,6 +105,7 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 | :--- | :--- | :--- | :--- | :--- |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
+|  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1'</font> |
 |  - extension (changeSummary) | 0..* | Optional | [Extension-CareConnect-MedicationChangeSummary-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationChangeSummary-1 "Extension-CareConnect-MedicationChangeSummary-1") | Optional Extensions Element<br/> |
 |   - - extension (status) | 0..1 | Optional | Extension | The change status of a medication<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">The nature of any change made to the medication</font> |
 |  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: status |
@@ -166,6 +168,7 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 | :--- | :--- | :--- | :--- | :--- |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
+  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationStatement-1'</font> |
 |  - extension (changeSummary) | 0..* | Optional | [Extension-CareConnect-MedicationChangeSummary-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-CareConnect-MedicationChangeSummary-1 "Extension-CareConnect-MedicationChangeSummary-1") | Optional Extensions Element<br/> |
 |   - - extension (status) | 0..1 | Optional | Extension | The change status of a medication<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/><font color="red">The nature of any change made to the medication</font> |
 |  - - - url | 1..1 | Mandatory | Uri | Identifies The Meaning Of The Extension<br/>Fixed Value: status |
@@ -196,7 +199,7 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 
 ## Mapping for Medication ##
 
-|>|Level 1|[MedicationStatement Resource](http://hl7.org/fhir/stu3/medication.html)|>|Level 2|[CareConnect-Medication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1)|>|Level 3|None|
+|>|Level 1|[Medication Resource](http://hl7.org/fhir/stu3/medication.html)|>|Level 2|[CareConnect-Medication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1)|>|Level 3|None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_medication_all.html#mapping-for-medication)**|
@@ -204,10 +207,10 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 |  **Name** | **Card.** | **Conformance** | **Type** | Description, Constraints and mapping for Digital Maternity Implementation |
 | :--- | :--- | :--- | :--- | :--- |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
-|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.nhs.uk/STU3/StructureDefinition/CareConnect-Medication-1'</font> |
+|  - meta | 0..1 | Mandatory | Meta | Metadata about the resource|
+  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Medication-1'</font> |
 |  - code | 0..1 | Required | CodeableConcept | Codes that identify this medication<br/>Binding (required): A code from the SNOMED Clinical Terminology UK coding system that describes a medication from the VTM/VMP/VMPP/AMP/AMPP subsets from the dm+d terminology [CareConnect-MedicationCode-1](https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationCode-1) |
 |  - - coding | 0..* | Required | Coding | Code defined by a terminology system |
-|  - - - extension (snomedCTDescriptionID) | 0..1 | Required | [Extension-coding-sctdescid](https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid "Extension-coding-sctdescid") | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/> |
 |  - - - system | 0..1 | Mandatory | Uri | Identity of the terminology system<br/><font color='red'>The element MUST contain the value 'http://snomed.info/sct'</font> |
 |  - - - code | 0..1 | Mandatory | Code | Symbol in syntax defined by the system |
 |  - - - display | 0..1 | Mandatory | String | Representation defined by the system |
@@ -215,17 +218,24 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 
 ## Mapping for Medication Administration ##
 
+|>|Level 1|[MedicationAdministration Resource](http://hl7.org/fhir/stu3/medication.html)|>|Level 2|[CareConnect-Medication-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationAdministration-1)|>|Level 3|None|
+
+
+|**View Used FHIR Elements**|**[View All FHIR Elements](explore_medication_all.html#mapping-for-medication)**|
+
+
 |  **Name** | **Card.** | **Conformance** | **Type** | **Description, Constraints and mapping for Digital Maternity Implementation** |
 | --- | --- | --- | --- | --- |
 |  - id | 0..1 | Optional | Id | Logical id of this artifact |
 |  - meta | 0..1 | Mandatory | Meta | Metadata about the resource |
+  - - profile | 1..1 | Mandatory | [Uri](http://hl7.org/fhir/stu3/datatypes.html#uri "Uri") | Profiles this resource claims to conform to<br/><font color='red'>The value attribute of the profile element MUST contain the value 'https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-MedicationAdministration-1'</font> |
 |  - identifier | 0..* | Required | Identifier | External identifier |
 |  - status | 1..1 | Mandatory | Code | in-progress \| on-hold \| completed \| entered-in-error \| stopped \| unknown<br/>Binding (required): A set of codes indicating the current status of a MedicationAdministration. (http://hl7.org/fhir/stu3/valueset-medication-admin-status.html )<br/><font color="red">The nature of any change made to the medication. MUST be marked as COMPLETED once administered</font> |
 |  - medicationReference | 1..1 | Required | Reference  | What was administered<br/>Binding (example): Codes identifying substance or product that can be administered. (http://hl7.org/fhir/stu3/valueset-medication-codes.html )<br/><font color="red">The reference to the included Organization resource</font> |
 |   |  | Mandatory | CareConnect-Medication-1 | <font color="red">This MUST use the CareConnect Medication profile.</font> See [Medication](explore_medication.html#mapping-for-medication) resource for information on how to populate the resource.” |
-|  - subject | 1..1 | Mandatory | Reference | Who received medication<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided |
-|   |  | Mandatory | CareConnect-Patient-1 |  |
-|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL |
+|  - subject | 0..1 | Mandatory | [Reference](http://hl7.org/fhir/stu3/references.html "Reference") | If all resources have the same subject<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color='red'>This is a reference to the Patient who is the subject of the list.</font> |
+|   |  | Mandatory | [CareConnect-Patient-1](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Patient-1 "CareConnect-Patient-1") | <font color="red">This is the subject of the Observations details List. This MUST use the CareConnect patient profile.</font>See [patient resource reference](explore_observations.html#patient-reference) for information on how to populate the resource. |
+|  - - reference | 0..1 | Mandatory | String | Literal reference, Relative, internal or absolute URL<br/><font color='red'>A reference to the patient resource included in the Patient demographics list within the FHIR Bundle. Note the Patient demographics list is mandatory in the FHIR bundle</font>  |
 |  - effective[x] | 1..1 | Mandatory | dateTime | Start and end time of administration |
 |  - performer | 0..* | Required | BackboneElement | Who administered substance |
 |  - - actor | 1..1 | Mandatory | Reference | Individual who was performing<br/>Constraint (ref-1): SHALL have a contained resource if a local reference is provided<br/><font color="red">Name of the professional performing the administration</font> |
@@ -244,7 +254,6 @@ The following profiles are referenced from the https://fhir.hl7.org.uk/STU3/Stru
 |  - - route | 0..1 | Optional | CodeableConcept | Path of substance into body<br/>Binding (example): A coded concept describing the route or physiological path of administration of a therapeutic agent into or onto the body of a subject. ( http://hl7.org/fhir/stu3/valueset-route-codes.html )<br/><font color="red">Medication administration description (oral, IM, IV, etc.): may include method of administration, (e.g., by infusion, via nebuliser, via NG tube) and/or site of use, (e.g., ‘to wound’, ‘to left eye’, etc.).</font> |
 |  - - - coding | 0..* | Required | Coding | Code defined by a terminology system<br/>Slicing: Discriminator: system, Ordering: false, Rules: Open |
 |  - - - coding (snomedCT) | 0..1 | Required | Coding | Code defined by a terminology system<br/>Binding (example): A code from the SNOMED Clinical Terminology UK coding system that describes the e-Prescribing route of administration. ( https://fhir.hl7.org.uk/STU3/ValueSet/CareConnect-MedicationDosageRoute-1 ) |
-|  - - - - extension (SnomedCTDescriptionId) | 0..1 | Required | Extension | The SNOMED CT Description ID for the display<br/>Constraint (ext-1): Must have either extensions or value[x], not both<br/>URL: https://fhir.hl7.org.uk/STU3/StructureDefinition/Extension-coding-sctdescid |
 |  - - - - system | 1..1 | Mandatory | Uri | Identity of the terminology system<br/>Fixed Value: http://snomed.info/sct |
 |  - - - - code | 1..1 | Mandatory | Code | Symbol in syntax defined by the system |
 |  - - - - display | 1..1 | Mandatory | String | Representation defined by the system |

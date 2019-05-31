@@ -153,7 +153,7 @@ The Plan and requested actions List has a mandated subject reference to the Pati
 
 ## Mapping for GP Practice GP Opt Out Flag ##
 
-|>|Level 1|[List Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2|[CareConnect-Flag-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3| None|
+|>|Level 1|[Flag Resource](http://hl7.org/fhir/stu3/flag.html)|>|Level 2|[CareConnect-Flag-1 Profile](https://fhir.hl7.org.uk/STU3/StructureDefinition/CareConnect-Flag-1)|>|Level 3| None|
 
 
 |**View Used FHIR Elements**|**[View All FHIR Elements](explore_individual_requirement.html#mapping-for-individual-requirements-gp-opt-out-flag)**|
